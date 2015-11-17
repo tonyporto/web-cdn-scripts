@@ -13,6 +13,12 @@ function animatecss(){
 }
 
 function onScrollAnimationInit(){
+	
+		var osAnimationOff = $(".os-animation");
+		var osAnimationOn = $(".os-animation.animated");
+
+		osAnimationOff.css("opacity", "0");
+		osAnimationOn.css("opacity", "1");
 
             function onScrollInit( items, trigger ) {
                 items.each( function() {
