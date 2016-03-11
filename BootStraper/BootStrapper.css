@@ -1336,6 +1336,7 @@ cite,
     padding: 0 0 2em;
 }
 
+.pull,
 .box-sized {
 	padding: 1em;
 }
@@ -1532,7 +1533,8 @@ address,
 }
 
 .button:focus,
-.button:hover {
+.button:hover,
+[class*="button"]:hover{
 
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.15)), color-stop(1%, rgba(255,255,255,.15)), color-stop(1%, rgba(0,0,0,.1)), to(rgba(0,0,0,.15)));
 /*
