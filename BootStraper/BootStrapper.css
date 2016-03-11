@@ -593,13 +593,16 @@ address,
 	line-height: 32px;
 }
 
+.form-left + input {
+	padding-left: 44px;
+}
+
 /* ============================ *
  * VERTICAL ALIGNMENT
  * ============================ */
 .footer-left > ul {
 	vertical-align: top;
 }
-
 
 .decoration-underline {
 	text-decoration: underline;
@@ -705,14 +708,20 @@ div.no-border,
     border-top-width: 0;
 }
 
+.border-right-1 {
+	border-right-width: 0;
+}
+
 .border-bottom3 {
 	border-bottom-width: 3px;
 }
+
 
 .border-bottom1 {
 	border-bottom-width: 1px;
 }
 
+.button.stacked:not(:last-child),
 .border-bottom0 {
 	border-bottom-width: 0;
 }
@@ -790,6 +799,7 @@ div.no-border,
 	border-radius: 6px;
 }
 
+.panel-body,
 .panel {
 	border-radius: 8px;
 }
@@ -805,36 +815,66 @@ div.no-border,
  * (top right, top left)
  * (bottom right, bottom left)
  * ======================================== */
-
+/* =========== TOP BORDERS ============ *
+ * ========== (right & left) ========== */
+.panel,
 .button.stacked:last-child:not(:first-child),
+.border-top-both {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/* ========= TOP RIGHT ========= *
+ * ============================= */
+.button.pager:not(:last-child),
 .border-top-right-0 {
     border-top-right-radius: 0;
 }
 
-
-.button.stacked:last-child:not(:first-child),
-.input-labels .form-control,
+/* ========= TOP LEFT ========= *
+ * ============================ */
+.button.pager:not(:first-child),
 .border-top-left-0 {
     border-top-left-radius: 0;
 }
 
-
+/* ============= BOTTOM =============== *
+ * ========== (right & left) ========== */
 .button.stacked:first-child:not(:last-child),
+.border-bottom-both {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/* ======= BOTTOM RIGHT =========== *
+ * ================================ */
+.button.pager:not(:last-child),
 .border-bottom-right-0 {
 	border-bottom-right-radius: 0;
 }
 
-.input-labels .form-control,
-.button.stacked:first-child:not(:last-child),
+/* ======= BOTTOM LEFT =========== *
+ * =============================== */
+.button.pager:not(:first-child),
 .border-bottom-left-0 {
 	border-bottom-left-radius: 0;
 }
 
+/* ============= RIGHT ================ *
+ * ========== (top & bottom) ========== */
 .form-right,
 .form-left,
 .input-left {
 	border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+}
+
+/* ============== LEFT ================ *
+ * ========== (top & bottom) ========== */
+.input-labels .form-control,
+.border-left-0 {
+	border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
 }
 
 /* ======================================== *
@@ -879,6 +919,12 @@ div.no-border,
 .footer-wrapper {
 	width: 90%;
 	max-width: 1180px;
+}
+
+.header-container {
+    -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
 }
 
 .admin.header-wrapper,
@@ -948,6 +994,7 @@ cite,
 }
 
 .button,
+.pager,
 [class*='col'] img,
 .inline-block {
 	display: inline-block;
@@ -956,7 +1003,7 @@ cite,
 
 .icon-container,
 .panel,
-.button.stacked,
+.stacked,
 .block {
 	display: block;
 }
@@ -1337,6 +1384,7 @@ cite,
 }
 
 .pull,
+.panel-body,
 .box-sized {
 	padding: 1em;
 }
@@ -1350,7 +1398,6 @@ cite,
 .section-content {
 	padding: 1em 0;
 }
-
 
 .space-btn {
 	padding: 13px 0;
@@ -1413,7 +1460,7 @@ select,
 }
 
 .content-chunk {
-	margin: 1em 0;
+	margin: 1em auto;
 }
 
 .buttons-stacked,
@@ -1533,9 +1580,7 @@ address,
 }
 
 .button:focus,
-.button:hover,
-[class*="button"]:hover{
-
+.button:hover {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.15)), color-stop(1%, rgba(255,255,255,.15)), color-stop(1%, rgba(0,0,0,.1)), to(rgba(0,0,0,.15)));
     background-image: -webkit-linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
     background-image: -moz-linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
@@ -1675,6 +1720,8 @@ textarea.form-control {
 [class*="table-"] tr {
 	display: table-row;
 }
+
+.button.stacked:hover,
 [class*="table-"] tbody > tr:nth-of-type(odd):hover,
 [class*="table-"] tbody > tr:hover {
    background-color: rgba(192,192,192,0.2);
