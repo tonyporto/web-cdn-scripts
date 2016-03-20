@@ -1,0 +1,122 @@
+/* Styles go here */
+.graph-arc-container {
+    display: inline-block;
+}
+
+.graph-arc {
+	position: relative;
+    overflow: hidden;
+}
+
+figure .graph-arc:before {
+	border-bottom-width: 0;
+	border-style: solid;
+	border-color: #E8E8E8;
+    top: 0;
+}
+
+.graph-arc .arc,
+.graph-arc:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    -ms-transform-origin: 50% 0%;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+}
+
+[class*="graph-arc"],
+[class*="graph-arc"]:before,
+.graph-arc .arc {
+    height: 100px;
+    width: 200px;
+}
+
+.arc {
+    top: 100%;
+    z-index: 2;
+	border-style: solid;
+    border-top: none;
+    -moz-animation: fill 2s;
+    -webkit-animation: fill 2s;
+    animation: fill 2s;
+    transition: All 5s ease;
+}
+
+.border-30:before,
+.border-30 .arc {
+    border-width: 30px;
+}
+.border-30:before {
+    border-radius: 180px 180px 0 0;
+}
+.border-30 .arc {
+    border-radius: 0 0 180px 180px;
+}
+
+/* BORDER COLORS */
+.arc[data-color="green"] {
+    border-color: #47CF73;
+}
+
+.arc[data-color="red"] {
+    border-color: #FF3C41;
+}
+
+/* ======= TEXT  ========= */
+.graph-arc-score,
+.graph-arc-text {
+    display: block;
+    text-align: center;
+}
+.graph-arc-score {
+    color: #394955;
+    font-size: 28px;
+    margin-top: 60px;
+}
+
+.graph-label {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* ======= BG ========= */
+.graph-arc-score:after {
+    content: '';
+    background-image: url(chart-bg-original.png);
+	position: absolute;
+    width: 200px;
+	top: 0;
+	left: 0;
+	z-index:3
+}
+
+/* =======================================
+// THE MARKUP
+<figure class="graph-arc-container">
+	<figcaption class="graph-label ">Mon, Tue, Wed</figcaption>
+	<footer class="graph-arc border-30">
+		<span class="arc" data-value="89" data-color="red"></span>
+		<span class="graph-arc-score">89%</span>
+	</footer>
+</figure>
+	
+	
+// THE SCRIPTS
+jQuery(".graph-arc-container").each(function() {
+
+	var	info = jQuery(this).find(".arc"),
+		allInfo = jQuery(".graph-arc .arc"),
+		total = jQuery(this).find(".arc").attr("data-value"),
+		amount = (total) * 1.8;
+
+	info.css({	
+		'-moz-transform' : 'rotate(' + amount + 'deg)',
+		'-ms-transform' : 'rotate(' + amount + 'deg)',
+		'transform' : 'rotate(' + amount + 'deg)'
+		
+	});
+
+});	
+ * ======================================= */

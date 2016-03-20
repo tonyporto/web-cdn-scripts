@@ -61,9 +61,9 @@
 	padding-right: .36em;
 }
 
-/* ==========================================================================
-	START CSS RESET
- ========================================================================== */
+/* ========================================================================= *
+ * START CSS RESET
+ * ========================================================================= */
 html {
     overflow-y: scroll;
     font-size: 100%; /* 1 */
@@ -630,6 +630,7 @@ address,
 	text-transform: uppercase;
 }
 
+.close,
 .mouse {
 	cursor: pointer;
 }
@@ -676,7 +677,6 @@ div.no-border,
 .border-bottom-solid {
 	border-bottom-style: solid;
 }
-
 
 .border-width2 {
 	border-width: 2px;
@@ -839,7 +839,6 @@ div.no-border,
 }
 
 .loader,
-.loader:after,
 .border-circle {
 	border-radius: 50%;
 }
@@ -970,11 +969,11 @@ div.no-border,
 	width: 94%;
 }
 
-
 /* =============================================================================================
  * FLOATS & TEXT ALIGN & DISPLAYS & POSITIONS & POSITION LOCATION & Z-INDEXES & FULLWIDTH
  * =============================================================================================
  * FLOATS - left */
+.navi.left,
 .align-left,
 .float-left,
 .float-left-all,
@@ -985,10 +984,11 @@ div.no-border,
 }
 
 /* FLOATS - right */
-.main-nav,
+.navi.right,
 .align-right,
 .float-right,
 .float-right-all,
+.panel .right,
 .right > aside,
 .left > article {
 	float: right;
@@ -1103,10 +1103,11 @@ cite,
 }
 
 /* ABSOLUTE */
+.loader,
+.modal-inner,
 .absolute {
 	position: absolute;
 }
-
 
 /* Z-INDEXES */
 .z1 {
@@ -1434,10 +1435,13 @@ cite,
 	margin: -1em;
 }
 
-
 .main,
 .footer-wrapper {
 	padding: 3em 0;
+}
+
+.main-main {
+	padding: 1.5em 0;
 }
 
 .section-content {
@@ -1452,7 +1456,6 @@ cite,
 	padding-top: 3em;
 }
 
-
 .main-top-sm {
 	padding-top: 2em;
 }
@@ -1461,17 +1464,14 @@ cite,
 	padding-top: 1em;
 }
 
-
 select,
 .pull-top-0 {
 	padding-top: 0;
 }
 
-
 .pull-right {
 	padding-right: 1.6%;
 }
-
 
 .main-bottom {
 	padding-bottom: 3em;
@@ -1737,6 +1737,8 @@ address,
     display: table;
     border-collapse: separate;
     margin-bottom: 15px;
+
+	width: 100%;
 }
 /* ============================================================================= */
 
@@ -1908,25 +1910,21 @@ hr,
  *  MODAL
  * ==========================================-=== */
 .modal {
-	margin: 0;
 	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	z-index: 999999;
+	z-index: 9999999;
 	background-color: rgba(215, 44, 44, 0.7);
 	display: none;
 }
 .modal-inner {
-	top: 50%;
+	top: calc(50% - 75px);
 	left: 15%;
     width: 70%;
 
-	min-height:150px;
-	margin-top: -75px;
-
-	display: block;
+	min-height: 150px;
 	position: absolute;
 }
 
@@ -1944,7 +1942,6 @@ hr,
  *  SPINNER
  * ============================================= */
 .loader {
-	position: relative;
 	text-indent: -9999em;
 	border-top: 20px solid rgba(255, 255, 255, 0.2);
 	border-right: 20px solid rgba(255, 255, 255, 0.2);
@@ -1964,11 +1961,13 @@ hr,
 .loader {
 	width: 120px;
 	height: 120px;
-	left: 50%;
-	margin-left: -80px;
+	top: calc(50% - 80px);
+	left: calc(50% - 80px);
 }
 
-
+/* ============================================== *
+ * LOADER ANIMATION
+ * ============================================= */
 @-webkit-keyframes loader {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1990,13 +1989,41 @@ hr,
   }
 }
 
+/* ============================================== *
+ * CLOSE BUTTON
+ * ============================================= */
+.close {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+.close::before {
+    transform: rotate(45deg);
+}
+.close::after {
+    transform: rotate(-45deg);
+}
+.close::before,
+.close::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+	background: #fff;
+}
+
 /* ==========================================================================
  *  CSS3 FADE IN
  *
  *  This Snippet will not be W3C valid until the year 2040, when hopefully W3C
  *  finally decides to update their validators from the last 1999 update
    ========================================================================== */
-.fadein{
+.fadein {
 /*
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera *//*
     -moz-animation: fadein 2s; /* Firefox & under *//*
@@ -2101,7 +2128,9 @@ hr,
 	.sidebars.small article {
 		width: 65%;
 	}
-
+	.sidebars.small aside {
+		width: 30%;
+	}
 	.col.col-4 {
 		width:  49%;
 	}
@@ -2145,10 +2174,15 @@ hr,
 		display: block;
 	}
 
+
+	/* !important & [class*="sidebars"] used to overwrite .sidebars.small width*/
+	[class*="sidebars"] > aside,
+	[class*="sidebars"] > article,
 	.section-wrapper .col {
-		width: 100%;
+		width: 100% !important;
 		margin-left: 0;
 		display:block;
+		margin-bottom: 2%;
 	}
 
     /* Alignments */
@@ -2193,4 +2227,3 @@ hr,
 	}
 
 }
-

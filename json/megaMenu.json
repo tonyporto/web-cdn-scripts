@@ -1,0 +1,31 @@
+{
+	"megamenu_content":
+	[
+        {
+            "__Students": "__ THIS IS THE STUDENTS MEGA MENU __",
+			"mm_students_1": "Students & Recruits",
+			"mm_students_2": "ExamFX offers the tools and help you need to succeed in your insurance or financial services career. Not only will we help you prepare, but we’ll also guarantee you’ll pass on your first attempt.",
+            "mm_students_3": "Unlike traditional classes, online access gives the ability to learn and study 24/7, no matter where you are.",
+            "mm_students_4": "Unlike traditional classes, online access gives the ability to learn and study 24/7, no matter where you are.",
+            "mm_students_5": "Unlike traditional classes, online access gives the ability to learn and study 24/7, no matter where you are.",
+			"mm_students_6": "Our Money Back Guarantee",
+			"mm_students_7": "We guarantee each student"
+        },
+        {
+			"__Managers": "__ THIS IS THE MANAGERS MENU MENU __",
+			"mm_managers_1": "Managers & Recruiters",
+            "mm_managers_2": "Help understand State-specific laws, insurance concepts, policies.",
+            "mm_managers_3": "Learn State-specific laws & regulations for Property/Casualty.",
+            "mm_managers_4": "Licensing materials for financial securities topics.",
+            "mm_managers_5": "ExamFX offers a library of online Continuing Education courses."
+        },
+        {
+			"__Course_Catalog": "__ THIS IS THE COURSE CATALOG MENU MENU __",
+            "mm_course_catalog_1": "Help understand State-specific laws, insurance concepts, policies.",
+            "mm_course_catalog_2": "Learn State-specific laws & regulations for Property/Casualty.",
+            "mm_course_catalog_3": "Licensing materials for financial securities topics.",
+            "mm_course_catalog_4": "ExamFX offers a library of online Continuing Education courses."
+        },
+    ]
+
+}

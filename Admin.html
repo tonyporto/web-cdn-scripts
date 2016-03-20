@@ -1,0 +1,870 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="stylesheet" href="http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/css/font-awesome.css">
+
+<style>
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/fonts/FontAwesome/fontawesome.eot?v=4.5.0');
+  src: url('http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/fonts/FontAwesome/fontawesome.eot?#iefix&v=4.5.0') format('embedded-opentype'), 
+  url('http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/fonts/FontAwesome/fontawesome.woff2?v=4.5.0') format('woff2'), 
+  url('http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/fonts/FontAwesome/fontawesome.woff?v=4.5.0') format('woff'), 
+  url('http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/fonts/FontAwesome/fontawesome.ttf?v=4.5.0') format('truetype'), 
+  url('http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/fonts/FontAwesome/fontawesome.svg?v=4.5.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+</style>
+		
+<style>
+* {
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0b1 | 201101 
+    NOTE:WORK IN PROGRESS
+    USE WITH CAUTION AND TEST WITH ABANDON */
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+    display:block;
+}
+body{
+    line-height:1;
+}
+ol,ul{
+    list-style:none;
+}
+blockquote,q{
+    quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+    content:’’;
+    content:none;
+}
+/* remember to define visible focus styles! 
+:focus{
+    outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+text-decoration:none;
+}
+del{
+    text-decoration:line-through;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+
+/* ======================================= *
+ * ICONS
+ * ======================================= */
+
+.ico-b:before,
+.ico-a:after,
+.ico {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-home:before {
+	content: "\f015";
+}
+.ico-nav:before {
+	content: "\f0c9";
+}
+.ico-dashboard:before {
+	content: "\f0e4";
+}
+
+
+
+
+/* SIDEBAR */
+.header-top {
+    width: 100%;
+}
+
+.header-top {
+    float: left;
+    background: #EDEDED;
+    border-bottom: 1px solid #D9DEE4;
+
+	display: table;
+	height: 60px;
+}
+
+/*
+    padding: 8px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    border-top: 1px solid #4d4d4d;
+    border-bottom: 1px solid #1a1a1a;
+*/
+
+.left-sidebar-menu a > span {
+	padding-left: 1em;
+}
+
+
+
+.left-sidebar {
+	color: #fff; 
+}
+
+.left-sidebar {
+	width:20%; 
+	position: fixed; 
+	top: 0; left: 0; bottom: 0; overflow: auto; 
+}
+.left-sidebar.resized {
+    min-width: 80px;
+	
+	width: 6%;
+	overflow-x: hidden;
+}
+
+
+.left-sidebar-menu li {
+	line-height: 1.5;
+}
+
+.left-sidebar-menu li {
+	line-height: 1.5;
+}
+
+.resized .menu-resize span {
+	display: none;
+	padding-left: 0;
+}
+
+
+.resized .menu-resize .ico-b {
+	font-size: 47px;
+}
+
+.header-top .ico-b {
+	font-size: 33px;
+}
+
+table {
+	font-size: 1em;
+}
+
+[class*="table-"] tr > th {
+	font-wight: bold;
+}
+
+
+.right-main {
+	width:80%; 
+	float:right
+}
+
+.main-inner,
+.right-main.resized {
+	width:94%; 
+}
+
+
+.main-inner {
+	margin: 0 auto;
+} 
+
+
+/* ======================================= *
+ * PANEL
+ * ======================================= */
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    display: block;
+}
+
+
+/* ======================================= *
+ * HOVER
+ * ======================================= */
+[class*="table-"] tbody > tr:nth-of-type(odd):hover,
+[class*="table-"] tbody > tr:hover {
+   background-color: rgba(192,192,192,0.2);
+}
+
+/* ======================================= *
+ * NAVIGATION MENU
+ * ======================================= */
+.navigation {
+	display: inline;
+}
+
+.header-block,
+.navigation > li {
+	display: inline-block;
+}
+
+.header-nav a {
+	line-height: 60px;
+	display: block;
+}
+
+
+
+/* ======================================= *
+ * FORMS
+ * ======================================= */
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.form-control {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}	
+	
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+/* ======================================= *
+ * TABLES
+ * ======================================= */
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+[class*="table-"] tr {
+	display: table-row;
+}
+
+[class*="table-"] th,
+[class*="table-"] tr > td {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+[class*="table-"] tr > th,
+[class*="table-"] tr > td {
+	border: 1px solid #ddd;
+}
+
+table * {
+	text-align: center;
+}
+
+table tr > th,
+table tr > td {
+	padding: .6em 1em;
+}
+
+.table-sorter tr > th {
+	position: relative;
+	padding-right: 1.8em;
+}
+
+.table-sorter tr > th:before,
+.table-sorter tr > th:after {
+	position: absolute;
+	top: 50%;
+	right: .5em;
+	font-size: 14px;
+	font-family: FontAwesome;
+}
+
+.table-sorter tr > th:before,
+.ico-up:before {
+	content: "\f0d8";
+}
+.table-sorter tr > th:after,
+.ico-down:before {
+	content: "\f0d7";
+}
+
+.table-sorter tr > th:before {
+	margin-top: -10px
+}
+
+.table-sorter tr > th:after {
+	margin-top: -2px;
+}
+
+.sorting_desc:before,
+.sorting_asc:after {
+	content: "";
+	visibility: hidden;
+}
+
+/* GRADIENT */
+/* ============================================== */
+.progress-bar-bg {
+    margin: .5em 0;
+}
+
+[class*="progress-bar-"] {
+	border-radius: 6px;
+}
+.progress-bar-bg {
+    font-weight: 300;
+    margin-bottom: 0;
+    overflow: hidden;
+    background-color: #e7e7e7;
+    border: 1px solid #d2d2d2;
+}
+.progress-bar-bg,
+.progress-bar-striped {
+    background-image: -webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: -o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    -webkit-background-size: 6px 6px;
+    background-size: 6px 6px;
+    
+    height: 34px;
+}
+
+.progress-bar-blue {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    background-color: #5381ac;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+
+/*
+
+<div class="progress-bar-bg">
+		<div class="progress-bar-blue progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> 6/10 Courses Completed </div>
+</div>   
+*/
+
+
+.progress-bar-fill-lined {
+	background: repeating-linear-gradient(45deg, #606dbc, #606dbc 67px, #465298 3px, #465298 70px);
+}
+
+/* TOOLTIP NAV */
+/* ===================================== */
+span[nav-title] {
+    position: relative;
+}
+[nav-title]:before {
+	content: "";
+	position: absolute;
+	border-bottom: 12px solid #434343;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	visibility: hidden;
+	margin-top: 60px;
+}
+
+[nav-title]:after {
+	position: absolute;
+	content: attr(nav-title);
+	color: #FFF;
+	margin-top: 65px;
+
+	left: 0;
+	margin-left: -50%;
+	background: #434343;
+	padding: 5px 10px;
+	border-radius: 6px;
+	white-space: nowrap;
+	visibility: hidden;
+	
+	height: 30px;
+	line-height: 30px;
+}
+
+[nav-title]:before,
+[nav-title]:after {
+z-index: 100;
+}
+
+li:hover span[nav-title]:before, 
+li:hover span[nav-title]:after {
+    visibility: visible;
+	-moz-transition: visibility 0s linear .3s;
+}
+
+/*
+
+<ul>
+    <li>
+		<a href="#"><span class="help-speech text-right" nav-title="Home">Home</span></a>
+	</li>
+    <li>
+		<a href="#"><span class="help-speech text-right" nav-title="Shop Courses">Shop Courses</span></a>
+	</li>   
+    <li>
+		<a href="#"><span class="help-speech text-right" nav-title="User Tour">User Tour</span></a>
+	</li>
+	
+</ul> 
+
+========= *
+<ul class="nav navbar-top-links navbar-left in">
+							<li><a href="index.html" class="active" data-toggle="tooltip" data-placement="bottom" title="" nav-title="Home"><i class="fa fa-home fa-lg"></i> <span class="nav-text">Home</span></a></li>
+							<li><a href="#" data-toggle="tooltip" data-placement="bottom" title="" class="active" data-original-title="Shop Courses"><i class="fa fa-shopping-cart fa-lg"></i> <span class="nav-text">Shop Courses</span></a></li>
+							<li><a href="#" data-toggle="tooltip" data-placement="bottom" title="" class="active" data-original-title="User Tour"><i class="fa fa-play-circle fa-lg"></i> <span class="nav-text">User Tour</span></a></li>
+							<li><a href="#" data-toggle="tooltip" data-placement="bottom" title="" class="active" data-original-title="Web Links"><i class="fa fa-link fa-lg"></i> <span class="nav-text">Web Links</span></a></li>
+							<li><a href="#" data-toggle="tooltip" data-placement="bottom" title="" class="active" data-original-title="Support"><i class="fa fa-exclamation-circle fa-lg"></i> <span class="nav-text">Support</span></a></li>
+						</ul>
+
+*/
+
+
+
+/* ================================================================== *
+ * SPACING
+ * ================================================================== */
+.sidebars > aside {
+    padding: 0 0 2em;
+}
+
+.box-sized {
+	padding: 1em;
+}
+
+
+.main,
+.footer-wrapper {
+	padding: 3em 0;
+}
+
+.section-content {
+	padding: 1em 0;
+}
+
+
+.space-btn {
+	padding: 13px 0;
+}
+
+.main-top {
+	padding-top: 3em;
+}
+
+
+.main-top-sm {
+	padding-top: 2em;
+}
+
+[class*="pull-top"] {
+	padding-top: 1em;
+}
+
+
+select,
+.pull-top-0 {
+	padding-top: 0;
+}
+
+.pull-right {
+	padding-right: 1em;
+}
+
+
+.main-bottom {
+	padding-bottom: 3em;
+}
+
+blockquote > cite,
+.pull-bottom {
+	padding-bottom: 1em;
+}
+
+select,
+.pull-top-0 {
+	padding-bottom: 0;
+}
+
+.pull-left {
+    padding-left: 1em;
+}
+
+
+/* ====================================================================
+ * MARGINS
+ ==================================================================== */
+.icon-container {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.pushed {
+	margin: 8px;
+}
+
+.content-chunk {
+	margin: 1em 0;
+}
+
+.box-sized,
+.form-group {
+    margin: 0 2% 1em 2%;
+}
+
+p,
+.input-group {
+    margin: 0 0 1em;
+}
+
+.push-top-big {
+	margin-top: 2.2em;
+}
+
+
+.push-top,
+.push-top-a:after {
+	margin-top: 1em;
+}
+
+.push-top-0 {
+	margin-top: 0;
+}
+
+.push-right,
+.align-left {
+	margin-right: 1em;
+}
+
+.align-left-all {
+	margin-right: 1%;
+}
+
+[class*="push-right-none"] {
+	margin-right: 0;
+}
+
+.push-bottom-big {
+	margin-bottom: 2.2em;
+}
+
+.push-bottom-a:after,
+.push-bottom {
+	margin-bottom: 1.3em;
+}
+
+address,
+.push-bottom,
+.push-bottom-a:after {
+	margin-bottom: 1em;
+}
+
+.push-bottom-0 {
+	margin-bottom: 0;
+}
+
+
+.push-bottom-10 {
+	margin-bottom: 10px;
+}
+
+.align-right {
+	margin-left: 1em;
+}
+
+[class*='first-col col'],
+.first-col {
+	margin-left: 0;
+}
+
+.ico-left-align:before {
+    margin-left: -25px;
+}
+</style>
+        <!-- Place favicon.ico in the root directory 
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		
+		-->
+		
+		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>		
+	
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <aside class="left-sidebar sidebar-resizer" style="background-color: #565656">
+		
+		<nav style="padding: 1em">
+			<ul class="left-sidebar-menu menu-resize">
+                <li>
+					<a href="#" class="ico-b ico-home"><span>Home</span></a>
+				</li>
+                <li>
+					<a href="#" class="ico-b ico-dashboard"><span>Settings</span></a>
+				</li>
+
+                <li class="pure-menu-item">
+                    <a href="#" class="pure-menu-link">Services</a>
+                </li>
+
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
+            </ul>
+			
+		</nav>
+			
+		</aside>
+		
+		
+		<div class="right-main sidebar-resizer">
+		
+			<header class="header-top">
+				<div class="main-inner">
+			
+					<nav class="header-nav">
+					
+						<span class="header-block pull-right">
+						
+							<a id="menu_toggle"><i class="ico-b ico-nav"></i></a>
+							
+						</span>
+						
+						<ul class="navigation">
+							<li>
+								<a href="#"><span class="help-speech text-right" nav-title="Home">Home</span></a>
+							</li>
+							<li>
+								<a href="#"><span class="help-speech text-right" nav-title="Shop Courses">Shop Courses</span></a>
+							</li>   
+							<li>
+								<a href="#"><span class="help-speech text-right" nav-title="User Tour">User Tour</span></a>
+							</li>
+							
+						</ul> 
+					
+					</nav>
+					
+				</div>
+			</header>
+		
+			<div class="main-inner" style="padding: 1em 0;height: 600px; ">
+				
+				
+				
+				
+<table class="table-striped border-box table-sorter">
+		<caption class="color-orange-all border-title small push-bottom-a">
+				<h3 class="uppercase">Course Catalog Chart</h3>
+		</caption>
+	<colgroup></colgroup>
+
+	<colgroup span="2" title="Compare ExamFx Packages"></colgroup>
+
+	<!-- # HEADER # -->
+	<thead class="sorter" style="">
+		<tr>
+			<th scope="col">Percentage</th>
+			<th scope="col">Ratio</th>
+			<th scope="col">Probability</th>
+			<th scope="col">Advantage</th>
+			<th scope="col">Flex</th>
+		</tr>
+	</thead>
+
+	<!-- # HEADER # -->
+
+	<!-- # FOOTER # -->
+	<tfoot>
+		<tr>
+			<td>87</td>
+			<td>34</td>
+			<td>34</td>
+			<td>43</td>
+			<td>34</td>
+		</tr>
+	</tfoot>
+
+	<!-- # FOOTER # -->
+
+	<!-- # BODY # -->
+	<tbody class="relative border-all border-width3">
+
+		
+		<!-- # ROW 1 - ANSWER # -->
+		<tr>
+
+			<td>87</td>
+			<td>44</td>
+			<td>36</td>
+			<td>83</td>
+			<td>39</td>
+		</tr>
+		
+		<!-- # ROW 2 - ANSWER # -->
+
+		<tr>
+
+			<td>97</td>
+			<td>74</td>
+			<td>52</td>
+			<td>23</td>
+			<td>32</td>
+		</tr>
+		
+		<!-- # ROW 3 - ANSWER # -->
+
+		<tr>
+
+			<td>17</td>
+			<td>94</td>
+			<td>39</td>
+			<td>48</td>
+			<td>84</td>
+		</tr>
+		
+		<!-- # ROW 4 - ANSWER # -->
+		
+		<tr>
+
+			<td>37</td>
+			<td>30</td>
+			<td>66</td>
+			<td>73</td>
+			<td>34</td>
+		</tr>
+		<!-- # ROW 5 - QUESTION # -->
+		
+		<tr>
+
+			<td>27</td>
+			<td>43</td>
+			<td>84</td>
+			<td>48</td>
+			<td>1</td>
+		</tr>
+		
+		<!-- # ROW 6 - ANSWER # -->
+		<tr>
+
+			<td>80</td>
+			<td>39</td>
+			<td>7</td>
+			<td>43</td>
+			<td>34</td>
+		</tr>
+		
+		<!-- # ROW 7 - ANSWER # -->
+		<tr>
+
+			<td>87</td>
+			<td>90</td>
+			<td>34</td>
+			<td>55</td>
+			<td>74</td>
+		</tr>
+
+
+	</tbody>
+	<!-- # BODY # -->
+</table>	
+		
+		
+		
+		</div>
+		
+
+		</div>
+		
+<script>
+jQuery("#menu_toggle").on("click", function() {
+	
+	jQuery(".sidebar-resizer").toggleClass("resized");
+	
+});
+</script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+
+	<script type="text/javascript">
+	jQuery(document).ready(function() {
+	
+		jQuery('.table-sorter').DataTable();
+
+	});
+	</script>	
+
+    </body>
+</html>
