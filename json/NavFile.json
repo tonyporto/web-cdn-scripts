@@ -1,0 +1,85 @@
+{
+	"megamenu_content":
+	[
+        {
+            "MEGA MENU TITLES": "_______ TITLES FOR STUDENTS, MANAGERS, RESOURCES _______"
+		},
+			{
+				"students_1_title": "Students & Recruits",
+				"students_1_intro": "ExamFX offers the tools and help you need to succeed in your insurance or financial services career. Not only will we help you prepare, but we’ll also guarantee you’ll pass on your first attempt.",
+
+				"managers_1_title": "Managers & Recruiters",
+				"managers_1_intro": "We’ll make sure your people get licensed. Here’s how:",
+
+				"resources_1_title": "Resources",
+				"resources_1_intro": "If you are a manager, recruiter, or home office rep and would like a personalized demo from a member of our sales team,"
+			},
+        {
+            "STUDENTS": "___________________ THIS IS THE STUDENTS MEGA MENU ___________________"
+		},
+			{
+				"students_1_list1": "Unlike traditional classes, online access gives the ability to learn and study 24/7, no matter where you are.",
+				"students_1_list2": "Learn the way you learn best. We offer rich multimedia online courses, catering to many learning styles including visual and auditory.",
+				"students_1_list3": "Our materials are state and provider specific so you study only what you need to know, with simulations that look and feel like the actual exams."
+			},
+			{
+				"students_2_title": "Already Have A Course?"
+			},
+			{
+				"moneyback_guarentee1": "Our Money Back Guarantee",
+				"moneyback_guarentee2": "We guarantee each student will pass his or her exam on the first attempt. If a student does not pass the licensing exam within three days after scoring 80% or higher on the ExamFx Guarantee Exam, we will refund the cost of the course material, when provided a copy of the exam results."
+			},
+        {
+            "MANAGERS": "____________________ THIS IS THE MANAGERS MEGA MENU ____________________"
+		},
+			{
+				"managers_1_list1": "Our Money Back Guarantee",
+				"managers_1_list2": "'Pass or Money Back' guarantee.",
+				"managers_1_list3": "Manager Tracking",
+				"managers_1_list4": "You’ll know how your recruits are doing.",
+				"managers_1_list5": "Top-Notch Content",
+				"managers_1_list6": "Our licensing prep materials are always current.",
+				"managers_1_list7": "Exam Simulation",
+				"managers_1_list8": "We offer a vast amount of simulated exams.",
+				"managers_1_list9": "Customer Service",
+				"managers_1_list10": "We have reps available six days a week.",
+				"managers_1_list11": "Content experts",
+				"managers_1_list12": "On hand to answer state-specific questions."
+			},
+			{
+			
+				"managers_2_title": "Corporate/Home Office",
+				"managers_2_link": "http://missinglinks.com/schools",
+				"managers_2_intro": "Do you represent nationwide pre-licensing efforts for your company? Click here for information on how we can help your organization.",
+				"managers_2_1": "Schools",
+				"managers_2_link2": "http://missinglinks.com/schools",
+				"managers_2_2": "Do you operate a physical school with classroom training? Click here for information on how we can help your organization."
+			},
+			{
+				"managers_3_1": "On hand to answer state-specific questions",
+				"managers_3_2": "On hand to answer state-specific questions"
+			},
+        {
+            "COURSE CATALOG": "______________ THIS IS THE COURSE CATALOG MEGA MENU ______________"
+		},
+			{
+				"course_catalog_1": "Help understand State-specific laws, insurance concepts, policies.",
+				"course_catalog_2": "Learn State-specific laws & regulations for Property/Casualty.",
+				"course_catalog_3": "Licensing materials for financial securities topics.",
+				"course_catalog_4": "ExamFX offers a library of online Continuing Education courses."
+			},
+        {
+            "RESOURCES": "_______________ THIS IS THE RESOURCES MEGA MENU _______________"
+		},	
+		
+			{
+				"resources_1_imglink": "Students & Recruits",
+				"resources_1_introlink": "ExamFX offers the tools and help you need to succeed in your insurance or financial services career. Not only will we help you prepare, but we’ll also guarantee you’ll pass on your first attempt.",
+
+				"resources_2_menutitle1": "Support",
+				"resources_2_menutitle2": "Tools for Students",
+				"resources_2_menutitle3": "Industry Knowledge"
+			}
+    ]
+
+}
