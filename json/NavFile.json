@@ -2,22 +2,11 @@
 	"megamenu_content":
 	[
         {
-            "MEGA MENU TITLES": "_______ TITLES FOR STUDENTS, MANAGERS, RESOURCES _______"
+            "STUDENTS": "___________________ THIS IS THE STUDENTS MEGA MENU ___________________"
 		},
 			{
 				"students_1_title": "Students & Recruits",
 				"students_1_intro": "ExamFX offers the tools and help you need to succeed in your insurance or financial services career. Not only will we help you prepare, but we’ll also guarantee you’ll pass on your first attempt.",
-
-				"managers_1_title": "Managers & Recruiters",
-				"managers_1_intro": "We’ll make sure your people get licensed. Here’s how:",
-
-				"resources_1_title": "Resources",
-				"resources_1_intro": "If you are a manager, recruiter, or home office rep and would like a personalized demo from a member of our sales team,"
-			},
-        {
-            "STUDENTS": "___________________ THIS IS THE STUDENTS MEGA MENU ___________________"
-		},
-			{
 				"students_1_list1": "Unlike traditional classes, online access gives the ability to learn and study 24/7, no matter where you are.",
 				"students_1_list2": "Learn the way you learn best. We offer rich multimedia online courses, catering to many learning styles including visual and auditory.",
 				"students_1_list3": "Our materials are state and provider specific so you study only what you need to know, with simulations that look and feel like the actual exams."
@@ -33,6 +22,8 @@
             "MANAGERS": "____________________ THIS IS THE MANAGERS MEGA MENU ____________________"
 		},
 			{
+				"managers_1_title": "Managers & Recruiters",
+				"managers_1_intro": "We’ll make sure your people get licensed. Here’s how:",
 				"managers_1_list1": "Our Money Back Guarantee",
 				"managers_1_list2": "'Pass or Money Back' guarantee.",
 				"managers_1_list3": "Manager Tracking",
@@ -73,6 +64,9 @@
 		},	
 		
 			{
+				"resources_1_title": "Resources",
+				"resources_1_intro": "If you are a manager, recruiter, or home office rep and would like a personalized demo from a member of our sales team,",		
+			
 				"resources_1_imglink": "Students & Recruits",
 				"resources_1_introlink": "ExamFX offers the tools and help you need to succeed in your insurance or financial services career. Not only will we help you prepare, but we’ll also guarantee you’ll pass on your first attempt.",
 
