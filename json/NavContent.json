@@ -69,15 +69,20 @@
 		
 			{
 				"resources_1_title": "Resources",
-				"resources_1_intro": "If you are a manager, recruiter, or home office rep and would like a personalized demo from a member of our sales team,"
+				"resources_1_img": "http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/img/mega-menu-video.png",
+				"resources_1_intro": "If you are a manager, recruiter, or home office rep and would like a personalized demo from a member of our sales team,",
+				"resources_1_intro_link": "fill out a request form",
+				"resources_1_intro_link": "http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/img/mega-menu-video.png"
 			},
-			{			
-				"resources_1_imglink": "Students & Recruits",
-				"resources_1_introlink": "ExamFX offers the tools and help you need to succeed in your insurance or financial services career. Not only will we help you prepare, but we’ll also guarantee you’ll pass on your first attempt.",
-
+			{
 				"resources_2_menutitle1": "Support",
 				"resources_2_menutitle2": "Tools for Students",
 				"resources_2_menutitle3": "Industry Knowledge"
+			},
+			{
+				"resources_3_menutitle1": "Support",
+				"resources_3_menutitle2": "Tools for Students",
+				"resources_3_menutitle3": "Industry Knowledge"
 			}
     ]
 
