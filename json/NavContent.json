@@ -40,7 +40,7 @@
 				"managers_1_list10": "We have reps available six days a week.",
 				"managers_1_list11": "Content experts",
 				"managers_1_list12": "On hand to answer state-specific questions."
-			},
+				},
 			{
 			
 				"managers_2_title": "Corporate/Home Office",
@@ -70,19 +70,20 @@
 			{
 				"resources_1_title": "Resources",
 				"resources_1_img": "http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/img/mega-menu-video.png",
-				"resources_1_intro": "If you are a manager, recruiter, or home office rep and would like a personalized demo from a member of our sales team,",
-				"resources_1_intro_link": "fill out a request form",
-				"resources_1_intro_link": "http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/img/mega-menu-video.png"
+				"resources_1_video_src": "https://www.youtube.com/embed/fEQo_RuI5Hs",
+				"resources_1_intro": "If you are a manager, recruiter, or home office rep and would like a personalized demo from a member of our sales team, please",
+				"resources_1_link1": "fill out a request form",
+				"resources_1_anchor1": "fill out a request form"
 			},
 			{
 				"resources_2_menutitle1": "Support",
 				"resources_2_menutitle2": "Tools for Students",
-				"resources_2_menutitle3": "Industry Knowledge"
+				"resources_2_menutitle3": "Industry Knowledge",
+				"resources_2_menutitle3": "What's Happening at Exam"
 			},
 			{
-				"resources_3_menutitle1": "Support",
-				"resources_3_menutitle2": "Tools for Students",
-				"resources_3_menutitle3": "Industry Knowledge"
+				"resources_3_title": "About",
+				"resources_3_description": "Since 1996 we have helped over 3 million people further their careers in insurance and financial services industry. Let us help you."
 			}
     ]
 
