@@ -45,7 +45,7 @@ window.onload = function() {
 			<li><small> a, b, c, d, e, f, g, h, i</small></li>
 				
 			<li class="combos"> Unclear</li>	
-			<li class="duplicate">Duplicate</li>
+			<li class="duplicate">Injected Links</li>
 			<li class="left-over">NOT URLS</li>	
 		</ul>
 		
@@ -57,7 +57,7 @@ window.onload = function() {
 		<li style="font-size: 14px"><span class="bold title" style="line-height: 1;"> a, b, c, d, </br>e, f, g, h, i - </span>Microsoft excel spreadsheet cordinates used for URL redirects of current examfx.com website to new URL.<span style="font-size: 12px;">(EXAMPLE: An Excel Spreadsheet with URL "http://examfx.com/login" in cordinate <b>A4</b>. This would tell me to enter: "http://examfx.com/login" as a redirect on when creating page "/students/course-tour"</span> </li>
 			
 			<li><span class="bold title"> Suggestions - </span> I have some suggestions regarding these in purple.</li>	
-			<li><span class="bold title">Duplicate - </span>URLS in multiple places, unclear where they belong, they homeless floaters.</li>
+			<li><span class="bold title">Injected Link - </span>These links are injected, if orange it does not belong under this parent.</li>
 			<li><span class="bold title"># links - </span> These are non-links that do not belong in a sitemap. Used for me to know what will be injected into the menu.</li>		
 		</ul>
 		
@@ -82,9 +82,11 @@ window.onload = function() {
 					<li><a href="/students/webinars"><small>2.</small>Webinars</a></li>
 					
 					<li><a href="/students/course-tour"><small>3.</small>Course Tour</a></li>
-					<li><a href="/students/course-login"><small>4.</small>Course Login</a></li>
+					<li class="duplicate"><a href="/course-login"><small>4.</small>Course Login</a></li>
 					
-				<!-- li class="duplicate"><a href="/students/instructor-support"><small>5.</small>Instructor Support</a></li -->
+					
+					<li class="duplicate"><a href="/resources/becoming-an-agent">Become an Agent</a></li>
+				<!-- li class="duplicate"><a href="/resources/instructor-support"><small>5.</small>Instructor Support</a></li -->
 					
 						
 						<ul class="left-over">
@@ -95,7 +97,7 @@ window.onload = function() {
 							<li><a href="/students#new-to-examFx">New to ExamFx</a></li>
 							<li><a href="/students/webinars#schedule">Webinar Schedule</a></li>
 							
-							<li><a href="/resources/becoming-an-agent">Become an Agent</a></li>
+						
 						</ul>	
 						
 					</li>
@@ -190,12 +192,12 @@ window.onload = function() {
 					<li><a href="/resources/live-chat"><small>3.</small>Live Chat</a></li>
 					
 					
-					<li class="duplicate"><a href="/resources/instructor-support"><small>4.</small>Instructor Support</a></li>
+					<li><a href="/resources/instructor-support"><small>4.</small>Instructor Support</a></li>
 					<li><a href="/resources/additional-study-tools"><small>5.</small>Additional Study Tools</a></li>
 					<li><a href="/resources/state-rules-regulations"><small>6.</small>State Rules & regulations </a></li>	
 
-					<li class="combos"><a href="/resources/agents"><small>7.</small>Become an Agent</a></li>
-					<li class="combos"><a href="/resources/agents/toolkit"><small>8.</small>New Agent Toolkit</a>
+					<li><a href="/resources/agents"><small>7.</small>Become an Agent</a></li>
+					<!-- li class="combos"><a href="/resources/agents/toolkit"><small>8.</small>New Agent Toolkit</a -->
 						
 						<ul class="left-over">
 							<li><a href="/about/testimonials">Student Testimonials</a></li>
@@ -212,9 +214,9 @@ window.onload = function() {
 			<li><a href="/news"><small>i.</small>News</a>
 				<ul>
 					<li><a href="/news/blog">Blog</a></li>
-					<li class="combos"><a href="/news/press-release">Press Release</a></li>
-					<li class="combos"><a href="/news/events">Events</a></li>
-					<li class="combos"><a href="/news/Course-updates">Course Updates</a></li>
+					<li><a href="/news/press-release">Press Release</a></li>
+					<li><a href="/news/events">Events</a></li>
+					<li><a href="/news/Course-updates">Course Updates</a></li>
 				</ul>
 			</li>	
 		</ul>
