@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+	<!--[if lt IE 9]>
+		<html class="no-js ie6 ie7 ie8 ie8-and-down" lang="en-US">
+	<![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+    <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+-->
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/css/font-awesome.css">
+
+<link rel="stylesheet" href="calendar2.css">
+  <script type="text/javascript" src="jQuery.2.1.4.js"></script>
+      <script type="text/javascript" src="calendar.js"></script>
+
+<style>
+	select.cal-datepicker-year > option:not(:first-child) {
+		background: #f1f1f1;
+		color: #696969;
+	}
+
+	select.cal-datepicker-year > option:focus,
+	select.cal-datepicker-year > option:hover {background: red}
+	
+	
+.cal-state-default > span[event-content] {
+    position: relative;
+}
+span[event-content]:before {
+	content: "";
+	position: absolute;
+	border-bottom: 12px solid transparent;
+	border-left: 12px solid transparent;
+	
+	border-top: 12px solid #434343;
+	border-right: 12px solid transparent;
+	visibility: hidden;
+	margin-top: -32px;
+
+}
+
+span[event-content]:after {
+	position: absolute;
+	content: attr(event-content);
+	color: #FFF;
+	margin-top: -70px;
+
+	left: -30px;
+	margin-left: -50%;
+	background: #434343;
+	padding: 5px 10px;
+	border-radius: 6px;
+	white-space: nowrap;
+	visibility: hidden;
+	
+	height: 30px;
+	line-height: 1.2;
+}
+
+span[event-content]:before,
+span[event-content]:after {
+z-index: 100;
+}
+
+.cal-state-hover:hover > span[event-content]:before, 
+.cal-state-hover:hover > span[event-content]:after {
+    visibility: visible;
+	-moz-transition: visibility 0s linear .3s;
+}	
+	
+</style>
+</head>
+
+<body style="background-color: black">
+<input type="text" id="datepicker">
+
+<div class="events-details"></div>
+
+
+
+
+<script type="text/javascript">
+/* ====================================== *
+ * SETUP EVENTS
+ * ====================================== */
+var Event = function(text, className) {
+    this.text = text;
+    this.className = className;
+};
+
+var events = {};
+events[new Date("03/14/2016")] = new Event("Valentines Day", "current-event red");
+events[new Date("03/18/2016")] = new Event("Payday", "current-event red");
+
+console.dir(events);
+
+/* ====================================== *
+ * SETUP DATEPICKER
+ * ====================================== */
+$( "#datepicker" ).datepicker({
+
+	changeYear: true,
+	yearRange: "-22:+2",
+	dateFormat: "yy-mm-dd",
+
+
+    beforeShowDay: function(date) {
+        var event = events[date];
+        if (event) {
+            return [true, event.className, event.text];
+        }
+        else {
+            return [true, '', ''];
+        }
+    }
+
+
+
+});
+
+
+$(document.body).on('mouseenter', '.current-event' ,function(){
+  //  alert(1);
+    var eventTitle = $(this).attr('title'),
+		eventMonth = $(this).data('month'),
+		eventYear = $(this).data('year');
+
+	if ($(this).find(".event-content").length < 1){
+		
+		$(this).find("a").prepend('<span class="event-content" event-content="' + eventTitle + ' ' + '(' + eventMonth + '/' + eventYear + ')' +'"></span>');
+
+	}
+	
+	$('.pop').show();
+    
+});
+	
+
+
+/* ====================================== *
+ * DATEPICKER EVENTS
+ * ====================================== */
+$("#datepicker").on("change",function(){
+
+	var selected = $(this).val();
+	alert(selected);
+	
+});
+
+</script>
+
+
+</body>
+</html>

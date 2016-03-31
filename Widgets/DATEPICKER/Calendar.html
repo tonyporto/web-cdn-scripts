@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+	<!--[if lt IE 9]>
+		<html class="no-js ie6 ie7 ie8 ie8-and-down" lang="en-US">
+	<![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+    <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+-->
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/css/font-awesome.css">
+
+<link rel="stylesheet" href="calendar.css">
+  <script type="text/javascript" src="jQuery.2.1.4.js"></script>
+      <script type="text/javascript" src="calendar.js"></script>
+
+
+
+</head>
+
+<body style="background-color: black">
+<input type="text" id="datepicker">
+
+
+
+
+<script type="text/javascript">
+/* ====================================== *
+ * SETUP EVENTS
+ * ====================================== */
+var Event = function(text, className) {
+    this.text = text;
+    this.className = className;
+};
+
+var events = {};
+events[new Date("03/14/2016")] = new Event("Valentines Day", "red");
+events[new Date("03/18/2016")] = new Event("Payday", "red");
+
+console.dir(events);
+
+/* ====================================== *
+ * SETUP DATEPICKER
+ * ====================================== */
+$( "#datepicker" ).datepicker({
+
+	dateFormat: "yy-mm-dd",
+
+
+    beforeShowDay: function(date) {
+        var event = events[date];
+        if (event) {
+            return [true, event.className, event.text];
+        }
+        else {
+            return [true, '', ''];
+        }
+    }
+
+});
+
+/* ====================================== *
+ * DATEPICKER EVENTS
+ * ====================================== */
+$("#datepicker").on("change",function(){
+
+	var selected = $(this).val();
+	alert(selected);
+});
+
+/*
+$(document).ready(function() {
+	$(".cal-datepicker .cal-datepicker-calendar > tbody > tr > td").on("click", function() {
+
+		$(this).addClass("selected");
+	});
+});
+*/
+</script>
+
+
+</body>
+</html>

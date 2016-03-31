@@ -1,0 +1,128 @@
+#cal-datepicker-div,
+#cal-datepicker-div:before {
+	margin: 10px auto auto 10px;
+	clear: both;
+	display: block;
+}
+#cal-datepicker-div {
+	text-align: center;
+	display: none;
+	
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400; 
+	font-size: 1em;
+	
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	
+	color: #888;
+	background-color: rgba(255, 255, 255, 0.94);
+}
+
+.cal-datepicker-calendar > thead {
+	font-weight: 500; 
+}
+#cal-datepicker-div a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* ======================= *
+ * HEADER
+ * ======================= */
+.cal-widget-header {	
+	padding: 2%;
+	line-height: 3em;
+}
+.cal-datepicker-title {
+	font-size: 1.3em;
+	line-height: 2.3em;
+	font-weight: 700; 
+}
+
+select[class*="cal-datepicker-year"] {
+	padding: .3em 30px .3em 5px;
+	height: 2em;
+	margin: 0px auto 3px 6px;
+	color: white;
+	background-color: #ff9999;
+
+	vertical-align: middle;
+	-webkit-appearance: menulist;  
+}
+
+select[class*="cal-datepicker-year"],
+select[class*="cal-datepicker-year"]:focus {
+	outline: 0;
+	border: 0;
+}
+/* ======================= *
+ * TABLE
+ * ======================= */
+[class*="-calendar"] tr > th,
+[class*="-calendar"] a {
+	line-height: 1.5;
+}
+.cal-widget-header > a {
+	font-family: 'FontAwesome';
+	color: white;
+}
+.cal-datepicker-prev *,
+.cal-datepicker-next * {
+	visibility: hidden;
+	display: none;
+}
+.cal-datepicker-prev:before {
+	float: left;
+	content: "\f053";
+}
+.cal-datepicker-next:after {
+	float: right;
+	content: "\f054";
+}
+.cal-datepicker-title {
+	display: inline-block;
+}
+
+/* ======================= *
+ * BODY
+ * ======================= */
+[class*="-calendar"] {
+    display: table;
+	border-collapse: collapse;
+    border: 0; border-spacing: 0;
+}
+[class*="-calendar"] > tbody > tr {	
+	display: table-row;
+}
+[class*="-calendar"] > tbody > tr > td {
+    display: table-cell;
+    vertical-align: middle;
+	padding: 5px;
+}
+
+/* ======================= *
+ * COLORS
+ * ======================= */
+.cal-datepicker-calendar a {
+	color: #6a6d72;
+    padding: .7em;
+	height: 1.4em;
+	
+	width: 1.4em;
+	border-radius: 50%;
+	display: block;
+}
+[class*="-calendar"] > tbody > tr:nth-of-type(odd) {
+    background-color: #fafafa;
+}
+.cal-widget-header,
+[class*="-calendar"] td.red > a,
+[class*="-calendar"] td.selected > a {
+	background-color: #ff6766;
+	color: white;
+}
+[class*="-calendar"] > thead,
+[class*="-calendar"] tr > td:not(.red):not(.selected) > a:hover {
+	background-color: #e3e3e3;
+}

@@ -1,0 +1,112 @@
+#cal-datepicker-div,
+#cal-datepicker-div:before {
+	margin: 10px auto auto 10px;
+}
+#cal-datepicker-div:before {
+	clear: both;
+	display: block;
+}
+#cal-datepicker-div {
+	text-align: center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	background-color: rgba(255, 255, 255, 0.94);
+	display: none;
+	
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400; 
+	font-size: 1em;
+}
+
+.cal-datepicker-title {
+	font-size: 1.3em;
+	line-height: 2.3em;
+	font-weight: 700; 
+}
+.cal-datepicker-calendar > thead {
+	font-weight: 500; 
+}
+#cal-datepicker-div a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* ======================= *
+ * HEADER
+ * ======================= */
+.cal-widget-header {	
+	padding: 2%;
+	line-height: 3em;
+}
+[class*="-calendar"] tr > th {
+	line-height: 1.5;
+}
+.cal-widget-header > a {
+	font-family: 'FontAwesome';
+}
+.cal-datepicker-prev *,
+.cal-datepicker-next * {
+	visibility: hidden;
+	display: none;
+}
+.cal-datepicker-prev {
+	float: left;
+}
+.cal-datepicker-next {
+	float: right;
+}
+.cal-datepicker-prev:before {
+	content: "\f053";
+}
+.cal-datepicker-next:after {
+	content: "\f054";
+}
+.cal-datepicker-title {
+	display: inline-block;
+}
+
+/* ======================= *
+ * BODY
+ * ======================= */
+[class*="-calendar"] {
+    display: table;
+	border-collapse: collapse;
+    border: 0;
+    border-spacing: 0;
+}
+[class*="-calendar"] > tbody > tr {	
+	display: table-row;
+}
+[class*="-calendar"] > tbody > tr > td {
+    display: table-cell;
+    vertical-align: middle;
+    padding: .7em;
+	height: 1.4em;
+	width: 1.4em;
+	border-radius: 50%;
+}
+
+/* ======================= *
+ * COLORS
+ * ======================= */
+.cal-datepicker-calendar a {
+	color: #6a6d72;
+}
+[class*="-calendar"] td.red > a,
+[class*="-calendar"] td.selected > a,
+.cal-widget-header > a {
+	color: white !important;
+}
+[class*="-calendar"] > tbody > tr:nth-of-type(odd) {
+    background-color: #f1f1f1;
+}
+.cal-widget-header,
+[class*="-calendar"] tr > td.red,
+[class*="-calendar"] tr > td.selected {
+	background-color: #ff6766;
+	color: white;
+}
+[class*="-calendar"] > thead,
+[class*="-calendar"] tr > td:not(.red):not(.selected):hover {
+	background-color: #e3e3e3;
+}
