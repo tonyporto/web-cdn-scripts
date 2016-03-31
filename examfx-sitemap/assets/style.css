@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 /* ------------------------------------------------------------
 	Reset Styles (from meyerweb.com)
 ------------------------------------------------------------ */
@@ -20,7 +21,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-family: inherit;
 	vertical-align: baseline;
 }
-
+body {
+	font-family: 'Open Sans', sans-serif;
+}
 /* ------------------------------------------------------------
 	NUMBER OF COLUMNS: Adjust .primaryNav li to set the number
 	of columns required in your site map. The default is 
