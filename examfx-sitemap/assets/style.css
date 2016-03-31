@@ -203,7 +203,11 @@ a:visited:before {
 /* ------------------------------------------------------------
 	General Styles
 ------------------------------------------------------------ */
-
+.header-doc-left {
+	float: left;
+	z-index: 3;
+	margin-top: -36px;
+}
 .header-docs {
 	
 	float: right;
