@@ -195,6 +195,32 @@ a:visited:before {
 	General Styles
 ------------------------------------------------------------ */
 
+.header-docs {
+	
+	float: right;
+	z-index: 3;
+	margin-top: -92px;
+}
+.excel-docs {
+	cursor: pointer;
+	display: block;
+	color: #52b529;
+	vertical-align: top;
+	font-size: 16px;
+	height: 30px;
+	line-height: 2;
+	font-weight: bold;
+}
+.excel-docs:after {
+	content: "";
+	margin-left: .36em;
+	display: inline-block;
+	float: right;
+	height: 24px;
+	width: 24px;
+	background: url('images/excel-doc.png') no-repeat;
+}
+
 body {
 	background: white;
 	color: black;
@@ -216,6 +242,7 @@ h1 {
 
 h1,
 .bold,
+em,
 .table-of-contents > li,
 .primaryNav li a,
 #utilityNav li a {
@@ -313,7 +340,7 @@ a:visited:before {
 }
 
 /* --------	Second Level --------- */
-
+.primaryNav li li.parent:last-child,
 .primaryNav li li {
 	width: 100%;
 	clear: left;
@@ -332,7 +359,8 @@ a:visited:before {
 	background-color: #e7f1d7;
 }
 .primaryNav li li.parent,
-.primaryNav li li:first-child {
+.primaryNav li li:first-child,
+.primaryNav.col6.mid-4 li.col-mid-4 > ul > li:last-child {
 	padding-top: 30px;
 }
 .primaryNav li li:last-child {
