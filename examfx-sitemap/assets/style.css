@@ -464,3 +464,48 @@ a:visited:before {
 	font-size: 9px;
 	margin-bottom: 3px;
 }
+
+/* ===================================== *
+ * TOOLTIP NAV *
+ * ===================================== */
+span[nav-title] {
+    position: relative;
+}
+[nav-title]:before {
+	content: "";
+	position: absolute;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-right: 12px solid #434343;
+    left: 101%;
+    margin-top: 1em;
+	visibility: hidden;
+}
+[nav-title]:after {
+	position: absolute;
+	content: attr(nav-title);
+	color: #FFF;
+    left: 101%;
+    margin-left: 24px;
+    margin-top: .5em;
+	background: #434343;
+	padding: 5px 10px;
+	border-radius: 6px;
+	white-space: nowrap;
+	visibility: hidden;
+	
+	height: 30px;
+	line-height: 30px;
+}
+
+[nav-title]:before,
+[nav-title]:after {
+z-index: 100;
+}
+
+li:hover span[nav-title]:before, 
+li:hover span[nav-title]:after {
+    visibility: visible;
+	-moz-transition: visibility 0s linear .3s;
+}
