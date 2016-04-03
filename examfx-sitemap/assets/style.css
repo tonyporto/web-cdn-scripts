@@ -498,6 +498,16 @@ a:visited:before {
 span[nav-title] {
     position: relative;
 	float: left;
+	
+	margin-left: 90%;
+	right: 12px;
+	
+	
+	background: url('images/link.png') bottom right no-repeat;
+	width: 20px;
+	height: 20px;
+	
+	
 }
 
 [nav-title]:before {
@@ -508,24 +518,28 @@ span[nav-title] {
 	border-right: 12px solid transparent;
 	visibility: hidden;
 	
-	margin-top: 10px;
+	padding-top: 20px;
 	
-	left: 50%;
-	right: -6px;
+	right: 0;
 	
-	margin-left: 100px;
-	
-
 }
 
 [nav-title]:after {
 	position: absolute;
 	content: attr(nav-title);
 	color: #FFF;
+	/*
 	margin-top: 20px;
+*/
 
-	margin-left: -50%;
-	left: -50%;
+	
+	font-size: 80%;
+	width: 200px;
+	margin-left: -180px;
+	
+	top: 30px;
+	
+	left: 0;
 	
 	background: #434343;
 	opacity: .96;
@@ -544,8 +558,10 @@ span[nav-title] {
 z-index: 100;
 }
 
-li > a:hover span[nav-title]:before, 
-li > a:hover span[nav-title]:after {
+span[nav-title]:hover:before, 
+span[nav-title]:hover:after
+/*li > a:hover span[nav-title]:before, 
+li > a:hover span[nav-title]:after*/ {
     visibility: visible;
 	-moz-transition: visibility 0s linear .3s;
 }
