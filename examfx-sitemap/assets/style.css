@@ -178,19 +178,19 @@ body {
 .primaryNav .duplicate > a {background-color:#f35719; border-color: #fa5513;}
 
 
-.combos > a,
-.primaryNav.table-of-contents > .combos,
-.primaryNav .combos:hover > a,
-.primaryNav .combos > a {background-color: #c61572; border-color: #bb337b; }
+.injected > a,
+.primaryNav.table-of-contents > .injected,
+.primaryNav .injected:hover > a,
+.primaryNav .injected > a {background-color: #c61572; border-color: #bb337b; }
 
-.combos > a,
+.injected > a,
 .duplicate > a,
-.primaryNav .combos > a,
+.primaryNav .injected > a,
 .primaryNav .duplicate > a {color: white;}
 
 small {margin-left: -1em; font-size: 92%; padding-right: 5px; color: red}
 
-.combos small,
+.injected small,
 .duplicate small {
 	color: black
 }

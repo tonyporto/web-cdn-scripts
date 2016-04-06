@@ -44,8 +44,8 @@ window.onload = function() {
 			<li class="level-3">Level 3</li>
 			<li><small> a, b, c, d, e, f, g, h, i</small></li>
 				
-			<li class="combos"> Unclear</li>	
-			<li class="duplicate">Injected Links</li>
+			<li class="injected"> Injected Into Mega Menu</li>	
+		<li class="duplicate">COMBOS </li>
 			<li class="left-over">NOT URLS</li>	
 		</ul>
 		
@@ -56,8 +56,8 @@ window.onload = function() {
 			<li><span class="bold title">Level 3 - </span>All 3rd level links (childs of submenus) are this color. Ex: <em>/course-catalog/property-casualty/flex</em></li>
 		<li style="font-size: 14px"><span class="bold title" style="line-height: 1;"> a, b, c, d, </br>e, f, g, h, i - </span>Microsoft excel spreadsheet cordinates used for URL redirects of current examfx.com website to new URL.<span style="font-size: 12px;">(EXAMPLE: An Excel Spreadsheet with URL "http://examfx.com/login" in cordinate <b>A4</b>. This would tell me to enter: "http://examfx.com/login" as a redirect on when creating page "/students/course-tour"</span> </li>
 			
-			<li><span class="bold title"> Suggestions - </span> I have some suggestions regarding these in purple.</li>	
-			<li><span class="bold title">Injected Link - </span>These links are injected, if orange it does not belong under this parent.</li>
+		<li><span class="bold title">Injected Link - </span>These links are injected, if orange it does not belong under this parent. </li>	
+			<li><span class="bold title">COMBOS - </span> Purple are similar suggesting maybe to be combined.</li>
 			<li><span class="bold title"># links - </span> These are non-links that do not belong in a sitemap. Used for me to know what will be injected into the menu.</li>		
 		</ul>
 		
@@ -78,14 +78,14 @@ window.onload = function() {
 			
 			<li><a href="/students"><small>a.</small>Students</a>
 				<ul>
-				<li class="duplicate"><a href="/about/testimonials"><small>1.</small>Testimonials</a></li>
-					<li><a href="/students/webinars"><small>2.</small>Webinars</a></li>
+				<li><a href="/students/testimonials"><small>1.</small>Testimonials</a></li>
+					<li class="injected"><a href="/resources/instructor-support/webinars"><small>2.</small>Webinars</a></li>
 					
-					<li><a href="/students/course-tour"><small>3.</small>Course Tour</a></li>
-					<li class="duplicate"><a href="/course-login"><small>4.</small>Course Login</a></li>
+					<li class="injected"><a href="/resources/course-tour"><small>3.</small>Course Tour</a></li>
+					<li class="injected"><a href="/course-login"><small>4.</small>Course Login</a></li>
 					
 					
-					<li class="duplicate"><a href="/resources/becoming-an-agent">Become an Agent</a></li>
+					<li class="injected"><a href="/resources/becoming-an-agent">Become an Agent</a></li>
 				<!-- li class="duplicate"><a href="/resources/instructor-support"><small>5.</small>Instructor Support</a></li -->
 					
 						
@@ -95,7 +95,7 @@ window.onload = function() {
 							
 							<li><a href="/course-catalog">Courses We Offer</a></li>
 							<li><a href="/students#new-to-examFx">New to ExamFx</a></li>
-							<li><a href="/students/webinars#schedule">Webinar Schedule</a></li>
+							<li class="duplicate"><a href="/resources/instructor-support/webinars#schedule">Webinar Schedule</a></li>
 							
 						
 						</ul>	
@@ -109,7 +109,7 @@ window.onload = function() {
 				<ul>
 					<li><a href="/managers/enroll-students"><small>1.</small>Enroll Students</a></li>
 					<li><a href="/managers/track-students"><small>2.</small>Track Students</a></li>
-					<li class="duplicate"><a href="/about/testimonials"><small>3.</small>Testimonials</a></li>
+					<li><a href="/managers/testimonials"><small>3.</small>Testimonials</a></li>
 					<li><a href="/managers/volume-licensing"><small>4.</small>Volume Licensing</a>
 
 						<ul class="left-over">
@@ -192,16 +192,21 @@ window.onload = function() {
 					<li><a href="/resources/live-chat"><small>3.</small>Live Chat</a></li>
 					
 					
-					<li><a href="/resources/instructor-support"><small>4.</small>Instructor Support</a></li>
+					
+					<li><a href="/resources/course-tour"><small>4.</small>Course Tour</a></li>
+					
 					<li><a href="/resources/additional-study-tools"><small>5.</small>Additional Study Tools</a></li>
 					<li><a href="/resources/state-rules-regulations"><small>6.</small>State Rules & regulations </a></li>	
 
-					<li><a href="/resources/agents"><small>7.</small>Become an Agent</a></li>
-					<!-- li class="combos"><a href="/resources/agents/toolkit"><small>8.</small>New Agent Toolkit</a -->
+					<li class="duplicate"><a href="/resources/agents"><small>7.</small>Become an Agent</a></li>
+					<li class="duplicate"><a href="/resources/agents/toolkit"><small>8.</small>New Agent Toolkit</a>
+					
+						<li class="parent"><a href="/resources/instructor-support"><small>9.</small>Instructor Support</a>
+
 						
-						<ul class="left-over">
+						<ul>
 							
-							<li><a href="/students/webinars">Webinars</a></li>
+							<li><a href="/resources/instructor-support/webinars">Webinars</a></li>
 						</ul>
 						
 					</li>
