@@ -94,24 +94,37 @@
 		},	
 		
 			{
-				"students_resources_1": "Resources",
-				"students_resources_2": "http://tonyporto.github.io/web-cdn-scripts/img/mega-menu-video.png",
-				"students_resources_3": "https://www.youtube.com/embed/fEQo_RuI5Hs",
-				"students_resources_4": "If you are a manager, recruiter, or home office rep and would like a personalized demo from a member of our sales team, please",
-				"students_resources_5": "http://examfx.com/contact",
-				"students_resources_6": "fill out a request form"
+				"students_resources_link1": "/resources/insurance-agents",		
+				"students_resources_link2": "/resources/insurance-agents/agent-toolkit",
+				"students_resources_link3": "/resources/licensing-requirements",		
+				"students_resources_link4": "/resources/instructor-support",
+				"students_resources_link5": "/resources/faq",
+				"students_resources_link6": "/contact"
+			},
+			{
+				"students_resources_1": "Becoming an Agent",
+				"students_resources_2": "New Agent Toolkit",
+				"students_resources_3": "Licensing Requirements",
+				"students_resources_4": "Instructor Support",
+				"students_resources_5": "FAQ",
+				"students_resources_6": "Contact"
 			},
         {
             "MANAGERS RESOURCES": "_______________ THIS IS THE RESOURCES MEGA MENU _______________"
 		},	
-		
 			{
-				"resources_1_title": "Resources",
-				"resources_1_img": "http://cdn.rawgit.com/tonyporto/web-cdn-scripts/gh-pages/img/mega-menu-video.png",
-				"resources_1_video_src": "https://www.youtube.com/embed/fEQo_RuI5Hs",
-				"resources_1_intro": "If you are a manager, recruiter, or home office rep and would like a personalized demo from a member of our sales team, please",
-				"resources_1_link1": "http://examfx.com/contact",
-				"resources_1_anchor1": "fill out a request form"
+				"managers_resources_link1": "/resources/course-tour",		
+				"managers_resources_link2": "/resources/licensing-requirements",
+				"managers_resources_link3": "/news",			
+				"managers_resources_link4": "/resources/faq",
+				"managers_resources_link5": "/contact"
+			},
+			{
+				"managers_resources_1": "Course Tour",
+				"managers_resources_2": "Licensing Requirements",
+				"managers_resources_3": "ExamFX News",
+				"managers_resources_4": "FAQ",
+				"managers_resources_5": "Contact"
 			}
     ]
 
