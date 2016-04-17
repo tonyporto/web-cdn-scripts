@@ -90,7 +90,8 @@
 				"resources_2_menutitle4": "What's Happening at Exam"
 			},
         {
-            "STUDENT RESOURCES": "_______________ THIS IS THE RESOURCES MEGA MENU _______________"
+            "STUDENT RESOURCES": "_______________ THIS IS THE RESOURCES MEGA MENU _______________",
+			"_": "STUDENT RESOURCES"
 		},	
 		
 			{
@@ -110,7 +111,8 @@
 				"students_resources_6": "Contact"
 			},
         {
-            "MANAGERS RESOURCES": "_______________ THIS IS THE RESOURCES MEGA MENU _______________"
+            "MANAGERS RESOURCES": "_______________ THIS IS THE RESOURCES MEGA MENU _______________",
+			"_": "MANAGERS RESOURCES"
 		},	
 			{
 				"managers_resources_link1": "/resources/course-tour",		
