@@ -48,10 +48,7 @@
 				"managers_2_1": "Schools",
 				"managers_2_2": "Do you operate a physical school with classroom training? Click here for information on how we can help your organization."
 			},
-			{
-				"resources_3_title": "About",
-				"resources_3_description": "Since 1996 we have helped over 3 million people further their careers in insurance and financial services industry. Let us help you."
-			},
+
         {
             "COURSE CATALOG": "______________ THIS IS THE COURSE CATALOG MEGA MENU ______________"
 		},
@@ -89,6 +86,7 @@
 				"resources_2_menutitle3": "Industry Knowledge",
 				"resources_2_menutitle4": "What's Happening at Exam"
 			},
+
         {
             "STUDENT RESOURCES": "_______________ THIS IS THE RESOURCES MEGA MENU _______________",
 			"_": "STUDENT RESOURCES"
@@ -127,6 +125,24 @@
 				"managers_resources_3": "ExamFX News",
 				"managers_resources_4": "FAQ",
 				"managers_resources_5": "Contact"
+			},
+        {
+            "RESOURCES ABOUT": "_______________ THIS IS THE RESOURCES MEGA MENU _______________",
+			"_": "RESOURCES ABOUT"
+		},	
+			{
+				"resources_about_link1": "/resources/course-tour",		
+				"resources_about_link2": "/resources/licensing-requirements",
+				"resources_about_link3": "/news",			
+				"resources_about_link4": "/resources/faq",
+				"resources_about_link5": "/contact"
+			},
+			{
+				"resources_about_1": "Course Tour",
+				"resources_about_2": "Licensing Requirements",
+				"resources_about_3": "ExamFX News",
+				"resources_about_4": "FAQ",
+				"resources_about_5": "Contact"
 			}
     ]
 
