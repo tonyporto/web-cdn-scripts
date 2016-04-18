@@ -144,14 +144,31 @@
 				"resources_about_link6": "/resources/faq",
 				"resources_about_link7": "/contact"
 			},
+			
 			{
-				"resources_about_1": "Testimonials",
-				"resources_about_2": "Case Studies",
-				"resources_about_3": "Community Involvement",
-				"resources_about_4": "Why Choose ExamFX",
-				"resources_about_5": "Industry Affiliations",
-				"resources_about_6": "FAQ",
-				"resources_about_7": "Contact"
+			"resources_about_text": [
+				{
+					"anchor": "Testimonials"
+				},
+				{
+					"anchor": "Case Studies"
+				},
+				{
+					"anchor": "Community Involvement"
+				},
+				{
+					"anchor": "Why Choose ExamFX"
+				},
+				{
+					"anchor": "Industry Affiliations"
+				},
+				{
+					"anchor": "FAQ"
+				},
+				{
+					"anchor": "Contact"
+				}
+				]
 			}
     ]
 
