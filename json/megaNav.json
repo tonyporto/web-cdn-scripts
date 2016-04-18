@@ -147,27 +147,27 @@
 			
 			{
 			"resources_about_text": [
-				{
-					"anchor": "Testimonials"
-				},
-				{
-					"anchor": "Case Studies"
-				},
-				{
-					"anchor": "Community Involvement"
-				},
-				{
-					"anchor": "Why Choose ExamFX"
-				},
-				{
-					"anchor": "Industry Affiliations"
-				},
-				{
-					"anchor": "FAQ"
-				},
-				{
-					"anchor": "Contact"
-				}
+					{
+						"anchor": "Testimonials"
+					},
+					{
+						"anchor": "Case Studies"
+					},
+					{
+						"anchor": "Community Involvement"
+					},
+					{
+						"anchor": "Why Choose ExamFX"
+					},
+					{
+						"anchor": "Industry Affiliations"
+					},
+					{
+						"anchor": "FAQ"
+					},
+					{
+						"anchor": "Contact"
+					}
 				]
 			}
     ]
