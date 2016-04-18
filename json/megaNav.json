@@ -101,12 +101,26 @@
 				"students_resources_link6": "/contact"
 			},
 			{
-				"students_resources_1": "Becoming an Agent",
-				"students_resources_2": "New Agent Toolkit",
-				"students_resources_3": "Licensing Requirements",
-				"students_resources_4": "Instructor Support",
-				"students_resources_5": "FAQ",
-				"students_resources_6": "Contact"
+			"students_resources_anchor": [
+					{
+						"anchor": "Becoming an Agent"
+					},
+					{
+						"anchor": "New Agent Toolkit"
+					},
+					{
+						"anchor": "Licensing Requirements"
+					},
+					{
+						"anchor": "Instructor Support"
+					},
+					{
+						"anchor": "FAQ"
+					},
+					{
+						"anchor": "Contact"
+					}
+				]
 			},
         {
             "MANAGERS RESOURCES": "_______________ THIS IS THE RESOURCES MEGA MENU _______________",
@@ -120,11 +134,23 @@
 				"managers_resources_link5": "/contact"
 			},
 			{
-				"managers_resources_1": "Course Tour",
-				"managers_resources_2": "Licensing Requirements",
-				"managers_resources_3": "ExamFX News",
-				"managers_resources_4": "FAQ",
-				"managers_resources_5": "Contact"
+			"managers_resources_anchor": [
+					{
+						"anchor": "Course Tour"
+					},
+					{
+						"anchor": "Licensing Requirements"
+					},
+					{
+						"anchor": "ExamFX News"
+					},
+					{
+						"anchor": "FAQ"
+					},
+					{
+						"anchor": "Contact"
+					}
+				]
 			},
         {
             "RESOURCES ABOUT": "_______________ THIS IS THE RESOURCES MEGA MENU _______________",
@@ -146,7 +172,7 @@
 			},
 			
 			{
-			"resources_about_text": [
+			"resources_about_anchor": [
 					{
 						"anchor": "Testimonials"
 					},
