@@ -136,18 +136,22 @@
 
 			},
 			{
-				"resources_about_link1": "/resources/course-tour",
-				"resources_about_link2": "/resources/licensing-requirements",
-				"resources_about_link3": "/news",
-				"resources_about_link4": "/resources/faq",
-				"resources_about_link5": "/contact"
+				"resources_about_link1": "/about/testimonials",
+				"resources_about_link2": "/about/case-studies",
+				"resources_about_link3": "/about/community-involvement",
+				"resources_about_link4": "/about/why-choose-examfx",
+				"resources_about_link5": "/about/affiliations",
+				"resources_about_link6": "/resources/faq",
+				"resources_about_link7": "/contact"
 			},
 			{
-				"resources_about_1": "Course Tour",
-				"resources_about_2": "Licensing Requirements",
-				"resources_about_3": "ExamFX News",
-				"resources_about_4": "FAQ",
-				"resources_about_5": "Contact"
+				"resources_about_1": "Testimonials",
+				"resources_about_2": "Case Studies",
+				"resources_about_3": "Community Involvement",
+				"resources_about_4": "Why Choose ExamFX",
+				"resources_about_5": "Industry Affiliations",
+				"resources_about_6": "FAQ",
+				"resources_about_7": "Contact"
 			}
     ]
 
