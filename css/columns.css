@@ -18,9 +18,7 @@
  * =========================== */
 .col-1 {
 	width: 98%;
-	*width: 97.93%;
 }
-
 .col-3-4 {
     width: 73%;
 }
@@ -124,7 +122,7 @@
 	[class*="col-"] {
 		 width: 98%;
 	}
-	.column {
+	[class*="column-"] {
 		 width: 100%;
 	}
 
