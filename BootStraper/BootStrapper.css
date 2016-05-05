@@ -368,6 +368,7 @@ h5 {
     font-size: 1.2em;
 }
 
+
 h2,
 h3,
 h4,
@@ -381,10 +382,10 @@ h6 {
 }
 
 h1,
-h2,
-h4,
-h5,
-h6 {
+h2:not(.centered),
+h4:not(.centered),
+h5:not(.centered),
+h6:not(.centered) {
 	margin-top: 10px;
 }
 
@@ -448,7 +449,7 @@ q:before, q:after {
 	background-color: #fff;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) {
+.color-light-grey-bg {
     background-color: #f9f9f9;
 }
 
@@ -1273,6 +1274,14 @@ cite,
 /* ====================================================================
  * WIDTHS
  ==================================================================== */
+[class*='col-'] {
+	text-align: center;
+	display: block;
+	_display: inline;
+	float: left;
+	margin: 0 0 3% 2%;
+}
+
 .col-1 {
 	width: 98%;
 	*width: 97.93%;
@@ -1282,7 +1291,6 @@ cite,
 .form-group {
     width: 96%;
 }
-
 
 .sidebars.small article {
     width: 75%;
@@ -1377,18 +1385,6 @@ cite,
 	*width: 7.93%;
 }
 
-/* ========================================================================================================================================= *
- * FOR DINASOUR BROWSER SUPPORT - ADD BELOW CLASSES INDIVIDUALLY WHERE "[class*='one-']"
- * .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-2-3, .col-1
- * ========================================================================================================================================= */
-
-[class*='col-'] {
-	text-align: center;
-	display: block;
-	_display: inline;
-	float: left;
-	margin: 0 0 3% 2%;
-}
 
 /* ======================================= *
  * PANEL

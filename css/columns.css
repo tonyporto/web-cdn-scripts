@@ -1,0 +1,131 @@
+.columns {
+	clear: both;
+	padding: 0px;
+	margin-left: -2%;
+	width:102%;
+	overflow: visible;
+    *zoom:1; /* For IE 6/7 */
+}
+
+[class*="col-"] {
+	text-align: center;
+	display: block;
+	float: left;
+	margin: 0 0 3% 2%;
+}
+/* =========================== *
+ * WIDTHS
+ * =========================== */
+.col-1 {
+	width: 98%;
+	*width: 97.93%;
+}
+
+.col-3-4 {
+    width: 73%;
+}
+
+.col-2-3 {
+	width: 64.67%;
+}
+
+.col-2 {
+	width: 48%;
+}
+.col-3 {
+	width: 31.33%;
+}
+
+.col-4 {
+	width: 23%;
+}
+
+.col-5 {
+	width: 18%;
+}
+
+.col-6 {
+	width: 14.66%;
+}
+.col-7 {
+	width: 12.28%;
+}
+
+.col-8 {
+	width: 10.5%;
+}
+.col-9 {
+	width: 9.1%;
+}
+.col-10 {
+	width: 8%;
+}
+
+
+/* ========================== *
+ * ONE ROW COLUMNS *
+ * ========================== */
+.column-2-3 {
+	width: 66%;
+}
+.column-2 {
+	width: 49%;
+}
+.column-3 {
+	width: 32%;
+}
+.column-4 {
+	width: 23.5%;
+}
+.column-5 {
+	width: 18.4%;
+}
+
+/* ============================================ *
+ * MIN-WIDTH: 768px	to	960px
+ * ============================================ */
+@media all and (min-width: 768px) and (max-width: 960px) {
+
+    .col-4 {
+		width:  48%;
+	}
+    .col-6 {
+		width: 31.33%;
+	}
+    .col-8 {
+		width: 23%;
+	}
+    .col-10 {
+		width: 18%;
+	}
+
+	/* ONE ROW COLUMNS */
+	.column-4 {
+		width:  49%;
+	}
+	.column-6 {
+		width: 32%;
+	}
+    .column-8 {
+		width: 23.25%;
+	}
+	.column-10 {
+		width: 18.4%;
+	}
+
+}
+
+/* ============================================ *
+ * MAX-WIDTH: 767px
+ * ============================================ */
+@media all and (max-width:767px) {
+
+	/* COLUMNS ROW */
+	[class*="col-"] {
+		 width: 98%;
+	}
+	.column {
+		 width: 100%;
+	}
+
+}
