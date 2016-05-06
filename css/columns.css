@@ -14,6 +14,7 @@
 	float: left;
 	margin: 0 0 3% 2%;
 }
+
 /* =========================== *
  * WIDTHS
  * =========================== */
@@ -64,6 +65,9 @@
 /* ========================== *
  * ONE ROW COLUMNS *
  * ========================== */
+.first-col {
+	margin-left: 0;
+}
 .column-2-3 {
 	width: 66%;
 }
@@ -103,6 +107,9 @@
 	}
 
 	/* ONE ROW COLUMNS */
+	.second-row {
+		margin-left: 0;
+	}
 	.column-4 {
 		width:  49%;
 	}
