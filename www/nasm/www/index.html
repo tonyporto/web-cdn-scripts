@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+	<!--[if lt IE 9]>
+		<html class="no-js ie6 ie7 ie8 ie8-and-down" lang="en-US">
+	<![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="../assets/css/main.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+  </head>
+  <body>
+
+<header class="section section-o text-center header-alert header-bg-section">
+		<div class="container p-y-1 p-x-0">
+			
+			<div class="col-lg-8 col-md-7 col-sm-6 text-xs-hide text-center center-sm-block header-cta font-bold">
+				
+
+
+
+			</div>
+			
+			<nav class="col-lg-4 col-md-5 col-sm-6 col-xs-12 text-center text-sm-right center-sm-block login-panel color-white">
+				
+<span id="ecommerce_login_TBAB679D6001">
+
+
+<!-- LOGIN PANEL -->
+<ul id="ecommerce_login_TBAB679D6001_ctl00_ctl00_loginPanel" class="loginPanel login-widget text-md-right m-a-0 list-inline list-unstyled text-uppercase section-o size14" style="max-height:28px;padding:0;margin:0;visibility:visible;">
+	<li class="icon-login login p-l-0">
+		<span>
+			<input type="submit" name="ctl00$ecommerce_login$TBAB679D6001$ctl00$ctl00$loginBtn" value="Login" id="ecommerce_login_TBAB679D6001_ctl00_ctl00_loginBtn" class="p-a-0 color-bg-transparent no-border">
+		</span>
+	</li>
+
+		<li class="p-x-0">/</li>
+
+	<li>
+		<input type="submit" name="ctl00$ecommerce_login$TBAB679D6001$ctl00$ctl00$registerBtn" value="Register" id="ecommerce_login_TBAB679D6001_ctl00_ctl00_registerBtn" class="p-a-0 color-bg-transparent no-border">
+	</li>
+</ul>
+<!-- LOGIN PANEL -->
+
+
+<!-- LOGOUT PANEL -->
+<ul id="ecommerce_login_TBAB679D6001_ctl00_ctl00_logoutPanel" class="logoutPanel login-widget text-md-right m-a-0 list-inline list-unstyled text-uppercase color-active section-o size14 hidden hidden-sm hidden-xs" style="max-height:28px;padding:0;margin:0;visibility:hidden;">
+	<li class="icon-logout logOut p-l-0">
+		<span>
+			<span id="ecommerce_login_TBAB679D6001_ctl00_ctl00_messageLabel" class="no-border color-bg-transparent messageLabel"></span>
+		</span>
+	</li>
+
+		<li class="p-x-0">/</li>
+
+	<li>
+		<input type="button" name="ctl00$ecommerce_login$TBAB679D6001$ctl00$ctl00$logoutBtn" value="Logout" onclick="javascript:__doPostBack('ctl00$ecommerce_login$TBAB679D6001$ctl00$ctl00$logoutBtn','')" id="ecommerce_login_TBAB679D6001_ctl00_ctl00_logoutBtn" class="p-a-0 color-bg-transparent no-border">
+	</li>
+</ul>
+<!-- LOGOUT PANEL -->
+
+
+
+<!-- script>
+    $(document).ready(function () {
+        $.ajax({
+            url: window.location.protocol + "//" + window.location.host + '/UAInterrogator.aspx/LoginCheck',
+            type: "POST",
+            dataType: "json",
+            data: '{name:"test"}',
+            contentType: 'application/json; charset=utf-8',
+            cache: false,
+            success: function (data) {
+
+                if ((typeof data.d != 'undefined') && data.d) {
+                    $('.messageLabel').html(data.d);
+                    $('.loginPanel').addClass("hidden hidden-sm hidden-xs");
+                    $('.logoutPanel').removeClass("hidden hidden-sm hidden-xs")
+
+                } else {
+                    $('.loginPanel').removeClass("hidden hidden-sm hidden-xs")
+                    $('.logoutPanel').addClass("hidden hidden-sm hidden-xs");
+
+                };
+
+            },
+            error: function (xhr) {
+            }
+        });
+		
+		
+});
+</script -->
+
+</span><span id="ecommerce_login_TBAB679D6002"><ul id="ecommerce_login_TBAB679D6002_ctl00_ctl00_mSiteCartLinkPanel" class="text-md-right m-a-0 list-inline list-unstyled login-widget text-uppercase section-o size14" style="max-height:28px; padding: 0; margin:0">
+    <li class="icon-user login">
+        <span>
+            <a id="ecommerce_login_TBAB679D6002_ctl00_ctl00_linkToPortal" href="http://stg-portal.nasm.org/">My Account</a>
+        </span>
+    </li>
+    <li class="icon-cartlink p-x-0">
+        <span>
+	        <a href="javascript:openCartLink()" class="p-a-0 color-bg-transparent no-border">
+			    <span>Cart</span>
+	        </a>
+        </span>
+	</li>
+	<li class="p-x-0">
+        <a href="javascript:openCartLink()" class="p-a-0 color-bg-transparent no-border">
+	        <div class="cart-count">
+                <div id="countlabel" class="countlabel">(0)</div>			
+	        </div>
+        </a>
+	</li>
+    
+
+</ul>
+
+<!-- script type="text/javascript">
+var shopUrlHostname   = 'http://sf-stg-shop.nasm.org/';
+var nasmCartUrl   = 'http://sf-stg-shop.nasm.org//nasm/cart';
+</script>
+
+
+<script>
+	function sucessCartCount(data) {
+        $(".countlabel").text("(" + data.CartCount + ")");
+    }
+
+    $(document).ready(function () {
+        $.getJSON(shopUrlHostname + '/api/OrderManager/GetCartItemCount?callback=?',
+            function (data) {
+                sucessCartCount(data);
+                return false;
+            });
+
+    });
+	
+    function openCartLink()
+    {
+        window.location.href = nasmCartUrl;
+    }
+</script -->
+
+
+
+</span>
+			</nav>
+			
+		</div>
+	</header>
+
+<div class="section header-wrapper">
+
+			<span class="center-block p-y-1 clearfix mobile-header _top text-center">
+				<a class="logo-wrapper" href="/">
+					<span class="logo-img-header" aria-label="Nasm Logo"></span>
+				</a>
+			</span>
+
+		<header class="container bottom-header header-ribbon">
+
+			<nav class="navbar-header m-a-0">
+				<button type="button" class="navi-button navbar-toggle" data-toggle="collapse" data-target="#main-nav-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</nav>
+
+			<nav class="mobile-header _bottom">
+				<button type="button" class="pull-sm-right head-search text-xs-left text-sm-right dropdown" data-toggle="collapse" data-target="#searchbar-header">
+					<span class="search-btn color-navy navbar-toggler 33collapsed">
+						<span class="icon-search"></span>
+					</span>
+				</button>
+			</nav>
+
+			<fieldset class="section head-search-expanded collapse" id="searchbar-header" aria-expanded="false">
+				<div class="container p-y-2">
+
+					<div class="input-group search-wrapper">
+						<input name="search" type="text" class="center-block form-control" placeholder="Search">
+						<input name="search-index" type="hidden" value="general-search">
+						<span class="input-group-btn">
+							<button type="button" class="header-search btn btn-primary"><i class="icon-search"></i></button>
+						</span>
+					</div>
+
+				</div>
+			</fieldset>
+
+			<nav class="row nav-wrap collapse navbar-collapse" id="main-nav-toggle" role="navigation" aria-label="Main menu">
+				
+
+
+
+
+	<ul class="nav navbar-bottom" role="navigation">
+        
+                         
+                         <li class="dropdown menu-dropdown">
+                            <a href="/certified-personal-trainer" aria-label="Certified Personal Trainer">Certified Personal Trainer</a>
+                            <ul id="Main_Navigation_T7B7212FE001_ctl00_ctl00_ctl01_ctl00_childNodesContainer" class="dropdown-menu main-menu">
+                         
+                         <li>
+                            <a href="/how-to-become-a-personal-trainer" aria-label="Why Become a Personal Trainer">Why Become a Personal Trainer</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/certified-personal-trainer/personal-training-careers" aria-label="Personal Training Careers">Personal Training Careers</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/become-a-personal-trainer" aria-label="Enroll in a Program">Enroll in a Program</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/certified-personal-trainer/personal-trainer-exam" aria-label="Exam Information">Exam Information</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/certified-personal-trainer/international-cpt" aria-label="International CPT">International CPT</a>
+                            
+                        </li>
+                    </ul>
+                        </li>
+                    
+                         
+                         <li class="dropdown menu-dropdown">
+                            <a href="/continuing-education" aria-label="Continuing Education">Continuing Education</a>
+                            <ul id="Main_Navigation_T7B7212FE001_ctl00_ctl00_ctl01_ctl01_childNodesContainer" class="dropdown-menu main-menu">
+                         
+                         <li>
+                            <a href="/continuing-education/specializations" aria-label="Specializations">Specializations</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/products" aria-label="All Courses">All Courses</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/continuing-education/workshops-events" aria-label="Workshops &amp; Events">Workshops &amp; Events</a>
+                            
+                        </li>
+                    </ul>
+                        </li>
+                    
+                         
+                         <li class="dropdown menu-dropdown">
+                            <a href="/recertify" aria-label="Recertify">Recertify</a>
+                            <ul id="Main_Navigation_T7B7212FE001_ctl00_ctl00_ctl01_ctl02_childNodesContainer" class="dropdown-menu main-menu">
+                         
+                         <li>
+                            <a href="/recertify/personal-trainer-recertification" aria-label="Recertify your CPT">Recertify your CPT</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/recertify/certify-for-life" aria-label="Certify for Life">Certify for Life</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="http://TBD" aria-label="Recertification Portal">Recertification Portal</a>
+                            
+                        </li>
+                    </ul>
+                        </li>
+                    
+                         
+                         <li class="dropdown menu-dropdown">
+                            <a href="/resources" aria-label="Resources">Resources</a>
+                            <ul id="Main_Navigation_T7B7212FE001_ctl00_ctl00_ctl01_ctl03_childNodesContainer" class="dropdown-menu main-menu">
+                         
+                         <li>
+                            <a href="http://blog.nasm.org" target="_blank" aria-label="Blog">Blog</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/resources/downloads" aria-label="Downloads">Downloads</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/resources/insurance" aria-label="Insurance">Insurance</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/resources/validate-credentials" aria-label="Validate Credentials">Validate Credentials</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/resources/providers" aria-label="Providers">Providers</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/resources/faq" aria-label="FAQ">FAQ</a>
+                            
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="http://nasmjobs.com" target="_blank" aria-label="Job Board">Job Board</a>
+                            
+                        </li>
+                    </ul>
+                        </li>
+                    
+                         
+                         <li>
+                            <a href="/testimagerotator" aria-label="testImageRotator">testImageRotator</a>
+                            
+                        </li>
+                    
+    </ul>
+			</nav>
+
+		</header>
+
+	</div>
+
+
+
+   <!-- Carousel
+    ================================================== -->
+   <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide m-b-3" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+	  
+        <div class="item active">
+          <img class="first-slide" src="../assets/Images/banner-1.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+                         <h2 class="section-header">Full-width Promo/Value Prop Hero Module.</h2>
+            <h3 class="hidden-xs">This is a medium header.</h3>
+            <button class="btn btn-primary btn-wide m-t-1">Button</button>
+
+            </div>
+          </div>
+        </div>
+		
+        <div class="item">
+          <img class="second-slide" src="../assets/Images/banner-1.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2 class="section-header">Another example headline.</h2>
+              <p class="hidden-xs">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-primary btn-wide m-t-1" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+		
+        <div class="item">
+          <img class="third-slide" src="../assets/Images/banner-1.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2 class="section-header">One more for good measure.</h2>
+              <p class="hidden-xs">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-primary btn-wide m-t-1" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+		
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="icon-prev" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="icon-next" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+
+
+
+<section class=" p-y-2 container clear">
+
+
+<div class="jumbotron jumbo-bg-section text-center clearfix dark-overlay large block-link">
+      <h2 class="section-header">Get started for only $49</h2>
+      <h3>Plus get a free bag!</h3>
+      <a class="m-y-1 btn btn-primary btn-wide" href="#">Learn More</a>
+    </div>
+
+
+<div class="jumbotron search-bg-section text-center dark-overlay large" >
+      <h2 class="section-header">This is a Search Hero Module.</h2>
+      <h3>This is a medium header.</h3>
+
+      <div class="m-y-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+
+        <form role="search" class="search round">
+          <div class="input-group input-group-lg rounded">
+            <input type="text" class="form-control" placeholder="Search">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-primary">Search</button>
+            </span>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+
+	<div class="row">
+
+
+<div class="col-sm-6 col-xs-12">
+
+	<figure class="card card-inverse dark-overlay panel-round">
+			  <img class="full-img" src="../assets/Images/jumbotron-half-bg.png" alt="Card image">
+		<figcaption class="card-img-overlay text-center overlay-outer">
+
+			<span class="overlay-inner">
+				<span class="section-header card-title m-t-4">Flexible Payment Plans</span>
+
+				<span class="center-block">Start for as little as 10% down. Six and 12 month plans. Zero interest.</span>
+				<a class="btn btn-primary btn-wide m-y-2" href="#">Learn More</a>
+
+
+			</span>
+		</figcaption>
+	</figure>
+
+</div>
+
+
+	<div class="col-sm-6 col-xs-12">
+
+		<figure class="panel panel-default text-center panel-round">
+
+			  <img class="panel-thumbnail full-img" src="../assets/Images/post-teaser.jpg">
+
+			  <div class="panel-body">
+				  <h3 class="card-label">
+						<span class="label label-default btn">Apparel</span>
+				  </h3>
+
+			<h2 class="teaser-header">I Want to Teach Group Fitness!</h2>
+			<div class="teaser-author">By Lawrence Biscontini, MA</div>
+				<p class="text-content-sm">The ABCs to Forge a Career Path as a Group Instructor in the Fitness Industry…</p>
+				<a class="text-content-sm read-more text-uppercase " href="#">Read More <i class="icon-next"></i></a>
+
+
+			  </div>
+		</figure>
+
+	</div>
+
+</div>
+</section>
+
+
+<section class="section-bg-blue container-fluid text-center v-center p-y-4">
+
+		<h2 class="section-header">This is a Section Divider</h2>
+
+
+</section>
+
+
+
+<section class="container">
+	<div class="row text-xs-center p-y-2">
+
+		<figure class="col-sm-6 col-xs-12">
+			<img src="../assets/Images/post-teaser.jpg" class="center-xs-block cornered-img full-img">
+		</figure>
+
+
+		<div class="col-sm-6 col-xs-12 text-content-md">
+
+			<h3 class="color-navy section-header">Become a Personal Trainer</h3>
+
+			<p>At NASM, our Certified Personal Trainer education combines science with proven techniques to turn fitness enthusiasts into fitness professionals.</p>
+			<a class="read-more" href="#">Read More  <i class="icon-next"></i></a>
+		</div>
+
+
+
+
+<hr class="col-sm-12 m-y-4">
+
+		<figure class="col-sm-6 col-xs-12 pull-sm-right">
+			<img src="../assets/Images/post-teaser-2.jpg" class="center-xs-block cornered-img full-img">
+		</figure>
+
+		<div class="col-sm-6 col-xs-12 text-content-md">
+
+			<h3 class="color-navy section-header">CPT 4 Online Class</h3>
+
+			<p>Furthering your education can improve client results, increase your income, and gain much needed CEUs.</p>
+
+			<a class="btn-link btn btn-lg">text link ></a>
+
+		</div>
+
+
+	</div>
+</section>
+
+
+<section class="container p-y-3">
+	<div class="row text-center">
+
+
+	<div class="col-sm-4 col-xs-12">
+
+			<figure class="card card-inverse text-center panel-round dark-overlay">
+			  <img class="full-img" src="../assets/Images/jumbotron-small.jpg" alt="Card image">
+
+			 <figcaption class="card-img-overlay overlay-outer p-x-2">
+
+				<span class="overlay-inner card-title text-uppercase">
+					 <span class="size24">
+						Be a Hero and Become a Weight-Loss Specialist
+					</span>
+
+					<a class="text-content-sm read-more text-uppercase color-white center-block m-t-2" href="#">Read More <i class="icon-next"></i></a>
+				</span>
+
+			  </figcaption>
+			</figure>
+
+	</div>
+
+
+	<figure class="col-sm-4 col-xs-12 text-center">
+
+		<div class="panel panel-default panel-round p-a-2">
+
+			<span class="ico-size-80 img-circle color-bg-yellow center-block">
+				<i class="icon-graduation-cap color-white"></i>
+			</span>
+
+			<h2 class=" p-x-1">Renew your Certification</h2>
+			<p class="card-title m-y-1">Being the best means staying up-to-date with the latest industry techniques and methods.</p>
+			<a class="read-more" href="#">Text Link <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+		</div>
+
+	</figure>
+
+	<div class="col-sm-4 col-xs-12">
+
+		<figure class="panel panel-default text-center panel-round">
+
+			  <img class="panel-thumbnail full-img" src="../assets/Images/post-small.jpg">
+
+			  <div class="panel-body">
+				<h3 class="card-label btn-group-sm">
+						<span class="label label-default btn">Liability Insurance</span>
+				  </h3>
+
+			<h3 class=" p-x-1">
+					Special Rates for NASM Credentialed Pros
+			</h3>
+
+				<a class=" m-y-1 text-content-sm read-more text-uppercase " href="#">Read More <i class="icon-next"></i></a>
+
+
+			  </div>
+		</figure>
+
+	</div>
+
+
+
+
+
+	</div>
+</section>
+
+
+<section class="container text-center">
+
+		<h2 class="section-header text-center">Explore Featured Curriculums</h2>
+
+
+	<div class="row p-y-3">
+
+
+		<figure class="col-sm-3 col-xs-6">
+
+			<img class="m-t-1 ico-size-80 img-circle" src="../assets/Images/circle-1.jpg">
+
+				<figcaption>
+
+				<h3 class="size24">CPT Associate Personal Trainer Experience</h3>
+				<p class="card-title">With Job Guarantee</p>
+				<a class="read-more" href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+				</figcaption>
+		</figure>
+
+
+		<figure class="col-sm-3 col-xs-6">
+
+			<span class="ico-size-80 img-circle color-bg-tiel center-block">
+				<i class="icon-check color-white"></i>
+			</span>
+
+				<figcaption class="">
+
+				<h3 class="size24">CPT All Access</h3>
+				<p class="card-title">
+					With Job Guarantee. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+
+				</p>
+				<a class="read-more" href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+				</figcaption>
+		</figure>
+
+
+
+		<figure class="col-sm-3 col-xs-6">
+
+				<img class="m-t-1 ico-size-80 img-circle" src="../assets/Images/circle-2.png">
+
+				<figcaption>
+
+				<h3 class="size24">CPT Online Classroom</h3>
+
+				<a class="read-more" href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+				</figcaption>
+		</figure>
+
+
+
+		<figure class="col-sm-3 col-xs-6">
+
+			<span class="ico-size-80 img-circle color-bg-lime center-block">
+				<i class="icon-book color-white"></i>
+			</span>
+
+				<figcaption>
+
+				<h3 class="size24">CPT Self-Study</h3>
+				<p class="card-title">With Job Guarantee</p>
+				<a class="read-more" href="#">Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+				</figcaption>
+		</figure>
+
+
+
+		<!-- end -->
+	</div>
+</section>
+
+<section class="container-fluid text-center p-y-4 color-bg-white color-navy">
+
+
+        <h2 class="section-header">This is a text only module headline</h2>
+        <h3 class="m-y-1">This is where you could put a few lines of text. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Fusce fermentum.</h3>
+        <button class="btn btn-primary btn-wide">Button</button>
+
+</section>
+
+
+<section class="container-fluid text-center p-y-4 color-bg-navy color-white">
+
+
+        <h2 class="section-header">This is a text only module headline</h2>
+        <h3 class="m-y-1">This is where you could put a few lines of text. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Fusce fermentum.</h3>
+        <button class="btn btn-primary btn-wide">Button</button>
+
+</section>
+
+<section class="container-fluid text-center p-y-4 color-bg-mint color-navy">
+
+
+        <h2 class="section-header">This is a text only module headline</h2>
+        <h3 class="m-y-1">This is where you could put a few lines of text. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Fusce fermentum.</h3>
+        <button class="btn btn-primary btn-wide">Button</button>
+
+</section>
+
+
+<section class="container-fluid text-center p-y-4 color-bg-yellow color-navy">
+
+
+        <h2 class="section-header">This is a text only module headline</h2>
+        <h3 class="m-y-1">This is where you could put a few lines of text. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Fusce fermentum.</h3>
+        <button class="btn btn-primary btn-wide">Button</button>
+
+</section>
+
+<section class="container p-t-1">
+
+	<h2 class="section-header text-center color-navy">Featured Products</h2>
+
+	<div class="row p-y-3">
+
+		<figure class="col-sm-3 col-xs-6 label-border-top">
+			<hr>
+			<span class="label label-default">Apparel</span>
+
+				<img src="../assets/Images/apparel.jpg" class="m-y-1 center-block" style="width: 140px; height: 140px">
+
+				<p class="text-center product-link">
+					<a href="#">Nasm icon quilted quicker upper</a>
+				</p>
+		</figure>
+
+
+		<figure class="col-sm-3 col-xs-6 label-border-top">
+			<hr>
+			<span class="label label-default">COURSES</span>
+
+				<img src="../assets/Images/courses.jpg" class="m-y-1 center-block" style="width: 140px; height: 140px">
+
+				<p class="text-center product-link">
+					<a href="#">3 Hour CPT Exam Prep</a>
+				</p>
+		</figure>
+
+
+		<figure class="col-sm-3 col-xs-6 label-border-top">
+			<hr>
+			<span class="label label-default">BUNDLES</span>
+
+				<img src="../assets/Images/bundles.jpg" class="m-y-1 center-block" style="width: 140px; height: 140px">
+
+				<p class="text-center">
+					<a href="#"> PES Self-Study</a>
+				</p>
+		</figure>
+
+
+		<figure class="col-sm-3 col-xs-6 label-border-top">
+			<hr>
+			<span class="label label-default">FEATURED PRODUCTS</span>
+
+				<img src="../assets/Images/featured-product.jpg" class="m-y-1 center-block" style="width: 140px; height: 140px">
+
+				<p class="text-center product-link">
+					<a href="#">Behavior Change Specialization (BCS)</a>
+				</p>
+		</figure>
+
+
+
+	</div>
+</section>
+
+
+<section class="container p-t-1">
+
+	<h2 class="section-header text-center color-navy text-uppercase">Most Popular Programs</h2>
+
+	<div class="row p-y-3">
+
+		<div class="col-sm-4 text-center">
+			<div class="panel panel-default panel-round">
+
+				<header class="p-y-1 p-x-3 color-bg-fern color-white">
+					<h4 class="section-header-xs">$599 one time payment</h4>
+					<h3 class="section-header-md">Integrated Training Series</h3>
+				</header>
+
+				 <figure class="panel-thumbnail">
+					<img src="../assets/Images/program-1.jpg" class="btn-block">
+				</figure>
+
+				<footer class="panel-body">
+					<a href="#" class="btn btn-primary text-uppercase">
+						Learn More
+					</a>
+				</footer>
+
+			</div>
+		  </div>
+
+
+		<div class="col-sm-4 text-center">
+			<div class="panel panel-default panel-round">
+
+				<header class="p-y-1 p-x-3 color-bg-lime color-white">
+					<h4 class="section-header-xs">$599 one time payment</h4>
+					<h3 class="section-header-md">Integrated Training Series</h3>
+				</header>
+
+				 <figure class="panel-thumbnail">
+					<img src="../assets/Images/program-2.png" class="btn-block">
+				</figure>
+
+				<footer class="panel-body">
+					<a href="#" class="btn btn-primary text-uppercase">
+						register today
+					</a>
+				</footer>
+
+			</div>
+		  </div>
+
+
+
+		<div class="col-sm-4 text-center">
+			<div class="panel panel-default panel-round">
+
+				<header class="p-y-1 p-x-3 color-bg-butter color-white">
+					<h4 class="section-header-xs">$599 one time payment</h4>
+					<h3 class="section-header-md">Integrated Training Series</h3>
+				</header>
+
+				 <figure class="panel-thumbnail">
+					<img src="../assets/Images/program-3.jpg" class="btn-block">
+				</figure>
+
+				<footer class="panel-body">
+					<a href="#" class="btn btn-primary text-uppercase">
+						Explore the program
+					</a>
+				</footer>
+
+			</div>
+		</div>
+
+	</div>
+</section>
+
+
+<section class="section color-bg-white p-t-1">
+
+	<h2 class="section-header text-center color-navy text-uppercase">SUCCESS STORIES</h2>
+
+
+	<div class="container">
+		<div class="row p-y-2">
+
+
+			<div class=" col-sm-4 text-center">
+			
+			
+			<span class="color-bg-fern color-white img-circle m-y-1 center-block" style="width: 140px; height: 140px">
+				<i class=" lineX2 icon-quote" style="font-size:70px; "></i>
+			</span>
+			
+
+
+					<h2>
+						James Mcdurmit, Janitor
+					</h2>
+						<hr>
+				<blockquote>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+						It has survived not only five centuries
+					</p>
+				</blockquote>
+
+			</div>
+
+
+			<div class=" col-sm-4 text-center">
+				<img alt="Bootstrap Thumbnail Second" src="../assets/Images/success-1.jpg" width="142" class="center-block img-circle">
+
+
+					<h2>
+						James Mcdurmit, Janitor
+					</h2>
+						<hr>
+
+				<blockquote>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+						It has survived not only five centuries
+					</p>
+				</blockquote>
+
+			</div>
+
+			<div class="col-sm-4 text-center">
+				<img alt="Bootstrap Thumbnail Second" src="../assets/Images/success-1.jpg" width="142" class="center-block img-circle">
+
+					<h2>
+						James Mcdurmit, Janitor
+					</h2>
+						<hr>
+
+				<blockquote>
+					<p>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+						It has survived not only five centuries
+					</p>
+				</blockquote>
+
+			</div>
+
+
+
+		</div>
+	</div>
+</section>
+
+
+
+                <!-- div class="container text-center p-y-2">
+                  <ul class="pagination center-block" style="display:inline-block;">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                  </ul>
+                </div -->
+
+
+
+
+
+ <footer class="section p-b-2 p-t-3 footer-bg-section">
+		<div class="container">
+
+			<div class="col-md-5 col-sm-12 p-x-0 text-center text-md-left center-sm-block ">
+
+					<figure class="logo-wrapper">
+						<span class="logo-img-footer "></span>
+					</figure>
+
+
+					<div class="col-md-12 m-y-2 center-sm-block" translate="no" typeof="schema:PostalAddress">
+
+						<address class="text-content-sm">
+							<strong property="schema:name" class="center-block">National Academy of Sports Medicine</strong>
+							<span property="schema:streetAddress">1750 E Northrop Blvd #200,</span>
+							<span property="schema:addressLocality">Chandler</span>,
+							<abbr title="Arizona" property="schema:addressRegion">AZ</abbr>
+							<span property="schema:postalCode">85286</span>
+						</address>
+
+						<p class="text-md-left">
+							<span class="center-sm-block text-italic text-uppercase text-content-md clearfix">customer service</span>
+							<a class="center-sm-block size30 color-white" href="tel:+18004806276">1-800-480-6276</a>
+						</p>
+					</div>
+
+			</div>
+
+
+
+<div class="col-md-7 col-sm-12 p-x-0 clearfix text-center text-md-left">
+
+		<div class="col-xs-4 footer-list">
+			<ul class="list-unstyled footer-menu">
+				  <li><a href="#">About NASM</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">History</a></li>
+                  <li><a href="#">OPT Model</a></li>
+                  <li><a href="#">Leadership</a></li>
+                  <li><a href="#">News &amp; Media</a></li>
+                  <li><a href="#">Board of Certification</a></li>
+                  <li><a href="#">Military</a></li>
+			</ul>
+
+		</div>
+
+
+				<div class="col-xs-4 footer-list">
+					<h4 class="text-uppercase m-t-0">Customer Service</h4>
+
+					<ul class="list-unstyled m-b-3 p-l-0">
+						<li><a href="#">Contact Support</a></li>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+
+					<ul class="list-unstyled footer-menu p-l-0">
+						<li><a href="#">Partners & Providers</a></li>
+						<li><a href="#">Course Providers</a></li>
+						<li><a href="#">Become a Provider</a></li>
+					</ul>
+
+				</div>
+
+				<div class="col-xs-4 footer-list">
+
+					<h4 class="text-uppercase m-t-0">Academic</h4>
+
+					<ul class="list-unstyled col-xs-12 p-l-0">
+						<li><a href="#">Attend a School for your CPT</a></li>
+						<li><a href="#">Academic Providers</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="col-md-12 col-sm-12 footer-social m-t-2 text-center center-block">
+
+				<ul class="list-inline list-unstyled col-sm-12 m-l-o">
+					<li class="social-icons"><a class="img-circle icon-facebook-circle"></a></li>
+					<li class="social-icons"><a class="img-circle icon-twitter-circle"></a></li>
+					<li class="social-icons"><a class="img-circle icon-instagram-circle"></a></li>
+					<li class="social-icons"><a class="img-circle icon-youtube-circle"></a></li>
+				</ul>
+
+				<ul class="footer-copyright list-inline list-unstyled col-sm-12  m-t-1">
+					<li>Copyright 2016 NASM</li>
+					<li>All Rights Reserved</li>
+					<li>Privacy Policy</li>
+					<li>terms of use</li>
+				</ul>
+
+			</div>
+
+
+
+
+		</div>
+   </footer>
+
+
+
+    <script src="../assets/js/loader.js"></script>
+  <!-- script src="../assets/js/jQuery.booklet.js"></script -->
+
+<!-- script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/holder.min.js"></script>
+    <script>
+      $(function () {
+        Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
+      });
+</script -->
+
+<!-- script>
+</script -->
+
+
+  </body>
+</html>

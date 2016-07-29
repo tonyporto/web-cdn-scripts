@@ -73,9 +73,6 @@ html {
 body {
 	font: 16px/20px Open Sans, sans-serif;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-/*
-	font-family: 'OpenSans-Light';
-*/
     line-height: 1;
 	color: #666666;
 	min-height: 100%;
@@ -455,7 +452,6 @@ q:before, q:after {
 .color-charcoal-bg {
     background-color: #777;
 }
-
 
 .input-left,
 .panel > .header,

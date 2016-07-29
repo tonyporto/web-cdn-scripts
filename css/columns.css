@@ -4,7 +4,6 @@
 	margin-left: -2%;
 	width:102%;
 	overflow: visible;
-    *zoom:1; /* For IE 6/7 */
 }
 
 [class*="col-"],

@@ -1,0 +1,154 @@
+body,
+.color-bg-body,
+.color-bg-body:hover {
+	background-color: #f1f2f6 !important;
+}
+
+/* ================================= *
+ * BG COLORS
+ * ================================= */
+.head-search,
+.nav .dropdown.open>a,
+.nav .navbar-bottom.open>a:focus,
+.nav .navbar-bottom.open>a:hover,
+.nav>li>a:focus, .nav>li>a:hover,
+.navbar-bottom > li a:hover,
+.navbar-bottom > li.open>a:hover,
+div > .color-bg-transparent,
+.color-bg-transparent {
+    background-color: transparent;
+}
+
+.header-wrapper,
+.navi-button,
+.navbar-top .open .dropdown-menu,
+.navbar-bottom .open > .dropdown-menu li:hover,
+.social-icons > a,
+.panel-products,
+.color-bg-white {
+	background-color: #fff;
+}
+
+.label-default,
+.color-bg-grey {
+	background-color: #a6acaf;
+}
+.navi-button .icon-bar,
+.color-bg-navy {
+    background-color: #013765;
+}
+
+/* GREEN BGS */
+.head-search-expanded,
+.color-bg-tiel {
+	background-color: #77bbb0;
+}
+
+.color-bg-lime {
+	background-color: #a0d468;
+}
+
+.color-bg-mint {
+    background-color: #b4d6d3;
+}
+.color-bg-fern {
+    background-color: #77bab1;
+}
+
+/* YELLOW BGS */
+.color-bg-yellow {
+    background-color: #fceeae;
+}
+
+.color-bg-butter {
+    background-color: #fdda32;
+}
+
+.table-warning>td, .table-warning>th {
+    background-color: #fcf8e3;
+}
+
+.hover-bg-inherit,
+.hover-bg-inherit:hover {
+	background-color: inherit;
+}
+
+[class*="-charcoal"] {
+    background-color: #636466;
+}
+
+.has-error input[type="text"],
+.form-error + .input-group input[type="text"],
+.has-error.form-control-div input[type="text"] {
+	background-color: #f2dede;
+}
+/* ================================= *
+ * COLORS
+ * ================================= */
+.color-white,
+a.color-white,
+.color-white *,
+.color-bg-navy,
+.section-bg-blue,
+.footer-top,
+.footer-bg-section,
+.footer-list li > a,
+.dark-overlay,
+.label:hover,
+.jumbotron {
+    color: white !important;
+}
+
+.bottom-header a,
+.social-icons > a,
+.product-link *,
+.color-navy,
+.color-navy * {
+    color: #003764;
+}
+
+.navbar-bottom a:hover,
+.navbar-bottom > .dropdown ul a,
+.navbar-top a:hover,
+.navbar-bottom a:focus,
+.navbar-bottom .dropdown a:hover,
+.color-blue {
+    color: #0d3b5f;
+}
+
+.color-yellow,
+a.color-yellow {
+    color: #fcda32;
+}
+
+.color-mustard {
+    color: #f38c23;
+}
+.read-more {
+    color: #206ca2;
+}
+
+.color-fern {
+    color: #77bab1;
+}
+/* ================================= *
+ * BORDER COLORS
+ * ================================= */
+hr {
+	border-color: #a6acaf;
+}
+.card-inverse {
+	border-color: transparent;
+}
+.panel-products {
+    border-color: #dcd7d3;
+}
+.panel-default {
+    border-color: #ddd;
+}
+.no-border,
+[class*="RadGrid"],
+.k-editable-area {
+	border-width: 0px !important;
+	outline: 0;
+}

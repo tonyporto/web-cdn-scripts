@@ -1,0 +1,85 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular Feeds - AngularJS module for Atom, RSS & media feeds...</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/Font-Awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="angular-feeds/angular-feeds.min.css">
+    <link rel="stylesheet" href="styles/feed-tester.css">
+    <!-- Google Feeds API script -->
+    <script type="text/javascript"
+            src="https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22feeds%22%2C%22version%22%3A%221.0%22%2C%22nocss%22%3Atrue%7D%5D%7D"></script>
+</head>
+<body ng-app="feed-tester" ng-controller="FeedTesterController">
+
+<div class="container">
+    <div class="page-header">
+        <a ng-show="isOrigin()" class="btn btn-default btn-sm pull-right" target="_new" href="feed-tester.html"><i class="fa fa-external-link"></i> Open in new window</a>
+        <h3>Feed Tester</h3>
+    </div>
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="inputURL" class="col-sm-2 control-label">Feed URL:</label>
+            <div class="col-sm-8">
+                <input type="url" ng-model="url" class="form-control" id="inputURL" placeholder="RSS, Atom or Media feed url">
+                <em>For ex. http://api.flickr.com/services/feeds/photos_public.gne?tags=nature</em>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" ng-click="showFeed();" ng-disabled="!url" class="btn btn-default">Show Feed</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputCount" class="col-sm-2 control-label">Count:</label>
+            <div class="col-sm-2">
+                <select id="inputCount" ng-model="count" class="form-control">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputCount" class="col-sm-2 control-label">Summary:</label>
+            <div class="col-sm-2">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="summary">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+        </div>
+     </div>
+</div>
+
+
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
+
+<script src="bower_components/jquery/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="angular-feeds/angular-feeds.min.js"></script>
+<script src="scripts/feed-tester.js"></script>
+</body>
+</html>
