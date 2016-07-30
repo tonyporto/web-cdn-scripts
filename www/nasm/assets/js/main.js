@@ -52,11 +52,7 @@ function modernizrResize() {
 				nav_Li_toggle.find("a:first").attr(link_clicker)
 			}
 			
-jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function (e) {
-	e.preventDefault();
-    window.location = jQuery(this).attr("href");
 
-});	
 	
 //TOP LEVEL CLICKABLE
 jQuery(".in .menu-dropdown > a.dropdown-toggle").each(function() {
@@ -340,6 +336,12 @@ jQuery(document).on('click.nav','.navbar-collapse.in',function(e) {
  * DOC LOAD
  * ================================== */
 jQuery(document).ready(function() {
+	
+jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function (e) {
+	e.preventDefault();
+    window.location = jQuery(this).attr("href");
+
+});	
 
 /*		
 jQuery(".navbar-bottom > li > a:not(.dropdown-toggle)").on("click", function (e) {
@@ -423,7 +425,7 @@ function alsoDropDownToggle() {
 
 	wcagKeyboardEvents()
 	
-	jQuery('.dropdown-toggle').dropdown()
+//	jQuery('.dropdown-toggle').dropdown()
 	
 	sfPagerNumeric();
 
