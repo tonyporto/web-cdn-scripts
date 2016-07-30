@@ -102,7 +102,7 @@ function wcagKeyboardEvents() {
 		aria_hidden = {'aria-expanded': 'false'};
 
 	
-	
+	jQuery(".navbar-bottom li:not(.dropdown) > a").on('click.dropdown.data-api', clearMenus)
 	
 	//link_clicker = {'class': 'dropdown-toggle', 'data-toggle': 'dropdown'};
 	//jQuery(".navbar-bottom > li:has(ul)").find("a:first").attr(link_clicker)
