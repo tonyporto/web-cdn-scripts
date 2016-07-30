@@ -51,6 +51,35 @@ function modernizrResize() {
 			if (!nav_Li_toggle.hasClass("dropdown-toggle")) {
 				nav_Li_toggle.find("a:first").attr(link_clicker)
 			}
+			
+jQuery(".navbar-bottom > li > a:not(.dropdown-toggle)").on("click", function (e) {
+	e.preventDefault();
+        window.location = jQuery(this).attr("href");
+
+});	
+	
+//TOP LEVEL CLICKABLE
+jQuery(".in .menu-dropdown > a.dropdown-toggle").each(function() {
+	
+	var tapped = jQuery(this);
+	
+	tapped.on("click", function () {
+	
+		if (tapped.parent().hasClass("open")) {
+		
+			 window.location = jQuery(this).attr("href");
+			 
+		} else {
+		
+			jQuery(".menu-dropdown").removeClass("open")
+			tapped.parent().addClass("open")
+		
+		} 
+	
+	})
+});			
+			
+		// END MAX 767px	
 		}
 
 
@@ -313,15 +342,56 @@ jQuery(document).on('click.nav','.navbar-collapse.in',function(e) {
 jQuery(document).ready(function() {
 
 /*		
-	jQuery(".navbar-bottom > li:not(.dropdown-toggle) > a").on("click", function (e) {
-		e.preventDefault();
-         window.location = jQuery(this).attr("href");
-		 
-		// alsoDropDownToggle();
+jQuery(".navbar-bottom > li > a:not(.dropdown-toggle)").on("click", function (e) {
+	e.preventDefault();
+        window.location = jQuery(this).attr("href");
 
-	});	
+});	
 	
-
+//TOP LEVEL CLICKABLE
+jQuery(".in .menu-dropdown > a.dropdown-toggle").each(function() {
+	
+	var tapped = jQuery(this);
+	
+	tapped.on("click", function () {
+	
+		if (tapped.parent().hasClass("open")) {
+		
+			 window.location = jQuery(this).attr("href");
+			 
+		} else {
+		
+			jQuery(".menu-dropdown").removeClass("open")
+			tapped.parent().addClass("open")
+		
+		} 
+	
+	})
+});
+	
+	
+//
+//jQuery(".in .menu-dropdown.open > a.dropdown-toggle").each(function() {
+	
+jQuery(".in .menu-dropdown > a.dropdown-toggle").each(function() {
+	
+	var tapped = jQuery(this);
+	
+	tapped.on("click", function () {
+	
+		if (tapped.parent().hasClass("open")) {
+		
+			 window.location = jQuery(this).attr("href");
+			 
+		} else {
+		
+			jQuery(".menu-dropdown").removeClass("open")
+			tapped.parent().addClass("open")
+		
+		} 
+	
+	})
+})
 function alsoDropDownToggle() {
 		
 		var action = 1;
