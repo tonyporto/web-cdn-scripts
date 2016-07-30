@@ -337,7 +337,7 @@ jQuery(document).on('click.nav','.navbar-collapse.in',function(e) {
  * ================================== */
 jQuery(document).ready(function() {
 	
-jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function (e) {
+jQuery(".navbar-bottom li:not(.dropdown) > a").on("click touchend", function (e) {
 	e.preventDefault();
     window.location = jQuery(this).attr("href");
 
