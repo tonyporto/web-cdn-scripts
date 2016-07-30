@@ -52,9 +52,9 @@ function modernizrResize() {
 				nav_Li_toggle.find("a:first").attr(link_clicker)
 			}
 			
-jQuery(".navbar-bottom > li > a:not(.dropdown-toggle)").on("click", function (e) {
+jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function (e) {
 	e.preventDefault();
-        window.location = jQuery(this).attr("href");
+    window.location = jQuery(this).attr("href");
 
 });	
 	
