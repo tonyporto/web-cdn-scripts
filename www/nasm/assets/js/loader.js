@@ -11,5 +11,5 @@
 $LAB.script("../assets/js/modernizr.js")
 	//.script("https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js").wait()
 	.script("../assets/js/bootstrap.min.js")
-	.script("../assets/js/dropdown.js")
+	//.script("../assets/js/dropdown.js")
 	.script("../assets/js/main.js");
