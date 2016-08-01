@@ -52,8 +52,15 @@ function modernizrResize() {
 				
 				nav_dropdown_link.attr(link_clicker)
 			}
+			
+			//BOOTSTRAP CLICK NAV LINKS BUG FIX
+			jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function () {
+				//e.preventDefault();
+			    window.location = jQuery(this).attr("href");
+		
+			});
 
-
+			//ON CLICK MAKE LINK TOGGLE CLICKABLE
 			nav_dropdown_link.on("click", function() {
 				
 			    var $el = $(this);
