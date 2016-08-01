@@ -3,11 +3,15 @@
  * ----------------------- */
 function modernizrResize() {
 
-
 	jQuery(".navbar-bottom li:not(:has(ul))").removeAttr("class data-toggle aria-expanded");
 
-	var nav_dropdown_link = jQuery(".navbar-bottom li.dropdown > a"),
-		link_clicker = {'class': 'dropdown-toggle', 'data-toggle': 'dropdown'};
+	
+	var menu_dropdown = jQuery(".navbar-bottom > li > .dropdown-menu"),
+		dropdown_menu = jQuery(".navbar-bottom > li:has(.dropdown-menu)");
+	
+	
+	//	nav_dropdown_link = jQuery(".navbar-bottom li.dropdown > a"),
+	//	link_clicker = {'class': 'dropdown-toggle', 'data-toggle': 'dropdown'};
 
 
 	//MIN WIDTH
@@ -36,18 +40,34 @@ function modernizrResize() {
 
 		if (min_width(768)) {
 
-			var nav_li = jQuery(".dropdown.menu-dropdown");
-
-			if (nav_li.hasClass("open")) {
-				nav_li.removeClass("open")
+			//var nav_li = jQuery(".dropdown.menu-dropdown");
+			menu_dropdown.removeClass("hidden")
+			
+			if (dropdown_menu.hasClass("open")) {
+				dropdown_menu.removeClass("open")
 			}
 
 
-			nav_dropdown_link.removeAttr("class data-toggle");
+			//nav_dropdown_link.removeAttr("class data-toggle");
 
 		//END MIN 768PX
 		} else {
+		
+		
+    /* ========================================================================== *
+	 * USABLE SUBMENU
+	 * ========================================================================== */ 
+	menu_dropdown.addClass("hidden")
+	 
+	dropdown_menu.hover(function () { 
+		jQuery(this).addClass("open").find(".dropdown-menu").removeClass("hidden");
 
+	}, function () {
+		jQuery(this).removeClass("open").find(".dropdown-menu").addClass("hidden");
+    });
+
+		//START MIN 0 to MAX 767px
+/*		
 			if (!nav_dropdown_link.hasClass("dropdown-toggle")) {
 
 				nav_dropdown_link.attr(link_clicker)
@@ -59,15 +79,7 @@ function modernizrResize() {
 			});
 
 			//BOOTSTRAP CLICK NAV LINKS BUG FIX
-			jQuery(".navbar-bottom li:not(.dropdown)").click(function () {
-				//e.preventDefault();
 
-			    window.location = jQuery(this).find("a").attr("href");
-			   // return false;
-
-			     jQuery(this).parent().parent().addClass("open");
-
-			});
 
 			//BOOTSTRAP CLICK NAV LINKS BUG FIX
 			jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function () {
@@ -92,10 +104,10 @@ function modernizrResize() {
 			        $el.addClass("disabled").attr('data-toggle', '')
 			    }, 500);
 			});
+*/
 
 
-
-		// END MAX 767px
+		// END MIN 0 to MAX 767px
 		}
 
 
@@ -220,12 +232,17 @@ if ( (window.location.href.indexOf("/Action/Edit") != -1) && (document.referrer.
  * By Osvaldas Valutis, www.osvaldas.info
  * Available for use under the MIT License
  *
+ * MENU DOUBLE TAP
  *
- * ====================================================== */
-;(function( $, window, document, undefined ) {
+ * By Osvaldas Valutis, www.osvaldas.info
+ * Available for use under the MIT License
+ * ======================================================= */
+ function devicesDoubleTapInit() {
 
-	$.fn.doubleTapToGo = function( params ) {
-		if( !( 'ontouchstart' in window ) && !navigator.msMaxTouchPoints &&
+	;(function( $, window, document, undefined ) {
+		$.fn.doubleTapToGo = function( params ) {
+			if( !( 'ontouchstart' in window ) &&
+				!navigator.msMaxTouchPoints &&
 				!navigator.userAgent.toLowerCase().match( /windows phone os 7/i ) ) return false;
 
 			this.each( function() {
@@ -251,11 +268,15 @@ if ( (window.location.href.indexOf("/Action/Edit") != -1) && (document.referrer.
 						curItem = false;
 				});
 			});
-
 			return this;
-	};
+		};
+	})( jQuery, window, document );
 
-})( jQuery, window, document );
+
+	//INIT DOUBLE TAP FUNCTION
+	jQuery(".navbar-bottom > li.menu-dropdown").doubleTapToGo();
+
+}
 
 /* ================================== *
  * MODERNIZR INIT
@@ -263,7 +284,8 @@ if ( (window.location.href.indexOf("/Action/Edit") != -1) && (document.referrer.
 jQuery(function(){
 
 	//Responsive Function
-	modernizrResize();
+	modernizrResize()
+	devicesDoubleTapInit();
 
 });
 
@@ -280,14 +302,6 @@ jQuery(document).on('click.nav','.navbar-collapse.in',function(e) {
  * DOC LOAD
  * ================================== */
 jQuery(document).ready(function() {
-
-
-	jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function () {
-		//e.preventDefault();
-	        window.location = jQuery(this).attr("href");
-
-	});
-
 
 
 	wcagKeyboardEvents()
