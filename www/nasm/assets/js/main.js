@@ -53,8 +53,12 @@ function modernizrResize() {
 				nav_dropdown_link.attr(link_clicker)
 			}
 			
-			//BOOTSTRAP CLICK NAV LINKS BUG FIX
-						
+			//BOOTSTRAP PREVENT IDIOTICNESS
+			jQuery('.dropdown-menu a').click(function(e){
+				e.stopPropagation();
+			});		
+			
+			//BOOTSTRAP CLICK NAV LINKS BUG FIX					
 			jQuery(".navbar-bottom li:not(.dropdown)").click(function () {
 				//e.preventDefault();
 				
@@ -65,7 +69,7 @@ function modernizrResize() {
 		
 			});						
 						
-/*
+
 			jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function () {
 				//e.preventDefault();
 				
@@ -74,7 +78,8 @@ function modernizrResize() {
 			        jQuery(this).parent().parent().parent().addClass("open");                    
 		
 			});
-*/
+			
+/*
 			//ON CLICK MAKE LINK TOGGLE CLICKABLE
 			nav_dropdown_link.on("click", function() {
 				
@@ -85,7 +90,7 @@ function modernizrResize() {
 			        $el.addClass("disabled");
 			    }, 500);
 			});
-			
+*/			
 
 
 		// END MAX 767px	
@@ -273,13 +278,17 @@ jQuery(document).on('click.nav','.navbar-collapse.in',function(e) {
  * DOC LOAD
  * ================================== */
 jQuery(document).ready(function() {
+	
+	
 
+
+/*
 	jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function (e) {
 		e.preventDefault();
 	        window.location = jQuery(this).attr("href");
 	
 	});	
-    
+*/   
     
 
 	wcagKeyboardEvents()	
