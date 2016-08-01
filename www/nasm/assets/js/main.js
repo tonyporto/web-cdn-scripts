@@ -63,7 +63,7 @@ function modernizrResize() {
 				//e.preventDefault();
 				
 			    window.location = jQuery(this).find("a").attr("href");
-			    return false;
+			   // return false;
 			    
 			     jQuery(this).parent().parent().addClass("open");                    
 		
@@ -79,7 +79,7 @@ function modernizrResize() {
 		
 			});
 			
-/*
+
 			//ON CLICK MAKE LINK TOGGLE CLICKABLE
 			nav_dropdown_link.on("click", function() {
 				
@@ -90,7 +90,7 @@ function modernizrResize() {
 			        $el.addClass("disabled");
 			    }, 500);
 			});
-*/			
+			
 
 
 		// END MAX 767px	
@@ -280,9 +280,9 @@ jQuery(document).on('click.nav','.navbar-collapse.in',function(e) {
 jQuery(document).ready(function() {
 	
 
-	jQuery(".navbar-bottom li:not(.dropdown)").on("click", function (e) {
-		e.preventDefault();
-	        window.location = jQuery(this).find("a").attr("href");
+	jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function () {
+		//e.preventDefault();
+	        window.location = jQuery(this).attr("href");
 	
 	});	
    
