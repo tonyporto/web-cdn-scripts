@@ -54,12 +54,27 @@ function modernizrResize() {
 			}
 			
 			//BOOTSTRAP CLICK NAV LINKS BUG FIX
+						
+			jQuery(".navbar-bottom li:not(.dropdown)").click(function () {
+				//e.preventDefault();
+				
+			    window.location = jQuery(this).find("a").attr("href");
+			    return false;
+			    
+			     jQuery(this).parent().parent().addClass("open");                    
+		
+			});						
+						
+/*
 			jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function () {
 				//e.preventDefault();
+				
 			    window.location = jQuery(this).attr("href");
+			    
+			        jQuery(this).parent().parent().parent().addClass("open");                    
 		
 			});
-
+*/
 			//ON CLICK MAKE LINK TOGGLE CLICKABLE
 			nav_dropdown_link.on("click", function() {
 				
