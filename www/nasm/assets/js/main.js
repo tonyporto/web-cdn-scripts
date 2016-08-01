@@ -6,8 +6,7 @@ function modernizrResize() {
 	
 	jQuery(".navbar-bottom li:not(:has(ul))").removeAttr("class data-toggle aria-expanded");
 		
-	var nav_Li_toggle = jQuery(".navbar-bottom > li:has(ul)"),
-		nav_dropdown_link = jQuery(".navbar-bottom li.dropdown > a"),
+	var nav_dropdown_link = jQuery(".navbar-bottom li.dropdown > a"),
 		link_clicker = {'class': 'dropdown-toggle', 'data-toggle': 'dropdown'};
 	
 
@@ -43,27 +42,30 @@ function modernizrResize() {
 				nav_li.removeClass("open")
 			}
 			
-			nav_Li_toggle.find("a:first").removeAttr("class data-toggle");
-			
-			nav_dropdown_link.removeAttr("disabled");
+
+			nav_dropdown_link.removeAttr("class data-toggle");
 
 		//END MIN 768PX
 		} else {
 		
-			if (!nav_Li_toggle.hasClass("dropdown-toggle")) {
-				nav_Li_toggle.find("a:first").attr(link_clicker)
+			if (!nav_dropdown_link.hasClass("dropdown-toggle")) {
+				
+				nav_dropdown_link.attr(link_clicker)
 			}
-			
-	/*
+
+
 			nav_dropdown_link.on("click", function() {
-				$(this).toggleClass("disabled");
-			})
-	*/
+				
+			    var $el = $(this);
+			    
+			    setTimeout(function () {			    
+			        nav_dropdown_link.removeClass("disabled")
+			        $el.addClass("disabled");
+			    }, 500);
+			});
 			
-			//INIT DOUBLE TAP FUNCTION
-			nav_dropdown_link.doubleTapToGo();
-			
-			
+
+
 		// END MAX 767px	
 		}
 
