@@ -2,13 +2,13 @@
  * CUSTOM EVENTS
  * ----------------------- */
 function modernizrResize() {
-	
-	
+
+
 	jQuery(".navbar-bottom li:not(:has(ul))").removeAttr("class data-toggle aria-expanded");
-		
+
 	var nav_dropdown_link = jQuery(".navbar-bottom li.dropdown > a"),
 		link_clicker = {'class': 'dropdown-toggle', 'data-toggle': 'dropdown'};
-	
+
 
 	//MIN WIDTH
     var min_width;
@@ -26,79 +26,81 @@ function modernizrResize() {
               };
             }
 
-			
+
 	/* ========================================================================== *
 	 * END MODERNIZR RESIZE *
-	 * ========================================================================== */	 
+	 * ========================================================================== */
 	//MODERNIZR RESIZE WRAPPER
 	var mod = function() {
 
 
 		if (min_width(768)) {
-		
+
 			var nav_li = jQuery(".dropdown.menu-dropdown");
-			
-			if (nav_li.hasClass("open")) {			
+
+			if (nav_li.hasClass("open")) {
 				nav_li.removeClass("open")
 			}
-			
+
 
 			nav_dropdown_link.removeAttr("class data-toggle");
 
 		//END MIN 768PX
 		} else {
-		
+
 			if (!nav_dropdown_link.hasClass("dropdown-toggle")) {
-				
+
 				nav_dropdown_link.attr(link_clicker)
 			}
-			
+
 			//BOOTSTRAP PREVENT IDIOTICNESS
 			jQuery('.dropdown-menu a').click(function(e){
 				e.stopPropagation();
-			});		
-			
-			//BOOTSTRAP CLICK NAV LINKS BUG FIX					
+			});
+
+			//BOOTSTRAP CLICK NAV LINKS BUG FIX
 			jQuery(".navbar-bottom li:not(.dropdown)").click(function () {
 				//e.preventDefault();
-				
+
 			    window.location = jQuery(this).find("a").attr("href");
 			   // return false;
-			    
-			     jQuery(this).parent().parent().addClass("open");                    
-		
-			});						
-						
 
+			     jQuery(this).parent().parent().addClass("open");
+
+			});
+
+			//BOOTSTRAP CLICK NAV LINKS BUG FIX
 			jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function () {
 				//e.preventDefault();
-				
+
 			    window.location = jQuery(this).attr("href");
-			    
-			        jQuery(this).parent().parent().parent().addClass("open");                    
-		
+
+			        jQuery(this).parent().parent().parent().addClass("open");
+
 			});
-			
+
 
 			//ON CLICK MAKE LINK TOGGLE CLICKABLE
 			nav_dropdown_link.on("click", function() {
-				
-			    var $el = $(this);
-			    
-			    setTimeout(function () {			    
-			        nav_dropdown_link.removeClass("disabled")
-			        $el.addClass("disabled");
+
+			    var $el = $(this),
+			        data_toggle = {'data-toggle': 'dropdown'};
+
+			    setTimeout(function () {
+			        nav_dropdown_link.removeClass("disabled").attr(data_toggle)
+
+			        $el.addClass("disabled").attr('data-toggle', '')
 			    }, 500);
 			});
-			
 
 
-		// END MAX 767px	
+
+		// END MAX 767px
 		}
 
 
 		//END MODERNIZR RESIZE WRAPPER
-		
+
 	};
 
     // Call on every window resize
@@ -117,7 +119,7 @@ function wcagKeyboardEvents() {
 		aria_expanded = {'aria-expanded': 'true'},
 		aria_hidden = {'aria-expanded': 'false'};
 
-	
+
 	MenuDropdowns.attr({'role':'menuitem','tabindex' : '0','aria-haspopup' : 'true'})
 
 	MenuDropdowns.on('focus', function() {
@@ -170,15 +172,15 @@ jQuery('.search-wrapper').each(function() {
  * ==================================*/
 function sfPagerNumeric() {
 	jQuery(".sf_pagerNumeric").find("a").wrap("<li></li>").parent().wrapAll("<ul class='pagination'></ul>");
-	
+
 	var nextLink = jQuery(".sf_pagerNumeric + a[id*='_pager']:first");
-	
+
 	if (nextLink.length) {
 
 		nextLink.detach().appendTo(".sf_pagerNumeric .pagination").wrap("<li class='next'></li>")
 
 	}
-	
+
 }
 /* ================================== *
  * REMOVE EMPTY WIDGET FIELDS
@@ -249,10 +251,10 @@ if ( (window.location.href.indexOf("/Action/Edit") != -1) && (document.referrer.
 						curItem = false;
 				});
 			});
-			
+
 			return this;
 	};
-	
+
 })( jQuery, window, document );
 
 /* ================================== *
@@ -278,17 +280,17 @@ jQuery(document).on('click.nav','.navbar-collapse.in',function(e) {
  * DOC LOAD
  * ================================== */
 jQuery(document).ready(function() {
-	
+
 
 	jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function () {
 		//e.preventDefault();
 	        window.location = jQuery(this).attr("href");
-	
-	});	
-   
-    
 
-	wcagKeyboardEvents()	
+	});
+
+
+
+	wcagKeyboardEvents()
 	sfPagerNumeric();
 
 });
