@@ -5,13 +5,9 @@ function modernizrResize() {
 
 	jQuery(".navbar-bottom li:not(:has(ul))").removeAttr("class data-toggle aria-expanded");
 
-	
+	//MOBILE NAVIGATION VARIABLES
 	var menu_dropdown = jQuery(".navbar-bottom > li > .dropdown-menu"),
 		dropdown_menu = jQuery(".navbar-bottom > li:has(.dropdown-menu)");
-	
-	
-	//	nav_dropdown_link = jQuery(".navbar-bottom li.dropdown > a"),
-	//	link_clicker = {'class': 'dropdown-toggle', 'data-toggle': 'dropdown'};
 
 
 	//MIN WIDTH
@@ -40,76 +36,30 @@ function modernizrResize() {
 
 		if (min_width(768)) {
 
-			//var nav_li = jQuery(".dropdown.menu-dropdown");
+			//REMOVE OPEN MOBILE NAVIGATION TRIGGER & SUBMENU
 			menu_dropdown.removeClass("hidden")
-			
+			jQuery("#main-nav-toggle").removeClass("in")
+
 			if (dropdown_menu.hasClass("open")) {
 				dropdown_menu.removeClass("open")
 			}
 
-
-			//nav_dropdown_link.removeAttr("class data-toggle");
-
 		//END MIN 768PX
 		} else {
-		
-		
-    /* ========================================================================== *
-	 * USABLE SUBMENU
-	 * ========================================================================== */ 
-	menu_dropdown.addClass("hidden")
-	 
-	dropdown_menu.hover(function () { 
-		jQuery(this).addClass("open").find(".dropdown-menu").removeClass("hidden");
 
-	}, function () {
-		jQuery(this).removeClass("open").find(".dropdown-menu").addClass("hidden");
-    });
+		    /* ========================================================================== *
+			 * UN-BOOTSTRAP MOBILE NAVIGATION TO MAKE IT USABLE
+			 * ========================================================================== */
+			menu_dropdown.addClass("hidden")
 
-		//START MIN 0 to MAX 767px
-/*		
-			if (!nav_dropdown_link.hasClass("dropdown-toggle")) {
-
-				nav_dropdown_link.attr(link_clicker)
-			}
-
-			//BOOTSTRAP PREVENT IDIOTICNESS
-			jQuery('.dropdown-menu a').click(function(e){
-				e.stopPropagation();
-			});
-
-			//BOOTSTRAP CLICK NAV LINKS BUG FIX
-
-
-			//BOOTSTRAP CLICK NAV LINKS BUG FIX
-			jQuery(".navbar-bottom li:not(.dropdown) > a").on("click", function () {
-				//e.preventDefault();
-
-			    window.location = jQuery(this).attr("href");
-
-			        jQuery(this).parent().parent().parent().addClass("open");
-
-			});
-
-
-			//ON CLICK MAKE LINK TOGGLE CLICKABLE
-			nav_dropdown_link.on("click", function() {
-
-			    var $el = $(this),
-			        data_toggle = {'data-toggle': 'dropdown'};
-
-			    setTimeout(function () {
-			        nav_dropdown_link.removeClass("disabled").attr(data_toggle)
-
-			        $el.addClass("disabled").attr('data-toggle', '')
-			    }, 500);
-			});
-*/
-
+			dropdown_menu.hover(function () {
+				jQuery(this).addClass("open").find(".dropdown-menu").removeClass("hidden");
+			}, function () {
+				jQuery(this).removeClass("open").find(".dropdown-menu").addClass("hidden");
+		    });
 
 		// END MIN 0 to MAX 767px
 		}
-
 
 		//END MODERNIZR RESIZE WRAPPER
 
@@ -118,7 +68,6 @@ function modernizrResize() {
     // Call on every window resize
     jQuery(window).resize(mod);
     mod();
-
 
 }
 
@@ -289,20 +238,11 @@ jQuery(function(){
 
 });
 
-/* ======================================================== *
- * UN-BOOTSTRAP MENU LINKS
- * ========================================================
-jQuery(document).on('click.nav','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a') ) {
-        $(this).removeClass('in').addClass('collapse');
-    }
-});
- */
+
 /* ================================== *
  * DOC LOAD
  * ================================== */
 jQuery(document).ready(function() {
-
 
 	wcagKeyboardEvents()
 	sfPagerNumeric();

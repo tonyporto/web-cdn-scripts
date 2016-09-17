@@ -1,0 +1,19 @@
+.checkbox-list > li:first-child {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.checkbox-list > li:last-child {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.checkbox-list > li {
+    padding: 10px 15px;
+    margin-bottom: -1px;
+}
+
+
+.checkbox-list > li {
+    border: 1px solid #ddd;
+}

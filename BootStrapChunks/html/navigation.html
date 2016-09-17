@@ -1,0 +1,500 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+				<!-- link rel="stylesheet" href="../web-cdn-scripts/not-bloatedStrap.css" -->
+        <!-- link rel="stylesheet" href="css/bootstrap.min.css" -->
+        <style>
+            body {
+                margin: 0;
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <!-- link rel="stylesheet" href="css/bootstrap-theme.min.css" -->
+        <!-- link rel="stylesheet" href="css/bootstrap-navbar.css" -->
+
+        <!-- script src="js/vendor/modernizr-2.8.3.min.js"></script -->
+
+
+ <style>
+nav li > a {
+	text-decoration: none;
+}
+
+.nav > li,
+.nav > li > a,
+.dropup,
+.dropdown,
+.collapsing,
+.navbar-toggle {
+	position: relative;
+}
+
+.sr-only,
+.dropdown-menu {
+	position: absolute;
+}
+
+.sr-only,
+.collapsing{
+	overflow: hidden;
+}
+
+.navbar-toggle {
+	float: right;
+}
+.dropdown-menu {
+	float: left;
+}
+.nav-justified > li {
+	float: none;
+}
+
+.sr-only,
+.nav-justified > li,
+.nav-justified > li > ul {
+	padding: 0;
+}
+
+.sr-only {
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+
+.icon-bar {
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+	margin: 3px 0;
+}
+
+.navbar-toggle {
+	padding: 6px;
+	border: 1px solid transparent;
+}
+.navbar-toggle {
+	border-radius: 4px;
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+	border-color: #337ab7;
+}
+.navbar-toggle {
+	border-color: #ddd;
+}
+
+/* ================================= *
+ * BG COLOR
+ * ================================= */
+.navbar-toggle,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+	background-image: none;
+}
+.nav .disabled > a:hover,
+.nav .disabled > a:focus,
+.navbar-toggle {
+	background-color: transparent;
+}
+.collapse.in > ul > li,
+.nav-justified > li > ul{
+	background-color: rgba(200,200,200,0.89);
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+	background-color: #f5f5f5;
+}
+.dropdown-menu .divider,
+.nav .nav-divider {
+	background-color: #e5e5e5;
+}
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+	background-color: #eeeeee;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+	background-color: #337ab7;
+}
+.icon-bar {
+	background-color: #888;
+}
+
+/* ================================= *
+ * COLOR
+ * ================================= */
+.nav-justified li > a, 
+ 
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+	color: #ffffff;
+}
+
+nav .disabled > a,
+nav .disabled > a:hover,
+nav .disabled > a:focus {
+	color: #777777;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+	color: #262626;
+}
+
+.dropdown-menu > li > a {
+	clear: both;
+}
+
+.nav .disabled > a:focus {
+	cursor: not-allowed;
+}
+
+.collapse,
+.dropdown-menu {
+	display: none;
+}
+
+.icon-bar,
+.collapse.in,
+.navbar-header:after,
+.nav > li,
+.nav > li > a,
+.open > .dropdown-menu,
+.dropdown-menu > li > a,
+.menu-dropdown:hover > .dropdown-menu {
+	display: block;
+}
+
+.navbar-header {
+	padding-top: 30px;
+}
+
+.navi-button {
+	margin-top: -30px;
+}
+
+.navbar-header:after {
+	content: "";
+	clear: both;
+}
+
+.dropdown-toggle:focus,
+.dropdown-menu a {
+	outline: 0;
+}
+
+.dropdown-menu {
+	top: 100%;
+	z-index: 1000;
+	font-size: 14px;
+}
+
+.dropdown-menu-right,
+.dropdown-menu.pull-right,
+.pull-right > .dropdown-menu {
+	right: 0;
+	left: auto;
+}
+
+.dropdown-menu-left {
+	right: auto;
+}
+
+.dropdown-menu,
+.dropdown-backdrop,
+.dropdown-menu-left {
+	left: 0;
+}
+
+.dropdown-menu .divider,
+.nav .nav-divider {
+	height: 1px;
+	margin: 9px 0;
+	overflow: hidden;
+}
+
+.dropdown-menu > li > a {
+	padding-left: 2em;
+	line-height: 1.42857143;
+	white-space: nowrap;
+}
+
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+	filter: progid: DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.dropdown-backdrop {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: 990;
+}
+
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
+	top: auto;
+	bottom: 100%;
+	margin-bottom: 2px;
+}
+
+.nav {
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.nav,
+.dropdown-menu {
+	list-style: none;
+}
+
+.nav > li > a,
+.dropdown-menu > li > a {
+	padding: 10px 15px;
+}
+
+.nav-justified {
+	width: 100%;
+}
+
+.nav-justified > .dropdown .dropdown-menu {
+	top: auto;
+  right: 0;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+
+	.menu-dropdown > .dropdown-menu {
+		position: static;
+		width: 100%;
+	}
+	.nav-justified > li {
+    display: block;
+	  position: relative;
+	  clear: both;
+	  float: none;
+  }
+	.dropdown-menu > li:first-child {
+	  border-top: 1px solid rgba(165,165,165,0.55);
+	}
+	.dropdown-menu > li,
+	.nav-justified > li:not(:last-child) {
+	  border-bottom: 1px solid rgba(165,165,165,0.55);
+	}
+	.menu-dropdown > a:after {
+	  content: "\f107";
+	  float: right;
+	  font-family: FontAwesome;
+	}
+	.menu-dropdown:hover > a:after {
+	  content: "\f106";
+	}
+	.dropdown-menu > li > a {
+		padding-left: 2.8em;
+	}
+
+}
+
+@media (min-width: 768px) {
+
+	.navbar-right .dropdown-menu {
+		left: auto;
+		right: 0;
+	}
+	.navbar-right .dropdown-menu-left {
+		left: 0;
+		right: auto;
+	}
+	.navbar-toggle {
+		display: none;
+	}
+	.nav-justified > li {
+		display: table-cell;
+		width: 1%;
+		vertical-align: middle;
+	}
+	.nav-justified > li > a {
+		margin-bottom: 0;
+		text-align: center;
+	}
+	.navbar-collapse.collapse {
+		display: block!important;
+		height: auto!important;
+		padding-bottom: 0;
+		overflow: visible!important;
+	}
+
+}
+ </style>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		<header class="container ">
+
+			<nav class="navbar-header m-a-0">
+
+
+	      <button type="button" class="navi-button navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-toggle" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+			</nav>
+
+
+
+
+			<nav class="row nav-wrap collapse navbar-collapse" id="main-nav-toggle" aria-label="Main menu">
+
+
+          <ul class="nav nav-justified" role="navigation">
+					<li>
+						<a href="home.html">become a personal trainer</a>
+					</li>
+
+<!-- ######## ========================================================
+	================================= ####### -->
+
+					<!-- li class="dropdown menu-dropdown dropdown-toggle" data-toggle="dropdown" aria-expanded="false" -->
+					<li class="dropdown menu-dropdown " >
+
+						<a href="continuing.html" class="dropdown-toggle" data-toggle="dropdown">continuing education
+
+						</a>
+						<ul class="dropdown-menu main-menu">
+							<li><a href="breadcrumb.html">ce 1</a></li>
+							<li><a href="login.html">ce 2</a></li>
+							<li><a href="home.html">Something else here</a></li>
+							<li><a href="home.html">Separated link</a></li>
+							<li><a href="home.html">One more separated link</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="breadcrumb.html">recertification </a>
+
+					</li>
+
+					<!-- li class="dropdown menu-dropdown dropdown-toggle" data-toggle="dropdown" aria-expanded="false" -->
+					<li class="dropdown menu-dropdown " aria-expanded="false">
+						<a href="/trainer.html">Trainer
+
+						</a>
+						<ul class="dropdown-menu main-menu">
+							<li><a href="home.html">ce 1</a></li>
+							<li><a href="breadcrumb.html">ce 2</a></li>
+							<li><a href="home.html">Something </a></li>
+							<li><a href="home.html">Separated </a></li>
+
+						</ul>
+
+					</li>
+					<li><a href="breadcrumb.html">events</a></li>
+				</ul>
+
+
+
+			</nav>
+
+		</header>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+      
+<a href="#aboutModal" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Launch demo modal</a>      
+      
+      
+<!--about modal-->
+<div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h2 class="text-center">About</h2>
+      </div>
+      <div class="modal-body">
+          <div class="col-md-12 text-center">
+            <a href="http://www.bootply.com/DwnjTNuvVt">This Bootstrap Template</a>
+			
+			<br>was made with <i class="glyphicon glyphicon-heart"></i> by <a href="http://bootply.com/templates">Bootply</a>
+            
+			
+            <a href="http://github.com/iatek/bootstrap-google-plus">GitHub Fork</a>
+          </div>
+      </div>
+      <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">OK</button>
+      </div>
+  </div>
+  </div>
+</div>
+      <footer>
+        <p>&copy; Company 2015</p>
+      </footer>
+    </div> <!-- /container -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+        <script src="nav.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+
+    </body>
+</html>

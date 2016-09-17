@@ -1,0 +1,47 @@
+<div class="alert alert-success alert-dismissible">
+				 
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+					×
+				</button>
+				<h4>
+					Alert!
+				</h4> <strong>Warning!</strong> Best check yo self, you're not looking too good. <a href="#" class="alert-link">alert link</a>
+			</div>
+
+<!-- /* ================================================================================ *
+             ERROR MESSAGES
+* ================================================================================= */ -->
+
+<label class=" alert alert-danger col-xs-12 m-y-1">
+  <i class="mistake"></i>
+  
+        Oh poopy something happened
+	
+</label>
+
+
+
+<!-- /* ================================================================================ *
+             ALERT/NOTICE MESSAGES
+* ================================================================================= */ -->
+
+
+<label class=" alert alert-warning col-xs-12 m-y-1">
+  <i class="notice"></i>
+  
+        Oh poopy something happened
+	
+</label>
+
+
+<!-- /* ================================================================================ *
+            SUCCESS MESSAGES
+* ================================================================================= */ -->
+
+
+<label class=" alert alert-success col-xs-12 m-y-1">
+  <i class="confirmation"></i>
+  
+        Oh poopy something happened
+	
+</label>
