@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'FontAwesome';
-	src: url('http://tonyporto.github.io/web-cdn-scripts/fonts/FontAwesome/fontawesome.eot');
-	src: url('http://tonyporto.github.io/web-cdn-scripts/fonts/FontAwesome/fontawesome.eot?#iefix') format('embedded-opentype'),
+	src: url('http://tonyporto.github.io/web-cdn-scripts/fonts/FontAwesome/fontawesome-webfont.eot');
+	src: url('http://tonyporto.github.io/web-cdn-scripts/fonts/FontAwesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
 	url('http://tonyporto.github.io/web-cdn-scripts/fonts/FontAwesome/fontawesome-webfont.woff2') format('woff2'),
 	url('http://tonyporto.github.io/web-cdn-scripts/fonts/FontAwesome/fontawesome-webfont.woff') format('woff'),
 	url('http://tonyporto.github.io/web-cdn-scripts/fonts/FontAwesome/fontawesome-webfont.ttf') format('truetype'),
