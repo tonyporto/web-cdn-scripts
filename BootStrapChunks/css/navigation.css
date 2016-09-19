@@ -156,14 +156,6 @@ nav .disabled > a:focus {
 	display: block;
 }
 
-.navbar-header {
-	padding-top: 30px;
-}
-
-.navi-button {
-	margin-top: -30px;
-}
-
 .navbar-header:after {
 	content: "";
 	clear: both;

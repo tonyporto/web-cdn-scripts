@@ -530,7 +530,6 @@ pre {
 	padding:15px;
 }
 pre,
-fieldset,
 .form-control,
 .input-group-addon {
   border:1px solid #ccc;
@@ -795,11 +794,9 @@ a.btn.disabled {
 .btn {
   border:1px solid transparent;
 }
-/* OUTLINE */
-button.close,
+btn.close,
 [class*="btn-"][class*="outline"] {
   background-color: transparent;
-  background-image: none;
 }
 
 /* ======================================= *
