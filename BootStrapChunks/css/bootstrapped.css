@@ -1038,7 +1038,7 @@ a.bg-success:hover {
 .btn,
 .img-thumbnail,
 .list-inline > li,
-.inline-block {
+[class*=inline-block] {
   display:inline-block;
 }
 .align-right,
