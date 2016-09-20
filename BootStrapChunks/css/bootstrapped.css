@@ -1037,7 +1037,8 @@ a.bg-success:hover {
 /* SPACE HELPER CLASSES */
 .btn,
 .img-thumbnail,
-.list-inline > li {
+.list-inline > li,
+.inline-block {
   display:inline-block;
 }
 .align-right,
