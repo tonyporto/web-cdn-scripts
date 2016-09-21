@@ -777,8 +777,8 @@ input,
 a.btn.disabled {
   pointer-events:none;
 }
-.btn:focus,
-.btn:hover {
+.btn:not(.btn-transparent):focus,
+.btn:not(.btn-transparent):hover {
   background-image: -webkit-linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
   background-image: linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.15)), color-stop(1%, rgba(255,255,255,.15)), color-stop(1%, rgba(0,0,0,.1)), to(rgba(0,0,0,.15)));
@@ -888,6 +888,10 @@ legend,
 /* ======================================= *
  * BACKGROUND COLORS
  * ======================================= */
+.btn-transparent,
+.btn-transparent:hover {
+  background:transparent;
+}
 .btn-default,
 .form-control {
   background-color:#fff;
@@ -957,10 +961,6 @@ a.bg-success:hover {
 /* ======================================= *
  * BORDER COLORS
  * ======================================= */
-.btn-outline-transparent,
-.btn-outline-transparent:hover {
-  border-color:transparent;
-}
 .btn-warning,
 .btn-outline-warning,
 .btn-outline-warning:hover {
@@ -1160,7 +1160,7 @@ kbd,
 .input-group-addon:last-child {
   border-left: 0;
 }
-.input-group:not(.button-right) .form-control:first-child,
+.input-group .form-control:first-child,
 .input-group-addon:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
