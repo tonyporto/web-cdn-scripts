@@ -313,9 +313,27 @@
 .p-x-2 {
   padding-left: 2em !important;
 }
+
+.p-t-30,
+.p-y-30 {
+  padding-top: 30px !important;
+}
+.p-b-30,
+.p-y-30 {
+  padding-bottom: 30px !important;
+}
+
+.p-t-25,
+.p-y-25 {
+  padding-top: 30px !important;
+}
 .p-r-25,
 .p-x-25 {
 	padding-right: 25px !important;
+}
+.p-b-25,
+.p-y-25 {
+  padding-bottom: 30px !important;
 }
 .p-l-25,
 .p-x-25 {
