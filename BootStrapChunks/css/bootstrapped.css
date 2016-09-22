@@ -1008,7 +1008,7 @@ a.bg-success:hover {
 }
 
 .container {
-  width: 90%;
+  width: 96%;
   max-width: 1170px;
 }
 .container:not([class*="-full"]),
