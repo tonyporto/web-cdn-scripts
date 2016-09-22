@@ -237,7 +237,7 @@ a:focus,
 }
 img,
 .btn,
-.overlay-inner,
+.display-table-cell,
 .input-group-addon,
 .input-group-btn {
   vertical-align:middle;
@@ -1065,13 +1065,11 @@ a.bg-success:hover {
   display:block;
 }
 table,
-.overlay-outer,
 .display-table,
 .input-group {
   display: table;
 }
 td, th,
-.overlay-inner,
 .display-table-cell,
 .input-group .form-control,
 .input-group-addon,
