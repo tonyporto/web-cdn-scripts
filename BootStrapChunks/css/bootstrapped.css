@@ -683,6 +683,7 @@ select.input-sm,
 }
 .input-lg,
 .form-group-lg .form-control,
+.input-group-lg>.form-control,
 .input-group-lg>.input-group-btn>.btn {
   height:46px;
 }
