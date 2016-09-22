@@ -120,11 +120,22 @@
   content:"\f071";
 }
 
-/* ===================================================================== *
+/*! ===================================================================== *
  * HELPER CLASSES : MARGIN & PADDING *
  *
  * http://v4-alpha.getbootstrap.com/components/utilities/#spacing *
  * ===================================================================== */
+.m-t-a,
+.m-y-a,
+.m-a-a {
+	margin-top: auto;
+}
+.m-b-a,
+.m-y-a,
+.m-a-a {
+	margin-bottom: auto;
+}
+.m-a-a,
 .m-x-a {
 	margin-right: auto;
 	margin-left: auto;
