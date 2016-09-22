@@ -1173,6 +1173,14 @@ kbd,
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+[class*="-lg rounded"] > .form-control {
+  border-top-left-radius: 23px;
+  border-bottom-left-radius: 23px;
+}
+[class*="-lg rounded"] > .input-group-btn > .btn {
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+}
 .btn-group .btn +.btn,
 .btn-group .btn +.btn-group,
 .btn-group .btn-group +.btn,
