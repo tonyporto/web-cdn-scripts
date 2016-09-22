@@ -1041,7 +1041,7 @@ a.bg-success:hover {
 }
 .float-none,
 .pull-none {
-  float:none;
+  float:none !important;
 }
 
 /* SPACE HELPER CLASSES */
