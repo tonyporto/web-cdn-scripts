@@ -194,6 +194,18 @@ button.close {
 fieldset {
   padding:.35em .625em .75em;
 }
+.list-inline>li {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.nav,
+.dropdown-menu,
+.list-unstyled, 
+.list-inline, 
+.breadcrumb, 
+.pager {
+	list-style: none;
+}
 hr,
 img,
 legend,
