@@ -518,7 +518,11 @@ p,
   padding-right: 10px !important;
 }
 .ico-b:before {
-  padding-right: .36em;
+  padding-right: .39em;
+}
+.ico-a:after,
+.menu-dropdown > a:after {
+	padding-left: .39em;
 }
 .p-b-10,
 .p-y-10 {
