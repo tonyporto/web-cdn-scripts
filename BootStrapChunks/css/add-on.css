@@ -70,6 +70,7 @@
 .size18 {
 	font-size: 18px;
 }
+.footer-links > li:not(:first-child),
 .size14 {
 	font-size: 14px
 }
@@ -100,6 +101,8 @@ p,
 .text-size-1-4{
   font-size: 1.4rem;
 }
+
+.footer-links > li,
 .text-size-1-2 {
 	font-size: 1.2em;
 }
@@ -531,8 +534,8 @@ p,
 .p-y-0 {
   padding-bottom: 0 !important;
 }
-span > ul,
-nav > ul,
+span > ul:not([class*=col-]),
+nav > ul:not([class*=col-]),
 .p-l-0,
 .p-x-0 {
   padding-left: 0 !important;
