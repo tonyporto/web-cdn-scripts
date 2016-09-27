@@ -239,8 +239,8 @@
 }
 .m-a-a,
 .m-x-a {
-	margin-right: auto;
-	margin-left: auto;
+	margin-right: auto !important;
+	margin-left: auto !important;
 }
 .m-t-4,
 .m-y-4 {
@@ -304,7 +304,7 @@
 }
 .m-l-1,
 .m-x-1 {
-  margin-left: 1em;
+  margin-left: 1em !important;
 }
 .m-t-05 {
     margin-top: .5rem !important;
