@@ -121,7 +121,7 @@ p,
 .line-height-1-2 {
 	line-height: 1.2;
 }
-/*! ============================================== *
+/* ============================================== *
  * ONLY ICONS USED ------------------------------ *
  *
  * http://fontawesome.io/cheatsheet ------------- *
@@ -532,6 +532,7 @@ p,
   padding-bottom: 0 !important;
 }
 span > ul,
+nav > ul,
 .p-l-0,
 .p-x-0 {
   padding-left: 0 !important;
