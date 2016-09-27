@@ -1023,7 +1023,7 @@ a.bg-success:hover {
   width: 96%;
   max-width: 1170px;
 }
-.container:not([class*="-full"]),
+
 .container-fluid,
 [class*="col-"] {
   padding-right:15px;
