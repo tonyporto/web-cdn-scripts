@@ -70,11 +70,14 @@
 .size18 {
 	font-size: 18px;
 }
-.footer-links > li:not(:first-child),
+
 .size14 {
 	font-size: 14px
 }
-
+.footer-links > li:not(:first-child),
+.size12 {
+	font-size: 12px
+}
 /* EMS & REMS */
 .text-size-2-8 {
 	font-size: 2.8rem;
@@ -98,11 +101,11 @@
 	font-size: 1.5rem;
 }
 p,
+.footer-links > li,
 .text-size-1-4{
   font-size: 1.4rem;
 }
 
-.footer-links > li,
 .text-size-1-2 {
 	font-size: 1.2em;
 }
