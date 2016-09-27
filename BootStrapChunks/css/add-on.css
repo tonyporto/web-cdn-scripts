@@ -156,24 +156,22 @@ p,
 }
 
 /* SOCIAL */
-.icon-facebook-circle:before {
-  content:"\f09a";
+.icon-facebook:before {
+  content:"\f082";
 }
-.icon-twitter-circle:before {
-  content:"\f099";
+.icon-googleplus:before {
+  content:"\f0d4";
 }
-.icon-youtube-circle:before {
-  content:"\f16a";
+.icon-twitter:before {
+  content:"\f081";
 }
-.icon-instagram-circle:before {
+.icon-instagram:before {
   content:"\f16d";
 }
-.icon-graduation-cap:before {
-  content:"\f19d";
+.icon-youtube:before {
+  content:"\f166";
 }
-.icon-book:before {
-  content:"\f02d";
-}
+
 .icon-quote:before {
   content:"\f10d";
 }
