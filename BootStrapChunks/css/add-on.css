@@ -91,6 +91,8 @@
 .text-size-2 {
 	font-size: 2rem;
 }
+
+.footer-links > li,
 .text-size-1-8 {
 	font-size: 1.8rem;
 }
@@ -101,7 +103,6 @@
 	font-size: 1.5rem;
 }
 p,
-.footer-links > li,
 .text-size-1-4{
   font-size: 1.4rem;
 }
@@ -117,6 +118,10 @@ p,
  * ========================================== */
 .line-height-2 {
 	line-height: 2;
+}
+.footer-links > li,
+.line-height-1-8 {
+	line-height: 1.8;
 }
 .line-height-1-5 {
 	line-height: 1.5;
