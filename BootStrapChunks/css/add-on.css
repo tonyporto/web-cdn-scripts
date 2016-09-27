@@ -289,6 +289,8 @@ p,
 .m-x-2 {
   margin-right: 2em !important;
 }
+
+.footer-links,
 .m-b-2,
 .m-y-2 {
   margin-bottom: 2em !important;
@@ -311,7 +313,6 @@ p,
   margin-right: 1em !important;
 }
 
-.footer-links,
 .m-b-1,
 .m-y-1 {
   margin-bottom: 1em !important;
