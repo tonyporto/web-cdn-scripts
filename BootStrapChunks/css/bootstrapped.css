@@ -128,7 +128,6 @@ textarea {
   overflow:auto;
 }
 
-.sr-only,
 .collapsing,
 .modal,
 .modal-open,
@@ -181,7 +180,6 @@ nav,
 nav > ul,
 ul > li,
 li > ul,
-.sr-only,
 td,th,
 kbd kbd,
 pre code,
@@ -1189,6 +1187,7 @@ kbd {
 }
 .collapse,
 .dropdown-menu,
+.sr-only,
 audio:not([controls]),
 [hidden],
 template,
@@ -1239,7 +1238,7 @@ sub,sup,
 .relative {
   position: relative;
 }
-.sr-only,
+
 .dropdown-menu,
 .form-control-feedback,
 .absolute {
