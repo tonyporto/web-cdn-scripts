@@ -24,6 +24,8 @@ html {
 body {
 	overflow: hidden;
 	margin:0;
+	line-height:1.3;
+	font-size: 1.3rem;
 }
 article,
 aside,
@@ -47,12 +49,6 @@ video{
   display:inline-block;
   vertical-align:baseline;
 }
-audio:not([controls]),
-[hidden],
-template,
-.collapse {
-  display:none;
-}
 a,
 pre code,
 table {
@@ -60,6 +56,7 @@ table {
 }
 a,
 a:visited,
+a.close,
 .btn.focus,
 .btn:focus,
 .btn:hover {
@@ -67,6 +64,8 @@ a:visited,
 }
 a:active,
 a:hover,
+.modal,
+.modal-content,
 .form-control:focus {
 	outline:0;
 }
@@ -123,6 +122,8 @@ pre,
 textarea {
   overflow:auto;
 }
+.modal,
+.modal-open,
 .excerpt,
 svg:not(:root) {
   overflow:hidden;
@@ -343,13 +344,13 @@ sup {
 }
 legend,
 .jumbotron p,
-.close,
 .size21 {
   font-size:21px;
 }
 blockquote,
 .h4,h4,
 .btn-lg,
+.close,
 .input-group-addon.input-lg,
 .size18 {
   font-size:18px;
@@ -430,6 +431,7 @@ th,
 .btn {
   font-weight:400;
 }
+.close,
 label{
   font-weight:700;
 }
@@ -454,6 +456,9 @@ h6 {
 dl,
 ol,ul {
   margin-top:0;
+}
+.close {
+  margin-top:-5px;
 }
 hr,
 .lead,
@@ -537,7 +542,6 @@ code {
   background-color:#f9f2f4;
 }
 kbd {
-  background-color:#333;
   -webkit-box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);
   box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);
 }
@@ -556,7 +560,8 @@ pre {
   word-break:break-all;
   word-wrap:break-word;
 }
-.alert {
+.alert,
+.modal-content {
 	padding:15px;
 }
 
@@ -769,9 +774,9 @@ select.input-lg,
   top:25px;
 }
 */
+.close,
 .input-group-addon {
   line-height:1;
-  background-color:#eee;
 }
 .input-group-addon,
 .input-group-btn {
@@ -824,9 +829,17 @@ abbr[title] {
   filter:alpha(opacity=65);
   opacity:.65;
 }
-
+.close,
+a.close {
+	font-family: Verdana,sans-serif;
+	text-shadow: 0 1px 0 #fff;
+	color: #000;
+	filter: alpha(opacity=20);
+	opacity: .2;
+}
 button,
 input,
+.close,
 .pointer,
 [class*="btn-"] {
   cursor:pointer;
@@ -948,27 +961,24 @@ legend,
   background:transparent;
 }
 .btn-default,
-.form-control {
+.form-control,
+.modal-content {
   background-color:#fff;
 }
 .mark,
 mark,
-.bg-warning {
+.bg-warning,
+.alert-warning {
   background-color:#fcf8e3;
 }
 .bg-danger,
 .alert-danger {
   background-color:#f2dede;
 }
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0,0,0,.05);
+.input-group-addon {
+  background-color:#eee;
 }
-.table-active,
-.table-active > td,
-.table-active > th,
-.table-hover tbody tr:hover {
-  background-color: rgba(0,0,0,.075);
-}
+
 a.bg-info:focus,
 a.bg-info:hover {
   background-color:#afd9ee;
@@ -1021,7 +1031,22 @@ a.bg-success:hover {
 .progress-bar-danger {
   background-color:#d9534f;
 }
-
+kbd {
+  background-color:#333;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,.05);
+}
+.modal,
+.table-active,
+.table-active > td,
+.table-active > th,
+.table-hover tbody tr:hover {
+  background-color: rgba(0,0,0,.075);
+}
+.modal {
+  background-color:rgba(0,0,0,.6);
+}
 /* ======================================= *
  * BORDER COLORS
  * ======================================= */
@@ -1088,7 +1113,7 @@ a.bg-success:hover {
   margin-right:-15px;
   margin-left:-15px;
 }
-
+.close,
 .align-right,
 .float-right,
 .pull-right {
@@ -1119,6 +1144,11 @@ a.bg-success:hover {
   display:inline;
 }
 
+audio:not([controls]),
+[hidden],
+template,
+.collapse,
+.modal,
 .display-none,
 .hidden {
   display:none;
@@ -1155,6 +1185,7 @@ td, th,
 sub,sup,
 .input-group,
 .has-feedback,
+[class*=modal-]:not([class*=open],[class*=header]),
 .relative {
   position: relative;
 }
@@ -1162,6 +1193,7 @@ sub,sup,
 .absolute {
   position: absolute;
 }
+.modal,
 .affix {
   position: fixed;
 }
@@ -1171,10 +1203,12 @@ sub,sup,
 	top:0;
 	right:0;
 }
+.modal,
 .top-left {
 	top:0;
 	left:0;
 }
+.modal,
 .form-control-feedback,
 .bottom-right {
 	bottom:0;
@@ -1183,6 +1217,38 @@ sub,sup,
 .form-control-feedback,
 .top-auto {
 	top: auto;
+}
+/* =============================== *
+ *  MODAL
+ * =============================== */
+.modal {
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+}
+.modal-dialog {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+/*
+  overflow-x: hidden;
+  overflow-y: auto;
+*/
+  overflow-y: scroll;
 }
 /* =============================== *
  *  BORDER RADIUS
@@ -1194,6 +1260,7 @@ sub,sup,
 .input-lg,
 .form-group-lg .form-control,
 .btn-lg,
+.modal-content,
 .input-group-addon.input-lg {
   border-radius:6px;
 }

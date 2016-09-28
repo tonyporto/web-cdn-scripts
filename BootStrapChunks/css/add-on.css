@@ -194,7 +194,16 @@ p,
 .icon-filter:before {
   content:"\f0b0";
 }
-
+/* LABEL MESSAGES */
+.icon-alert-success:before {
+	content: "\f058";
+}
+.icon-alert-danger:before {
+	content: "\f06a";
+}
+.icon-alert-warning:before {
+	content: "\f071";
+}
 /* ECOMMERCE */
 .icon-login:before {
   content:"\f090";
