@@ -1230,9 +1230,6 @@ td, th,
 .dropup,
 .collapsing,
 .navbar-toggle,
-.dropdown,
-.dropdown.menu-dropdown,
-.nav-justified > li,
 sub,sup,
 .input-group,
 .has-feedback,
@@ -1296,6 +1293,10 @@ sub,sup,
  * =============================== */
 .dropdown-menu {
 	z-index: 1000;
+}
+.dropdown,
+.nav-justified > li {
+	position: relative !important;
 }
 .dropdown-menu > li > a {
 	padding-left: 2em;
