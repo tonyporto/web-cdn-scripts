@@ -180,6 +180,7 @@ nav,
 .nav,
 nav > ul,
 ul > li,
+li > ul,
 .sr-only,
 td,th,
 kbd kbd,
@@ -735,6 +736,7 @@ legend {
 /* ======================== *
  * FORM INPUTS
  * ======================== */
+
 .input-group[class*=col-] {
   padding-right:0;
   padding-left:0;
