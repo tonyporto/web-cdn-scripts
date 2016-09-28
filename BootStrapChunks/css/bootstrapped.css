@@ -1230,6 +1230,9 @@ td, th,
 .dropup,
 .collapsing,
 .navbar-toggle,
+.dropdown,
+.dropdown.menu-dropdown,
+.nav-justified > li,
 sub,sup,
 .input-group,
 .has-feedback,
@@ -1237,11 +1240,7 @@ sub,sup,
 .relative {
   position: relative;
 }
-.dropdown,
-.dropdown.menu-dropdown,
-.nav-justified > li {
-	position: relative !important;
-}
+
 .dropdown-menu,
 .form-control-feedback,
 .absolute {
