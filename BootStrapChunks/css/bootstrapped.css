@@ -1303,9 +1303,8 @@ sub,sup,
 	padding-left: 2em;
 	line-height: 1.42857143;
 }
-.menu-dropdown > .dropdown-menu > li:last-child,
-.menu-dropdown > .dropdown-menu > li:not(:last-child) {
-	border-bottom: 1px solid #ddd;
+.menu-dropdown > .dropdown-menu > li {
+	border-top: 1px solid #ddd;
 }
 .dropdown-menu > .disabled > a:hover,
 .dropdown-menu > .disabled > a:focus {
@@ -1509,9 +1508,10 @@ kbd,
 	  clear: both;
 	  float: none;
   }
-	.menu-dropdown {
-		border-bottom: 1px solid #ddd;
+  .menu-dropdown:not(:first-child) {
+		border-top: 1px solid #ddd;
 	}
+
 	.menu-dropdown > a:after {
 	  content: "\f107";
 	  float: right;
