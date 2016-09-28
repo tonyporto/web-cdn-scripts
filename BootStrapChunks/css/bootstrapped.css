@@ -1504,13 +1504,17 @@ kbd,
 	  clear: both;
 	  float: none;
   }
+/*
 	.dropdown-menu > li:first-child {
 	  border-top: 1px solid rgba(165,165,165,0.55);
 	}
+	.menu-dropdown:first-child,
+	 .menu-dropdown > ul > li:not(:last-child)
 	.dropdown-menu > li,
 	.nav-justified > li:not(:last-child) {
 	  border-bottom: 1px solid rgba(165,165,165,0.55);
 	}
+*/
 	.menu-dropdown > a:after {
 	  content: "\f107";
 	  float: right;
