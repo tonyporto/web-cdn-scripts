@@ -1228,7 +1228,6 @@ td, th,
 .nav > li,
 .nav > li > a,
 .dropup,
-.nav-justified > li.dropdown,
 .collapsing,
 .navbar-toggle,
 sub,sup,
@@ -1238,7 +1237,11 @@ sub,sup,
 .relative {
   position: relative;
 }
-
+.dropdown,
+.dropdown.menu-dropdown,
+.nav-justified > li {
+	position: relative !important;
+}
 .dropdown-menu,
 .form-control-feedback,
 .absolute {
@@ -1498,7 +1501,6 @@ kbd,
 	}
 	.nav-justified > li {
     display: block;
-	  position: relative;
 	  clear: both;
 	  float: none;
   }
