@@ -606,6 +606,7 @@ hr,
 .table-bordered th {
   border: 1px solid #eceeef;
 }
+.pagination>li>a,
 .img-thumbnail {
   border:1px solid #ddd;
 }
@@ -700,6 +701,7 @@ legend {
 }
 .btn,
 .form-control,
+.pagination>li>a,
 .input-group-addon {
   padding:6px 12px;
 }
@@ -994,6 +996,7 @@ legend,
   background-color:transparent;
 }
 .dropdown-menu,
+.pagination>li>a,
 .btn-default,
 .form-control,
 .modal-content {
@@ -1011,6 +1014,8 @@ mark,
 }
 .nav > li > a:hover,
 .nav > li > a:focus,
+.pagination>li>a:hover,
+.pagination>li>a.sf_PagerCurrent,
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus,
@@ -1166,6 +1171,7 @@ kbd {
 }
 .dropdown-menu,
 [class*="col-"],
+.pagination>li>a,
 .align-left,
 .float-left,
 .pull-left {
@@ -1184,6 +1190,7 @@ kbd {
 .display-inblock {
   display:inline-block;
 }
+.pagination>li,
 .align-right,
 .align-left,
 .display-inline {
@@ -1306,8 +1313,12 @@ sub,sup,
 }
 .dropdown-menu > li > a {
 	padding-left: 2em;
+}
+.dropdown-menu > li > a,
+.pagination > li > a {
 	line-height: 1.42857143;
 }
+
 .menu-dropdown > .dropdown-menu > li {
 	border-top: 1px solid #ddd;
 }
@@ -1371,6 +1382,7 @@ pre,
 .alert,
 .panel,
 .form-control,
+.pagination>li>a,
 .input-group-addon {
   border-radius:4px;
 }
@@ -1391,11 +1403,13 @@ kbd,
 .input-group-addon:last-child {
   border-left: 0;
 }
+.pagination>li:not(:last-child)>a,
 .input-group .form-control:first-child,
 .input-group-addon:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+.pagination>li:not(:first-child)>a,
 .input-group .form-control:last-child,
 .input-group-btn:last-child > .btn,
 .input-group-addon:last-child {
@@ -1410,6 +1424,7 @@ kbd,
     border-top-right-radius: 23px;
     border-bottom-right-radius: 23px;
 }
+.pagination>li:not(:first-child)>a,
 .btn-group .btn +.btn,
 .btn-group .btn +.btn-group,
 .btn-group .btn-group +.btn,
@@ -1578,7 +1593,6 @@ kbd,
 	  margin-right:auto;
 	  margin-left:auto;
   }
-
   .p-x-0-xs {
     padding-right: 0;
     padding-left: 0;
