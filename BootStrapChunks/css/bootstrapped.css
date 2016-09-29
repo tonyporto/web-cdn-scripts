@@ -1236,7 +1236,9 @@ td, th,
 .nav-justified > li:not(.dummy),
 .input-group,
 .has-feedback,
+/*
 [class*=modal-]:not(.modal-open,.modal-header),
+*/
 .relative {
   position: relative;
 }
