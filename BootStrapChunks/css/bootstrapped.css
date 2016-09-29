@@ -891,6 +891,9 @@ btn.close,
 /* ======================================= *
  * COLORS
  * ======================================= */
+.btn-transparent {
+  color:inherit;
+}
 kbd,
 .btn,
 [class*="btn-"]:not(.btn-default):not(.btn-transparent):focus,
@@ -988,7 +991,7 @@ legend,
  * ======================================= */
 .btn-transparent,
 .btn-transparent:hover {
-  background:transparent;
+  background-color:transparent;
 }
 .dropdown-menu,
 .btn-default,
@@ -1499,7 +1502,7 @@ kbd,
  *  MAX-WIDTH: 767px
  * ========================================== */
 @media (max-width:767px) {
-	
+
 	/* NAVIGATION */
 	.menu-dropdown > .dropdown-menu {
 		position: static;
@@ -1523,7 +1526,7 @@ kbd,
 	}
 	.dropdown-menu > li > a {
 		padding-left: 2.8em;
-	}	
+	}
 	/* NAVIGATION */
 
   .display-xs-inline {
@@ -1587,7 +1590,7 @@ kbd,
  *  MIN-WIDTH: 768px
  * ========================================== */
 @media (min-width:768px) {
-	
+
 	/* NAVIGATION */
 	.navbar-toggle {
 		display: none;
