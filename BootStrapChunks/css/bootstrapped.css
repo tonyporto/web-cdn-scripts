@@ -1236,7 +1236,7 @@ td, th,
 .menu-dropdown:not(.dummy),
 .input-group,
 .has-feedback,
-[class*=modal-]:not([class*=open],[class*=header]),
+[class*=modal-]:not(.modal-open,.modal-header),
 .relative {
   position: relative;
 }
