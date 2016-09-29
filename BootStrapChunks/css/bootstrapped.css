@@ -1226,19 +1226,17 @@ td, th,
 /* ======================== *
  * POSITIONS
  * ======================== */
- sub,sup,
 .nav > li,
 .nav > li > a,
 .dropup,
 .collapsing,
 .navbar-toggle,
 .dropdown,
-.nav-justified > li:not(.dummy),
+.nav-justified > li,
+sub,sup,
 .input-group,
 .has-feedback,
-/*
-[class*=modal-]:not(.modal-open,.modal-header),
-*/
+[class*=modal-]:not(.modal-open):not(.modal-header),
 .relative {
   position: relative;
 }
@@ -1272,12 +1270,14 @@ td, th,
 .dropdown-menu {
 	top: 100%;
 }
-.nav-justified > .dropdown .dropdown-menu,
+/* .nav-justified > .dropdown .dropdown-menu, */
+.dropdown .dropdown-menu,
 .form-control-feedback,
 .top-auto {
 	top: auto;
 }
-.nav-justified > .dropdown .dropdown-menu,
+/* .nav-justified > .dropdown .dropdown-menu, */
+.dropdown .dropdown-menu,
 .dropdown-menu-right,
 .dropdown-menu.pull-right,
 .pull-right > .dropdown-menu {
@@ -1287,10 +1287,12 @@ td, th,
 .dropdown-menu-left {
 	right: auto;
 }
-.nav-justified > .dropdown .dropdown-menu,
+ /* .nav-justified > .dropdown .dropdown-menu,
+.dropdown .dropdown-menu,
 .dropdown-menu,
-.dropdown-backdrop,
-.dropdown-menu-left {
+.dropdown-menu-left
+ */
+[class*=dropdown-menu]:not([class*=-right]) {
 	left: 0;
 }
 /* =============================== *
@@ -1511,7 +1513,6 @@ kbd,
   .menu-dropdown:not(:first-child) {
 		border-top: 1px solid #ddd;
 	}
-
 	.menu-dropdown > a:after {
 	  content: "\f107";
 	  float: right;
