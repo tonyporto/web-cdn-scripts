@@ -31,6 +31,12 @@
 vertical-align:bottom;
 line-height:3
 }
+
+.a1 {
+	margin: 1em auto;
+	border: 2px solid white
+}
+
 </style>
 
 
@@ -124,7 +130,7 @@ line-height:3
 
   
   <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
-  <span class="icon-checkmark form-control-feedback" aria-hidden="true"></span>
+  <span class="icon-form-success form-control-feedback" aria-hidden="true"></span>
   <span id="inputSuccess2Status" class="sr-only">(success)</span>
 
   
@@ -136,7 +142,7 @@ line-height:3
     <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
   </div>
   
-  <span class="icon-warning form-control-feedback" aria-hidden="true"></span>
+  <span class="icon-form-warning form-control-feedback" aria-hidden="true"></span>
 
 
 </div>
@@ -146,7 +152,7 @@ line-height:3
     <span class="input-group-addon">@</span>
     <input type="text" class="form-control" id="inputGrouperr1" aria-describedby="inputGrouperr1Status">
   </div>
-  <span class="icon-remove form-control-feedback" aria-hidden="true"></span>
+  <span class="icon-form-error form-control-feedback" aria-hidden="true"></span>
   <span id="inputError2Status" class="sr-only">(error)</span>
 </div>
 
@@ -158,7 +164,7 @@ line-height:3
     <span class="input-group-addon">@</span>
     <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
   </div>
-  <span class="icon-checkmark form-control-feedback" aria-hidden="true"></span>
+  <span class="icon-form-success form-control-feedback" aria-hidden="true"></span>
   <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
 </div>
 
@@ -195,7 +201,7 @@ line-height:3
      
  <div class="col-xs-12 color-bg-grey p-b-3 clearfix">
  <nav class="mobile-header _bottom">
-				<button type="button" class="pull-sm-right head-search text-xs-left text-sm-right dropdown" data-toggle="collapse" data-target="#searchbar-header">
+				<button type="button" class="btn btn-transparent pull-sm-right head-search text-xs-left text-sm-right dropdown" data-toggle="collapse" data-target="#searchbar-header">
 					<span class="search-btn color-navy navbar-toggler 33collapsed">
 						<span class="icon-search"></span>
 					</span>
@@ -247,7 +253,7 @@ line-height:3
 <section class="container p-y-3 clearfix">
 
 
-<div class="alert alert-success alert-dismissable alert-dismissable">
+<div class="alert alert-success alert-dismissable">
 				 
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
 					×
@@ -279,9 +285,9 @@ line-height:3
 	
 	<span class="btn btn-outline-danger">The Button</span>
 	
-	<div class="alert alert-success alert-dismissible">
+	<div class="alert alert-success alert-dismissable">
 				 
-	<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+	<span href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</span>
 				<h4>
 					Alert!
 				</h4> <strong>Warning!</strong> Best check yo self, you're not looking too good. <a href="#" class="alert-link">alert link</a>
@@ -291,11 +297,11 @@ line-height:3
              ERROR MESSAGES
 * ================================================================================= */ -->
 
-<label class=" alert alert-danger icon-alert-danger col-xs-12 m-y-1">
+<label class=" alert alert-danger icon-alert-danger alert-dismissable col-xs-12 m-y-1">
 	<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
 
   
-        Oh poopy something happened
+        Oh poopy something happened noooooooooo
 	
 </label>
 
@@ -400,8 +406,43 @@ line-height:3
 	</div>	
 	
 </section>
-
-
+<section class="container p-y-4 clearfix">
+		<span class="col-xs-12 col-sm-6 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-6 a1 bg-warning" style="height:30px;"></span>
+		
+		<span class="col-xs-12 col-sm-4 a1 bg-info" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-4 a1 bg-info" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-4 a1 bg-info" style="height:30px;"></span>
+		
+		<span class="col-xs-12 col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
+		
+		<span class="col-xs-12 col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
+		
+		
+		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		
+		
+		<span class="col-xs-12 col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
+		<span class="col-xs-12 col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
+</section>
 <section class="container p-y-4 clearfix">
 
 		<table class="table m-b-1">

@@ -175,10 +175,6 @@ p,
 .icon-quote:before {
   content:"\f10d";
 }
-/* FORM CHECKBOX */
-.icon-check:before {
-  content:"\f00c";
-}
 
 /* TOGGLE */
 .icon-plus-square:before {
@@ -187,9 +183,6 @@ p,
 .icon-minus-square:before,
 .open > .icon-plus-square:before {
 	content:"\f147";
-}
-.icon-close:before {
-  content:"\f00d";
 }
 .icon-filter:before {
   content:"\f0b0";
@@ -237,10 +230,18 @@ p,
 .icon-closed:before {
   content:"\f106";
 }
-.icon-warning:before {
+.icon-warning:before,
+.icon-form-warning:before {
   content:"\f071";
 }
-
+.icon-close:before,
+.icon-form-error:before {
+  content:"\f00d";
+}
+.icon-check:before,
+.icon-form-success:before {
+  content:"\f00c";
+}
 /* ===================================================================== *
  * HELPER CLASSES : MARGIN & PADDING *
  *

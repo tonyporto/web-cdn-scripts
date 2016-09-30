@@ -50,16 +50,6 @@ video{
   vertical-align:baseline;
 }
 a,
-.disabled > a:hover,
-.disabled > a:focus,
-.navbar-toggle,
-pre code,
-table,
-btn.close,
-[class*="btn-outline"] {
-  background-color: transparent;
-}
-a,
 a:visited,
 a.close,
 .btn.focus,
@@ -75,7 +65,7 @@ a:hover,
 .modal,
 .modal-content,
 .form-control:focus {
-	outline:0;
+	outline:0 !important;
 }
 b,
 dt,
@@ -315,7 +305,6 @@ thead,
   -webkit-transition:all .2s ease-in-out;
   transition:all .2s ease-in-out;
 }
-
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
   font-family:inherit;
   font-weight:500;
@@ -365,6 +354,7 @@ blockquote,
 .h4,h4,
 .btn-lg,
 .close,
+.form-group-lg *,
 .input-group-addon.input-lg,
 .size18 {
   font-size:18px;
@@ -397,9 +387,6 @@ output,
 p,
 pre {
   margin:0 0 10px;
-}
-.lead {
-  font-weight:300;
 }
 .mark,
 mark {
@@ -443,6 +430,9 @@ th,
 }
 .text-capitalize {
   text-transform:capitalize;
+}
+.lead {
+  font-weight:300;
 }
 .btn {
   font-weight:400;
@@ -646,7 +636,6 @@ pre,
 .col-xs-3 {
   width:25%;
 }
-
 /* MISSING 5 COLUMNS */
 .col-xs-2-4 {
   width: 20%;
@@ -731,7 +720,6 @@ legend {
 .form-control::-webkit-input-placeholder {
   color:#999;
 }
-
 /* ======================== *
  * FORM INPUTS
  * ======================== */
@@ -854,8 +842,7 @@ abbr[title] {
   filter:alpha(opacity=65);
   opacity:.65;
 }
-.close,
-a.close {
+.close {
 	font-family: Verdana,sans-serif;
 	text-shadow: 0 1px 0 #fff;
 	color: #000;
@@ -877,6 +864,10 @@ a.btn.disabled {
   background-image: -webkit-linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
   background-image: linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.15)), color-stop(1%, rgba(255,255,255,.15)), color-stop(1%, rgba(0,0,0,.1)), to(rgba(0,0,0,.15)));
+}
+.btn-transparent,
+.btn-transparent:focus {
+	box-shadow:none;
 }
 /* ======================================= *
  * COLORS
@@ -978,6 +969,14 @@ legend,
 /* ======================================= *
  * BACKGROUND COLORS
  * ======================================= */
+a,
+.disabled > a:hover,
+.disabled > a:focus,
+.navbar-toggle,
+pre code,
+table,
+btn.close,
+[class*="btn-outline"],
 .btn-transparent,
 .btn-transparent:hover {
   background-color:transparent;
@@ -1237,7 +1236,6 @@ sub,sup,
 .affix {
   position: fixed;
 }
-
 .form-control-feedback,
 .top-right {
 	top:0;
@@ -1299,7 +1297,7 @@ sub,sup,
 	filter: progid: DXImageTransform.Microsoft.gradient(enabled = false);
 }
 .nav li a {
-	padding: 10px 15px;
+	padding:10px 15px;
 }
 /* =============================== *
  *  MODAL
@@ -1399,7 +1397,6 @@ kbd,
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
-
 .clearfix:after,
 .clearfix:before,
 .container:before,
@@ -1428,7 +1425,7 @@ kbd,
   .display-xxs-inline {
   	display:inline !important;
   }
-  .display-xxs-inline-block {
+  .display-xxs-inblock {
 	  display:inline-block !important;
   }
   .display-xxs-table {
@@ -1448,7 +1445,6 @@ kbd,
 		text-overflow: ellipsis;
 		white-space: nowrap;
   }
-
   /* HELPERS */
   .float-xxs-left,
   .pull-xxs-left {
@@ -1512,7 +1508,7 @@ kbd,
   .display-xs-inline {
   	display:inline !important;
   }
-  .display-xs-inline-block {
+  .display-xs-inblock {
   	display:inline-block !important;
   }
   .display-xs-table {
@@ -1683,7 +1679,7 @@ kbd,
   .display-sm-inline {
 	  display:inline !important;
   }
-  .display-sm-inline-block {
+  .display-sm-inblock {
 	  display:inline-block !important;
   }
   .display-sm-table {
@@ -1731,7 +1727,6 @@ kbd,
   }
 
 }
-
 /* ========================================== *
  *  MIN-WIDTH: 992px
  * ========================================== */
@@ -1780,7 +1775,6 @@ kbd,
   .col-md-1 {
     width:8.33333333%;
   }
-
   .col-md-offset-12 {
     margin-left:100%;
   }
@@ -1820,11 +1814,10 @@ kbd,
   .col-md-offset-0 {
     margin-left:0;
   }
-
   .display-md-inline {
   	display:inline !important;
   }
-  .display-md-inline-block {
+  .display-md-inblock {
   	display:inline-block !important;
   }
   .display-md-table {
@@ -1839,7 +1832,6 @@ kbd,
   .display-md-block {
   	display:block !important;
   }
-
   /* HELPERS */
   .float-lg-left,
   .pull-md-left {
@@ -1864,7 +1856,6 @@ kbd,
   }
 
 }
-
 /* ========================================== *
  *  MIN-WIDTH: 1200px
  * ========================================== */
@@ -1956,7 +1947,7 @@ kbd,
   .display-lg-inline {
 	  display:inline !important;
   }
-  .display-lg-inline-block {
+  .display-lg-inblock {
 	  display:inline-block !important;
   }
   .display-lg-table {
