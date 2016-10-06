@@ -196,10 +196,6 @@ button.close {
 fieldset {
   padding:.35em .625em .75em;
 }
-.list-inline>li {
-  padding-right: 5px;
-  padding-left: 5px;
-}
 .nav,
 .dropdown-menu,
 .list-unstyled,
@@ -691,8 +687,18 @@ legend {
 /* ======================== *
  * FORM INPUTS
  * ======================== */
+.list-inline>li {
+  padding-right: 5px;
+  padding-left: 5px;
+}
 .input-group[class*=col-] {
   padding-right:0;
+}
+.list-unstyled, 
+.list-inline, 
+.nav, .pagination, 
+.pager, .media-list, .list-group,
+.input-group[class*=col-] {
   padding-left:0;
 }
 .input-sm,
@@ -1239,7 +1245,7 @@ sub,sup,
 	bottom:0;
 	right:0;
 }
-.dropdown-menu {
+.dropdown>.dropdown-menu {
 	top: 100%;
 }
 /* .nav-justified > .dropdown .dropdown-menu, .dropdown .dropdown-menu,*/
@@ -1266,7 +1272,7 @@ sub,sup,
  *  DROPDOWN
  * =============================== */
 [data-header-btn=button] {
-	margin: .6em 0;
+	margin: 1em 0;
 }
 .button-bar {
 	height: 3px;
@@ -1390,8 +1396,8 @@ kbd,
   border-bottom-left-radius: 23px;
 }
 [class*="-lg rounded"] > .input-group-btn > .btn {
-    border-top-right-radius: 23px;
-    border-bottom-right-radius: 23px;
+	border-top-right-radius: 23px;
+	border-bottom-right-radius: 23px;
 }
 .pagination>li:not(:first-child)>a,
 .btn-group .btn +.btn,
@@ -1495,7 +1501,6 @@ kbd,
 	.nav-justified > li {
 		background-color: rgba(200,200,200,0.89);
 		font-size: 1.3em;
-    display: block;
 	  clear: both;
 		border-top: 1px solid #ddd;
 	}
@@ -1507,7 +1512,7 @@ kbd,
 	  margin: 0 -5%;
 	  width: 110%;
 	}
-	.nav-justified > li > a {
+	.nav-justified li > a {
 		padding: 10px 5.5%;
 	}
 	.dropdown-menu > li > a {
@@ -1515,13 +1520,11 @@ kbd,
 	}
 	.menu-dropdown > a:after {
 	  content: "\f107";
-	  float: right;
 	}
 	.menu-dropdown:hover > a:after {
 	  content: "\f106";
 	}
 	/* NAVIGATION */
-
   .display-xs-inline {
   	display:inline !important;
   }
@@ -1535,6 +1538,7 @@ kbd,
   .display-xs-none {
   	display:none !important;
   }
+  .nav-justified > li,
   .show-xs,
   .center-xs-block,
   .display-xs-block {
@@ -1550,6 +1554,7 @@ kbd,
   .pull-xs-left {
     float: left !important;
   }
+  .menu-dropdown > a:after,
   .float-xs-right,
   .pull-xs-right {
     float: right !important;
@@ -1583,25 +1588,24 @@ kbd,
 @media (min-width:768px) {
 
 	/* NAVIGATION */
-	.navbar-toggle {
-		display: none;
-	}
 	.nav-justified > li {
 		display: table-cell;
 		width: 1%;
 		vertical-align: middle;
 	}
 	.nav-justified > li > a {
-		margin-bottom: 0;
-		text-align: center;
+		margin: 0;
+		padding: 1.2em 1.1em;
 	}
 	.navbar-collapse.collapse {
-		display: block!important;
 		height: auto!important;
 		padding-bottom: 0;
 		overflow: visible!important;
 	}
 	/* NAVIGATION */
+  [class*="col-sm-"] {
+    float: left;
+  }
   .col-sm-12 {
     width:100%;
   }
@@ -1642,7 +1646,6 @@ kbd,
   .col-sm-1 {
     width:8.33333333%;
   }
-
   .col-sm-offset-12 {
     margin-left:100%;
   }
@@ -1697,10 +1700,12 @@ kbd,
   .display-sm-table {
   	display:table !important;
   }
+  .navbar-toggle,
   .hidden-sm,
   .display-sm-none {
   	display:none !important;
   }
+  .navbar-collapse.collapse,
   .show-sm,
   .center-sm-block,
   .display-sm-block {
@@ -1718,7 +1723,6 @@ kbd,
   .pull-sm-right {
     float: right !important;
   }
-  [class*="col-sm-"],
   .float-sm-left,
   .pull-sm-left {
     float: left !important;
@@ -1733,6 +1737,7 @@ kbd,
   .text-sm-right {
     text-align: right !important;
   }
+  .nav-justified > li > a,
   .text-sm-center {
     text-align:center !important;
   }
@@ -1747,6 +1752,9 @@ kbd,
  * ========================================== */
 @media (min-width:992px) {
 
+  [class*="col-md-"] {
+    float: left;
+  }
   .col-md-12 {
     width:100%;
   }
@@ -1845,8 +1853,6 @@ kbd,
   	display:block !important;
   }
   /* HELPERS */
-
-  [class*="col-md-"],
   .float-lg-left,
   .pull-md-left {
     float: left !important;
@@ -1875,6 +1881,9 @@ kbd,
  * ========================================== */
 @media (min-width:1200px) {
 
+  [class*="col-lg-"] {
+    float: left;
+  }
   .col-lg-12 {
     width:100%;
   }
@@ -1973,7 +1982,6 @@ kbd,
 	  display:block !important;
   }
   /* HELPERS */
-  [class*="col-lg-"],
   .float-lg-left,
   .pull-lg-left {
     float: left !important;
