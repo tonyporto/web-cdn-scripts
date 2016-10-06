@@ -17,121 +17,6 @@
 [class*="icon-"]:before {
   font-family: 'FontAwesome';
 }
-
-/* ========================================== *
- *  FONT WEIGHTS
- * ========================================== */
-.text-bold {
-	font-weight: bold;
-}
-.text-weight-700 {
-	font-weight: 700;
-}
-.text-weight-600 {
-  font-weight: 600;
-}
-
-.text-weight-500 {
-	font-weight: 500;
-}
-
-.text-weight-400 {
-	font-weight: 400;
-}
-
-.text-uppercase {
-	text-transform: uppercase;
-}
-.text-italic {
-	font-style: italic;
-}
-/* ========================================== *
- *  FONT SIZES
- * ========================================== */
-
-.size46 {
-	font-size: 46px;
-}
-.size40 {
-	font-size: 40px;
-}
-.size30 {
-	font-size: 30px;
-}
-.size26 {
-	font-size: 26px;
-}
-.size24 {
-	font-size: 24px;
-}
-.size20 {
-	font-size: 20px;
-}
-.size18 {
-	font-size: 18px;
-}
-
-.size14 {
-	font-size: 14px
-}
-.footer-links > li:not(:first-child),
-.size12 {
-	font-size: 12px
-}
-/* EMS & REMS */
-.text-size-2-8 {
-	font-size: 2.8rem;
-}
-.text-size-2-4 {
-  font-size: 2.4rem;
-}
-.text-size-2-2 {
-	font-size: 2.2rem;
-}
-.text-size-2 {
-	font-size: 2rem;
-}
-
-.footer-links > li,
-.text-size-1-8 {
-	font-size: 1.8rem;
-}
-.text-size-1-6 {
-	font-size: 1.6rem;
-}
-.text-size-1-5 {
-	font-size: 1.5rem;
-}
-p,
-.text-size-1-4{
-  font-size: 1.4rem;
-}
-
-.text-size-1-2 {
-	font-size: 1.2em;
-}
-.text-size-1 {
-	font-size: 1em;
-}
-/* ========================================== *
- *  LINE HEIGHT
- * ========================================== */
-.line-height-2 {
-	line-height: 2;
-}
-.footer-links > li,
-.line-height-1-8 {
-	line-height: 1.8;
-}
-.line-height-1-5 {
-	line-height: 1.5;
-}
-.line-height-1 {
-	line-height: 1;
-}
-.line-height-1-2 {
-	line-height: 1.2;
-}
 /*! ============================================== *
  * ONLY ICONS USED ------------------------------ *
  *
@@ -154,7 +39,6 @@ p,
 .icon-plus-circle:before {
   content:"\f055";
 }
-
 /* SOCIAL */
 .icon-facebook:before {
   content:"\f082";
@@ -171,22 +55,10 @@ p,
 .icon-youtube:before {
   content:"\f166";
 }
-
 .icon-quote:before {
   content:"\f10d";
 }
 
-/* TOGGLE */
-.icon-plus-square:before {
-	content:"\f196";
-}
-.icon-minus-square:before,
-.open > .icon-plus-square:before {
-	content:"\f147";
-}
-.icon-filter:before {
-  content:"\f0b0";
-}
 /* LABEL MESSAGES */
 .icon-alert-success:before {
 	content: "\f058";
@@ -197,6 +69,26 @@ p,
 .icon-alert-warning:before {
 	content: "\f071";
 }
+/* FORM CHECKBOX */
+.icon-check:before {
+  content:"\f00c";
+}
+
+/* TOGGLE */
+.icon-plus-square:before {
+	content:"\f196";
+}
+.icon-minus-square:before,
+.open > .icon-plus-square:before {
+	content:"\f147";
+}
+.icon-close:before {
+  content:"\f00d";
+}
+.icon-filter:before {
+  content:"\f0b0";
+}
+
 /* ECOMMERCE */
 .icon-login:before {
   content:"\f090";
@@ -230,23 +122,118 @@ p,
 .icon-closed:before {
   content:"\f106";
 }
-.icon-warning:before,
-.icon-form-warning:before {
+.icon-warning:before {
   content:"\f071";
 }
-.icon-close:before,
-.icon-form-error:before {
-  content:"\f00d";
+/* ================================= *
+ *  FONT WEIGHTS
+ * ================================= */
+.text-weight-700 {
+	font-weight: 700;
 }
-.icon-check:before,
-.icon-form-success:before {
-  content:"\f00c";
+.text-weight-600 {
+  font-weight: 600;
 }
-/* ===================================================================== *
+.text-weight-500 {
+	font-weight: 500;
+}
+.text-weight-400 {
+	font-weight: 400;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+.text-italic {
+	font-style: italic;
+}
+/* ================================= *
+ *  FONT SIZES
+ * ================================= */
+.size46 {
+	font-size: 46px;
+}
+.size40 {
+	font-size: 40px;
+}
+.size30 {
+	font-size: 30px;
+}
+.size26 {
+	font-size: 26px;
+}
+.size24 {
+	font-size: 24px;
+}
+.size20 {
+	font-size: 20px;
+}
+.size18 {
+	font-size: 18px;
+}
+.text-size-1 {
+	font-size: 1em;
+}
+.size14 {
+	font-size: 14px
+}
+.footer-links > li:not(:first-child),
+.size12 {
+	font-size: 12px
+}
+/* EMS & REMS */
+.text-size-2-8 {
+	font-size: 2.8rem;
+}
+.text-size-2-4 {
+  font-size: 2.4rem;
+}
+.text-size-2-2 {
+	font-size: 2.2rem;
+}
+.text-size-2 {
+	font-size: 2rem;
+}
+.footer-links > li,
+.text-size-1-8 {
+	font-size: 1.8rem;
+}
+.text-size-1-6 {
+	font-size: 1.6rem;
+}
+.text-size-1-5 {
+	font-size: 1.5rem;
+}
+p,
+.text-size-1-4{
+  font-size: 1.4rem;
+}
+.text-size-1-2 {
+	font-size: 1.2em;
+}
+/* ================================= *
+ *  LINE HEIGHT
+ * ================================= */
+.line-height-2 {
+	line-height: 2;
+}
+.footer-links > li,
+.line-height-1-8 {
+	line-height: 1.8;
+}
+.line-height-1-5 {
+	line-height: 1.5;
+}
+.line-height-1-2 {
+	line-height: 1.2;
+}
+.line-height-1 {
+	line-height: 1;
+}
+/* ============================================================== *
  * HELPER CLASSES : MARGIN & PADDING *
  *
  * http://v4-alpha.getbootstrap.com/components/utilities/#spacing *
- * ===================================================================== */
+ * ============================================================== */
 .m-t-a,
 .m-y-a,
 .m-a-a {
@@ -262,6 +249,7 @@ p,
 	margin-right: auto !important;
 	margin-left: auto !important;
 }
+/* --- MARGIN 4em --- */
 .m-t-4,
 .m-y-4 {
   margin-top: 4em !important;
@@ -270,6 +258,16 @@ p,
 .m-y-4 {
   margin-bottom: 4em !important;
 }
+/* --- MARGIN 3.5em --- */
+.m-t-3-5,
+.m-y-3-5 {
+  margin-top: 3.5em !important;
+}
+.m-b-3-5,
+.m-y-3-5 {
+  margin-bottom: 3.5em !important;
+}
+/* --- MARGIN 3em --- */
 .m-a-3 {
   margin: 3em 3em !important;
 }
@@ -278,13 +276,21 @@ p,
   margin-top: 3em !important;
 }
 .m-r-3 {
-    margin-right: 3rem !important;
+  margin-right: 3rem !important;
 }
 .m-b-3,
 .m-y-3 {
   margin-bottom: 3em !important;
 }
-
+/* --- MARGIN 2.5em --- */
+.m-t-2-5,
+.m-y-2-5 {
+  margin-top: 2.5em !important;
+}
+.m-b-2-5,
+.m-y-2-5 {
+  margin-bottom: 2.5em !important;
+}
 /* --- MARGIN 2em --- */
 .m-a-2 {
   margin: 2em 2em !important;
@@ -297,7 +303,6 @@ p,
 .m-x-2 {
   margin-right: 2em !important;
 }
-
 .footer-links,
 .m-b-2,
 .m-y-2 {
@@ -307,7 +312,15 @@ p,
 .m-x-2 {
   margin-left: 2em !important;
 }
-
+/* --- MARGIN 1.5em --- */
+.m-t-1-5,
+.m-y-1-5 {
+  margin-top: 1.5em !important;
+}
+.m-b-1-5,
+.m-y-1-5 {
+  margin-bottom: 1.5em !important;
+}
 /* --- MARGIN 1em --- */
 .m-a-1 {
   margin: 1em 1em !important;
@@ -320,7 +333,6 @@ p,
 .m-x-1 {
   margin-right: 1em !important;
 }
-
 .m-b-1,
 .m-y-1 {
   margin-bottom: 1em !important;
@@ -330,30 +342,8 @@ p,
   margin-left: 1em !important;
 }
 .m-t-05 {
-    margin-top: .5rem !important;
+	margin-top: .5rem !important;
 }
-
-.m-t-20 {
-	margin-top:20px !important;
-}
-/* --- MARGIN 10px --- */
-.m-a-10 {
-	margin: 10px !important;
-}
-.m-t-10 {
-	margin-top: 10px !important;
-}
-.form-control-feedback,
-.m-r-10 {
-	margin-right: 10px !important;
-}
-.m-b-10 {
-	margin-bottom: 10px !important;
-}
-.m-l-10 {
-	margin-left: 10px !important;
-}
-
 /* --- MARGIN 0 --- */
 .m-a-0 {
   margin: 0 0;
@@ -374,7 +364,6 @@ p,
 .m-x-0 {
   margin-left: 0 !important;
 }
-
 /* --- MARGIN -10px --- */
 .m-r_10 {
 	margin-right: -10px;
@@ -382,19 +371,34 @@ p,
 .m-l_10 {
 	margin-left: -10px;
 }
-
-/* ===================================================================== *
- * MARGIN -15px *
- *
- * IMPORTANT SITEFINITY REWRITE *
- * ===================================================================== */
+/* --- MARGIN -15px --- */
 .m-r_15 {
 	margin-right: -15px !important;
 }
 .m-l_15 {
 	margin-left: -15px !important;
 }
-
+/* ================================= *
+ * PADDING *
+ * ================================= */
+/* --- PADDING 5em --- */
+.p-t-5,
+.p-y-5 {
+  padding-top: 5em !important;
+}
+.p-b-5,
+.p-y-5 {
+  padding-bottom: 5em !important;
+}
+/* --- PADDING 4.5em --- */
+.p-t-4-5,
+.p-y-4-5 {
+  padding-top: 4.5em !important;
+}
+.p-b-4-5,
+.p-y-4-5 {
+  padding-bottom: 4.5em !important;
+}
 /* --- PADDING 4em --- */
 .p-t-4,
 .p-y-4 {
@@ -404,14 +408,24 @@ p,
 .p-y-4 {
   padding-bottom: 4em !important;
 }
-.p-l-4 {
-  padding-left: 4em !important;
+/* --- PADDING 3.5em --- */
+.p-t-3-5,
+.p-y-3-5 {
+  padding-top: 3.5em !important;
 }
-
+.p-r-3-5,
+.p-x-3-5 {
+  padding-right: 3.5em !important;
+}
+.p-b-3-5,
+.p-y-3-5 {
+  padding-bottom: 3.5em !important;
+}
+.p-l-3-5,
+.p-x-3-5 {
+  padding-left: 3.5em !important;
+}
 /* --- PADDING 3em --- */
-.p-a-3 {
-  padding: 3em 3em !important;
-}
 .p-t-3,
 .p-y-3 {
   padding-top: 3em !important;
@@ -428,11 +442,24 @@ p,
 .p-x-3 {
   padding-left: 3em !important;
 }
-
-/* --- PADDING 2em --- */
-.p-a-2 {
-  padding: 2em 2em !important;
+/* --- PADDING 2.5em --- */
+.p-t-2-5,
+.p-y-2-5 {
+  padding-top: 2.5em !important;
 }
+.p-r-2-5,
+.p-x-2-5 {
+  padding-right: 2.5em !important;
+}
+.p-b-2-5,
+.p-y-2-5 {
+  padding-bottom: 2.5em !important;
+}
+.p-l-2-5,
+.p-x-2-5 {
+  padding-left: 2.5em !important;
+}
+/* --- PADDING 2em --- */
 .p-t-2,
 .p-y-2 {
   padding-top: 2em !important;
@@ -449,7 +476,7 @@ p,
 .p-x-2 {
   padding-left: 2em !important;
 }
-
+/* --- PADDING 30px --- */
 .p-t-30,
 .p-y-30 {
   padding-top: 30px !important;
@@ -458,44 +485,7 @@ p,
 .p-y-30 {
   padding-bottom: 30px !important;
 }
-
-.p-t-25,
-.p-y-25 {
-  padding-top: 30px !important;
-}
-.p-r-25,
-.p-x-25 {
-	padding-right: 25px !important;
-}
-.p-b-25,
-.p-y-25 {
-  padding-bottom: 30px !important;
-}
-.p-l-25,
-.p-x-25 {
-	padding-left: 25px !important;
-}
-.p-r-15 {
-	padding-right: 15px;
-}
-.p-l-15 {
-	padding-left: 15px;
-}
-
-/* --- PADDING 20px --- */
-.p-t-20,
-.p-y-20 {
-  padding-top: 20px !important;
-}
-.p-b-20,
-.p-y-20 {
-  padding-bottom: 20px !important;
-}
-
 /* --- PADDING 1em --- */
-.p-a-1 {
-  padding: 1em 1em !important;
-}
 .p-t-1,
 .p-y-1 {
   padding-top: 1em !important;
@@ -512,11 +502,24 @@ p,
 .p-x-1 {
   padding-left: 1em;
 }
-
-/* --- PADDING 10px --- */
-.p-a-10 {
-  padding: 10px 10px !important;
+/* --- PADDING 15px --- */
+.p-t-15,
+.p-y-15 {
+  padding-top: 15px !important;
 }
+.p-r-15,
+.p-x-15 {
+	padding-right: 15px;
+}
+.p-b-15,
+.p-y-15 {
+  padding-bottom: 15px !important;
+}
+.p-l-15,
+.p-x-15 {
+	padding-left: 15px;
+}
+/* --- PADDING 10px --- */
 .p-t-10,
 .p-y-10 {
   padding-top: 10px !important;
@@ -524,13 +527,6 @@ p,
 .p-r-10,
 .p-x-10 {
   padding-right: 10px !important;
-}
-.ico-b:before {
-  padding-right: .39em;
-}
-.ico-a:after,
-.menu-dropdown > a:after {
-	padding-left: .39em;
 }
 .p-b-10,
 .p-y-10 {
@@ -540,7 +536,14 @@ p,
 .p-x-10 {
   padding-left: 10px !important;
 }
-
+.ico-b:before {
+  padding-right: .39em;
+}
+.ico-a:after,
+.login-widget a > span,
+.menu-dropdown > a:after {
+	padding-left: .39em;
+}
 /* --- PADDING 0 --- */
 .p-a-0 {
   padding: 0 0;
@@ -557,16 +560,17 @@ p,
 .p-y-0 {
   padding-bottom: 0 !important;
 }
+/*
 span > ul:not([class*=col-]),
 nav > ul:not([class*=col-]),
+*/
 .p-l-0,
 .p-x-0 {
   padding-left: 0 !important;
 }
-
-/* ===================================================================== *
+/* ================================= *
  * FORM CHECKBOXES & RADIOS
- * ==================================================================== */
+ * ================================= */
 .form-checkbox input {
 	display:none;
 }

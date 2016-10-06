@@ -1,0 +1,100 @@
+.header-wrapper,
+.navi-button,
+.color-bg-white {
+	background-color: #fff;
+}
+/* ================================= *
+ * BG COLORS
+ * ================================= */
+.head-search,
+.nav>li>a:focus, 
+.nav>li>a:hover,
+.color-bg-transparent {
+  background-color: transparent;
+}
+
+.color-bg-grey {
+	background-color: #b7b7b7;
+}
+
+.footer-container{
+	background-color: #6f6f6f;
+}
+
+.navi-button .icon-bar,
+.color-bg-navy {
+  background-color: #02285f;
+}
+
+.table-warning>td, .table-warning>th {
+  background-color: #fcf8e3;
+}
+
+.hover-bg-inherit,
+.hover-bg-inherit:hover {
+	background-color: inherit;
+}
+
+.has-error input[type="text"],
+.form-error + .input-group input[type="text"],
+.has-error.form-control-div input[type="text"] {
+	background-color: #f2dede;
+}
+/* ================================= *
+ * COLORS
+ * ================================= */
+ 
+.footer-container,
+.color-white,
+a.color-white,
+.color-white *{
+  color: white !important;
+}
+
+.nav-justified li > a,
+[class*=-outline-navy],
+.color-navy,
+.color-navy * {
+  color: #02285f !important;
+}
+
+.btn-outline-navy {
+	border-color: #02285f;
+}
+
+.color-blue {
+  color: #0d3b5f;
+}
+
+.social-icons > a,
+.footer-copyright > li,
+.footer-copyright > li > a,
+.color-grey,
+.color-grey-all * {
+	color: #b7b7b7;
+}
+
+.link-hover:hover {
+	color: inherit;
+}
+/* ================================= *
+ * BORDER COLORS
+ * ================================= */
+.border-color-grey,
+hr {
+	border-color: #a6acaf;
+}
+.border-color-transparent {
+	border-color: transparent;
+}
+
+.panel-products,
+.panel-default {
+  border-color: #ddd;
+}
+.no-border,
+[class*="RadGrid"],
+.k-editable-area {
+	border-width: 0px !important;
+	outline: 0;
+}
