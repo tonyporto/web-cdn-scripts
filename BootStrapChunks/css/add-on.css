@@ -66,10 +66,14 @@
 .icon-alert-danger:before {
 	content: "\f06a";
 }
+.icon-form-warning:before,
+.icon-warning:before,
 .icon-alert-warning:before {
 	content: "\f071";
 }
+
 /* FORM CHECKBOX */
+.icon-form-success:before,
 .icon-check:before {
   content:"\f00c";
 }
@@ -82,6 +86,7 @@
 .open > .icon-plus-square:before {
 	content:"\f147";
 }
+.icon-form-error:before,
 .icon-close:before {
   content:"\f00d";
 }
@@ -122,9 +127,7 @@
 .icon-closed:before {
   content:"\f106";
 }
-.icon-warning:before {
-  content:"\f071";
-}
+
 /* ================================= *
  *  FONT WEIGHTS
  * ================================= */
