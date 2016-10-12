@@ -60,57 +60,81 @@
   border: 0;
 }	
 
-/* ------- */
-.rslides_pager > li,
-.rslides_nav {
-	width: 16px;
-	margin: 0 5px
-}
-.rslides_pager > li,
-.rslides_nav:before {
+/* --- PAGER --- */
+.rslides_pager > li {
 	display: inline-block;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
 	border: 3px solid white;
+	margin: 0 5px;
 }
-.rslides_pager > [class*="_here"] {
+
+.rslides_pager > [class*="_here"],
+.rslides_nav:before,
+.rslides_nav:after {
 	background-color: #fff;
 }
-.rslides_nav,
-.rslides_nav:before {
-	position: absolute;
-	top: calc(50% - .8em);
-}
-.rslides_nav.prev {
-	left: 2%;
-}
-.rslides_nav.next {
-	right: 2%;
-	margin-right: 0.3em;
-}
-/* =================== */
+
 .rslides_nav {
-  font-size: 400%;
+	top: calc(50% - 25px);
+  height: 50px;
+  width: 34px;
+  z-index: 5;
+}
+
+.rslides_nav,
+.rslides_nav:before,
+.rslides_nav:after {
+	position: absolute;
 }
 .rslides_nav:before {
-	position: relative;
-  top: 3pt;
-  content: "";
-  border-bottom: 0;
-  border-left: 0;     
-  width: 0.4em;
-  height: 0.4em;
-  border-radius: .05em;
+	top: 11px;
 }
-.rslides_nav.prev::before{
-  -webkit-transform: rotate(-135deg);
-  transform: rotate(-135deg);
+.rslides_nav:after {
+	bottom: 11px;
 }
-.rslides_nav.next::before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+.rslides_nav.prev:before,
+.rslides_nav.prev:after {
+  left: -5px;
+}
+.rslides_nav.next:before,
+.rslides_nav.next:after {
+	right: -5px;
+}
+
+
+.rslides_nav:before,
+.rslides_nav:after {
+	content: "";
+	width: 100%;
+	display: block;
+  height: 4px;
+  border-radius: 2px;
+}
+.rslides_nav.prev:before,
+.rslides_nav.next:after {
+    -webkit-transform: translate(0,0) rotate(-50deg);
+    -moz-transform: translate(0,0) rotate(-50deg);
+    -ms-transform: translate(0,0) rotate(-50deg);
+}
+.rslides_nav.next:before,
+.rslides_nav.prev:after {
+    -webkit-transform: translate(0,0) rotate(50deg);
+    -moz-transform: translate(0,0) rotate(50deg);
+    -ms-transform: translate(0,0) rotate(50deg);
 }
 
 
 
+/* =============================
+ * INLINE
+ * =============================
+.rslides_nav.prev{left: 2%;}
+.rslides_nav.next {right: 2%;}
+.rslides_pager > li > a,
+.rslides_nav {color: transparent;}
+ * ============================= */
 </style>
 
 
@@ -226,12 +250,10 @@
         visibleClass = namespaceIdx + "_on",
         slideClassPrefix = namespaceIdx + "_s",
         
-        //CUSTOM CSS
-        zIndex = "z-index:80;",
-        colorTransp = "color:transparent;",
+        color_transp = "color:transparent;",
  
         // Pager
-        $pager = $("<ul style='" + zIndex + " position:absolute;bottom: 30px; left:0; right: 0;text-align: center;' class='rslides_pager " + namespace + "_tabs " + namespaceIdx + "_tabs' />"),
+        $pager = $("<ul style='z-index:5; position:absolute;bottom: 30px; left:0; right: 0;text-align: center;' class='rslides_pager " + namespace + "_tabs " + namespaceIdx + "_tabs' />"),
  
         // Styles for visible and hidden slides
         visible = {"float": "left", "position": "relative", "opacity": 1, "zIndex": 2},
@@ -262,18 +284,24 @@
           settings.before(idx);
           // If CSS3 transitions are supported
           if (supportsTransitions) {
-            $slide.removeClass(visibleClass).css(hidden).eq(idx).addClass(visibleClass).css(visible);
+            $slide
+              .removeClass(visibleClass).css(hidden).eq(idx)
+              .addClass(visibleClass).css(visible);
             index = idx;
             setTimeout(function () {
               settings.after(idx);
             }, fadeTime);
           // If not, use jQuery fallback
           } else {
-            $slide.stop().fadeOut(fadeTime, function () {
-                $(this).removeClass(visibleClass).css(hidden).css("opacity", 1);
+            $slide
+              .stop().fadeOut(fadeTime, function () {
+                $(this)
+                  .removeClass(visibleClass).css(hidden).css("opacity", 1);
               })
-              .eq(idx).fadeIn(fadeTime, function () {
-                $(this).addClass(visibleClass).css(visible);
+              .eq(idx)
+              .fadeIn(fadeTime, function () {
+                $(this)
+                  .addClass(visibleClass).css(visible);
                 settings.after(idx);
                 index = idx;
               });
@@ -286,8 +314,7 @@
           return (Math.round(Math.random()) - 0.5);
         });
         $this
-          .empty()
-          .append($slide);
+          .empty().append($slide);
       }
  
       // Add ID's to each slide
@@ -303,12 +330,7 @@
  
       // Hide all slides, then show first one
       $slide
-        .hide()
-        .css(hidden)
-        .eq(0)
-        .addClass(visibleClass)
-        .css(visible)
-        .show();
+        .hide().css(hidden).eq(0).addClass(visibleClass).css(visible).show();
  
       // CSS transitions
       if (supportsTransitions) {
@@ -336,8 +358,8 @@
           $slide.each(function (i) {
             var n = i + 1;
             tabMarkup +=
-              "<li style='height: 16px; border-radius: 50%;'>" +
-              "<a href='#' style='" + colorTransp + "' class='" + slideClassPrefix + n + "'>" + n + "</a>" +
+              "<li>" +
+              "<a href='#' class='" + slideClassPrefix + n + "' style='" + color_transp + "'>" + n + "</a>" +
               "</li>";
           });
           $pager.append(tabMarkup);
@@ -370,10 +392,7 @@
           // Select pager item
           selectTab = function (idx) {
             $tabs
-              .closest("li")
-              .removeClass(activeClass)
-              .eq(idx)
-              .addClass(activeClass);
+              .closest("li").removeClass(activeClass).eq(idx).addClass(activeClass);
           };
         }
  
@@ -458,8 +477,9 @@
         // Navigation
         if (settings.nav) {
           var navMarkup =
-            "<a href='#' style='" + zIndex + colorTransp + "' class='" + navClass + " prev'>" + settings.prevText + "</a>" +
-            "<a href='#' style='" + zIndex + colorTransp + "' class='" + navClass + " next'>" + settings.nextText + "</a>";
+            "<a href='#' class='" + navClass + " prev' style='left:2%; " + color_transp + "'>" + settings.prevText + "</a>" +
+            "<a href='#' class='" + navClass + " next' style='right:2%; " + color_transp + "'>" + settings.nextText + "</a>";
+ 
           // Inject navigation
           if (options.navContainer) {
             $(settings.navContainer).append(navMarkup);
