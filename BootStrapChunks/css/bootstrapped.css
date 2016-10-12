@@ -821,7 +821,6 @@ abbr[title] {
 	opacity: .2;
 }
 button,
-input,
 .close,
 .pointer,
 [class*="btn-"] {
@@ -839,6 +838,7 @@ a.btn.disabled {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.15)), color-stop(1%, rgba(255,255,255,.15)), color-stop(1%, rgba(0,0,0,.1)), to(rgba(0,0,0,.15)));
 }
 .btn-transparent,
+.btn-transparent:hover,
 .btn-transparent:focus {
 	box-shadow:none;
 }
@@ -964,9 +964,11 @@ btn.close,
 code {
   background-color:#f9f2f4;
 }
+/*
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus,
+*/
 .pagination>li>a:hover,
 .pagination>li>a.sf_PagerCurrent,
 .input-group-addon,
@@ -1271,9 +1273,6 @@ sub,sup,
 /* =============================== *
  *  DROPDOWN
  * =============================== */
-[data-header-btn=button] {
-	margin: 1em 0;
-}
 .button-bar {
 	height: 3px;
   margin: 5px 0;
@@ -1504,12 +1503,13 @@ kbd,
 	  clear: both;
 		border-top: 1px solid #ddd;
 	}
-	.nav-justified > li:hover {	
+	.nav-justified li:hover {	
 		background-image: -webkit-linear-gradient(rgba(255,255,255,.2) 99%, rgba(0,0,0,.2) 1%, rgba(0,0,0,.2));
     background-image: linear-gradient(rgba(255,255,255,.2) 99%, rgba(0,0,0,.2) 1%, rgba(0,0,0,.2));
 	}
 	.nav-wrap {
 	  margin: 0 -5%;
+	  padding: 0 0;
 	  width: 110%;
 	}
 	.nav-justified li > a {
@@ -1540,6 +1540,7 @@ kbd,
   }
   .nav-justified > li,
   .show-xs,
+  .collapse.in,
   .center-xs-block,
   .display-xs-block {
   	display:block !important;
@@ -1595,7 +1596,7 @@ kbd,
 	}
 	.nav-justified > li > a {
 		margin: 0;
-		padding: 1.2em 1.1em;
+		padding: .66em 1em;
 	}
 	.navbar-collapse.collapse {
 		height: auto!important;
