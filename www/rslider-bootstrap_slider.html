@@ -760,10 +760,12 @@ window.onload=function(){
   d.addEventListener(a,touch[a],false);
  }
 })(document);
+
 //EXAMPLE OF USE
 var h=function(e){
 
 	console.log(e.type,e)
+
 
 };
 document.body.addEventListener('fc',h,false);// 0-50ms vs 500ms with normal click
@@ -777,9 +779,26 @@ document.body.addEventListener('swd',h,false);
 
 if (Modernizr.touchevents) {
 
+
+
 var deleteli=function(e){
- var li=e.target;
+ var li=e.target,
+ 
+ lis = $("#slider1 > li[class*='_on']"),
+
+  
+  li_visible = {"display": "block", "float": "left", "position": "relative", "opacity": 1, "z-index": 2},
+  li_hidden = {"float": "none", "position": "absolute", "opacity": 0, "z-index": 1},
+  
+  cls = jQuery("carousel-inner > ul").attr("class");
+  
  console.log('deleting '+li.textContent);
+ 
+             
+lis.removeAttr("class style").css(li_hidden);     
+lis.next("li").addClass(cls + "_on").css(li_visible); 
+ 
+ 
 }
 document.getElementById('slider1').addEventListener('swl',deleteli,false);
 document.getElementById('slider1').addEventListener('swr',deleteli,false);
