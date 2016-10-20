@@ -14,7 +14,7 @@
 	<meta name="Description" content="">
 
 	<link rel="stylesheet" href="http://tonyporto.github.io/web-cdn-scripts/BootStrapChunks/css/bootstrapped.css">
-
+	
 
 <style>
 
@@ -199,7 +199,7 @@
 </div>
 		<footer>
 		</footer>
-
+<script src="http://tonyporto.github.io/web-cdn-scripts/js/modernizr.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
 /*! ResponsiveSlides.js v1.54
@@ -710,6 +710,82 @@ jQuery(document).ready(function() {
 			
 
 });
+
+
+//SWIPE
+window.onload=function(){
+(function(d){
+ var ce=function(e,n){
+	 var a=document.createEvent("CustomEvent");
+	 a.initCustomEvent(n,true,true,e.target);
+	 e.target.dispatchEvent(a);
+	 a=null;
+	 
+	 return false
+ },
+ nm=true,
+ sp={x:0,y:0},
+ ep={x:0,y:0},
+ touch={
+  touchstart:function(e){
+    sp={x:e.touches[0].pageX,y:e.touches[0].pageY}
+  },
+  touchmove:function(e){
+    nm=false;ep={x:e.touches[0].pageX,y:e.touches[0].pageY}
+  },
+  touchend:function(e){
+  
+  if(nm){
+    ce(e,'fc')
+    
+    }else{
+    
+	  var x=ep.x-sp.x,
+	  xr=Math.abs(x),
+	  y=ep.y-sp.y,
+	  yr=Math.abs(y);
+	  
+	  if(Math.max(xr,yr)>20){
+	    ce(e,(xr>yr?(x<0?'swl':'swr'):(y<0?'swu':'swd')))
+	  }
+  
+  };
+  nm=true
+  },
+  touchcancel:function(e){
+    nm=false
+  }
+ };
+ for(var a in touch){
+  d.addEventListener(a,touch[a],false);
+ }
+})(document);
+//EXAMPLE OF USE
+var h=function(e){
+
+	console.log(e.type,e)
+
+};
+document.body.addEventListener('fc',h,false);// 0-50ms vs 500ms with normal click
+document.body.addEventListener('swl',h,false);
+document.body.addEventListener('swr',h,false);
+document.body.addEventListener('swu',h,false);
+document.body.addEventListener('swd',h,false);
+}
+
+
+
+if (Modernizr.touchevents) {
+
+var deleteli=function(e){
+ var li=e.target;
+ console.log('deleting '+li.textContent);
+}
+document.getElementById('slider1').addEventListener('swl',deleteli,false);
+document.getElementById('slider1').addEventListener('swr',deleteli,false);
+
+
+}
 </script>
 	</body>
 </html>
