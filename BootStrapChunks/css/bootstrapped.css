@@ -1282,9 +1282,6 @@ sub,sup,
 	font-family: FontAwesome;
 	line-height: 1;
 }
-[data-header-btn="item"] {
-	z-index:500;
-}
 .dropdown-menu {
 	z-index: 1000;
 }
