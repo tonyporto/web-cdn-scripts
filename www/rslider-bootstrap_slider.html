@@ -12,128 +12,149 @@
 	<meta name="Author" content="">
 	<meta name="Keywords" content="">
 	<meta name="Description" content="">
-	
-	<script src="http://tonyporto.github.io/web-cdn-scripts/js/modernizr-prfx.js"></script>
+
+	<link rel="stylesheet" href="http://tonyporto.github.io/web-cdn-scripts/BootStrapChunks/css/bootstrapped.css">
+
 
 <style>
-[class*="rslides_"],
-.rslides_wrapper * {
+
+.carousel * {
   width: 100%;
 }
-.rslides_wrapper,
-.rslides_container {
+.carousel,
+.carousel-inner {
   margin-bottom: 50px;
 }
-.rslides,
-.rslides_pager {
+.carousel,
+.carousel-indicators {
   margin: 0 auto;
   list-style: none;
   overflow: hidden;
   padding: 0;
   margin: 0;
-} 
-.rslides li {
+}
+.carousel > li {
   -webkit-backface-visibility: hidden;
   position: absolute;
   display: none;
   left: 0;
   top: 0;
 }
-.rslides_wrapper,
-.rslides_container,
-.rslides li:first-child,
-.rslides img {
+
+.carousel-inner,
+.carousel > li:first-child,
+.carousel img {
   float: left;
 }
-.rslides li:first-child,
-.rslides img,
-.rslides_nav {
+.carousel > li:first-child,
+.carousel img,
+.carousel-control {
   display: block;
 }
-.rslides_container,
-.rslides,
-.rslides li:first-child {
+.carousel-inner,
+.carousel,
+.carousel > li:first-child {
   position: relative;
 }
-.rslides img {
+.carousel img {
   height: auto;
   border: 0;
-}	
+}
 
 /* --- PAGER --- */
-.rslides_pager > li {
+.carousel-indicators > li {
 	display: inline-block;
 	height: 16px;
 	width: 16px;
 	border-radius: 50%;
-	border: 3px solid white;
+	border: 2px solid white;
 	margin: 0 5px;
 }
 
-.rslides_pager > [class*="_here"],
-.rslides_nav:before,
-.rslides_nav:after {
+.carousel-indicators > [class*="_here"],
+.carousel-control:before,
+.carousel-control:after {
 	background-color: #fff;
 }
-
-.rslides_nav {
+.carousel-control {
 	top: calc(50% - 25px);
   height: 50px;
   width: 34px;
   z-index: 5;
 }
-
-.rslides_nav,
-.rslides_nav:before,
-.rslides_nav:after {
+.carousel-control,
+.carousel-control:before,
+.carousel-control:after,
+.carousel-item {
 	position: absolute;
 }
-.rslides_nav:before {
+.carousel-control:before {
 	top: 11px;
 }
-.rslides_nav:after {
+.carousel-control:after {
 	bottom: 11px;
 }
-.rslides_nav.prev:before,
-.rslides_nav.prev:after {
+.carousel-control.prev:before,
+.carousel-control.prev:after {
   left: -5px;
 }
-.rslides_nav.next:before,
-.rslides_nav.next:after {
+
+.carousel-control.next:before,
+.carousel-control.next:after {
 	right: -5px;
 }
 
-.rslides_nav:before,
-.rslides_nav:after {
+.carousel-control:before,
+.carousel-control:after {
 	content: "";
 	width: 100%;
 	display: block;
   height: 4px;
   border-radius: 2px;
 }
-.rslides_nav.prev:before,
-.rslides_nav.next:after {
+.carousel-control.prev:before,
+.carousel-control.next:after {
     -webkit-transform: translate(0,0) rotate(-50deg);
     -moz-transform: translate(0,0) rotate(-50deg);
     -ms-transform: translate(0,0) rotate(-50deg);
 }
-.rslides_nav.next:before,
-.rslides_nav.prev:after {
+.carousel-control.next:before,
+.carousel-control.prev:after {
     -webkit-transform: translate(0,0) rotate(50deg);
     -moz-transform: translate(0,0) rotate(50deg);
     -ms-transform: translate(0,0) rotate(50deg);
 }
 
+.carousel-caption {
+	height: 100%;
+	display: table;
+}
 
+@media all and (max-width: 767px) {
+
+	.carousel-control:before,
+	.carousel-control:after {
+		width: 60%;
+		margin: 18% 0;
+	  height: 2px;
+	  border-radius: 1px;
+	}
+	.carousel-indicators {
+		display: none;
+	}
+}
 
 /* =============================
  * INLINE
  * =============================
-.rslides_nav.prev{left: 2%;}
-.rslides_nav.next {right: 2%;}
-.rslides_pager > li > a,
-.rslides_nav {color: transparent;}
+.carousel-control.prev{left: 2%;}
+.carousel-control.next {right: 2%;}
+.carousel-indicators > li > a,
+.carousel-control {color: transparent;}
  * ============================= */
+ 
+.carousel-item {position: absolute; top: 0; left: 0; bottom: 0; right: 0;}
+.display-table-cell {display: table-cell; vertical-align:middle; text-align:center; color:white}
 </style>
 
 
@@ -141,46 +162,44 @@
 	<body style="margin:0">
 		<header>
 		</header>
-		
-		
-		
-<div class="rslides_wrapper">
+
+
+
+<div class="carousel">
     <h1>Three different ways to use next/prev buttons</h1>
- 
+
     <h3>Vertically centered on both sides</h3>
     <!-- Slideshow 1 -->
-    <div class="rslides_container">
-      <ul class="rslides" id="slider1">
-        <li><img src="http://tonyporto.github.io/web-cdn-scripts/img/blue.jpg" alt=""></li>
-        <li><img src="http://tonyporto.github.io/web-cdn-scripts/img/purple.jpg" alt=""></li>
-        <li><img src="http://tonyporto.github.io/web-cdn-scripts/img/red.jpg" alt=""></li>
+    <div class="carousel-inner">
+      <ul class="carousel" id="slider1">
+        <li>
+          <img src="http://tonyporto.github.io/web-cdn-scripts/img/blue.jpg" alt="">
+
+            <div class="carousel-item top-left bottom-right">
+				      <div class="carousel-caption">
+				        <div class="display-table-cell text-center color-white">
+				          <h2>Slider Title</h2>
+				          <p>This is the content area</p>
+				        </div>
+				      </div>
+				    </div>
+
+        </li>
+        <li>
+          <img src="http://tonyporto.github.io/web-cdn-scripts/img/purple.jpg" alt="">
+        </li>
+        <li>
+          <img src="http://tonyporto.github.io/web-cdn-scripts/img/red.jpg" alt="">
+        </li>
       </ul>
     </div>
- 
-    <h3>Transparent buttons over the left and right side</h3>
-    <!-- Slideshow 2 -->
-    <div class="rslides_container">
-      <ul class="rslides" id="slider2">
-        <li><img src="http://tonyporto.github.io/web-cdn-scripts/img/blue.jpg" alt=""></li>
-        <li><img src="http://tonyporto.github.io/web-cdn-scripts/img/purple.jpg" alt=""></li>
-        <li><img src="http://tonyporto.github.io/web-cdn-scripts/img/red.jpg" alt=""></li>
-      </ul>
-    </div>
- 
-    <h3>100% height with vertically centered icons</h3>
-    <!-- Slideshow 3 -->
-    <div class="rslides_container">
-      <ul class="rslides" id="slider3">
-        <li><img src="http://tonyporto.github.io/web-cdn-scripts/img/blue.jpg" alt=""></li>
-        <li><img src="http://tonyporto.github.io/web-cdn-scripts/img/purple.jpg" alt=""></li>
-        <li><img src="http://tonyporto.github.io/web-cdn-scripts/img/red.jpg" alt=""></li>
-      </ul>
-    </div>
- 
+
+
+
 </div>
 		<footer>
 		</footer>
-		
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
 /*! ResponsiveSlides.js v1.54
@@ -190,12 +209,12 @@
  * Copyright (c) 2011-2012 @viljamis
  * Available under the MIT license
  */
- 
+
 /*jslint browser: true, sloppy: true, vars: true, plusplus: true, indent: 2 */
- 
+
 (function ($, window, i) {
   $.fn.responsiveSlides = function (options) {
- 
+
     // Default settings
     var settings = $.extend({
       "auto": true,             // Boolean: Animate automatically, true or false
@@ -211,18 +230,18 @@
       "maxwidth": "",           // Integer: Max-width of the slideshow, in pixels
       "navContainer": "",       // Selector: Where auto generated controls should be appended to, default is after the <ul>
       "manualControls": "",     // Selector: Declare custom pager navigation
-      "namespace": "rslides",   // String: change the default namespace used
+      "namespace": "carousel",   // String: change the default namespace used
       "before": $.noop,         // Function: Before callback
       "after": $.noop           // Function: After callback
     }, options);
- 
+
     return this.each(function () {
- 
+
       // Index for namespacing
       i++;
- 
+
       var $this = $(this),
- 
+
         // Local variables
         vendor,
         selectTab,
@@ -230,7 +249,6 @@
         restartCycle,
         rotate,
         $tabs,
- 
         // Helpers
         index = 0,
         $slide = $this.children(),
@@ -238,26 +256,26 @@
         fadeTime = parseFloat(settings.speed),
         waitTime = parseFloat(settings.timeout),
         maxw = parseFloat(settings.maxwidth),
- 
+
         // Namespacing
         namespace = settings.namespace,
         namespaceIdx = namespace + i,
- 
+
         // Classes
-        navClass = namespace + "_nav " + namespaceIdx + "_nav",
+        navClass = namespace + "-control " + namespaceIdx + "-control",
         activeClass = namespace + "_here",
         visibleClass = namespaceIdx + "_on",
         slideClassPrefix = namespaceIdx + "_s",
-        
+
         color_transp = "color:transparent;",
- 
+
         // Pager
-        $pager = $("<ul style='z-index:5; position:absolute;bottom: 30px; left:0; right: 0;text-align: center;' class='rslides_pager " + namespace + "_tabs " + namespaceIdx + "_tabs' />"),
- 
+        $pager = $("<ul style='z-index:5; position:absolute;bottom: 30px; left:0; right: 0;text-align: center;' class='" + namespace + "-indicators " + namespaceIdx + "-indicators' />"),
+
         // Styles for visible and hidden slides
         visible = {"float": "left", "position": "relative", "opacity": 1, "zIndex": 2},
         hidden = {"float": "none", "position": "absolute", "opacity": 0, "zIndex": 1},
- 
+
         // Detect transition support
         supportsTransitions = (function () {
           var docBody = document.body || document.documentElement;
@@ -277,33 +295,30 @@
           }
           return false;
         })(),
- 
+
         // Fading animation
         slideTo = function (idx) {
           settings.before(idx);
           // If CSS3 transitions are supported
           if (supportsTransitions) {
-            $slide
-              .removeClass(visibleClass).css(hidden).eq(idx).addClass(visibleClass).css(visible);
+            $slide.removeClass(visibleClass).css(hidden).eq(idx).addClass(visibleClass).css(visible);
             index = idx;
             setTimeout(function () {
               settings.after(idx);
             }, fadeTime);
           // If not, use jQuery fallback
           } else {
-            $slide
-              .stop().fadeOut(fadeTime, function () {
+            $slide.stop().fadeOut(fadeTime, function () {
                 $(this).removeClass(visibleClass).css(hidden).css("opacity", 1);
               })
-              .eq(idx)
-              .fadeIn(fadeTime, function () {
+              .eq(idx).fadeIn(fadeTime, function () {
                 $(this).addClass(visibleClass).css(visible);
                 settings.after(idx);
                 index = idx;
               });
           }
         };
- 
+
       // Random order
       if (settings.random) {
         $slide.sort(function () {
@@ -312,26 +327,24 @@
         $this
           .empty().append($slide);
       }
- 
+
       // Add ID's to each slide
       $slide.each(function (i) {
         this.id = slideClassPrefix + i;
       });
- 
+
       // Add max-width and classes
       $this.addClass(namespace + " " + namespaceIdx);
       if (options && options.maxwidth) {
         $this.css("max-width", maxw);
       }
- 
+
       // Hide all slides, then show first one
-      $slide
-        .hide().css(hidden).eq(0).addClass(visibleClass).css(visible).show();
- 
+      $slide.hide().css(hidden).eq(0).addClass(visibleClass).css(visible).show();
+
       // CSS transitions
       if (supportsTransitions) {
-        $slide
-          .show().css({
+        $slide.show().css({
             // -ms prefix isn't needed as IE10 uses prefix free version
             "-webkit-transition": "opacity " + fadeTime + "ms ease-in-out",
             "-moz-transition": "opacity " + fadeTime + "ms ease-in-out",
@@ -339,15 +352,15 @@
             "transition": "opacity " + fadeTime + "ms ease-in-out"
           });
       }
- 
+
       // Only run if there's more than one slide
       if ($slide.size() > 1) {
- 
+
         // Make sure the timeout is at least 100ms longer than the fade
         if (waitTime < fadeTime + 100) {
           return;
         }
- 
+
         // Pager
         if (settings.pager && !settings.manualControls) {
           var tabMarkup = [];
@@ -359,7 +372,7 @@
               "</li>";
           });
           $pager.append(tabMarkup);
- 
+
           // Inject pager
           if (options.navContainer) {
             $(settings.navContainer).append($pager);
@@ -367,55 +380,54 @@
             $this.after($pager);
           }
         }
- 
+
         // Manual pager controls
         if (settings.manualControls) {
           $pager = $(settings.manualControls);
           $pager.addClass(namespace + "_tabs " + namespaceIdx + "_tabs");
         }
- 
+
         // Add pager slide class prefixes
         if (settings.pager || settings.manualControls) {
           $pager.find('li').each(function (i) {
             $(this).addClass(slideClassPrefix + (i + 1));
           });
         }
- 
+
         // If we have a pager, we need to set up the selectTab function
         if (settings.pager || settings.manualControls) {
           $tabs = $pager.find('a');
- 
+
           // Select pager item
           selectTab = function (idx) {
-            $tabs
-              .closest("li").removeClass(activeClass).eq(idx).addClass(activeClass);
+            $tabs.closest("li").removeClass(activeClass).eq(idx).addClass(activeClass);
           };
         }
- 
+
         // Auto cycle
         if (settings.auto) {
- 
+
           startCycle = function () {
             rotate = setInterval(function () {
- 
+
               // Clear the event queue
               $slide.stop(true, true);
- 
+
               var idx = index + 1 < length ? index + 1 : 0;
- 
+
               // Remove active state and set new if pager is set
               if (settings.pager || settings.manualControls) {
                 selectTab(idx);
               }
- 
+
               slideTo(idx);
             }, waitTime);
           };
- 
+
           // Init cycle
           startCycle();
         }
- 
+
         // Restarting cycle
         restartCycle = function () {
           if (settings.auto) {
@@ -425,7 +437,7 @@
             startCycle();
           }
         };
- 
+
         // Pause on hover
         if (settings.pause) {
           $this.hover(function () {
@@ -434,32 +446,31 @@
             restartCycle();
           });
         }
- 
+
         // Pager click event handler
         if (settings.pager || settings.manualControls) {
           $tabs.bind("click", function (e) {
             e.preventDefault();
- 
+
             if (!settings.pauseControls) {
               restartCycle();
             }
- 
+
             // Get index of clicked tab
             var idx = $tabs.index(this);
- 
+
             // Break if element is already active or currently animated
             if (index === idx || $("." + visibleClass).queue('fx').length) {
               return;
             }
- 
+
             // Remove active state from old tab and set new one
             selectTab(idx);
- 
+
             // Do the animation
             slideTo(idx);
-          })
-            .eq(0).closest("li").addClass(activeClass);
- 
+          }).eq(0).closest("li").addClass(activeClass);
+
           // Pause when hovering pager
           if (settings.pauseControls) {
             $tabs.hover(function () {
@@ -469,34 +480,33 @@
             });
           }
         }
- 
         // Navigation
         if (settings.nav) {
           var navMarkup =
-            "<a href='#' class='" + navClass + " prev' style='left:2%; " + color_transp + "'>" + settings.prevText + "</a>" +
-            "<a href='#' class='" + navClass + " next' style='right:2%; " + color_transp + "'>" + settings.nextText + "</a>";
- 
+            "<a href='#' class='" + navClass + " prev left' style='left:2%; " + color_transp + "'>" + settings.prevText + "</a>" +
+            "<a href='#' class='" + navClass + " next right' style='right:2%; " + color_transp + "'>" + settings.nextText + "</a>";
+
           // Inject navigation
           if (options.navContainer) {
             $(settings.navContainer).append(navMarkup);
           } else {
             $this.after(navMarkup);
           }
- 
-          var $trigger = $("." + namespaceIdx + "_nav"),
+
+          var $trigger = $("." + namespaceIdx + "-control"),
             $prev = $trigger.filter(".prev");
- 
+
           // Click event handler
           $trigger.bind("click", function (e) {
             e.preventDefault();
- 
+
             var $visibleClass = $("." + visibleClass);
- 
+
             // Prevent clicking if currently animated
             if ($visibleClass.queue('fx').length) {
               return;
             }
- 
+
             //  Adds active class during slide animation
             //  $(this)
             //    .addClass(namespace + "_active")
@@ -505,23 +515,23 @@
             //      $(this).removeClass(namespace + "_active");
             //      next();
             //  });
- 
+
             // Determine where to slide
             var idx = $slide.index($visibleClass),
               prevIdx = idx - 1,
               nextIdx = idx + 1 < length ? index + 1 : 0;
- 
+
             // Go to slide
             slideTo($(this)[0] === $prev[0] ? prevIdx : nextIdx);
             if (settings.pager || settings.manualControls) {
               selectTab($(this)[0] === $prev[0] ? prevIdx : nextIdx);
             }
- 
+
             if (!settings.pauseControls) {
               restartCycle();
             }
           });
- 
+
           // Pause when hovering navigation
           if (settings.pauseControls) {
             $trigger.hover(function () {
@@ -531,9 +541,9 @@
             });
           }
         }
- 
+
       }
- 
+
       // Max-width fallback
       if (typeof document.body.style.maxWidth === "undefined" && options.maxwidth) {
         var widthSupport = function () {
@@ -542,24 +552,24 @@
             $this.css("width", maxw);
           }
         };
- 
+
         // Init fallback
         widthSupport();
         $(window).bind("resize", function () {
           widthSupport();
         });
       }
- 
+
     });
- 
+
   };
 })(jQuery, this, 0);
- 
+
 /* ====================================================================
  * SLIDER FUNCTION
  * =================================================================== */
 function initSlider() {
- 
+
       // Slideshow 1
       $("#slider1").responsiveSlides({
         auto: false,
@@ -567,19 +577,21 @@ function initSlider() {
         nav: true,
         speed: 500,
         maxwidth: 2000,
-        namespace: "rslides"
+        namespace: "carousel"
       });
- 
-      // Slideshow 2
+
+
+
+/* Slideshow 2
       $("#slider2").responsiveSlides({
         auto: false,
         pager: true,
         nav: true,
         speed: 500,
         maxwidth: 1230,
-        namespace: "rslides_pager"
+        namespace: "carousel"
       });
- 
+
       // Slideshow 3
       $("#slider3").responsiveSlides({
         auto: false,
@@ -589,14 +601,16 @@ function initSlider() {
         maxwidth: 1230,
         namespace: "large-btns"
       });
- 
+*/
+
+
     }
- 
-     
+
+
 /* ALL THE OPTIONS
  *
  * ===============================================
- $(".rslides").responsiveSlides({
+ $(".carousel").responsiveSlides({
   auto: true,             // Boolean: Animate automatically, true or false
   speed: 500,            // Integer: Speed of the transition, in milliseconds
   timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
@@ -610,19 +624,91 @@ function initSlider() {
   maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
   navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
   manualControls: "",     // Selector: Declare custom pager navigation
-  namespace: "rslides",   // String: Change the default namespace used
+  namespace: "carousel",   // String: Change the default namespace used
   before: function(){},   // Function: Before callback
   after: function(){}     // Function: After callback
 });
- 
+
 */
+
+
+
+
+
+/* ====================================================================
+ * DETECT SWIPE
+ * =================================================================== *
+var swipeFunc = {
+	touches : {
+		"touchstart": {"x":-1, "y":-1},
+		"touchmove" : {"x":-1, "y":-1},
+		"touchend"  : false,
+		"direction" : "undetermined"
+	},
+	touchHandler: function(event) {
+		var touch;
+		if (typeof event !== 'undefined'){
+			event.preventDefault();
+			if (typeof event.touches !== 'undefined') {
+				touch = event.touches[0];
+				switch (event.type) {
+					case 'touchstart':
+					case 'touchmove':
+						swipeFunc.touches[event.type].x = touch.pageX;
+						swipeFunc.touches[event.type].y = touch.pageY;
+						break;
+					case 'touchend':
+						swipeFunc.touches[event.type] = true;
+						if (swipeFunc.touches.touchstart.x > -1 && swipeFunc.touches.touchmove.x > -1) {
+							swipeFunc.touches.direction = swipeFunc.touches.touchstart.x < swipeFunc.touches.touchmove.x ? "right" : "left";
+
+							// DO STUFF HERE
+						//console.log(swipeFunc.touches.direction);
+
+		
+
+//$("#slider1").hover(function() {
+
+								if(swipeFunc.touches.touchstart.x < swipeFunc.touches.touchmove.x) {
+									console.log("madafoka swiped right");
+								}
+								if(swipeFunc.touches.touchmove.x < swipeFunc.touches.touchstart.x) {
+									console.log("madafoka swiped left");
+								}	
+//})
+// HEREEeee		
+
+		
+
+
+	//END
+	
+						}
+					default:
+						break;
+				}
+			}
+		}
+	},
+	init: function() {
+		document.addEventListener('touchstart', swipeFunc.touchHandler, false);
+		document.addEventListener('touchmove', swipeFunc.touchHandler, false);
+		document.addEventListener('touchend', swipeFunc.touchHandler, false);
+	}
+};
+swipeFunc.init();
+*/
+
+
 /* ====================================================================
  * INIT SCRIPTS
  * =================================================================== */
 jQuery(document).ready(function() {
-     
+
     initSlider();
- 
+
+			
+
 });
 </script>
 	</body>
