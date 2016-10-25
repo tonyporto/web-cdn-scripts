@@ -116,6 +116,7 @@ textarea {
 .modal,
 .modal-open,
 .excerpt,
+.card,
 svg:not(:root) {
   overflow:hidden;
 }
@@ -564,6 +565,7 @@ hr,
 }
 .pagination>li>a,
 .list-group>li,
+.panel,
 .img-thumbnail {
   border:1px solid #ddd;
 }
@@ -694,9 +696,9 @@ legend {
 .input-group[class*=col-] {
   padding-right:0;
 }
-.list-unstyled, 
-.list-inline, 
-.nav, .pagination, 
+.list-unstyled,
+.list-inline,
+.nav, .pagination,
 .pager, .media-list, .list-group,
 .input-group[class*=col-] {
   padding-left:0;
@@ -834,7 +836,7 @@ a.btn.disabled {
 /*
   background-image: -webkit-linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
   background-image: linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
-*/ 
+*/
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.15)), color-stop(1%, rgba(255,255,255,.15)), color-stop(1%, rgba(0,0,0,.1)), to(rgba(0,0,0,.15)));
 }
 .btn-transparent,
@@ -1053,6 +1055,7 @@ kbd {
 .table-hover tbody tr:hover {
   background-color: rgba(0,0,0,.075);
 }
+.overlay-outer:after,
 .modal {
   background-color:rgba(0,0,0,.6);
 }
@@ -1180,6 +1183,7 @@ legend,
 .btn-block,
 .show,
 .list-group>li,
+.overlay-outer:after,
 .center-block,
 .display-block {
   display:block;
@@ -1220,19 +1224,23 @@ sub,sup,
 .input-group,
 .has-feedback,
 [class*=modal-]:not(.modal-open):not(.modal-header),
+.card,
 .relative {
-  position: relative;
+  position:relative;
 }
 .dropdown-menu,
 .form-control-feedback,
+.overlay-outer:after,
 .absolute {
-  position: absolute;
+  position:absolute;
 }
 .modal,
 .affix {
-  position: fixed;
+  position:fixed;
 }
+.dropdown-search,
 .form-control-feedback,
+.overlay-outer:after,
 .top-right {
 	top:0;
 	right:0;
@@ -1320,6 +1328,15 @@ sub,sup,
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
+/* UI WIDGETS */
+.overlay-outer {
+  z-index:0;
+}
+.overlay-outer:after {
+	content:"";
+	height:100%;
+	width:100%;
+}
 /* =============================== *
  *  BORDER RADIUS
  * =============================== */
@@ -1332,6 +1349,7 @@ sub,sup,
 .form-group-lg .form-control,
 .btn-lg,
 .modal-content,
+.card, .card-img,
 .input-group-addon.input-lg {
   border-radius:6px;
 }
@@ -1503,7 +1521,7 @@ kbd,
 	  clear: both;
 		border-top: 1px solid #ddd;
 	}
-	.nav-justified li:hover {	
+	.nav-justified li:hover {
 		background-image: -webkit-linear-gradient(rgba(255,255,255,.2) 99%, rgba(0,0,0,.2) 1%, rgba(0,0,0,.2));
     background-image: linear-gradient(rgba(255,255,255,.2) 99%, rgba(0,0,0,.2) 1%, rgba(0,0,0,.2));
 	}
@@ -1537,9 +1555,6 @@ kbd,
   .hidden-xs,
   .display-xs-none {
   	display:none !important;
-  }
-  .position-xs-absolute {
-  	position:absolute;
   }
   .nav-justified > li,
   .show-xs,

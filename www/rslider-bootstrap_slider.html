@@ -14,7 +14,6 @@
 	<meta name="Description" content="">
 
 	<link rel="stylesheet" href="http://tonyporto.github.io/web-cdn-scripts/BootStrapChunks/css/bootstrapped.css">
-	
 
 <style>
 
@@ -202,6 +201,90 @@
 <script src="http://tonyporto.github.io/web-cdn-scripts/js/modernizr.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
+/**
+ * jquery.detectSwipe v2.1.3
+ * jQuery Plugin to obtain touch gestures from iPhone, iPod Touch, iPad and Android
+ * http://github.com/marcandre/detect_swipe
+ * Based on touchwipe by Andreas Waltl, netCU Internetagentur (http://www.netcu.de)
+ */
+
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define(['jquery'], factory);
+    } else if (typeof exports === 'object') {
+        // Node/CommonJS
+        module.exports = factory(require('jquery'));
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function($) {
+
+  $.detectSwipe = {
+    version: '2.1.2',
+    enabled: 'ontouchstart' in document.documentElement,
+    preventDefault: true,
+    threshold: 20
+  };
+
+  var startX,
+    startY,
+    isMoving = false;
+
+  function onTouchEnd() {
+    this.removeEventListener('touchmove', onTouchMove);
+    this.removeEventListener('touchend', onTouchEnd);
+    isMoving = false;
+  }
+
+  function onTouchMove(e) {
+    if ($.detectSwipe.preventDefault) { e.preventDefault(); }
+    if(isMoving) {
+      var x = e.touches[0].pageX;
+      var y = e.touches[0].pageY;
+      var dx = startX - x;
+      var dy = startY - y;
+      var dir;
+      if(Math.abs(dx) >= $.detectSwipe.threshold) {
+        dir = dx > 0 ? 'left' : 'right'
+      }
+      else if(Math.abs(dy) >= $.detectSwipe.threshold) {
+        dir = dy > 0 ? 'up' : 'down'
+      }
+      if(dir) {
+        onTouchEnd.call(this);
+        $(this).trigger('swipe', dir).trigger('swipe' + dir);
+      }
+    }
+  }
+
+  function onTouchStart(e) {
+    if (e.touches.length == 1) {
+      startX = e.touches[0].pageX;
+      startY = e.touches[0].pageY;
+      isMoving = true;
+      this.addEventListener('touchmove', onTouchMove, false);
+      this.addEventListener('touchend', onTouchEnd, false);
+    }
+  }
+
+  function setup() {
+    this.addEventListener && this.addEventListener('touchstart', onTouchStart, false);
+  }
+
+  function teardown() {
+    this.removeEventListener('touchstart', onTouchStart);
+  }
+
+  $.event.special.swipe = { setup: setup };
+
+  $.each(['left', 'up', 'down', 'right'], function () {
+    $.event.special['swipe' + this] = { setup: function(){
+      $(this).on('swipe', $.noop);
+    } };
+  });
+}));
 /*! ResponsiveSlides.js v1.54
  * http://responsiveslides.com
  * http://viljamis.com
@@ -301,7 +384,7 @@
           settings.before(idx);
           // If CSS3 transitions are supported
           if (supportsTransitions) {
-            $slide.removeClass(visibleClass).css(hidden).eq(idx).addClass(visibleClass).css(visible);
+            $slide.removeClass(visibleClass + " active").css(hidden).eq(idx).addClass(visibleClass + " active").css(visible);
             index = idx;
             setTimeout(function () {
               settings.after(idx);
@@ -309,10 +392,10 @@
           // If not, use jQuery fallback
           } else {
             $slide.stop().fadeOut(fadeTime, function () {
-                $(this).removeClass(visibleClass).css(hidden).css("opacity", 1);
+                $(this).removeClass(visibleClass + " active").css(hidden).css("opacity", 1);
               })
               .eq(idx).fadeIn(fadeTime, function () {
-                $(this).addClass(visibleClass).css(visible);
+                $(this).addClass(visibleClass + " active").css(visible);
                 settings.after(idx);
                 index = idx;
               });
@@ -340,7 +423,7 @@
       }
 
       // Hide all slides, then show first one
-      $slide.hide().css(hidden).eq(0).addClass(visibleClass).css(visible).show();
+      $slide.hide().css(hidden).eq(0).addClass(visibleClass + " active").css(visible).show();
 
       // CSS transitions
       if (supportsTransitions) {
@@ -437,7 +520,6 @@
             startCycle();
           }
         };
-
         // Pause on hover
         if (settings.pause) {
           $this.hover(function () {
@@ -446,7 +528,6 @@
             restartCycle();
           });
         }
-
         // Pager click event handler
         if (settings.pager || settings.manualControls) {
           $tabs.bind("click", function (e) {
@@ -531,7 +612,6 @@
               restartCycle();
             }
           });
-
           // Pause when hovering navigation
           if (settings.pauseControls) {
             $trigger.hover(function () {
@@ -541,8 +621,31 @@
             });
           }
         }
-
       }
+      
+     /* ============================================
+      * ================================================= */
+ /**/
+$(".carousel > .active").on('swipeleft',  function(){
+
+console.log("swiped left")
+
+	$(this).removeClass(visibleClass + " active").css(hidden).prev("li").addClass(visibleClass + " active").css(visible)
+	
+	
+     
+}).on('swiperight', function(){
+console.log("swiped right")
+    
+	$(this).removeClass(visibleClass + " active").css(hidden).next("li").addClass(visibleClass + " active").css(visible) 
+    
+})  
+      
+      
+      /* =====================================
+  * ===================================== */     
+     
+      
 
       // Max-width fallback
       if (typeof document.body.style.maxWidth === "undefined" && options.maxwidth) {
@@ -711,100 +814,13 @@ jQuery(document).ready(function() {
 
 });
 
-
+      //SWIPY
+    
+ 
+//SWIPY 
 //SWIPE
-window.onload=function(){
-(function(d){
- var ce=function(e,n){
-	 var a=document.createEvent("CustomEvent");
-	 a.initCustomEvent(n,true,true,e.target);
-	 e.target.dispatchEvent(a);
-	 a=null;
-	 
-	 return false
- },
- nm=true,
- sp={x:0,y:0},
- ep={x:0,y:0},
- touch={
-  touchstart:function(e){
-    sp={x:e.touches[0].pageX,y:e.touches[0].pageY}
-  },
-  touchmove:function(e){
-    nm=false;ep={x:e.touches[0].pageX,y:e.touches[0].pageY}
-  },
-  touchend:function(e){
-  
-  if(nm){
-    ce(e,'fc')
-    
-    }else{
-    
-	  var x=ep.x-sp.x,
-	  xr=Math.abs(x),
-	  y=ep.y-sp.y,
-	  yr=Math.abs(y);
-	  
-	  if(Math.max(xr,yr)>20){
-	    ce(e,(xr>yr?(x<0?'swl':'swr'):(y<0?'swu':'swd')))
-	  }
-  
-  };
-  nm=true
-  },
-  touchcancel:function(e){
-    nm=false
-  }
- };
- for(var a in touch){
-  d.addEventListener(a,touch[a],false);
- }
-})(document);
-
-//EXAMPLE OF USE
-var h=function(e){
-
-	console.log(e.type,e)
-
-
-};
-document.body.addEventListener('fc',h,false);// 0-50ms vs 500ms with normal click
-document.body.addEventListener('swl',h,false);
-document.body.addEventListener('swr',h,false);
-document.body.addEventListener('swu',h,false);
-document.body.addEventListener('swd',h,false);
-}
-
-
-
-if (Modernizr.touchevents) {
-
-
-
-var deleteli=function(e){
- var li=e.target,
- 
- lis = $("#slider1 > li[class*='_on']"),
-
-  
-  li_visible = {"display": "block", "float": "left", "position": "relative", "opacity": 1, "z-index": 2},
-  li_hidden = {"float": "none", "position": "absolute", "opacity": 0, "z-index": 1},
-  
-  cls = jQuery("carousel-inner > ul").attr("class");
-  
- console.log('deleting '+li.textContent);
- 
-             
-lis.removeAttr("class style").css(li_hidden);     
-lis.next("li").addClass(cls + "_on").css(li_visible); 
- 
- 
-}
-document.getElementById('slider1').addEventListener('swl',deleteli,false);
-document.getElementById('slider1').addEventListener('swr',deleteli,false);
-
-
-}
+//$(".selector").on('swipeleft',  function(){ /*...*/ })
+//.on('swiperight', function(){ /*...*/ })
 </script>
 	</body>
 </html>

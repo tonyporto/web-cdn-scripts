@@ -34,7 +34,9 @@
 .hover-bg-inherit:hover {
 	background-color: inherit;
 }
-
+.color-bg-black {
+  background-color: #222;
+}
 .has-error input[type="text"],
 .form-error + .input-group input[type="text"],
 .has-error.form-control-div input[type="text"] {

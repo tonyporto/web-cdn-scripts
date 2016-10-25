@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+	<!--[if lt IE 9]>
+		<html class="no-js ie6 ie7 ie8 ie8-and-down" lang="en-US">
+	<![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> New Document </title>
+	<meta name="Generator" content="NPP-Plugin">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<style>
+body {margin:0}
+/* ========================================================================= *
+ * CUSTOMIZE BOOTSTRAP CAROUSEL
+ * ========================================================================= */
+.carousel-inner {
+  overflow:hidden;
+}
+.carousel,
+.carousel-inner,
+.carousel-inner>.item,
+.carousel-control:before {
+  position:relative;
+}
+[class*=carousel-]:not([class*=inner]) {
+	position:absolute;
+}
+.carousel-indicators,
+.carousel-caption {
+  right: 0;
+  left:0;
+}
+.carousel-caption {
+  top: 0;
+	bottom: 0;
+  width: 80%;
+}
+.carousel-caption {
+	display: table;
+  margin: auto;
+}
+.carousel,
+.carousel-inner,
+.carousel-inner > .item,
+.carousel-inner > .item > img {
+  width: 100%;
+}
+.carousel-inner,
+.carousel-inner > .item {
+  margin: 0;
+  max-height:550px;
+}
+
+/* CAROUSEL */
+.carousel-inner>.item {
+  display:none;
+  -webkit-transition:.6s ease-in-out left;
+  -o-transition:.6s ease-in-out left;
+  transition:.6s ease-in-out left;
+}
+.carousel-inner>.item.active {
+  left: 0;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.carousel-inner > .item > img,
+.carousel-inner>.active {
+  display:block;
+}
+.carousel-indicators,
+.carousel-caption {
+  z-index:10;
+}
+.carousel {
+  z-index:1;
+  color: white;
+}
+
+/* CAPTION & INDICATORS */
+.carousel-indicators {
+	bottom: 1.5em;
+	margin: 0;
+	text-align: center;
+}
+.carousel-indicators > li {
+	width: 1em;
+	height: 1em;
+	margin: 0 3px;
+	border-radius: 50%;
+}
+.carousel-indicators > .active {
+	background-color: #fff;
+}
+.carousel-indicators > li,
+.carousel-control:before {
+	display: inline-block;
+	border: 2px solid white;
+}
+
+/* CAROUSEL CONTROL */
+.carousel-control {
+  font-size: 400%;
+}
+.carousel-control,
+.carousel-control:before {
+	top: calc(50% - .8em);
+}
+.carousel-control.left {
+	left: 3%;
+}
+.carousel-control.right {
+	right: 3%;
+}
+.carousel-control:before {
+  top: 3pt;
+  content: "";
+  border-bottom: 0;
+  border-left: 0;
+  width: 0.4em;
+  height: 0.4em;
+  border-radius: .05em;
+}
+.carousel-control.left::before{
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.carousel-control.right::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+ /* END CAROUSEL =========================*/
+
+
+
+
+
+.container {
+margin-right: auto;
+    margin-left: auto;
+}
+.container:before, .container:after{
+	display: table;
+	clear:both;
+	content:"";
+}
+* {box-sizing: border-box}
+</style>
+
+</head>
+	<body>
+
+
+		 <!-- Carousel
+    ================================================== -->
+   <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide m-b-3" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+
+        <div class="item active">
+          <img class="first-slide" src="http://tonyporto.github.io/web-cdn-scripts/img/blue.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+                         <h2 class="section-header">Full-width Promo/Value Prop Hero Module.</h2>
+            <h3 class="hidden-xs">This is a medium header.</h3>
+            <button class="btn btn-primary btn-wide m-t-1">Button</button>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="second-slide" src="http://tonyporto.github.io/web-cdn-scripts/img/red.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2 class="section-header">Another example headline.</h2>
+              <p class="hidden-xs">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-primary btn-wide m-t-1" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <img class="third-slide" src="http://tonyporto.github.io/web-cdn-scripts/img/purple.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2 class="section-header">One more for good measure.</h2>
+              <p class="hidden-xs">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-primary btn-wide m-t-1" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="icon-prev" aria-hidden="true"></span>
+
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="icon-next" aria-hidden="true"></span>
+
+      </a>
+    </div><!-- /.carousel -->
+
+
+<script>
+/* ======================================================================
+(function(t) {
+
+    "use strict";
+    function e(e) {
+        return this.each(function() {
+            var o = t(this), n = o.data("bs.carousel"), s = t.extend({}, i.DEFAULTS, o.data(), "object" == typeof e && e), a = "string" == typeof e ? e :s.slide;
+            n || o.data("bs.carousel", n = new i(this, s)), "number" == typeof e ? n.to(e) :a ? n[a]() :s.interval && n.pause().cycle();
+        });
+    }
+    var i = function(e, i) {
+        this.$element = t(e), this.$indicators = this.$element.find(".carousel-indicators"),
+        this.options = i, this.paused = null, this.sliding = null, this.interval = null,
+        this.$active = null, this.$items = null, this.options.keyboard && this.$element.on("keydown.bs.carousel", t.proxy(this.keydown, this)),
+        "hover" == this.options.pause && !("ontouchstart" in document.documentElement) && this.$element.on("mouseenter.bs.carousel", t.proxy(this.pause, this)).on("mouseleave.bs.carousel", t.proxy(this.cycle, this));
+    };
+    i.VERSION = "3.3.6", i.TRANSITION_DURATION = 600, i.DEFAULTS = {
+        interval:5e3,
+        pause:"hover",
+        wrap:!0,
+        keyboard:!0
+    }, i.prototype.keydown = function(t) {
+        if (!/input|textarea/i.test(t.target.tagName)) {
+            switch (t.which) {
+              case 37:
+                this.prev();
+                break;
+
+              case 39:
+                this.next();
+                break;
+
+              default:
+                return;
+            }
+            t.preventDefault();
+        }
+    }, i.prototype.cycle = function(e) {
+        return e || (this.paused = !1), this.interval && clearInterval(this.interval), this.options.interval && !this.paused && (this.interval = setInterval(t.proxy(this.next, this), this.options.interval)),
+        this;
+    }, i.prototype.getItemIndex = function(t) {
+        return this.$items = t.parent().children(".item"), this.$items.index(t || this.$active);
+    }, i.prototype.getItemForDirection = function(t, e) {
+        var i = this.getItemIndex(e), o = "prev" == t && 0 === i || "next" == t && i == this.$items.length - 1;
+        if (o && !this.options.wrap) return e;
+        var n = "prev" == t ? -1 :1, s = (i + n) % this.$items.length;
+        return this.$items.eq(s);
+    }, i.prototype.to = function(t) {
+        var e = this, i = this.getItemIndex(this.$active = this.$element.find(".item.active"));
+        return t > this.$items.length - 1 || 0 > t ? void 0 :this.sliding ? this.$element.one("slid.bs.carousel", function() {
+            e.to(t);
+        }) :i == t ? this.pause().cycle() :this.slide(t > i ? "next" :"prev", this.$items.eq(t));
+    }, i.prototype.pause = function(e) {
+        return e || (this.paused = !0), this.$element.find(".next, .prev").length && t.support.transition && (this.$element.trigger(t.support.transition.end),
+        this.cycle(!0)), this.interval = clearInterval(this.interval), this;
+    }, i.prototype.next = function() {
+        return this.sliding ? void 0 :this.slide("next");
+    }, i.prototype.prev = function() {
+        return this.sliding ? void 0 :this.slide("prev");
+    }, i.prototype.slide = function(e, o) {
+        var n = this.$element.find(".item.active"), s = o || this.getItemForDirection(e, n), a = this.interval, r = "next" == e ? "left" :"right", l = this;
+        if (s.hasClass("active")) return this.sliding = !1;
+        var h = s[0], d = t.Event("slide.bs.carousel", {
+            relatedTarget:h,
+            direction:r
+        });
+        if (this.$element.trigger(d), !d.isDefaultPrevented()) {
+            if (this.sliding = !0, a && this.pause(), this.$indicators.length) {
+                this.$indicators.find(".active").removeClass("active");
+                var p = t(this.$indicators.children()[this.getItemIndex(s)]);
+                p && p.addClass("active");
+            }
+            var c = t.Event("slid.bs.carousel", {
+                relatedTarget:h,
+                direction:r
+            });
+            return t.support.transition && this.$element.hasClass("slide") ? (s.addClass(e),
+            s[0].offsetWidth, n.addClass(r), s.addClass(r), n.one("bsTransitionEnd", function() {
+                s.removeClass([ e, r ].join(" ")).addClass("active"), n.removeClass([ "active", r ].join(" ")),
+                l.sliding = !1, setTimeout(function() {
+                    l.$element.trigger(c);
+                }, 0);
+            }).emulateTransitionEnd(i.TRANSITION_DURATION)) :(n.removeClass("active"), s.addClass("active"),
+            this.sliding = !1, this.$element.trigger(c)), a && this.cycle(), this;
+        }
+    };
+    var o = t.fn.carousel;
+    t.fn.carousel = e, t.fn.carousel.Constructor = i, t.fn.carousel.noConflict = function() {
+        return t.fn.carousel = o, this;
+    };
+    var n = function(i) {
+        var o, n = t(this), s = t(n.attr("data-target") || (o = n.attr("href")) && o.replace(/.*(?=#[^\s]+$)/, ""));
+        if (s.hasClass("carousel")) {
+            var a = t.extend({}, s.data(), n.data()), r = n.attr("data-slide-to");
+            r && (a.interval = !1), e.call(s, a), r && s.data("bs.carousel").to(r), i.preventDefault();
+        }
+    };
+    t(document).on("click.bs.carousel.data-api", "[data-slide]", n).on("click.bs.carousel.data-api", "[data-slide-to]", n),
+    t(window).on("load", function() {
+        t('[data-ride="carousel"]').each(function() {
+            var i = t(this);
+            e.call(i, i.data());
+        });
+    });
+        
+    
+})(jQuery)
+* ================================================================= */
+
++ function(a) {
+    "use strict";
+
+    function b() {
+        var a = document.createElement("bootstrap"),
+            b = {
+                WebkitTransition: "webkitTransitionEnd",
+                MozTransition: "transitionend",
+                OTransition: "oTransitionEnd otransitionend",
+                transition: "transitionend"
+            };
+        for (var c in b)
+            if (void 0 !== a.style[c]) return {
+                end: b[c]
+            };
+        return !1
+    }
+    a.fn.emulateTransitionEnd = function(b) {
+        var c = !1,
+            d = this;
+        a(this).one("bsTransitionEnd", function() {
+            c = !0
+        });
+        var e = function() {
+            c || a(d).trigger(a.support.transition.end)
+        };
+        return setTimeout(e, b), this
+    }, a(function() {
+        a.support.transition = b(), a.support.transition && (a.event.special.bsTransitionEnd = {
+            bindType: a.support.transition.end,
+            delegateType: a.support.transition.end,
+            handle: function(b) {
+                return a(b.target).is(this) ? b.handleObj.handler.apply(this, arguments) : void 0
+            }
+        })
+    })
+ }(jQuery),
+(function(a) {
+    "use strict";
+
+    function b(b) {
+        return this.each(function() {
+            var d = a(this),
+                e = d.data("bs.carousel"),
+                f = a.extend({}, c.DEFAULTS, d.data(), "object" == typeof b && b),
+                g = "string" == typeof b ? b : f.slide;
+            e || d.data("bs.carousel", e = new c(this, f)), "number" == typeof b ? e.to(b) : g ? e[g]() : f.interval && e.pause().cycle()
+        })
+    }
+    var c = function(b, c) {
+        this.$element = a(b), this.$indicators = this.$element.find(".carousel-indicators"), this.options = c, this.paused = null, this.sliding = null, this.interval = null, this.$active = null, this.$items = null, this.options.keyboard && this.$element.on("keydown.bs.carousel", a.proxy(this.keydown, this)), "hover" == this.options.pause && !("ontouchstart" in document.documentElement) && this.$element.on("mouseenter.bs.carousel", a.proxy(this.pause, this)).on("mouseleave.bs.carousel", a.proxy(this.cycle, this))
+    };
+    c.VERSION = "3.3.6", c.TRANSITION_DURATION = 600, c.DEFAULTS = {
+        interval: 5e3,
+        pause: "hover",
+        wrap: !0,
+        keyboard: !0
+    }, c.prototype.keydown = function(a) {
+        if (!/input|textarea/i.test(a.target.tagName)) {
+            switch (a.which) {
+                case 37:
+                    this.prev();
+                    break;
+                case 39:
+                    this.next();
+                    break;
+                default:
+                    return
+            }
+            a.preventDefault()
+        }
+    }, c.prototype.cycle = function(b) {
+        return b || (this.paused = !1), this.interval && clearInterval(this.interval), this.options.interval && !this.paused && (this.interval = setInterval(a.proxy(this.next, this), this.options.interval)), this
+    }, c.prototype.getItemIndex = function(a) {
+        return this.$items = a.parent().children(".item"), this.$items.index(a || this.$active)
+    }, c.prototype.getItemForDirection = function(a, b) {
+        var c = this.getItemIndex(b),
+            d = "prev" == a && 0 === c || "next" == a && c == this.$items.length - 1;
+        if (d && !this.options.wrap) return b;
+        var e = "prev" == a ? -1 : 1,
+            f = (c + e) % this.$items.length;
+        return this.$items.eq(f)
+    }, c.prototype.to = function(a) {
+        var b = this,
+            c = this.getItemIndex(this.$active = this.$element.find(".item.active"));
+        return a > this.$items.length - 1 || 0 > a ? void 0 : this.sliding ? this.$element.one("slid.bs.carousel", function() {
+            b.to(a)
+        }) : c == a ? this.pause().cycle() : this.slide(a > c ? "next" : "prev", this.$items.eq(a))
+    }, c.prototype.pause = function(b) {
+        return b || (this.paused = !0), this.$element.find(".next, .prev").length && a.support.transition && (this.$element.trigger(a.support.transition.end), this.cycle(!0)), this.interval = clearInterval(this.interval), this
+    }, c.prototype.next = function() {
+        return this.sliding ? void 0 : this.slide("next")
+    }, c.prototype.prev = function() {
+        return this.sliding ? void 0 : this.slide("prev")
+    }, c.prototype.slide = function(b, d) {
+        var e = this.$element.find(".item.active"),
+            f = d || this.getItemForDirection(b, e),
+            g = this.interval,
+            h = "next" == b ? "left" : "right",
+            i = this;
+        if (f.hasClass("active")) return this.sliding = !1;
+        var j = f[0],
+            k = a.Event("slide.bs.carousel", {
+                relatedTarget: j,
+                direction: h
+            });
+        if (this.$element.trigger(k), !k.isDefaultPrevented()) {
+            if (this.sliding = !0, g && this.pause(), this.$indicators.length) {
+                this.$indicators.find(".active").removeClass("active");
+                var l = a(this.$indicators.children()[this.getItemIndex(f)]);
+                l && l.addClass("active")
+            }
+            var m = a.Event("slid.bs.carousel", {
+                relatedTarget: j,
+                direction: h
+            });
+            return a.support.transition && this.$element.hasClass("slide") ? (f.addClass(b), f[0].offsetWidth, e.addClass(h), f.addClass(h), e.one("bsTransitionEnd", function() {
+                f.removeClass([b, h].join(" ")).addClass("active"), e.removeClass(["active", h].join(" ")), i.sliding = !1, setTimeout(function() {
+                    i.$element.trigger(m)
+                }, 0)
+            }).emulateTransitionEnd(c.TRANSITION_DURATION)) : (e.removeClass("active"), f.addClass("active"), this.sliding = !1, this.$element.trigger(m)), g && this.cycle(), this
+        }
+    };
+    var d = a.fn.carousel;
+    a.fn.carousel = b, a.fn.carousel.Constructor = c, a.fn.carousel.noConflict = function() {
+        return a.fn.carousel = d, this
+    };
+    var e = function(c) {
+        var d, e = a(this),
+            f = a(e.attr("data-target") || (d = e.attr("href")) && d.replace(/.*(?=#[^\s]+$)/, ""));
+        if (f.hasClass("carousel")) {
+            var g = a.extend({}, f.data(), e.data()),
+                h = e.attr("data-slide-to");
+            h && (g.interval = !1), b.call(f, g), h && f.data("bs.carousel").to(h), c.preventDefault()
+        }
+    };
+    a(document).on("click.bs.carousel.data-api", "[data-slide]", e).on("click.bs.carousel.data-api", "[data-slide-to]", e), a(window).on("load", function() {
+        a('[data-ride="carousel"]').each(function() {
+            var c = a(this);
+            b.call(c, c.data())
+        })
+    })
+    
+    
+    
+
+    
+    
+})(jQuery)
+
+
+
+//TOUCH SWIPE
+/**
+ * jquery.detectSwipe v2.1.3
+ * jQuery Plugin to obtain touch gestures from iPhone, iPod Touch, iPad and Android
+ * http://github.com/marcandre/detect_swipe
+ * Based on touchwipe by Andreas Waltl, netCU Internetagentur (http://www.netcu.de)
+ */
+(function($) {
+
+  $.detectSwipe = {
+    version: '2.1.2',
+    enabled: 'ontouchstart' in document.documentElement,
+    preventDefault: true,
+    threshold: 20
+  };
+
+  var startX,
+    startY,
+    isMoving = false;
+
+  function onTouchEnd() {
+    this.removeEventListener('touchmove', onTouchMove);
+    this.removeEventListener('touchend', onTouchEnd);
+    isMoving = false;
+  }
+
+  function onTouchMove(e) {
+    if ($.detectSwipe.preventDefault) { e.preventDefault(); }
+    if(isMoving) {
+      var x = e.touches[0].pageX;
+      var y = e.touches[0].pageY;
+      var dx = startX - x;
+      var dy = startY - y;
+      var dir;
+      if(Math.abs(dx) >= $.detectSwipe.threshold) {
+        dir = dx > 0 ? 'left' : 'right'
+      }
+      else if(Math.abs(dy) >= $.detectSwipe.threshold) {
+        dir = dy > 0 ? 'up' : 'down'
+      }
+      if(dir) {
+        onTouchEnd.call(this);
+        $(this).trigger('swipe', dir).trigger('swipe' + dir);
+      }
+    }
+  }
+
+  function onTouchStart(e) {
+    if (e.touches.length == 1) {
+      startX = e.touches[0].pageX;
+      startY = e.touches[0].pageY;
+      isMoving = true;
+      this.addEventListener('touchmove', onTouchMove, false);
+      this.addEventListener('touchend', onTouchEnd, false);
+    }
+  }
+
+  function setup() {
+    this.addEventListener && this.addEventListener('touchstart', onTouchStart, false);
+  }
+  function teardown() {
+    this.removeEventListener('touchstart', onTouchStart);
+  }
+
+  $.event.special.swipe = { setup: setup };
+
+  $.each(['left', 'up', 'down', 'right'], function () {
+    $.event.special['swipe' + this] = { setup: function(){
+      $(this).on('swipe', $.noop);
+    } };
+  });
+});
+
+</script>
+
+<script>
+$('.carousel').carousel({
+  interval: 5000
+  //swipe: 30
+})
+
+
+
+$(".carousel").on('swipeleft',  function(){
+ // 
+ $(".item").carousel('prev')
+
+	
+ console.log("swiped left")
+ 
+}).on('swiperight', function(){
+
+ console.log("swiped right")
+ 
+	//Cycles to the previous item.
+	$(".item").carousel('next') 
+ 
+})
+</script>
+
+
+	</body>
+</html>
