@@ -123,6 +123,39 @@ $(document).on('click.bs.collapse.data-api','[data-toggle="collapse"]',function(
 if(!$this.attr('data-target'))e.preventDefault()
 var $target=getTargetFromTrigger($this),data=$target.data('bs.collapse'),option=data?'toggle':$this.data()
 Plugin.call($target,option)})}(jQuery));
+
+
+/* ================================================================== * 
+ * WHAT CAN BE CHANGED ABOVE ARE THE NAME: beforeJquery
+ * AND INTERVAL amount: var interval = 10; // ms
+ * Obviously if the interval is to low it will fire too soon
+ * ================================================================== */
+function beforeJquery(name, callback) {
+ 
+    var interval = 90; // ms
+ 
+    window.setTimeout(function() {
+        if (window[name]) {
+            callback(window[name]);
+        } else {
+            window.setTimeout(arguments.callee, interval);
+        }
+    }, interval);
+}
+
+beforeJquery("jQuery", function(t) {
+
+			//FUNCTION USING JQUERY
+		jQuery("button[data-header-btn='button']").on("click", function() {
+
+				var clicker = jQuery("[data-header-btn=button]").not(jQuery(this)),
+						dataTarget = clicker.attr("data-target");
+						
+						jQuery(dataTarget).removeClass("in")
+
+		})	
+
+});
 /* ========================================================================
  * Bootstrap: Modal v3.3.7
  * ====================================================================== */
@@ -261,14 +294,18 @@ function centerModal() {
 		jQuery(".modal_click").on("click", function() {
 
 		var modalWindowId = jQuery(this).attr("id");
-		jQuery(".modal" + "." +modalWindowId).modal().css("padding-left", "0")
-			setTimeout(function(){jQuery(window).trigger("modalDialogueCss");},200); jQuery("body").removeAttr("style");
+		jQuery(".modal" + "." +modalWindowId).modal()
+		
+			.css("padding-left", "0")
+			 setTimeout(function(){jQuery(window).trigger("modalDialogueCss");},200);
+			 
+			 jQuery("body").removeAttr("style");
 		});
 		$(window).on("modalDialogueCss", function() {
 		  $(".modal-dialog").each(function() {
 
 			var modalHeight = $(this).actual('height'), modMarg = modalHeight / 2, modalHeight = "-" + modMarg, 
-					modalHcss =   "position:absolute;bottom:0;left:0;right:0;top:50%;margin-top:" + modalHeight+ "px",
+					modalHcss =   "position:fixed;bottom:0;left:0;right:0;top:50%;margin-top:" + modalHeight+ "px",
 				  modalCloser = $(this).find("button[data-dismiss=modal]");
 		    $(this).attr("style", modalHcss); $(this).css("margin-top", modalHeight)
 			  modalCloser.on("click", function() {$(this).closest(".modal-dialog").removeAttr("style")})

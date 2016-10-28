@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-	<link rel="stylesheet" href="../BootStrapChunks/css/bootstrapped.css">
+	<link rel="stylesheet" href="../BootStrapChunks/css/base.css">
 	<link rel="stylesheet" href="../BootStrapChunks/css/add-on.css">
 	
 	<!-- link rel="stylesheet" href="../BootStrapChunks/css/navigation.css" -->
@@ -30,8 +30,8 @@
 .bb {
 	background-color:yellow;
 	border-right: 2px solid white;
-vertical-align:bottom;
-line-height:3
+	vertical-align:bottom;
+	line-height:3
 }
 
 .a1 {
@@ -59,12 +59,14 @@ background-color: #333
     border-radius: 1px;
     margin: 3px 0;
 }
-*/
+
 
 
 [data-header-btn="item"] {
 	z-index:500;
 }
+
+*/
 </style>
 <script>
 //CALL SCRIPTS BEFORE LOADER
@@ -104,7 +106,7 @@ beforeJquery("jQuery", function(t) {
 
  </head>
  <body>
-		<header class="container-full header-wrapper relative color-bg-blk ">
+		<header class="container-full header-container color-bg-blk ">
 
 			<div class="container">
 			
@@ -145,7 +147,7 @@ beforeJquery("jQuery", function(t) {
 <!-- SEARCH BOX -->
 
 
-			<nav class="row nav-wrap collapse navbar-collapse" data-header-btn="item" id="main-nav-toggle" aria-label="Main menu">
+			<nav class="row navbar-container collapse navbar-collapse" data-header-btn="item" id="main-nav-toggle" aria-label="Main menu">
 
 
           <ul class="nav nav-justified" role="navigation">

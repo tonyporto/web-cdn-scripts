@@ -117,6 +117,9 @@
   content:"\f1d8";
 }
 
+.icon-cartlink:before {
+  content:"\f290";
+}
 /* CHECKOUT */
 .icon-edit:before {
   content:"\f044";
