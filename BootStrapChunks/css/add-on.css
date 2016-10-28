@@ -117,6 +117,9 @@
   content:"\f1d8";
 }
 
+.icon-login:before {
+  content:"\f090";
+}
 .icon-cartlink:before {
   content:"\f290";
 }
