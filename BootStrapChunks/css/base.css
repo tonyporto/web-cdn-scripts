@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'FontAwesome';
-	src: url('../fonts/fontAwesome/FontAwesome.eot');
-	src: url('../fonts/fontAwesome/FontAwesome.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/fontAwesome/FontAwesome.woff2') format('woff2'),
-		url('../fonts/fontAwesome/FontAwesome.woff') format('woff'),
-		url('../fonts/fontAwesome/FontAwesome.ttf') format('truetype'),
-		url('../fonts/fontAwesome/FontAwesome.svg#fontawesomeregular') format('svg');
+	src: url('../fonts/FontAwesome/FontAwesome.eot');
+	src: url('../fonts/FontAwesome/FontAwesome.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FontAwesome/FontAwesome.woff2') format('woff2'),
+		url('../fonts/FontAwesome/FontAwesome.woff') format('woff'),
+		url('../fonts/FontAwesome/FontAwesome.ttf') format('truetype'),
+		url('../fonts/FontAwesome/FontAwesome.svg#fontawesomeregular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -961,7 +961,7 @@ code {
   background-color:#f9f2f4;
 }
 .pagination>li>a:hover,
-.pagination>li>a.sf_PagerCurrent,
+.pagination>li>a.active,
 .input-group-addon,
 .btn-outline-secondary:hover {
   background-color:#eee;
@@ -1213,7 +1213,7 @@ td, th,
 sub,sup,
 .input-group,
 .has-feedback,
-[class*=modal-]:not(.modal-open):not(.modal-header),
+[class*=modal-]:not(.modal-open):not(.modal-header):not([class*=modal-dialog-]),
 .card,
 .relative {
   position:relative;
@@ -1864,15 +1864,15 @@ kbd,
   	display:block !important;
   }
   /* HELPERS */
-  .float-lg-left,
+  .float-md-left,
   .pull-md-left {
     float: left !important;
   }
-  .float-lg-right,
+  .float-md-right,
   .pull-md-right {
     float: right !important;
   }
-  .float-lg-none,
+  .float-md-none,
   .pull-md-none {
     float: none !important;
   }

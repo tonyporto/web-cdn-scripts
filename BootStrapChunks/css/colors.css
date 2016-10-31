@@ -53,8 +53,6 @@ a.color-white,
   color: white !important;
 }
 
-.nav-justified li > a,
-[class*=-outline-navy],
 .color-navy,
 .color-navy * {
   color: #02285f !important;
