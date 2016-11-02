@@ -310,7 +310,7 @@ p,
 }
 .m-r-2,
 .m-x-2 {
-  margin-right: 2em !important;
+  margin-right: 2em;
 }
 .footer-links,
 .m-b-2,
@@ -319,7 +319,7 @@ p,
 }
 .m-l-2,
 .m-x-2 {
-  margin-left: 2em !important;
+  margin-left: 2em;
 }
 /* --- MARGIN 1.5em --- */
 .m-t-1-5,

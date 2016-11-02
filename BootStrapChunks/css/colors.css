@@ -48,8 +48,7 @@
  
 .footer-container,
 .color-white,
-a.color-white,
-.color-white *{
+.color-white > a {
   color: white !important;
 }
 
