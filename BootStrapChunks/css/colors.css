@@ -1,14 +1,11 @@
-.header-wrapper,
-.navi-button,
+
 .color-bg-white {
 	background-color: #fff;
 }
 /* ================================= *
  * BG COLORS
  * ================================= */
-.head-search,
-.nav>li>a:focus, 
-.nav>li>a:hover,
+
 .color-bg-transparent {
   background-color: transparent;
 }
@@ -17,11 +14,6 @@
 	background-color: #b7b7b7;
 }
 
-.footer-container{
-	background-color: #6f6f6f;
-}
-
-.navi-button .icon-bar,
 .color-bg-navy {
   background-color: #02285f;
 }
@@ -45,8 +37,7 @@
 /* ================================= *
  * COLORS
  * ================================= */
- 
-.footer-container,
+
 .color-white,
 .color-white > a {
   color: white !important;
@@ -92,7 +83,6 @@ hr {
   border-color: #ddd;
 }
 .no-border,
-[class*="RadGrid"],
 .k-editable-area {
 	border-width: 0px !important;
 	outline: 0;
