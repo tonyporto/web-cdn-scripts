@@ -43,11 +43,6 @@
   color: white !important;
 }
 
-.color-navy,
-.color-navy * {
-  color: #02285f !important;
-}
-
 .btn-outline-navy {
 	border-color: #02285f;
 }
