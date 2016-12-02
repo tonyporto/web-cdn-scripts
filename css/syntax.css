@@ -1,0 +1,114 @@
+/*
+    Paraíso (light)
+    Created by Jan T. Sott (http://github.com/idleberg)
+    Inspired by the art of Rubens LP (http://www.rubenslp.com.br)
+*/
+
+/* Paraíso Comment */
+.syntax-comment,
+.syntax-title {
+  color: #776e71;
+}
+
+/* Paraíso Red */
+.syntax-variable,
+.syntax-attribute,
+.syntax-tag,
+.syntax-regexp,
+.ruby .syntax-constant,
+.xml .syntax-tag .syntax-title,
+.xml .syntax-pi,
+.xml .syntax-doctype,
+.html .syntax-doctype,
+.css .syntax-id,
+.css .syntax-class,
+.css .syntax-pseudo {
+  color: #ef6155;
+}
+
+/* Paraíso Orange */
+.syntax-number,
+.syntax-preprocessor,
+.syntax-built_in,
+.syntax-literal,
+.syntax-params,
+.syntax-constant {
+  color: #f99b15;
+}
+
+/* Paraíso Yellow */
+.ruby .syntax-class .syntax-title,
+.css .syntax-rules .syntax-attribute {
+  color: #fec418;
+}
+
+/* Paraíso Green */
+.syntax-string,
+.syntax-value,
+.syntax-inheritance,
+.syntax-header,
+.ruby .syntax-symbol,
+.xml .syntax-cdata {
+  color: #48b685;
+}
+
+/* Paraíso Aqua */
+.css .syntax-hexcolor {
+  color: #5bc4bf;
+}
+
+/* Paraíso Blue */
+.syntax-function,
+.python .syntax-decorator,
+.python .syntax-title,
+.ruby .syntax-function .syntax-title,
+.ruby .syntax-title .syntax-keyword,
+.perl .syntax-sub,
+.javascript .syntax-title,
+.coffeescript .syntax-title {
+  color: #06b6ef;
+}
+
+/* Paraíso Purple */
+.syntax-keyword,
+.javascript .syntax-function {
+  color: #815ba4;
+}
+
+.syntax,
+.hljs {
+display: block;
+padding: 10px 15px;
+background: #F5F6F0;
+color: #414141;
+border: 1px solid #EAEEE7;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .syntax-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .syntax-cdata {
+  opacity: 0.5;
+}
+
+.highlight {
+	background-color: #d3d3d3 !important;
+}
+
+.left-arrow:before {
+	content: "<!----";
+	display: inline-block;
+}
+
+/* CLASS NAME ORDER *
+ * 1st call = ".color.position > .syntax-value"
+ * ---------------------------------------------- */
+.last-class.pink > .this {
+	color: #FF69B4;
+}
+.bold {
+	font-weight: bold;
+}

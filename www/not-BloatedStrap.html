@@ -8,7 +8,12 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+<style>
+[class*=form-control disabled] {
+cursor: not-allowed;
+background-color: #eee;
+}
+</style>
 	<link rel="stylesheet" href="../BootStrapChunks/css/base.css">
 	<link rel="stylesheet" href="../BootStrapChunks/css/add-on.css">
 	
@@ -106,7 +111,7 @@ beforeJquery("jQuery", function(t) {
 
  </head>
  <body>
-		<header class="container-full header-container color-bg-blk ">
+		<header class="header-wrapper color-bg-blk ">
 
 			<div class="container">
 			
@@ -131,10 +136,10 @@ beforeJquery("jQuery", function(t) {
 
 
 <!-- SEARCH BOX -->
-<fieldset data-header-btn="item" style="position: absolute;" class="dropdown-search section head-search-expanded collapse" id="searchbar-header" aria-expanded="true">
+<fieldset data-header-btn="item" class="search-wrapper absolute color-bg-blk collapse" id="searchbar-header" aria-expanded="false">
 				<div class="container p-y-2">
 
-					<div class="input-group search-wrapper">
+					<div class="input-group search_function">
 						<input name="search" type="text" class="center-block form-control" placeholder="Search">
 						<input name="search-index" type="hidden" value="general-search">
 						<span class="input-group-btn">
@@ -147,7 +152,7 @@ beforeJquery("jQuery", function(t) {
 <!-- SEARCH BOX -->
 
 
-			<nav class="row navbar-container collapse navbar-collapse" data-header-btn="item" id="main-nav-toggle" aria-label="Main menu">
+			<nav class="navbar-wrapper collapse navbar-collapse" data-header-btn="item" id="main-nav-toggle" aria-label="Main menu">
 
 
           <ul class="nav nav-justified" role="navigation">
@@ -465,7 +470,20 @@ beforeJquery("jQuery", function(t) {
 
 
 			<input type="text" id="hdnTestNewsletter" class="hidden hidden-xs">
-
+			
+			
+	<div class="col-sm-offset-2 col-sm-8">
+			<select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
+        <option data-subtext="Rep California">Tom Foolery</option>
+        <option data-subtext="Sen California">Bill Gordon</option>
+        <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
+        <option data-subtext="Rep Alabama">Mario Flores</option>
+        <option data-subtext="Rep Alaska">Don Young</option>
+        <option data-subtext="Rep California" disabled="disabled">Marvin Martinez</option>
+      </select>
+	</div>
+	
+	
 		</fieldset>
 
 	
@@ -490,41 +508,41 @@ beforeJquery("jQuery", function(t) {
 	
 </section>
 <section class="container p-y-4 clearfix">
-		<span class="col-xs-12 col-sm-6 a1 bg-warning" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-6 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-sm-6 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-sm-6 a1 bg-warning" style="height:30px;"></span>
 		
-		<span class="col-xs-12 col-sm-4 a1 bg-info" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-4 a1 bg-info" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-4 a1 bg-info" style="height:30px;"></span>
+		<span class="col-sm-4 a1 bg-info" style="height:30px;"></span>
+		<span class="col-sm-4 a1 bg-info" style="height:30px;"></span>
+		<span class="col-sm-4 a1 bg-info" style="height:30px;"></span>
 		
-		<span class="col-xs-12 col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
+		<span class="col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
+		<span class="col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
+		<span class="col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
+		<span class="col-sm-6 col-md-3 a1 bg-success" style="height:30px;"></span>
 		
-		<span class="col-xs-12 col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
-		
-		
-		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
+		<span class="col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
+		<span class="col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
+		<span class="col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
+		<span class="col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
 		
 		
-		<span class="col-xs-12 col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
-		<span class="col-xs-12 col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
+		<span class=" col-sm-4 col-md-2 a1 bg-warning" style="height:30px;">pii</span>
+		<span class="col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		<span class="col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
+		
+		
+		<span class="col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
+		<span class="col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
+		<span class="col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
+		<span class="col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
+		<span class="col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
+		<span class="col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
+		<span class="col-sm-3 col-md-1 a1 bg-info" style="height:30px;"></span>
+		<span class="col-sm-3 col-md-2 a1 bg-info" style="height:30px;"></span>
 </section>
 <section class="container p-y-4 clearfix">
 
@@ -809,7 +827,13 @@ beforeJquery("jQuery", function(t) {
 
 
 </section>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+<!-- script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script -->
 <script src="../BootStrapChunks/js/bootstrap.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
  </body>
 </html>>

@@ -27,6 +27,7 @@
 .icon-cart:before {
   content:"\f07a";
 }
+.icon-header-search:before,
 .icon-search:before {
   content:"\f002";
 }
@@ -185,7 +186,6 @@
 .size14 {
 	font-size: 14px
 }
-.footer-links > li:not(:first-child),
 .size12 {
 	font-size: 12px
 }
@@ -202,7 +202,6 @@
 .text-size-2 {
 	font-size: 2rem;
 }
-.footer-links > li,
 .text-size-1-8 {
 	font-size: 1.8rem;
 }
@@ -225,7 +224,6 @@ p,
 .line-height-2 {
 	line-height: 2;
 }
-.footer-links > li,
 .line-height-1-8 {
 	line-height: 1.8;
 }
@@ -312,7 +310,6 @@ p,
 .m-x-2 {
   margin-right: 2em;
 }
-.footer-links,
 .m-b-2,
 .m-y-2 {
   margin-bottom: 2em !important;
@@ -549,7 +546,6 @@ p,
   padding-right: .39em;
 }
 .ico-a:after,
-.login-widget a > span,
 .menu-dropdown > a:after {
 	padding-left: .39em;
 }
@@ -569,10 +565,6 @@ p,
 .p-y-0 {
   padding-bottom: 0 !important;
 }
-/*
-span > ul:not([class*=col-]),
-nav > ul:not([class*=col-]),
-*/
 .p-l-0,
 .p-x-0 {
   padding-left: 0 !important;
