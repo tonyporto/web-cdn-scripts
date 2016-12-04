@@ -2,15 +2,14 @@
 	font-family: 'FontAwesome';
 	src: url('../fonts/FontAwesome/FontAwesome.eot');
 	src: url('../fonts/FontAwesome/FontAwesome.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/FontAwesome/FontAwesome.woff2') format('woff2'),
-		url('../fonts/FontAwesome/FontAwesome.woff') format('woff'),
-		url('../fonts/FontAwesome/FontAwesome.ttf') format('truetype'),
-		url('../fonts/FontAwesome/FontAwesome.svg#fontawesomeregular') format('svg');
+	url('../fonts/FontAwesome/FontAwesome.woff2') format('woff2'),
+	url('../fonts/FontAwesome/FontAwesome.woff') format('woff'),
+	url('../fonts/FontAwesome/FontAwesome.ttf') format('truetype'),
+	url('../fonts/FontAwesome/FontAwesome.svg#fontawesomeregular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
-/*
- * Bootstrap v3.3.5 (http://getbootstrap.com)
+/* Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -312,9 +311,9 @@ sup {
   line-height:1.1;
   color:inherit;
 }
-/* =============================== *
+/* ======================== *
  *  FONT SIZES
- * =============================== */
+ * ======================== */
 kbd kbd {
   font-size:100%;
 }
@@ -386,8 +385,7 @@ p,
 pre {
   margin:0 0 10px;
 }
-.mark,
-mark {
+.mark,mark {
   padding:.2em;
 }
 .table td,
@@ -556,11 +554,11 @@ pre {
  * BORDERS
  * ======================== */
 hr,
+.panel-body,
 .table td,
 .table th {
   border-top:1px solid #eceeef;
 }
-
 .in > .nav-justified > li,
 .dropdown-menu > li {
 	border-top: 1px solid rgba(221,221,221,.5);
@@ -788,7 +786,7 @@ select.input-lg,
 }
 .input-group-addon,
 .input-group-btn {
-  width: 1%;
+  width:1%;
 }
 /* ======================== *
  * FORM VALIDATION
@@ -860,9 +858,9 @@ a.btn.disabled {
 .btn-transparent:focus {
 	box-shadow:none;
 }
-/* ========================= *
+/* ======================== *
  * COLORS
- * ========================= */
+ * ======================== */
 kbd,
 .btn,
 .card,
@@ -959,11 +957,10 @@ legend,
 .btn-transparent {
   color: inherit;
 }
-/* ========================= *
+/* ======================== *
  * BACKGROUND COLORS
- * ========================= */
-a,
-.disabled > a:hover,
+ * ======================== */
+a,.disabled > a:hover,
 .disabled > a:focus,
 .navbar-toggle,
 pre code,
@@ -982,8 +979,9 @@ btn.close,
 .color-bg-white {
   background-color:#fff;
 }
-code {
-  background-color:#f9f2f4;
+code,
+.panel-heading {
+  background-color: #f5f5f5;
 }
 .pagination>li>a:hover,
 .pagination>li>a.active,
@@ -992,8 +990,7 @@ code {
 .btn-outline-secondary:hover {
   background-color:#eee;
 }
-.mark,
-mark,
+.mark,mark,
 .bg-warning,
 .alert-warning,
 .has-warning .input-group-addon {
@@ -1073,9 +1070,9 @@ kbd {
 .modal {
   background-color:rgba(0,0,0,.6);
 }
-/* ========================= *
+/* ======================== *
  * BORDER COLORS
- * ========================= */
+ * ======================== */
 .navbar-toggle {
 	border-color: transparent;
 }
@@ -1087,6 +1084,9 @@ kbd {
 }
 .btn-primary{
   border-color:#2e6da4;
+}
+.panel-heading {
+  border-color: #eceeef;
 }
 .btn-default,
 .form-control {
@@ -1150,7 +1150,7 @@ li > ul > .menu-dropdown > a:after,
 .pull-none {
   float:none !important;
 }
-/* SPACE HELPER CLASSES */
+/* DISPLAY CLASSES */
 audio,
 canvas,
 progress,
@@ -1296,9 +1296,9 @@ sub,sup,
 [class*=dropdown-menu]:not([class*=-right]) {
 	left: 0;
 }
-/* =============================== *
+/* ======================== *
  *  DROPDOWN
- * =============================== */
+ * ======================== */
 .button-bar {
 	height: 3px;
   margin: 5px 0;
@@ -1326,9 +1326,9 @@ sub,sup,
 .nav li a {
 	padding:10px 15px;
 }
-/* =============================== *
+/* ======================== *
  *  MODAL
- * =============================== */
+ * ======================== */
 .modal {
   z-index: 1050;
   -webkit-overflow-scrolling: touch;
@@ -1358,9 +1358,9 @@ sub,sup,
 	height:100%;
 	width:100%;
 }
-/* =============================== *
+/* ======================== *
  *  BORDER RADIUS
- * =============================== */
+ * ======================== */
 .img-circle {
   border-radius:50%;
 }
@@ -1469,9 +1469,9 @@ kbd,
 .row:after {
   clear:both;
 }
-/* ================================ *
+/* ======================== *
  *  MAX-WIDTH: 480px
- * ================================ */
+ * ======================== */
 @media (max-width:480px) {
 
 	[class*="col- col-xxs"] {
@@ -1545,10 +1545,9 @@ kbd,
 	  margin-left:auto;
   }
 }
-
-/* ================================ *
+/* ======================== *
  *  MAX-WIDTH: 767px
- * ================================ */
+ * ======================== */
 @media (max-width:767px) {
 
   .display-xs-inline {
@@ -1605,9 +1604,9 @@ kbd,
     padding-left: 0;
   }
 }
-/* ================================ *
+/* ======================== *
  *  MIN-WIDTH: 768px
- * ================================ */
+ * ======================== */
 @media (min-width:768px) {
 
   [class*="col-sm-"] {
@@ -1748,10 +1747,9 @@ kbd,
 	  margin-left:auto;
   }
 }
-
-/* ================================ *
+/* ======================== *
  *  MAX-WIDTH: 991px
- * ================================ */
+ * ======================== */
 @media (max-width:991px) {
 
 	/* NAVIGATION */
@@ -1797,10 +1795,11 @@ kbd,
     float: right !important;
   }
 }
-/* ================================ *
+/* ======================== *
  *  MIN-WIDTH: 992px
- * ================================ */
+ * ======================== */
 @media (min-width:992px) {
+
 	.navbar-wrapper:not(.dummy) {
 		border-top: 0 solid transparent;
 	}
@@ -1821,8 +1820,7 @@ kbd,
 		margin-left: 100%;
 	  margin-right: -100%
 	}
-	/* NAVIGATION */
-
+	/* END NAVIGATION */
   [class*="col-md-"] {
     float: left;
   }
@@ -1958,9 +1956,9 @@ kbd,
     text-align:center !important;
   }
 }
-/* ================================ *
+/* ======================== *
  *  MIN-WIDTH: 1200px
- * ================================ */
+ * ======================== */
 @media (min-width:1200px) {
 
   [class*="col-lg-"] {

@@ -492,6 +492,9 @@ p,
   padding-bottom: 30px !important;
 }
 /* --- PADDING 1em --- */
+.p-a-1 {
+  padding: 1em 1em;
+}
 .p-t-1,
 .p-y-1 {
   padding-top: 1em !important;

@@ -9,9 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-[class*=form-control disabled] {
-cursor: not-allowed;
-background-color: #eee;
+.color-bg-light {
+    background-color: #f5f5f5;
 }
 </style>
 	<link rel="stylesheet" href="../BootStrapChunks/css/base.css">
@@ -338,6 +337,29 @@ beforeJquery("jQuery", function(t) {
 </article>
 </section>
 
+<section class="wrapper color-bg-light p-y-3">
+				<div class="container">
+
+			<h2 class="text-center">Buttons</h2>
+
+			<hr class="m-b-1">
+
+				<span class="btn btn-primary">The Button</span>
+				<span class="btn btn-success">The Button</span>
+				<span class="btn btn-warning">The Button</span>
+				<span class="btn btn-info">The Button</span>
+				<span class="btn btn-danger">The Button</span>
+				<span class="btn btn-outline-primary">The Button</span>
+				<span class="btn btn-outline-secondary">The Button</span>
+				<span class="btn btn-outline-success">The Button</span>
+				<span class="btn btn-outline-info">The Button</span>
+				<span class="btn btn-outline-warning">The Button</span>
+				<span class="btn btn-outline-danger">The Button</span>
+
+
+			</div>
+		</section>
+
 <section class="container p-y-3 clearfix">
 
 
@@ -351,31 +373,11 @@ beforeJquery("jQuery", function(t) {
 				</h4> <strong>Warning!</strong> Best check yo self, you're not looking too good. <a href="#" class="alert-link">alert link</a>
 			</div>
 
-	<span class="btn btn-primary">The Button</span>
-	<span class="btn btn-success">The Button</span>
-	<span class="btn btn-warning">The Button</span>
-	<span class="btn btn-info">The Button</span>
-	<span class="btn btn-danger">The Button</span>
-	
-	
-	<span class="btn btn-outline-primary">The Button</span>
-	
-	<span class="btn btn-outline-secondary">The Button</span>
-	
-	
-	<span class="btn btn-outline-success">The Button</span>
-	
-	
-	<span class="btn btn-outline-info">The Button</span>
-	
-	<span class="btn btn-outline-warning">The Button</span>
-	
-	
-	<span class="btn btn-outline-danger">The Button</span>
+
 	
 	<div class="alert alert-success alert-dismissable">
 				 
-	<span href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</span>
+			<span href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</span>
 				<h4>
 					Alert!
 				</h4> <strong>Warning!</strong> Best check yo self, you're not looking too good. <a href="#" class="alert-link">alert link</a>
@@ -386,7 +388,7 @@ beforeJquery("jQuery", function(t) {
 * ================================================================================= */ -->
 
 <label class=" alert alert-danger icon-alert-danger alert-dismissable col-xs-12 m-y-1">
-	<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+	<span class="close" data-dismiss="alert" aria-label="close" title="close">×</span>
 
   
         Oh poopy something happened noooooooooo
@@ -469,19 +471,7 @@ beforeJquery("jQuery", function(t) {
 
 
 
-			<input type="text" id="hdnTestNewsletter" class="hidden hidden-xs">
-			
-			
-	<div class="col-sm-offset-2 col-sm-8">
-			<select class="selectpicker form-control" data-show-subtext="true" data-live-search="true">
-        <option data-subtext="Rep California">Tom Foolery</option>
-        <option data-subtext="Sen California">Bill Gordon</option>
-        <option data-subtext="Sen Massacusetts">Elizabeth Warren</option>
-        <option data-subtext="Rep Alabama">Mario Flores</option>
-        <option data-subtext="Rep Alaska">Don Young</option>
-        <option data-subtext="Rep California" disabled="disabled">Marvin Martinez</option>
-      </select>
-	</div>
+
 	
 	
 		</fieldset>
@@ -527,7 +517,7 @@ beforeJquery("jQuery", function(t) {
 		<span class="col-sm-2-4 a1 bg-danger" style="height:30px;"></span>
 		
 		
-		<span class=" col-sm-4 col-md-2 a1 bg-warning" style="height:30px;">pii</span>
+		<span class=" col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
 		<span class="col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
 		<span class="col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
 		<span class="col-sm-4 col-md-2 a1 bg-warning" style="height:30px;"></span>
@@ -827,6 +817,65 @@ beforeJquery("jQuery", function(t) {
 
 
 </section>
+
+
+<section class="wrapper p-y-3" style="background-color:#fafafa">
+	<div class="container">
+
+<h2>Accordions</h2>
+<hr>
+
+		<div class="panel-group" id="accordion">
+		  <div class="panel panel-default">
+		    <div class="panel-heading p-a-1">
+		      <h4 class="panel-title m-a-0">
+		        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+		        Collapsible Group 1</a>
+		      </h4>
+		    </div>
+		    <div id="collapse1" class="panel-collapse collapse in">
+		      <div class="panel-body p-a-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+		      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+		      commodo consequat.</div>
+		    </div>
+		  </div>
+		  <div class="panel panel-default m-t-05">
+		    <div class="panel-heading p-a-1">
+		      <h4 class="panel-title m-a-0">
+		        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+		        Collapsible Group 2</a>
+		      </h4>
+		    </div>
+		    <div id="collapse2" class="panel-collapse collapse">
+		      <div class="panel-body p-a-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+		      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+		      commodo consequat.</div>
+		    </div>
+		  </div>
+		  <div class="panel panel-default m-t-05">
+		    <div class="panel-heading p-a-1">
+		      <h4 class="panel-title m-a-0">
+		        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+		        Collapsible Group 3</a>
+		      </h4>
+		    </div>
+		    <div id="collapse3" class="panel-collapse collapse">
+		      <div class="panel-body p-a-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+		      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+		      commodo consequat.</div>
+		    </div>
+		  </div>
+		</div>	
+	
+
+	</div>
+</section>
+
+
+
 <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
 <!-- script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script -->
 <script src="../BootStrapChunks/js/bootstrap.js"></script>
