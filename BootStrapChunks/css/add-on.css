@@ -492,6 +492,8 @@ p,
   padding-bottom: 30px !important;
 }
 /* --- PADDING 1em --- */
+.panel-body,
+.panel-heading,
 .p-a-1 {
   padding: 1em 1em;
 }
