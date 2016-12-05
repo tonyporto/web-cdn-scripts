@@ -7994,8 +7994,13 @@ function defer(method) {
     $LAB.script("http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
     .script("../js/modernizr.js")
     .script("../BootStrapChunks/js/bootstrap.js")
-    .script("../js/syntax.js");
-//});
+    .script("../js/syntax.js").wait(function() {
+    
+      if (typeof initHighlightingOnLoad == 'function') {
+        hljs.configure({classPrefix: 'syntax-'});
+				hljs.initHighlightingOnLoad();
+      }
+});
 </script>
 
 
