@@ -7996,10 +7996,10 @@ function defer(method) {
     .script("../BootStrapChunks/js/bootstrap.js")
     .script("../js/syntax.js").wait(function() {
     
-      if (typeof initHighlightingOnLoad == 'function') {
+      
         hljs.configure({classPrefix: 'syntax-'});
 				hljs.initHighlightingOnLoad();
-      }
+      
 });
 </script>
 
