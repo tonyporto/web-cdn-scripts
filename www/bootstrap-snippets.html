@@ -7957,9 +7957,13 @@ Not all icons below are included in the project, but can be added to project if 
   $LAB.script("http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
   .script("../js/modernizr.js")
   .script("../BootStrapChunks/js/bootstrap.js")
-  .script("http://tonyporto.github.io/web-cdn-scripts/js/syntax.js")
+  .script("../js/syntax.js")
+
+
+ window.onload = function(e) {
+		hljs.configure({classPrefix: 'syntax-'});
+		hljs.initHighlightingOnLoad();
+	}
 </script>
-
-
 </body>
 </html>
