@@ -865,6 +865,7 @@ kbd,
 .btn,
 .card,
 .color-white,
+.list-group .active,
 [class*="btn-"]:not(.btn-default):not(.btn-transparent):focus,
 [class*="btn-"]:not(.btn-default):not(.btn-transparent):hover,
 [class*="btn-"]:not(.btn-default):not(.btn-transparent):active,
@@ -1106,7 +1107,6 @@ kbd {
   border-color:#d43f3a;
 }
 [class*="btn-outline"],
-.list-group .active,
 .has-error .form-control,
 .has-success .input-group-addon,
 .has-warning .input-group-addon,
