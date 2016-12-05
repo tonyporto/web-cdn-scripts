@@ -1030,6 +1030,7 @@ a.bg-success:hover {
 .btn-outline-success:hover {
   background-color:#5cb85c;
 }
+.list-group .active,
 .btn-primary,
 .btn-outline-primary:hover {
   background-color:#337ab7;
@@ -1105,6 +1106,7 @@ kbd {
   border-color:#d43f3a;
 }
 [class*="btn-outline"],
+.list-group .active,
 .has-error .form-control,
 .has-success .input-group-addon,
 .has-warning .input-group-addon,
