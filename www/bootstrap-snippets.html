@@ -7959,27 +7959,11 @@ Not all icons below are included in the project, but can be added to project if 
   .script("../BootStrapChunks/js/bootstrap.js")
   .script("../js/syntax.js")
 
-
- window.onload = function(e) {
+window.onload = function(e) {	
+	setTimeout(function(){	
 		hljs.configure({classPrefix: 'syntax-'});
 		hljs.initHighlightingOnLoad();
-		
-		setTimeout(function(){
-
-			checkHighlighter();
-			console.log(checkHighlighter() + "started")
-		},200);
-	}
-	
-function checkHighlighter() {
-
-	if(!$("pre > code span").lenght) {
-		hljs.configure({classPrefix: 'syntax-'});
-		hljs.initHighlightingOnLoad();		
-		
-		console.log("highlighter re-checked")
-	}
-
+	},100);
 }
 </script>
 </body>
