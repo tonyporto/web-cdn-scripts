@@ -856,6 +856,13 @@
 			<li><a href="http://www.nasm.org/products/page/3/">3</a></li>
 			<li class="next"><a id="MainContent_C004_productsFrontendMaster_ctl00_ctl00_pager_ctl00_ctl00_cmdNext" href="http://www.nasm.org/products/page/2/">Next</a></li>
 		</ul>
+		
+<div uib-pagination="" total-items="pagingInfo.totalItems" ng-model="pagingInfo.currentPage" max-size="3" boundary-links="true" items-per-page="pagingInfo.itemsPerPage" ng-change="selectPage()" class="ng-pristine ng-untouched ng-valid ng-isolate-scope pagination ng-not-empty"><!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" ng-disabled="noPrevious()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">First</a></li><!-- end ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" ng-disabled="noPrevious()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">Previous</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" ng-disabled="ngDisabled&amp;&amp;!page.active" uib-tabindex-toggle="" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" ng-disabled="noNext()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">Next</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" ng-disabled="noNext()||ngDisabled" uib-tabindex-toggle="" class="ng-binding" disabled="disabled" tabindex="-1">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+</div>
 
 	</div>
 	
@@ -991,7 +998,7 @@
 			        <div class="col-lg-6">
 			            <div class="input-group"> <input type="text" class="form-control" aria-label="Text input with dropdown button">
 			                <div class="input-group-btn"> <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
-			                    <ul class="dropdown-menu dropdown-menu-right">
+			                    <ul class="dropdown-menu dropdown-menu-right p-a-1">
 			                        <li><a href="#">Action</a><span class="caret"></span></li>
 			                        <li><a href="#">Another action</a></li>
 			                        <li><a href="#">Something else here</a></li>

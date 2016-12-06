@@ -9,7 +9,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
-/* Bootstrap v3.3.5 (http://getbootstrap.com)
+/* Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -826,6 +826,7 @@ abbr[title] {
   border-bottom:1px dotted #777;
 }
 .form-control.disabled,
+.disabled>a:hover,
 .btn.disabled,
 .btn[disabled] {
   cursor:not-allowed;
@@ -866,6 +867,7 @@ kbd,
 .card,
 .color-white,
 .list-group .active,
+.pagination>.active>a,
 [class*="btn-"]:not(.btn-default):not(.btn-transparent):focus,
 [class*="btn-"]:not(.btn-default):not(.btn-transparent):hover,
 [class*="btn-"]:not(.btn-default):not(.btn-transparent):active,
@@ -1032,6 +1034,8 @@ a.bg-success:hover {
   background-color:#5cb85c;
 }
 .list-group .active,
+.pagination>.active>a,
+.pagination>.active:hover>a,
 .btn-primary,
 .btn-outline-primary:hover {
   background-color:#337ab7;
@@ -1381,7 +1385,7 @@ code,
 pre,
 .btn,
 .alert,
-.panel,
+.panel:not(.panel-flat),
 .form-control,
 .pagination>li>a,
 .input-group-addon {
@@ -1395,6 +1399,7 @@ kbd,
   border-radius:3px;
 }
 .btn-flat,
+.panel-flat,
 .input-group .form-control:not(:first-child):not(:last-child),
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child) {

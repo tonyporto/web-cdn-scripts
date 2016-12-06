@@ -123,8 +123,6 @@ $(document).on('click.bs.collapse.data-api','[data-toggle="collapse"]',function(
 if(!$this.attr('data-target'))e.preventDefault()
 var $target=getTargetFromTrigger($this),data=$target.data('bs.collapse'),option=data?'toggle':$this.data()
 Plugin.call($target,option)})}(jQuery));
-
-
 /* ================================================================== *
  * WHAT CAN BE CHANGED ABOVE ARE THE NAME: beforeJquery
  * AND INTERVAL amount: var interval = 10; // ms
@@ -142,19 +140,17 @@ function beforeJquery(name, callback) {
         }
     }, interval);
 }
-
 beforeJquery("jQuery", function(t) {
 
 			//FUNCTION USING JQUERY
 		jQuery("button[data-header-btn='button']").on("click", function() {
 
-				var clicker = jQuery("[data-header-btn=button]").not(jQuery(this)),
-						dataTarget = clicker.attr("data-target");
-
-						jQuery(dataTarget).removeClass("in")
+			var clicker = jQuery("[data-header-btn=button]").not(jQuery(this)),
+					dataTarget = clicker.attr("data-target");
+					
+					jQuery(dataTarget).removeClass("in")
 
 		})
-
 });
 /* ========================================================================
  * Bootstrap: Modal v3.3.7
@@ -308,7 +304,6 @@ function centerModal() {
 			.css("padding-left", "0")
 			 setTimeout(function(){
 			  jQuery(window).trigger("modalDialogueCss");
-
 			 },200);
 
 			 jQuery("body").removeAttr("style");
