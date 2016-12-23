@@ -1473,6 +1473,7 @@ kbd,
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
+.nav-tabs>li,
 .list-group>li {
   margin-bottom: -1px;
 }
