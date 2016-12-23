@@ -59,7 +59,9 @@
 .icon-quote:before {
   content:"\f10d";
 }
-
+.icon-caret-right:before {
+  content: "\f054";
+}
 /* LABEL MESSAGES */
 .icon-alert-success:before {
 	content: "\f058";
@@ -83,6 +85,9 @@
 .icon-plus-square:before {
 	content:"\f196";
 }
+.icon-filter:before {
+  content: "\f0b0";
+}
 .icon-minus-square:before,
 .open > .icon-plus-square:before {
 	content:"\f147";
@@ -90,9 +95,6 @@
 .icon-form-error:before,
 .icon-close:before {
   content:"\f00d";
-}
-.icon-filter:before {
-  content:"\f0b0";
 }
 
 /* ECOMMERCE */
@@ -105,9 +107,7 @@
 .icon-user:before {
   content:"\f007";
 }
-.icon-cartlink:before {
-  content:"\f290";
-}
+
 .icon-asterisk:before {
   content:"\f069";
 }
@@ -118,11 +118,14 @@
   content:"\f1d8";
 }
 
-.icon-login:before {
-  content:"\f090";
-}
 .icon-cartlink:before {
   content:"\f290";
+}
+.icon-add-cart:before {
+  content:"\f217";
+}
+.icon-dollar:before {
+  content:"\f155";
 }
 /* CHECKOUT */
 .icon-edit:before {
@@ -153,9 +156,7 @@
 .text-uppercase {
 	text-transform: uppercase;
 }
-.text-italic {
-	font-style: italic;
-}
+
 /* ================================= *
  *  FONT SIZES
  * ================================= */
@@ -193,6 +194,9 @@
 .text-size-2-8 {
 	font-size: 2.8rem;
 }
+.text-size-2-5 {
+  font-size: 2.5rem;
+}
 .text-size-2-4 {
   font-size: 2.4rem;
 }
@@ -221,6 +225,15 @@ p,
 /* ================================= *
  *  LINE HEIGHT
  * ================================= */
+.line-height-3 {
+	line-height: 3;
+}
+.line-height-2-5 {
+	line-height: 2.5;
+}
+.line-height-2-3 {
+	line-height: 2.3;
+}
 .line-height-2 {
 	line-height: 2;
 }
@@ -229,6 +242,12 @@ p,
 }
 .line-height-1-5 {
 	line-height: 1.5;
+}
+.line-height-1-4 {
+	line-height: 1.4;
+}
+.line-height-1-3 {
+	line-height: 1.3;
 }
 .line-height-1-2 {
 	line-height: 1.2;
@@ -546,6 +565,23 @@ p,
 .p-l-10,
 .p-x-10 {
   padding-left: 10px !important;
+}
+/* --- PADDING .3em --- */
+.p-t-03,
+.p-y-03 {
+  padding-top:.3em !important;
+}
+.p-r-03,
+.p-x-03 {
+  padding-right:.3em !important;
+}
+.p-b-03,
+.p-y-03 {
+  padding-bottom:.3em !important;
+}
+.p-l-03,
+.p-x-03 {
+  padding-left:.3em !important;
 }
 .ico-b:before {
   padding-right: .39em;
