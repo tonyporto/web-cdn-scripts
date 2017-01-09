@@ -88,8 +88,8 @@
 .icon-filter:before {
   content: "\f0b0";
 }
-.icon-minus-square:before,
-.open > .icon-plus-square:before {
+[aria-expanded=true] > .icon-plus-square:before,
+.icon-minus-square:before {
 	content:"\f147";
 }
 .icon-form-error:before,
@@ -153,9 +153,6 @@
 .text-weight-400 {
 	font-weight: 400;
 }
-.text-uppercase {
-	text-transform: uppercase;
-}
 
 /* ================================= *
  *  FONT SIZES
@@ -181,9 +178,6 @@
 .size18 {
 	font-size: 18px;
 }
-.text-size-1 {
-	font-size: 1em;
-}
 .size14 {
 	font-size: 14px
 }
@@ -191,36 +185,51 @@
 	font-size: 12px
 }
 /* EMS & REMS */
-.text-size-2-8 {
-	font-size: 2.8rem;
+.text-size-1 {
+	font-size: 1em;
 }
-.text-size-2-5 {
-  font-size: 2.5rem;
-}
-.text-size-2-4 {
-  font-size: 2.4rem;
-}
-.text-size-2-2 {
-	font-size: 2.2rem;
-}
-.text-size-2 {
-	font-size: 2rem;
-}
-.text-size-1-8 {
-	font-size: 1.8rem;
-}
-.text-size-1-6 {
-	font-size: 1.6rem;
-}
-.text-size-1-5 {
-	font-size: 1.5rem;
+.text-size-1-2 {
+	font-size: 1.2em;
 }
 p,
 .text-size-1-4{
   font-size: 1.4rem;
 }
-.text-size-1-2 {
-	font-size: 1.2em;
+.text-size-1-6 {
+	font-size: 1.6rem;
+}
+.text-size-1-8 {
+	font-size: 1.8rem;
+}
+.text-size-2 {
+	font-size: 2rem;
+}
+.text-size-2-2 {
+	font-size: 2.2rem;
+}
+.text-size-2-4 {
+  font-size: 2.4rem;
+}
+.text-size-2-6 {
+  font-size: 2.6rem;
+}
+.text-size-2-8 {
+	font-size: 2.8rem;
+}
+.text-size-3 {
+	font-size: 3rem;
+}
+.text-size-3-2 {
+	font-size: 3.2rem;
+}
+.text-size-3-4 {
+  font-size: 3.4rem;
+}
+.text-size-3-6 {
+  font-size: 3.6rem;
+}
+.text-size-3-8 {
+	font-size: 3.8rem;
 }
 /* ================================= *
  *  LINE HEIGHT
