@@ -185,13 +185,13 @@
 	font-size: 12px
 }
 /* EMS & REMS */
+p,
 .text-size-1 {
 	font-size: 1em;
 }
 .text-size-1-2 {
 	font-size: 1.2em;
 }
-p,
 .text-size-1-4{
   font-size: 1.4rem;
 }
@@ -619,6 +619,104 @@ p,
 .p-x-0 {
   padding-left: 0 !important;
 }
+
+/* ======================== *
+ *  MAX-WIDTH: 767px
+ * ======================== */
+@media (max-width:767px) {
+  .p-x-0-xs,
+  .p-r-0-xs {
+    padding-right:0 !important;
+  }
+  .p-x-0-xs,
+  .p-l-0-xs {
+    padding-left:0 !important;
+  }
+}
+
+/* ======================== *
+ *  MIN-WIDTH: 768px
+ * ======================== */
+@media (min-width:768px) {
+  .p-x-2-sm,
+  .p-r-2-sm {
+    padding-right:2em !important;
+  }
+  .p-x-2-sm,
+  .p-l-2-sm {
+    padding-left:2em !important;
+  }
+  .p-x-1-sm,
+  .p-r-1-sm {
+    padding-right:1em !important;
+  }
+  .p-x-1-sm,
+  .p-l-1-sm {
+    padding-left:1em !important;
+  }
+  .p-x-0-sm,
+  .p-r-0-sm {
+    padding-right:0 !important;
+  }
+  .p-x-0-sm,
+  .p-l-0-sm {
+    padding-left:0 !important;
+  }
+}
+/* ======================== *
+ *  MIN-WIDTH: 992px
+ * ======================== */
+@media (min-width:992px) {
+	
+  .p-x-2-md,
+  .p-r-2-md {
+    padding-right:2em !important;
+  }
+  .p-x-2-md,
+  .p-l-2-md {
+    padding-left:2em !important;
+  }
+  .p-x-1-md,
+  .p-r-1-md {
+    padding-right:1em !important;
+  }
+  .p-x-1-md,
+  .p-l-1-md {
+    padding-left:1em !important;
+  }
+  .p-x-0-md,
+  .p-r-0-md {
+    padding-right:0 !important;
+  }
+  .p-x-0-md,
+  .p-l-0-md {
+    padding-left:0 !important;
+  }
+	
+}
+/* ======================== *
+ *  MIN-WIDTH: 1200px
+ * ======================== */
+@media (min-width:1200px) {
+	
+  .p-x-2-lg,
+  .p-r-2-lg {
+    padding-right:2em !important;
+  }
+  .p-x-2-lg,
+  .p-l-2-lg {
+    padding-left:2em !important;
+  }
+  .p-x-1-lg,
+  .p-r-1-lg {
+    padding-right:1em !important;
+  }
+  .p-x-1-lg,
+  .p-l-1-lg {
+    padding-left:1em !important;
+  }
+
+}
 /* ================================= *
  * FORM CHECKBOXES & RADIOS
  * ================================= */
@@ -638,7 +736,7 @@ p,
 	position:absolute;
 	top:0;
 	left:0;
-	box-sizing: border-box;
+	box-sizing:border-box;
 }
 .form-checkbox input+label:before,
 .form-checkbox input[type=radio]:checked+label:after {
@@ -661,7 +759,7 @@ p,
 	border:2px solid #fff;
 	border-top:0;
 	border-left:0;
-	z-index: 2;
+	z-index:2;
 }
 /* RADIO BOX */
 .form-checkbox input[type=radio]+label:before,
