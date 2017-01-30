@@ -4,25 +4,29 @@
  * http://fontawesome.io/cheatsheet/ *
  * ========================================== */
 [class*="icon-"] {
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	text-transform: none;
-	font-weight: normal;
+	display:inline-block;
+	font:normal normal normal 14px/1 FontAwesome;
+	font-size:inherit;
+	text-rendering:auto;
+	-webkit-font-smoothing:antialiased;
+	text-transform:none;
+}
+[class*="icon-"],
+.text-normal {
+	font-weight:normal;
 }
 .ico-b:before,
 .ico-a:after,
 [class*="icon-"]:before {
-  font-family: 'FontAwesome';
+  font-family:'FontAwesome';
 }
-/*! ============================================== *
- * ONLY ICONS USED ------------------------------ *
+
+/* ============================================== *
+ * ONLY ICONS USED *
  *
- * http://fontawesome.io/cheatsheet ------------- *
+ * //http://fontawesome.io/cheatsheet *
  *
- * USAGE: prefixed with ".icon-" ---------------- *
+ * USAGE: prefixed with ".icon-" *
  * ============================================== */
 .icon-cart:before {
   content:"\f07a";
@@ -39,6 +43,9 @@
 }
 .icon-plus-circle:before {
   content:"\f055";
+}
+.icon-caret-right:before {
+  content:"\f0da";
 }
 /* SOCIAL */
 .icon-facebook:before {
@@ -60,19 +67,19 @@
   content:"\f10d";
 }
 .icon-caret-right:before {
-  content: "\f054";
+  content:"\f054";
 }
 /* LABEL MESSAGES */
 .icon-alert-success:before {
-	content: "\f058";
+	content:"\f058";
 }
 .icon-alert-danger:before {
-	content: "\f06a";
+	content:"\f06a";
 }
 .icon-form-warning:before,
 .icon-warning:before,
 .icon-alert-warning:before {
-	content: "\f071";
+	content:"\f071";
 }
 
 /* FORM CHECKBOX */
@@ -86,12 +93,13 @@
 	content:"\f196";
 }
 .icon-filter:before {
-  content: "\f0b0";
+  content:"\f0b0";
 }
 [aria-expanded=true] > .icon-plus-square:before,
 .icon-minus-square:before {
 	content:"\f147";
 }
+.has-error .icon-form-required:before,
 .icon-form-error:before,
 .icon-close:before {
   content:"\f00d";
@@ -107,7 +115,7 @@
 .icon-user:before {
   content:"\f007";
 }
-
+.icon-form-required:before,
 .icon-asterisk:before {
   content:"\f069";
 }
@@ -137,132 +145,137 @@
 .icon-closed:before {
   content:"\f106";
 }
-
+.icon-pdf:before {
+  content:"\f1c1";
+}
+.icon-book:before {
+  content: "\f02d";
+}
 /* ================================= *
  *  FONT WEIGHTS
  * ================================= */
 .text-weight-700 {
-	font-weight: 700;
+	font-weight:700;
 }
 .text-weight-600 {
-  font-weight: 600;
+  font-weight:600;
 }
 .text-weight-500 {
-	font-weight: 500;
+	font-weight:500;
 }
 .text-weight-400 {
-	font-weight: 400;
+	font-weight:400;
 }
 
 /* ================================= *
  *  FONT SIZES
  * ================================= */
 .size46 {
-	font-size: 46px;
+	font-size:46px;
 }
 .size40 {
-	font-size: 40px;
+	font-size:40px;
 }
 .size30 {
-	font-size: 30px;
+	font-size:30px;
 }
 .size26 {
-	font-size: 26px;
+	font-size:26px;
 }
 .size24 {
-	font-size: 24px;
+	font-size:24px;
 }
 .size20 {
-	font-size: 20px;
+	font-size:20px;
 }
 .size18 {
-	font-size: 18px;
+	font-size:18px;
 }
 .size14 {
-	font-size: 14px
+	font-size:14px
 }
 .size12 {
-	font-size: 12px
+	font-size:12px
 }
 /* EMS & REMS */
 p,
 .text-size-1 {
-	font-size: 1em;
+	font-size:1em;
 }
 .text-size-1-2 {
-	font-size: 1.2em;
+	font-size:1.2em;
 }
 .text-size-1-4{
-  font-size: 1.4rem;
+  font-size:1.4rem;
 }
 .text-size-1-6 {
-	font-size: 1.6rem;
+	font-size:1.6rem;
 }
 .text-size-1-8 {
-	font-size: 1.8rem;
+	font-size:1.8rem;
 }
 .text-size-2 {
-	font-size: 2rem;
+	font-size:2rem;
 }
 .text-size-2-2 {
-	font-size: 2.2rem;
+	font-size:2.2rem;
 }
 .text-size-2-4 {
-  font-size: 2.4rem;
+  font-size:2.4rem;
 }
 .text-size-2-6 {
-  font-size: 2.6rem;
+  font-size:2.6rem;
 }
 .text-size-2-8 {
-	font-size: 2.8rem;
+	font-size:2.8rem;
 }
 .text-size-3 {
-	font-size: 3rem;
+	font-size:3rem;
 }
 .text-size-3-2 {
-	font-size: 3.2rem;
+	font-size:3.2rem;
 }
 .text-size-3-4 {
-  font-size: 3.4rem;
+  font-size:3.4rem;
 }
 .text-size-3-6 {
-  font-size: 3.6rem;
+  font-size:3.6rem;
 }
 .text-size-3-8 {
-	font-size: 3.8rem;
+	font-size:3.8rem;
 }
 /* ================================= *
  *  LINE HEIGHT
  * ================================= */
 .line-height-3 {
-	line-height: 3;
+	line-height:3;
 }
 .line-height-2-5 {
-	line-height: 2.5;
+	line-height:2.5;
 }
 .line-height-2-3 {
-	line-height: 2.3;
+	line-height:2.3;
 }
 .line-height-2 {
-	line-height: 2;
+	line-height:2;
 }
 .line-height-1-8 {
-	line-height: 1.8;
+	line-height:1.8;
 }
 .line-height-1-5 {
-	line-height: 1.5;
+	line-height:1.5;
 }
 .line-height-1-4 {
-	line-height: 1.4;
+	line-height:1.4;
 }
 .line-height-1-3 {
-	line-height: 1.3;
+	line-height:1.3;
 }
 .line-height-1-2 {
-	line-height: 1.2;
+	line-height:1.2;
 }
 .line-height-1 {
-	line-height: 1;
+	line-height:1;
 }
 /* ============================================================== *
  * HELPER CLASSES : MARGIN & PADDING *
@@ -272,145 +285,145 @@ p,
 .m-t-a,
 .m-y-a,
 .m-a-a {
-	margin-top: auto;
+	margin-top:auto;
 }
 .m-b-a,
 .m-y-a,
 .m-a-a {
-	margin-bottom: auto;
+	margin-bottom:auto;
 }
 .m-a-a,
 .m-x-a {
-	margin-right: auto !important;
-	margin-left: auto !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
 }
 /* --- MARGIN 4em --- */
 .m-t-4,
 .m-y-4 {
-  margin-top: 4em !important;
+  margin-top:4em !important;
 }
 .m-b-4,
 .m-y-4 {
-  margin-bottom: 4em !important;
+  margin-bottom:4em !important;
 }
 /* --- MARGIN 3.5em --- */
 .m-t-3-5,
 .m-y-3-5 {
-  margin-top: 3.5em !important;
+  margin-top:3.5em !important;
 }
 .m-b-3-5,
 .m-y-3-5 {
-  margin-bottom: 3.5em !important;
+  margin-bottom:3.5em !important;
 }
 /* --- MARGIN 3em --- */
 .m-a-3 {
-  margin: 3em 3em !important;
+  margin:3em 3em !important;
 }
 .m-t-3,
 .m-y-3 {
-  margin-top: 3em !important;
+  margin-top:3em !important;
 }
 .m-r-3 {
-  margin-right: 3rem !important;
+  margin-right:3rem !important;
 }
 .m-b-3,
 .m-y-3 {
-  margin-bottom: 3em !important;
+  margin-bottom:3em !important;
 }
 /* --- MARGIN 2.5em --- */
 .m-t-2-5,
 .m-y-2-5 {
-  margin-top: 2.5em !important;
+  margin-top:2.5em !important;
 }
 .m-b-2-5,
 .m-y-2-5 {
-  margin-bottom: 2.5em !important;
+  margin-bottom:2.5em !important;
 }
 /* --- MARGIN 2em --- */
 .m-a-2 {
-  margin: 2em 2em !important;
+  margin:2em 2em !important;
 }
 .m-t-2,
 .m-y-2 {
-  margin-top: 2em !important;
+  margin-top:2em !important;
 }
 .m-r-2,
 .m-x-2 {
-  margin-right: 2em;
+  margin-right:2em;
 }
 .m-b-2,
 .m-y-2 {
-  margin-bottom: 2em !important;
+  margin-bottom:2em !important;
 }
 .m-l-2,
 .m-x-2 {
-  margin-left: 2em;
+  margin-left:2em;
 }
 /* --- MARGIN 1.5em --- */
 .m-t-1-5,
 .m-y-1-5 {
-  margin-top: 1.5em !important;
+  margin-top:1.5em !important;
 }
 .m-b-1-5,
 .m-y-1-5 {
-  margin-bottom: 1.5em !important;
+  margin-bottom:1.5em !important;
 }
 /* --- MARGIN 1em --- */
 .m-a-1 {
-  margin: 1em 1em !important;
+  margin:1em 1em !important;
 }
 .m-t-1,
 .m-y-1 {
-  margin-top: 1em !important;
+  margin-top:1em !important;
 }
 .m-r-1,
 .m-x-1 {
-  margin-right: 1em !important;
+  margin-right:1em !important;
 }
 .m-b-1,
 .m-y-1 {
-  margin-bottom: 1em !important;
+  margin-bottom:1em !important;
 }
 .m-l-1,
 .m-x-1 {
-  margin-left: 1em !important;
+  margin-left:1em !important;
 }
 .m-t-05 {
-	margin-top: .5rem !important;
+	margin-top:.5em !important;
 }
 /* --- MARGIN 0 --- */
 .m-a-0 {
-  margin: 0 0;
+  margin:0 0;
 }
 .m-t-0,
 .m-y-0 {
-  margin-top: 0 !important;
+  margin-top:0 !important;
 }
 .m-r-0,
 .m-x-0 {
-  margin-right: 0 !important;
+  margin-right:0 !important;
 }
 .m-b-0,
 .m-y-0 {
-  margin-bottom: 0 !important;
+  margin-bottom:0 !important;
 }
 .m-l-0,
 .m-x-0 {
-  margin-left: 0 !important;
+  margin-left:0 !important;
 }
 /* --- MARGIN -10px --- */
 .m-r_10 {
-	margin-right: -10px;
+	margin-right:-10px;
 }
 .m-l_10 {
-	margin-left: -10px;
+	margin-left:-10px;
 }
 /* --- MARGIN -15px --- */
 .m-r_15 {
-	margin-right: -15px !important;
+	margin-right:-15px !important;
 }
 .m-l_15 {
-	margin-left: -15px !important;
+	margin-left:-15px !important;
 }
 /* ================================= *
  * PADDING *
@@ -418,162 +431,162 @@ p,
 /* --- PADDING 5em --- */
 .p-t-5,
 .p-y-5 {
-  padding-top: 5em !important;
+  padding-top:5em !important;
 }
 .p-b-5,
 .p-y-5 {
-  padding-bottom: 5em !important;
+  padding-bottom:5em !important;
 }
 /* --- PADDING 4.5em --- */
 .p-t-4-5,
 .p-y-4-5 {
-  padding-top: 4.5em !important;
+  padding-top:4.5em !important;
 }
 .p-b-4-5,
 .p-y-4-5 {
-  padding-bottom: 4.5em !important;
+  padding-bottom:4.5em !important;
 }
 /* --- PADDING 4em --- */
 .p-t-4,
 .p-y-4 {
-  padding-top: 4em !important;
+  padding-top:4em !important;
 }
 .p-b-4,
 .p-y-4 {
-  padding-bottom: 4em !important;
+  padding-bottom:4em !important;
 }
 /* --- PADDING 3.5em --- */
 .p-t-3-5,
 .p-y-3-5 {
-  padding-top: 3.5em !important;
+  padding-top:3.5em !important;
 }
 .p-r-3-5,
 .p-x-3-5 {
-  padding-right: 3.5em !important;
+  padding-right:3.5em !important;
 }
 .p-b-3-5,
 .p-y-3-5 {
-  padding-bottom: 3.5em !important;
+  padding-bottom:3.5em !important;
 }
 .p-l-3-5,
 .p-x-3-5 {
-  padding-left: 3.5em !important;
+  padding-left:3.5em !important;
 }
 /* --- PADDING 3em --- */
 .p-t-3,
 .p-y-3 {
-  padding-top: 3em !important;
+  padding-top:3em !important;
 }
 .p-r-3,
 .p-x-3 {
-  padding-right: 3em !important;
+  padding-right:3em !important;
 }
 .p-b-3,
 .p-y-3 {
-  padding-bottom: 3em !important;
+  padding-bottom:3em !important;
 }
 .p-l-3,
 .p-x-3 {
-  padding-left: 3em !important;
+  padding-left:3em !important;
 }
 /* --- PADDING 2.5em --- */
 .p-t-2-5,
 .p-y-2-5 {
-  padding-top: 2.5em !important;
+  padding-top:2.5em !important;
 }
 .p-r-2-5,
 .p-x-2-5 {
-  padding-right: 2.5em !important;
+  padding-right:2.5em !important;
 }
 .p-b-2-5,
 .p-y-2-5 {
-  padding-bottom: 2.5em !important;
+  padding-bottom:2.5em !important;
 }
 .p-l-2-5,
 .p-x-2-5 {
-  padding-left: 2.5em !important;
+  padding-left:2.5em !important;
 }
 /* --- PADDING 2em --- */
 .p-t-2,
 .p-y-2 {
-  padding-top: 2em !important;
+  padding-top:2em !important;
 }
 .p-r-2,
 .p-x-2 {
-  padding-right: 2em !important;
+  padding-right:2em !important;
 }
 .p-b-2,
 .p-y-2 {
-  padding-bottom: 2em !important;
+  padding-bottom:2em !important;
 }
 .p-l-2,
 .p-x-2 {
-  padding-left: 2em !important;
+  padding-left:2em !important;
 }
 /* --- PADDING 30px --- */
 .p-t-30,
 .p-y-30 {
-  padding-top: 30px !important;
+  padding-top:30px !important;
 }
 .p-b-30,
 .p-y-30 {
-  padding-bottom: 30px !important;
+  padding-bottom:30px !important;
 }
 /* --- PADDING 1em --- */
 .panel-body,
 .panel-heading,
 .p-a-1 {
-  padding: 1em 1em;
+  padding:1em 1em;
 }
 .p-t-1,
 .p-y-1 {
-  padding-top: 1em !important;
+  padding-top:1em !important;
 }
 .p-r-1,
 .p-x-1 {
-  padding-right: 1em !important;
+  padding-right:1em !important;
 }
 .p-b-1,
 .p-y-1 {
-  padding-bottom: 1em !important;
+  padding-bottom:1em !important;
 }
 .p-l-1,
 .p-x-1 {
-  padding-left: 1em;
+  padding-left:1em;
 }
 /* --- PADDING 15px --- */
 .p-t-15,
 .p-y-15 {
-  padding-top: 15px !important;
+  padding-top:15px !important;
 }
 .p-r-15,
 .p-x-15 {
-	padding-right: 15px;
+	padding-right:15px;
 }
 .p-b-15,
 .p-y-15 {
-  padding-bottom: 15px !important;
+  padding-bottom:15px !important;
 }
 .p-l-15,
 .p-x-15 {
-	padding-left: 15px;
+	padding-left:15px;
 }
 /* --- PADDING 10px --- */
 .p-t-10,
 .p-y-10 {
-  padding-top: 10px !important;
+  padding-top:10px !important;
 }
 .p-r-10,
 .p-x-10 {
-  padding-right: 10px !important;
+  padding-right:10px !important;
 }
 .p-b-10,
 .p-y-10 {
-  padding-bottom: 10px !important;
+  padding-bottom:10px !important;
 }
 .p-l-10,
 .p-x-10 {
-  padding-left: 10px !important;
+  padding-left:10px !important;
 }
 /* --- PADDING .3em --- */
 .p-t-03,
@@ -592,38 +605,62 @@ p,
 .p-x-03 {
   padding-left:.3em !important;
 }
+/* --- PADDING .5em --- */
+.p-t-05,
+.p-y-05 {
+  padding-top:.5em !important;
+}
+.p-r-05,
+.p-x-05 {
+  padding-right:.5em !important;
+}
+.p-b-05,
+.p-y-05 {
+  padding-bottom:.5em !important;
+}
+.p-l-05,
+.p-x-05 {
+  padding-left:.5em !important;
+}
 .ico-b:before {
-  padding-right: .39em;
+  padding-right:.39em;
 }
 .ico-a:after,
 .menu-dropdown > a:after {
-	padding-left: .39em;
+	padding-left:.39em;
 }
 /* --- PADDING 0 --- */
 .p-a-0 {
-  padding: 0 0;
+  padding:0 0 0 0 !important;
 }
 .p-t-0,
 .p-y-0 {
-  padding-top: 0 !important;
+  padding-top:0 !important;
 }
 .p-r-0,
 .p-x-0 {
-  padding-right: 0 !important;
+  padding-right:0 !important;
 }
 .p-b-0,
 .p-y-0 {
-  padding-bottom: 0 !important;
+  padding-bottom:0 !important;
 }
 .p-l-0,
 .p-x-0 {
-  padding-left: 0 !important;
+  padding-left:0 !important;
 }
 
 /* ======================== *
  *  MAX-WIDTH: 767px
  * ======================== */
 @media (max-width:767px) {
+	
+	 [class*=text-size-1-],
+	 [class*=text-size-2],
+	 [class*=text-size-3],
+	 [class*=text-size-4] {
+		font-size: 100% !important;
+	}
   .p-x-0-xs,
   .p-r-0-xs {
     padding-right:0 !important;
@@ -663,6 +700,7 @@ p,
     padding-left:0 !important;
   }
 }
+
 /* ======================== *
  *  MIN-WIDTH: 992px
  * ======================== */
@@ -724,7 +762,7 @@ p,
 	display:none;
 }
 .form-checkbox label {
-	padding: 2px 0 0 30px;
+	padding:2px 0 0 30px;
 	position:relative;
 	height:30px;
 	line-height:30px;
