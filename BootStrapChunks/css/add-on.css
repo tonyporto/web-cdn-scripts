@@ -1,8 +1,7 @@
-/* ========================================== *
- *  FONTAWESOME *
- *
- * http://fontawesome.io/cheatsheet/ *
- * ========================================== */
+/* ============================= *
+ * FONTAWESOME *
+ * fontawesome.io/cheatsheet/ *
+ * ============================= */
 [class*="icon-"] {
 	display:inline-block;
 	font:normal normal normal 14px/1 FontAwesome;
@@ -13,21 +12,17 @@
 }
 [class*="icon-"],
 .text-normal {
-	font-weight:normal;
+  font-weight:normal;
 }
 .ico-b:before,
 .ico-a:after,
 [class*="icon-"]:before {
   font-family:'FontAwesome';
 }
-
-/* ============================================== *
+/* ============================= *
  * ONLY ICONS USED *
- *
- * //http://fontawesome.io/cheatsheet *
- *
  * USAGE: prefixed with ".icon-" *
- * ============================================== */
+ * ============================= */
 .icon-cart:before {
   content:"\f07a";
 }
@@ -66,7 +61,7 @@
 .icon-quote:before {
   content:"\f10d";
 }
-.icon-caret-right:before {
+.icon-arrow-right:before {
   content:"\f054";
 }
 /* LABEL MESSAGES */
@@ -81,13 +76,11 @@
 .icon-alert-warning:before {
 	content:"\f071";
 }
-
 /* FORM CHECKBOX */
 .icon-form-success:before,
 .icon-check:before {
   content:"\f00c";
 }
-
 /* TOGGLE */
 .icon-plus-square:before {
 	content:"\f196";
@@ -104,7 +97,6 @@
 .icon-close:before {
   content:"\f00d";
 }
-
 /* ECOMMERCE */
 .icon-login:before {
   content:"\f090";
@@ -125,7 +117,6 @@
 .icon-sending:before {
   content:"\f1d8";
 }
-
 .icon-cartlink:before {
   content:"\f290";
 }
@@ -151,9 +142,9 @@
 .icon-book:before {
   content: "\f02d";
 }
-/* ================================= *
+/* ============================= *
  *  FONT WEIGHTS
- * ================================= */
+ * ============================= */
 .text-weight-700 {
 	font-weight:700;
 }
@@ -166,10 +157,9 @@
 .text-weight-400 {
 	font-weight:400;
 }
-
-/* ================================= *
+/* ============================= *
  *  FONT SIZES
- * ================================= */
+ * ============================= */
 .size46 {
 	font-size:46px;
 }
@@ -244,9 +234,9 @@ p,
 .text-size-3-8 {
 	font-size:3.8rem;
 }
-/* ================================= *
+/* ============================= *
  *  LINE HEIGHT
- * ================================= */
+ * ============================= */
 .line-height-3 {
 	line-height:3;
 }
@@ -425,10 +415,9 @@ p,
 .m-l_15 {
 	margin-left:-15px !important;
 }
-/* ================================= *
+/* ============================= *
  * PADDING *
- * ================================= */
-/* --- PADDING 5em --- */
+ * ============================= */
 .p-t-5,
 .p-y-5 {
   padding-top:5em !important;
@@ -554,6 +543,23 @@ p,
 .p-x-1 {
   padding-left:1em;
 }
+/* --- PADDING 20px --- */
+.p-t-20,
+.p-y-20 {
+  padding-top:20px !important;
+}
+.p-r-20,
+.p-x-20 {
+	padding-right:20px;
+}
+.p-b-20,
+.p-y-20 {
+  padding-bottom:20px !important;
+}
+.p-l-20,
+.p-x-20 {
+	padding-left:20px;
+}
 /* --- PADDING 15px --- */
 .p-t-15,
 .p-y-15 {
@@ -588,23 +594,6 @@ p,
 .p-x-10 {
   padding-left:10px !important;
 }
-/* --- PADDING .3em --- */
-.p-t-03,
-.p-y-03 {
-  padding-top:.3em !important;
-}
-.p-r-03,
-.p-x-03 {
-  padding-right:.3em !important;
-}
-.p-b-03,
-.p-y-03 {
-  padding-bottom:.3em !important;
-}
-.p-l-03,
-.p-x-03 {
-  padding-left:.3em !important;
-}
 /* --- PADDING .5em --- */
 .p-t-05,
 .p-y-05 {
@@ -622,12 +611,31 @@ p,
 .p-x-05 {
   padding-left:.5em !important;
 }
-.ico-b:before {
-  padding-right:.39em;
+/* --- PADDING .3em --- */
+.p-t-03,
+.p-y-03 {
+  padding-top:.3em !important;
 }
+.p-r-03,
+.p-x-03 {
+  padding-right:.3em !important;
+}
+.p-b-03,
+.p-y-03 {
+  padding-bottom:.3em !important;
+}
+.p-l-03,
+.p-x-03 {
+  padding-left:.3em !important;
+}
+.p-r-04,
+.ico-b:before {
+  padding-right:.4em;
+}
+.p-l-04,
 .ico-a:after,
 .menu-dropdown > a:after {
-	padding-left:.39em;
+	padding-left:.4em;
 }
 /* --- PADDING 0 --- */
 .p-a-0 {
@@ -649,17 +657,21 @@ p,
 .p-x-0 {
   padding-left:0 !important;
 }
-
 /* ======================== *
  *  MAX-WIDTH: 767px
  * ======================== */
 @media (max-width:767px) {
-	
-	 [class*=text-size-1-],
-	 [class*=text-size-2],
-	 [class*=text-size-3],
-	 [class*=text-size-4] {
-		font-size: 100% !important;
+	.text-resize-1-2 {
+		font-size:120% !important;
+	}
+	.text-resize-1-4 {
+		font-size:140% !important;
+	}
+	.text-resize-1-6 {
+		font-size:160% !important;
+	}
+	.text-resize-1-8 {
+		font-size:180% !important;
 	}
   .p-x-0-xs,
   .p-r-0-xs {
@@ -670,7 +682,6 @@ p,
     padding-left:0 !important;
   }
 }
-
 /* ======================== *
  *  MIN-WIDTH: 768px
  * ======================== */
@@ -700,12 +711,10 @@ p,
     padding-left:0 !important;
   }
 }
-
 /* ======================== *
  *  MIN-WIDTH: 992px
  * ======================== */
 @media (min-width:992px) {
-	
   .p-x-2-md,
   .p-r-2-md {
     padding-right:2em !important;
@@ -730,13 +739,11 @@ p,
   .p-l-0-md {
     padding-left:0 !important;
   }
-	
 }
 /* ======================== *
  *  MIN-WIDTH: 1200px
  * ======================== */
 @media (min-width:1200px) {
-	
   .p-x-2-lg,
   .p-r-2-lg {
     padding-right:2em !important;
@@ -753,11 +760,18 @@ p,
   .p-l-1-lg {
     padding-left:1em !important;
   }
-
+  .p-x-0-lg,
+  .p-r-0-lg {
+    padding-right:0 !important;
+  }
+  .p-x-0-lg,
+  .p-l-0-lg {
+    padding-left:0 !important;
+  }
 }
-/* ================================= *
+/* ============================= *
  * FORM CHECKBOXES & RADIOS
- * ================================= */
+ * ============================= */
 .form-checkbox input {
 	display:none;
 }
