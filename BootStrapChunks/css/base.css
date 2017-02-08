@@ -991,6 +991,7 @@ pre code,
 table,
 btn.close,
 [class*="btn-outline"],
+.color-bg-transparent,
 .btn-transparent,
 .btn-transparent:hover {
   background-color:transparent;
@@ -1153,8 +1154,8 @@ kbd {
   border-color:currentColor;
 }
 .container {
-  width:94%;
-  max-width:1170px;
+  width:92%;
+  max-width:1200px;
 }
 .container-fluid,
 [class*="col-"] {
@@ -1253,7 +1254,7 @@ table,
 td, th,
 .display-table-cell,
 .input-group .form-control,
-.input-group-addon,
+.input-group-addon:not(.dummy),
 .input-group-btn {
   display:table-cell;
 }
@@ -1485,6 +1486,10 @@ kbd,
 [class*="-lg rounded"] > .form-control {
   border-top-left-radius:23px;
   border-bottom-left-radius:23px;
+}
+.input-group:not(.dummy) > .input-group-addon:not(.dummy) + .form-control {
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px;
 }
 [class*="-lg rounded"] > .input-group-btn > .btn {
 	border-top-right-radius:23px;
