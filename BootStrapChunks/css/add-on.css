@@ -26,6 +26,9 @@
 .icon-cart:before {
   content:"\f07a";
 }
+.icon-link:before {
+  content:"\f0c1";
+}
 .icon-header-search:before,
 .icon-search:before {
   content:"\f002";
@@ -542,6 +545,23 @@ p,
 .p-l-1,
 .p-x-1 {
   padding-left:1em;
+}
+/* --- PADDING 30px --- */
+.p-t-30,
+.p-y-30 {
+  padding-top:30px !important;
+}
+.p-r-30,
+.p-x-30 {
+	padding-right:30px;
+}
+.p-b-30,
+.p-y-30 {
+  padding-bottom:30px !important;
+}
+.p-l-30,
+.p-x-30 {
+	padding-left:30px;
 }
 /* --- PADDING 20px --- */
 .p-t-20,
