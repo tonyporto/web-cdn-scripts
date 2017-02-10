@@ -439,7 +439,7 @@
 		</section>
 
 
-<fieldset class="container p-y-3">
+<div class="container p-y-3">
 
 		<h2 class="text-left">Form Errors</h2>
 		<hr>
@@ -564,10 +564,10 @@
     
 </div>		
 		
-</fieldset>
+</div>
 
 
-<fieldset class="wrapper color-bg-light">
+<div class="wrapper color-bg-light">
 	<div class="container p-y-4">
 
 			<h3>Large Form</h3>
@@ -651,7 +651,7 @@
 </div>
 
 	</div>
-</fieldset>
+</div>
 
 
 <div class="container p-y-1">
@@ -1502,8 +1502,8 @@
 	<h2> Modals</h2>
 		
 
-		<button type="button" class="btn btn-info btn-lg modal_click " id="modal_one">Regular Modal</button>
-		<button type="button" class="btn btn-info btn-lg modal_click " id="modal_two">Content Modal</button>
+		<button type="button" class="btn btn-info btn-lg modal_click " data-target="modal_one">Regular Modal</button>
+		<button type="button" class="btn btn-info btn-lg modal_click " data-target="modal_two">Content Modal</button>
 
 		
 		
@@ -1616,48 +1616,97 @@
 <h2>Links Collapse</h2>
 <hr>
 
-<div data-wrapper="nav" class="panel-group nav nav-pills nav-stacked " id="accordion">
-		  <ul class="list-unstyled">
-		    <li class="panel-heading border-b-wrapper">
-		      <a class=" panel-title m-a-0" data-toggle="collapse" data-parent="#accordion" href="#links-collapse1">
-		        Collapsible Group 1
-		      </a>
-		      </li>
-		    
-		    <li id="links-collapse1" class="panel-collapse collapse in p-a-1">Lorem links ipsum dolor sit amet, consectetur adipisicing elit,
-		      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-		      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-		      commodo consequat.
-		    </li>
-		  </ul>
-		  <ul class="list-unstyled">
-		    <li class="panel-heading border-b-wrapper">
-		      <a class="panel-title m-a-0" data-toggle="collapse" data-parent="#accordion" href="#links-collapse2">
-		        Collapsible Group 2</a>
+<style>
+[data-nav=toggle] > li > a:not(.collapsed) {
+	background-color: #f1f1f1;
+}
+[data-nav=toggle] > .panel-collapse {
+	background-color: #fcfcfc;
+	border-left: 5px solid #337ab7;
+}
+[data-nav=toggle] > li > a.collapsed {
+  background-color: #e1e1e1;
+}
+</style>
 
-		    </li>
-		    <li id="links-collapse2" class="panel-collapse collapse p-a-1">
-		      <ul class="list-unstyled">
-		        <li>Car</li>
-		        <li>Car</li>
-		       </ul>
-		    </li>
+<nav class="panel-group nav nav-pills nav-stacked " id="accordion">
+	<ul data-nav="toggle" class="list-unstyled">
+		<li class="border-b-wrapper">
+		  <a class="panel-title p-a-10" data-toggle="collapse" data-parent="#accordion" href="#links-collapse1" aria-expanded="true">
+		    Collapsible Group 1
+		  </a>
+		</li>
+		    
+		<li id="links-collapse1" class="panel-collapse p-l-1 p-y-10 collapse in" aria-expanded="true">
+		  <ul class="list-unstyled line-height-1-8">
+		    <li>Car</li>
+		    <li>Car</li>
 		  </ul>
-		  <ul class="list-unstyled">
-		    <li class="panel-heading border-b-wrapper">
-		      <a class="panel-title m-a-0" data-toggle="collapse" data-parent="#accordion" href="#links-collapse3">
+		</li>
+	</ul>
+	<ul data-nav="toggle" class="list-unstyled">
+		<li class="border-b-wrapper">
+		  <a class="panel-title p-a-10" data-toggle="collapse" data-parent="#accordion" href="#links-collapse2">
+		    Collapsible Group 2
+		  </a>
+		</li>
+		<li id="links-collapse2" class="panel-collapse collapse p-l-1 p-y-10">
+		  <ul class="list-unstyled line-height-1-8">
+		    <li>Car</li>
+		    <li>Car</li>
+		  </ul>
+		</li>
+	</ul>
+		  <ul data-nav="toggle" class="list-unstyled">
+		    <li class="border-b-wrapper">
+		      <a class="panel-title p-a-10" data-toggle="collapse" data-parent="#accordion" href="#links-collapse3">
 		        Collapsible Group 3
 		      </a>
 		     
 		    </li>
-		    <li id="links-collapse3" class="panel-collapse collapse">
-		      <div class="panel-body p-a-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-		      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-		      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-		      commodo consequat.</div>
+		    <li id="links-collapse3" class="panel-collapse collapse p-l-1 p-y-10">
+		      <ul class="list-unstyled line-height-1-8">
+		        <li>Car</li>
+		        <li>Car</li>
+		       </ul>
 		    </li>
-		  </ul>
-</div>	
+	</ul>
+</nav>	
+
+<script>
+function whenAvailable(name, callback) {
+ 
+    var interval = 10; // ms
+ 
+    window.setTimeout(function() {
+        if (window[name]) {
+            callback(window[name]);
+        } else {
+            window.setTimeout(arguments.callee, interval);
+        }
+    }, interval);
+}
+ 
+//WAIT FOR MODERNIZER TO BE DEFINED
+whenAvailable("jQuery", function(t) {
+ 
+
+
+		jQuery("[data-nav=toggle] > li > a").on("click", function() {
+		
+			var dataClicked = jQuery("[data-nav=toggle] > li > a").not(jQuery(this)),
+					aria_expanded = {"aria-expanded": "true"},
+					aria_hidden = {"aria-expanded": "false"}
+					
+				dataClicked.addClass("collapsed").attr(aria_hidden)
+				.parent()
+					.next("li").removeClass("in").attr(aria_hidden);
+		
+		})
+		
+   
+});
+</script>
 
 </div>
 
@@ -1796,7 +1845,6 @@ Not all icons below are included in the project, but can be added to project if 
 </ul>
 
 
-</p>
 
  <p> Click send, and I'll reply with the classes for the icons you requested:<br>
  
@@ -7919,7 +7967,8 @@ Not all icons below are included in the project, but can be added to project if 
     
     <div class="col-md-4 col-sm-6 col-lg-3">
       <small class="text-muted pull-right">4.7</small>
-      <i class="fa fa-fw" aria-hidden="true" title="Copy to use window-maximize"></i>
+      <i class="fa fa-fw" aria-hidden="true" 
+      title="Copy to use window-maximize"></i>
       fa-window-maximize
       
       <span class="text-muted">[&amp;#xf2d0;]</span>

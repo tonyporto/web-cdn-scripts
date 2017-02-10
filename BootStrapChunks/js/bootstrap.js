@@ -286,6 +286,7 @@ setTimeout(function(){centerModal();},200);
  * MAKE MODAL APPEAR ON CENTER OF SCREEN
  * ===================================================================== */
 function centerModal() {
+	
 	if (jQuery(".modal_click").length) {
 
 		var modalClosedCss = {
@@ -298,7 +299,7 @@ function centerModal() {
 
 		jQuery(".modal_click").on("click", function() {
 
-		var modalWindowId = jQuery(this).attr("id");
+		var modalWindowId = jQuery(this).attr("data-target");
 		jQuery(".modal" + "." +modalWindowId).modal()
 
 			.css("padding-left", "0")
@@ -321,18 +322,18 @@ function centerModal() {
 				  //modalCloser = $(this).find("button[data-dismiss=modal]");
 		    $(this).attr("style", modalHcss);
 		    $(this).css("margin-top", modalHeight);
+		    $(this).parent().attr("aria-hidden","false")
 
-			  $("[data-dismiss=modal]").on("click", function() {
 
-				  setTimeout(function(){
-	          $(".modal-dialog").css(modalClosedCss)
-	        },300);
-
-				})
+				jQuery(document).on('click', 'html', function(e){
+					$(".modal-dialog").css(modalClosedCss)	
+					$(".modal").attr("aria-hidden","true")
+				});
 
 		  })
 		});
 	}
+	
 }
 /* ========================================================================
  * Bootstrap: ALERT DISMISS v3.3.7
