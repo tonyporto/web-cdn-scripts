@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Basic search in AngularJS",
+    "url": "http://webdesigncolors.com/angularjs-basic-search-using-filter/",
+	"desc": "Articles about Basic search in AngularJS"
+  },
+  {
+    "title": "AngularJS in 20 minutes",
+    "url": "http://webdesigncolors.com/angularjs-in-20-minutes/",
+	"desc": "Killer about AngularJS in 20 minutes"
+  },
+  {
+    "title": "CSS arrows Sass mixin",
+    "url": "http://webdesigncolors.com/css-arrows-sass-mixin/",
+	"desc": "Articles about CSS arrows Sass mixin"
+  },
+  {
+    "title": "WordPress Plugins",
+    "url": "http://webdesigncolors.com/category/wordpress/wordpress-plugins/",
+	"desc": "Articles about WordPress Plugins"
+  },
+  {
+    "title": "jQuery Plugins",
+    "url": "http://webdesigncolors.com/category/jquery/jquery-plugins/",
+	"desc": "Articles about jQuery Plugins"
+  }
+]
