@@ -300,7 +300,7 @@ function centerModal() {
 		jQuery(".modal_click").on("click", function() {
 
 		var modalWindowId = jQuery(this).attr("data-target");
-		jQuery(".modal" + "." +modalWindowId).modal()
+				jQuery(".modal" + "." +modalWindowId).modal()
 
 			.css("padding-left", "0")
 			 setTimeout(function(){

@@ -101,6 +101,9 @@
   content:"\f00d";
 }
 /* ECOMMERCE */
+.login-widget > li:not(:last-child):after {
+	content:"/";
+}
 .icon-login:before {
   content:"\f090";
 }
@@ -384,6 +387,23 @@ p,
 .m-t-05 {
 	margin-top:.5em !important;
 }
+/* --- MARGIN 10px --- */
+.m-t-10,
+.m-y-10 {
+  margin-top:10px !important;
+}
+.m-r-10,
+.m-x-10 {
+  margin-right:10px !important;
+}
+.m-b-10,
+.m-y-10 {
+  margin-bottom:10px !important;
+}
+.m-l-10,
+.m-x-10 {
+  margin-left:10px !important;
+}
 /* --- MARGIN 0 --- */
 .m-a-0 {
   margin:0 0;
@@ -649,11 +669,13 @@ p,
   padding-left:.3em !important;
 }
 .p-r-04,
+.login-widget > li:not(:last-child):after,
 .ico-b:before {
   padding-right:.4em;
 }
 .p-l-04,
 .ico-a:after,
+.login-widget > li:not(:last-child):after,
 .menu-dropdown > a:after {
 	padding-left:.4em;
 }
@@ -811,7 +833,7 @@ p,
 	box-sizing:border-box;
 }
 .form-checkbox input+label:before,
-.form-checkbox input[type=radio]:checked+label:after {
+.form-checkbox input+label:after {
 	height:20px;
 	width:20px;
 	border:2px solid #d3d3d3;
@@ -829,18 +851,16 @@ p,
 	width:6.66667px;
 	height:13px;
 	border:2px solid #fff;
-	border-top:0;
-	border-left:0;
+	border-width: 0 2px 2px 0;
 	z-index:2;
 }
 /* RADIO BOX */
 .form-checkbox input[type=radio]+label:before,
-.form-checkbox input[type=radio]+label:after,
-.form-checkbox input[type=radio]:checked+label:after {
+.form-checkbox input[type=radio]+label:after {
 	border-radius:50%;
 }
 .form-checkbox input[type=radio]:checked+label:after {
-	background-color:#337ab7;
+	/* background-color:#337ab7; */
 	margin:1px;
 	border:4px solid #fff;
 	height:18px;

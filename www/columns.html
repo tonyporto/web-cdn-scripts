@@ -14,9 +14,9 @@
 	<!-- script src="http://tonyporto.github.io/web-cdn-scripts/js/modernizr-prfx.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script -->
 
+<style>	
 
-
-  <style>
+  
 body {
 	margin: 0; 
 	padding: 0;
@@ -66,6 +66,37 @@ strong {display: block; font-weight: bold; margin-top: 1.5em}
 	background-color: orange;
 	height: 70px;
 	color: white;
+}
+
+
+
+
+@media print,print and (color) {
+   * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+   }
+   body,
+   .section-wrapper {
+			background-color: yellow;
+	}
+
+	[class*="col-"],
+	[class*="column-"] {
+		height: 30px;
+		color: black;
+		float:left;
+	}	
+	[class*="col-"] {
+		background-color: red;
+		width: 48%;
+	}
+	[class*="column-"] {
+		background-color: pink;
+		width: 32%;
+		margin-left: 1%
+	}	
+	
 }
   </style>
 
