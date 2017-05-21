@@ -147,7 +147,7 @@ beforeJquery("jQuery", function(t) {
 
 			var clicker = jQuery("[data-header-btn=button]").not(jQuery(this)),
 					dataTarget = clicker.attr("data-target");
-					
+
 					jQuery(dataTarget).removeClass("in")
 
 		})
@@ -282,11 +282,35 @@ fix();var actual=/(outer)/.test(method)?$target[method](configs.includeMargin):$
 //INIT CENTER MODAL
 setTimeout(function(){centerModal();},200);
 }
+
+//GET SCROLLBAR WIDTH
+function scrollbarWidth() {
+  var outer = document.createElement("div");
+    outer.style.visibility = "hidden";
+    outer.style.width = "100px";
+    document.body.appendChild(outer);
+
+  var widthNoScroll = outer.offsetWidth;
+    // force scrollbars
+    outer.style.overflow = "scroll";
+
+  // add innerdiv
+  var inner = document.createElement("div");
+    inner.style.width = "100%";
+    outer.appendChild(inner);
+
+  var widthWithScroll = inner.offsetWidth;
+
+    // remove divs
+    outer.parentNode.removeChild(outer);
+
+    return widthNoScroll - widthWithScroll;
+}
 /* ========================================================================
  * MAKE MODAL APPEAR ON CENTER OF SCREEN
  * ===================================================================== */
 function centerModal() {
-	
+
 	if (jQuery(".modal_click").length) {
 
 		var modalClosedCss = {
@@ -300,14 +324,13 @@ function centerModal() {
 		jQuery(".modal_click").on("click", function() {
 
 		var modalWindowId = jQuery(this).attr("data-target");
-				jQuery(".modal" + "." +modalWindowId).modal()
+				jQuery(".modal" + "." +modalWindowId).modal().css("padding-right", scrollbarWidth())
 
-			.css("padding-left", "0")
 			 setTimeout(function(){
 			  jQuery(window).trigger("modalDialogueCss");
 			 },200);
 
-			 jQuery("body").removeAttr("style");
+			 jQuery("body").removeAttr("style").css("overflow", "hidden");
 		});
 
 		$(window).on("modalDialogueCss", function() {
@@ -324,16 +347,15 @@ function centerModal() {
 		    $(this).css("margin-top", modalHeight);
 		    $(this).parent().attr("aria-hidden","false")
 
-
 				jQuery(document).on('click', 'html', function(e){
-					$(".modal-dialog").css(modalClosedCss)	
+					$(".modal-dialog").css(modalClosedCss)
 					$(".modal").attr("aria-hidden","true")
 				});
 
 		  })
 		});
 	}
-	
+
 }
 /* ========================================================================
  * Bootstrap: ALERT DISMISS v3.3.7

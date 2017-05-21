@@ -15,11 +15,49 @@
 		<link rel="stylesheet" href="../css/syntax.css">
 		<link rel="stylesheet" href="../css/font-awesome.css">
 		
+<style>
+.ease-in {
+	overflow:hidden;
+  height: 0;
+  transition: height .3s linear;
+  
+}
+.ease-in.in {
+	transition: all .3s ease;
+  height: 100px;
+}
+</style>		
 </head>
 <body style="font-family: 'Roboto Condensed';">
 
 			<!--############################ APP CONTENT ###################################-->
 
+<!-- NAV -->
+
+
+    <div class="collapse ease-in" id="navbar-header" style="height:0">
+      <div class="container 33bg-inverse p-a-1">
+        <h3>Collapsed content</h3>
+        <p>Toggleable via the navbar brand.</p>
+      </div>
+    </div>
+    
+    
+   <header class="navbar navbar-inverse bg-faded navbar-static-top p-y-1 m-b-1">
+		<div class="container ">
+		
+		<div class="row navbar-brand">
+			
+			  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar-header">
+				&#9776;
+			  </button> MENU
+		</div>
+		</div>
+  </header>
+
+<!-- NAV -->			
+			
+			
 		<section class="wrapper" id="wrapper">
 				<div class="container p-y-2" >
 
@@ -182,6 +220,22 @@
 </div>						
 						
 
+					
+					
+		<div class="col-xs-12 m-y-1">
+			<h2> Panel List</h2>
+			<hr>
+			<ul class="list-group">
+              <li class="list-group-item">Bootply Playground</li>
+              <li class="list-group-item">Bootstrap Editor</li>
+              <li class="list-group-item">Bootstrap Templates</li>
+              </ul>
+
+
+		</div>				
+					
+					
+					
 					</div>
 
 					<div class="col-sm-6 p-y-1">
@@ -285,8 +339,23 @@
     
 </div>
 
-					</div>
 
+		
+<div class="col-xs-12 m-y-1">
+		<h3 class="syntax-variable">Panel List Source</h3>
+	<hr>
+
+	<pre><code class="html">
+&ltul class="list-group">
+  &ltli class="list-group-item">Bootply Playground</li>
+  &ltli class="list-group-item">Bootstrap Editor</li>
+  &ltli class="list-group-item">Bootstrap Templates</li>
+&lt/ul>
+    </code></pre>
+    
+</div>		
+		
+</div>
 
 		<div class="col-md-12 p-y-2">
 
@@ -8337,15 +8406,18 @@ var tabsCss = document.getElementsByTagName("head")[0],
 
   // TAB DATA-API
   // ============
+	if (!$("[data-tabs=angular]").length) {
+	
+		var clickHandler = function (e) {
+			e.preventDefault()
+			Plugin.call($(this), 'show')
+		}
 
-  var clickHandler = function (e) {
-    e.preventDefault()
-    Plugin.call($(this), 'show')
-  }
-
-  $(document)
-    .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
-    .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
+		$(document)
+			.on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
+			.on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
+			
+	}
 
 }(jQuery);
     
@@ -8356,7 +8428,11 @@ var tabsCss = document.getElementsByTagName("head")[0],
     $('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
     })
-  })
+  }).wait(function() {
+  
+		$(window).trigger("commonJs")
+  
+})
 </script>
 </body>
 </html>

@@ -818,10 +818,13 @@ p,
 	display:none;
 }
 .form-checkbox label {
+/*
 	padding:2px 0 0 30px;
-	position:relative;
 	height:30px;
-	line-height:30px;
+	line-height:1.5;
+*/
+	position:relative;
+	padding:4px 0 0 28px;
 }
 .form-checkbox input+label:before,
 .form-checkbox input+label:after {
