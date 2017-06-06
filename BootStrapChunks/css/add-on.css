@@ -123,6 +123,7 @@
 .icon-sending:before {
   content:"\f1d8";
 }
+.icon-shopping-bag:before,
 .icon-cartlink:before {
   content:"\f290";
 }
@@ -252,6 +253,7 @@ p,
 .line-height-2-3 {
 	line-height:2.3;
 }
+.form-checkbox label,
 .line-height-2 {
 	line-height:2;
 }
@@ -386,6 +388,23 @@ p,
 }
 .m-t-05 {
 	margin-top:.5em !important;
+}
+/* --- MARGIN 15px --- */
+.m-t-15,
+.m-y-15 {
+  margin-top:15px !important;
+}
+.m-r-15,
+.m-x-15 {
+  margin-right:15px !important;
+}
+.m-b-15,
+.m-y-15 {
+  margin-bottom:15px !important;
+}
+.m-l-15,
+.m-x-15 {
+  margin-left:15px !important;
 }
 /* --- MARGIN 10px --- */
 .m-t-10,
@@ -715,6 +734,9 @@ p,
 	.text-resize-1-8 {
 		font-size:180% !important;
 	}
+  .m-r-0-xs {
+    margin-right:0 !important;
+  }
   .p-x-0-xs,
   .p-r-0-xs {
     padding-right:0 !important;
@@ -728,6 +750,7 @@ p,
  *  MIN-WIDTH: 768px
  * ======================== */
 @media (min-width:768px) {
+
   .p-x-2-sm,
   .p-r-2-sm {
     padding-right:2em !important;
@@ -824,7 +847,7 @@ p,
 	line-height:1.5;
 */
 	position:relative;
-	padding:4px 0 0 28px;
+	padding:3px 0 0 28px;
 }
 .form-checkbox input+label:before,
 .form-checkbox input+label:after {
