@@ -84,6 +84,9 @@
 .icon-check:before {
   content:"\f00c";
 }
+.icon-key:before {
+  content:"\f084";
+}
 /* TOGGLE */
 .icon-plus-square:before {
 	content:"\f196";
@@ -304,15 +307,7 @@ p,
 .m-y-4 {
   margin-bottom:4em !important;
 }
-/* --- MARGIN 3.5em --- */
-.m-t-3-5,
-.m-y-3-5 {
-  margin-top:3.5em !important;
-}
-.m-b-3-5,
-.m-y-3-5 {
-  margin-bottom:3.5em !important;
-}
+
 /* --- MARGIN 3em --- */
 .m-a-3 {
   margin:3em 3em !important;
@@ -388,6 +383,23 @@ p,
 }
 .m-t-05 {
 	margin-top:.5em !important;
+}
+/* --- MARGIN 20px --- */
+.m-t-20,
+.m-y-20 {
+  margin-top:20px !important;
+}
+.m-r-20,
+.m-x-20 {
+  margin-right:20px !important;
+}
+.m-b-20,
+.m-y-20 {
+  margin-bottom:20px !important;
+}
+.m-l-20,
+.m-x-20 {
+  margin-left:20px !important;
 }
 /* --- MARGIN 15px --- */
 .m-t-15,
@@ -468,15 +480,7 @@ p,
 .p-y-5 {
   padding-bottom:5em !important;
 }
-/* --- PADDING 4.5em --- */
-.p-t-4-5,
-.p-y-4-5 {
-  padding-top:4.5em !important;
-}
-.p-b-4-5,
-.p-y-4-5 {
-  padding-bottom:4.5em !important;
-}
+
 /* --- PADDING 4em --- */
 .p-t-4,
 .p-y-4 {
@@ -554,15 +558,7 @@ p,
 .p-x-2 {
   padding-left:2em !important;
 }
-/* --- PADDING 30px --- */
-.p-t-30,
-.p-y-30 {
-  padding-top:30px !important;
-}
-.p-b-30,
-.p-y-30 {
-  padding-bottom:30px !important;
-}
+
 /* --- PADDING 1em --- */
 .panel-body,
 .panel-heading,
@@ -585,6 +581,7 @@ p,
 .p-x-1 {
   padding-left:1em;
 }
+
 /* --- PADDING 30px --- */
 .p-t-30,
 .p-y-30 {
@@ -638,19 +635,23 @@ p,
 }
 /* --- PADDING 10px --- */
 .p-t-10,
-.p-y-10 {
+.p-y-10,
+.p-a-10 {
   padding-top:10px !important;
 }
 .p-r-10,
-.p-x-10 {
+.p-x-10,
+.p-a-10 {
   padding-right:10px !important;
 }
 .p-b-10,
-.p-y-10 {
+.p-y-10,
+.p-a-10 {
   padding-bottom:10px !important;
 }
 .p-l-10,
-.p-x-10 {
+.p-x-10,
+.p-a-10 {
   padding-left:10px !important;
 }
 /* --- PADDING .5em --- */
@@ -841,11 +842,6 @@ p,
 	display:none;
 }
 .form-checkbox label {
-/*
-	padding:2px 0 0 30px;
-	height:30px;
-	line-height:1.5;
-*/
 	position:relative;
 	padding:3px 0 0 28px;
 }
