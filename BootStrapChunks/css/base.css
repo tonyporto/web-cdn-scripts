@@ -564,7 +564,8 @@ pre {
 /* ======================== *
  * BORDERS
  * ======================== */
-.panel {
+.panel,
+.dropdown-menu:not(.main-menu){
   border:1px solid #f3f3f3;
 }
 .table-bordered,
@@ -595,8 +596,9 @@ hr,
 .border-t-wrapper {
 	border-top:1px solid #eceeef;
 }
-.in > .nav-justified > li,
-.dropdown-menu > li {
+/* .dropdown-menu > li */
+.main-menu > li,
+.in > .nav-justified > li {
 	border-top:1px solid rgba(221,221,221,.5);
 }
 .in.navbar-wrapper,
@@ -734,8 +736,7 @@ legend,
 .input-group[class*=col-] {
   padding-right:0;
 }
-.list-unstyled,
-.list-inline,
+ul,
 .nav, .pagination,
 .pager, .media-list, .list-group,
 .input-group[class*=col-] {
@@ -857,7 +858,6 @@ abbr[title] {
 }
 .close {
 	font-family:Verdana,sans-serif;
-	/*text-shadow:0 1px 0 #fff;color:#000;filter:alpha(opacity=20);opacity:.2;*/
 }
 button,
 .close,
@@ -1005,7 +1005,8 @@ btn.close,
 .btn-default,
 .form-control,
 .modal-content,
-.color-bg-white {
+.color-bg-white,
+.dropdown-menu:not(.main-menu) {
   background-color:#fff;
 }
 .color-bg-light {
@@ -1102,8 +1103,9 @@ a.bg-success:hover {
 kbd {
   background-color:#333;
 }
-.dropdown-menu {
-	background-color:rgba(200,200,200,0.95);
+/*.dropdown-menu */
+.main-menu {
+	background-color:rgba(238, 238, 238,0.95);
 }
 .table-striped tbody tr:nth-of-type(odd) {
   background-color:rgba(0,0,0,.05);
@@ -1447,6 +1449,7 @@ blockquote:not(.widgets),
 .input-lg,.btn-lg,
 .form-group-lg .form-control,
 .modal-content,
+.dropdown-menu:not(.main-menu),
 .card:not(.slider-wrapper), .card-img,
 .input-group-addon.input-lg {
   border-radius:6px;

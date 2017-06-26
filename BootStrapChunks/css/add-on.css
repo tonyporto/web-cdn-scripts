@@ -104,8 +104,11 @@
   content:"\f00d";
 }
 /* ECOMMERCE */
-.login-widget > li:not(:last-child):after {
+.login-widget > ul > li:after {
 	content:"/";
+}
+.login-widget > ul:last-child > li:last-child:after {
+	content: none;
 }
 .icon-login:before {
   content:"\f090";
@@ -689,13 +692,13 @@ p,
   padding-left:.3em !important;
 }
 .p-r-04,
-.login-widget > li:not(:last-child):after,
+.login-widget > ul > li:after,
 .ico-b:before {
   padding-right:.4em;
 }
 .p-l-04,
 .ico-a:after,
-.login-widget > li:not(:last-child):after,
+.login-widget > ul > li:after,
 .menu-dropdown > a:after {
 	padding-left:.4em;
 }
