@@ -1,2 +1,4 @@
-examfx-sitemap
-Angular Feed
+!.gitignore
+BootStrapChunks/.synkron.syncdb
+BootStrapChunks/node_modules/
+Angular Feed/

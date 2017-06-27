@@ -1,0 +1,33 @@
+<style>
+.navbar-toggle {
+    width: 44px;
+    height: 33px;
+}
+
+[aria-expanded=true] .button-bar {
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    width: 38px;
+
+
+    -webkit-transition: all .2s  ease-in-out;
+    transition: all .2s  ease-in-out;
+}
+
+[aria-expanded=true] .button-bar:first-child {
+    -webkit-transform: translateY(0) rotate(-44deg);
+    transform: translateY(0) rotate(-44deg);
+}
+
+[aria-expanded=true] .button-bar:last-child {
+    -webkit-transform: translateY(0) rotate(44deg);
+    transform: translateY(0) rotate(44deg);
+}
+
+[aria-expanded=true] .button-bar:not(:first-child):not(:last-child) {
+    display: none;
+}
+</style>
+
+:all .2s ease-in-out

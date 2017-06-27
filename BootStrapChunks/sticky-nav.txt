@@ -1,0 +1,34 @@
+/* ================================== *
+ * STICKY NAV
+ * ================================== */
+setTimeout(function(){
+
+	var header = $(".header-wrapper"),
+			position = $(window).scrollTop(),
+			fadein = {'-webkit-transition' : 'opacity .6s ease-in', 'transition' : 'opacity .6s ease-in', 'z-index' : '999'};
+
+	$(window).scroll(function() {
+
+		var scroll = $(window).scrollTop();
+		header.css(fadein).addClass("color-bg-white");
+
+	    if(scroll > position) {
+
+	      if(position >= 270) {
+	        header.removeClass("affix top-left").addClass("display-none")
+				}
+
+	    } else {
+
+	        header.removeClass("display-none").addClass("affix top-left");
+
+	        if(position <= 270) {
+	          header.removeClass("affix top-left display-none").removeAttr("style");
+	        }
+
+	    }
+
+	    position = scroll;
+
+	});
+},200);

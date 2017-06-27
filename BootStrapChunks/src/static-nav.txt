@@ -1,0 +1,77 @@
+<li class="dropdown menu-dropdown " aria-expanded="false" style="position:static">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/course-catalog" aria-label="Course Catalog">Course Catalog</a>
+                            <ul style="padding: 2% 5%" class="dropdown-menu main-menu" role="menu" aria-hidden="true">
+                        <li class="col-md-3 dropdown menu-dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/course-catalog/life-health" aria-label="Life &amp; Health">Life &amp; Health</a>
+                            <ul class="" role="menu" aria-hidden="true">
+                        <li>
+                            <a href="/course-catalog/life-health/advantage" aria-label="Advantage">Advantage</a>
+                        </li>
+                    
+                        <li>
+                            <a href="/course-catalog/life-health/flex" aria-label="Flex">Flex</a>      
+                        </li>
+                    </ul>
+                        </li>
+                    
+                        <li class="col-md-3 dropdown menu-dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/course-catalog/property-casualty" aria-label="Property &amp; Casualty">Property &amp; Casualty</a>
+                            <ul class="" role="menu" aria-hidden="true">
+                        <li>
+                            <a href="/course-catalog/property-casualty/advantage" aria-label="Advantage">Advantage</a>
+                            
+                        </li>
+                    
+                        <li>
+                            <a href="/course-catalog/property-casualty/flex" aria-label="Flex">Flex</a>
+                            
+                        </li>
+                    </ul>
+                        </li>
+                    
+                        <li class="col-md-3  ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/course-catalog/securities" aria-label="Securities">Securities</a>
+                            <ul class="" role="menu" aria-hidden="true">
+                        <li>
+                            <a href="/course-catalog/securities/series-6-63" aria-label="Series 6 &amp; 63">Series 6 &amp; 63</a>
+                            
+                        </li>
+                    
+                        <li>
+                            <a href="/course-catalog/securities/series-7" aria-label="Series 7">Series 7</a>
+                            
+                        </li>
+                    
+                        <li>
+                            <a href="/course-catalog/securities/series-65" aria-label="Series 65">Series 65</a>
+                            
+                        </li>
+                    
+                        <li>
+                            <a href="/course-catalog/securities/series-66" aria-label="Series 66">Series 66</a>
+                            
+                        </li>
+                    
+                        <li>
+                            <a href="/course-catalog/securities/series-24" aria-label="Series 24">Series 24</a>
+                            
+                        </li>
+                    </ul>
+                        </li>
+                    
+                        <li class="col-md-3 dropdown menu-dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/course-catalog/continuing-education" aria-label="Continuing Education">Continuing Education</a>
+                            <ul class="" role="menu" aria-hidden="true">
+                        <li>
+                            <a href="/course-catalog/continuing-education/general-consultants" aria-label="General Consultants">General Consultants</a>
+                            
+                        </li>
+                    
+                        <li>
+                            <a href="/course-catalog/continuing-education/public-adjusters" aria-label="Public Adjusters">Public Adjusters</a>
+                            
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
+                        </li>

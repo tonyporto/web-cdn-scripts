@@ -1,0 +1,17 @@
+<style>
+.form-control.ssr::placehold {color:orange
+}
+form > div .form-control.ssr {
+  width:100%;
+
+ 
+}
+form > div .form-control.ssr:focus{
+padding-right:40%;
+margin-left:-40%;
+width: 140%;
+float:right;
+ -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+</style>

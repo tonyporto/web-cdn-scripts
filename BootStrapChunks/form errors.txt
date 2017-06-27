@@ -1,0 +1,48 @@
+<div class="form-group has-error 
+						has-feedback">
+
+	<label class="control-label" for="inputError2">Input with error</label>
+	
+	<div class="input-group">
+		<span class="input-group-addon">@</span>
+		<input type="text" class="form-control" id="inputGrouperr1" aria-describedby="inputGrouperr1Status">
+	</div>
+
+		<span class="icon-form-error form-control-feedback" aria-hidden="true"></span>
+		<span id="inputError2Status" class="sr-only">(error)</span>
+
+</div>
+
+----------------------------------------
+
+<div class="form-group has-success has-feedback">
+			
+	<label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+	
+	<div class="input-group">
+		<span class="input-group-addon">@</span>
+		<input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+	</div>
+	
+		<span class="icon-form-success form-control-feedback" aria-hidden="true"></span>
+		<span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+
+</div>
+$(".has-feedback-btn").on("click", function() {
+	$(".has-feedback").each(function() {
+
+		var feedback = ".form-control-feedback";
+	
+		if ($(this).wrong) {
+		
+			$(this).addClass("has-error").closest(feedback).addClass("icon-form-error")
+			
+		}
+
+		if ($(this).right) {
+		
+			$(this).addClass("has-success").closest(feedback).addClass("icon-form-success")
+		}
+
+	})
+});
