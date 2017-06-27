@@ -1475,8 +1475,7 @@ kbd,
 .btn-sm {
   border-radius:3px;
 }
-.btn-flat,
-.panel-flat,
+[class*=-flat],
 .input-group .form-control:not(:first-child):not(:last-child),
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child) {
