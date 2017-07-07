@@ -13,8 +13,8 @@ pre {
 }
 
 /* Paraíso Red */
-.syntax-variable,
 .syntax-attribute,
+.syntax-variable,
 .syntax-tag,
 .syntax-regexp,
 .ruby .syntax-constant,
@@ -26,6 +26,10 @@ pre {
 .css .syntax-class,
 .css .syntax-pseudo {
   color: #ef6155;
+}
+
+.syntax-value {
+  color: #4f9fcf
 }
 
 /* Paraíso Orange */
@@ -46,7 +50,7 @@ pre {
 
 /* Paraíso Green */
 .syntax-string,
-.syntax-value,
+
 .syntax-inheritance,
 .syntax-header,
 .ruby .syntax-symbol,
@@ -77,13 +81,20 @@ pre {
   color: #815ba4;
 }
 
+pre {
+	border-color: transparent;
+}
 .syntax,
 .hljs {
 display: block;
 padding: 10px 15px;
-background: #F5F6F0;
+background: #fbfbfb;
 color: #414141;
-border: 1px solid #EAEEE7;
+border: 1px solid #f3f3f3;
+}
+
+.color-bg-light .hljs {
+background: #f3f3f3;
 }
 
 .coffeescript .javascript,
