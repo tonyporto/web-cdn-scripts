@@ -148,6 +148,7 @@ beforeJquery("jQuery", function(t) {
 			var clicker = jQuery("[data-header-btn=button]").not(jQuery(this)),
 					dataTarget = clicker.attr("data-target");
 
+					clicker.attr("aria-expanded","false")
 					jQuery(dataTarget).removeClass("in")
 
 		})

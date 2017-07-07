@@ -10,8 +10,6 @@
 	font-style:normal;
 }
 /* Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 html {
   overflow-y:scroll;
@@ -352,10 +350,6 @@ blockquote small {
   font-size:24px;
 }
 legend,
-.jumbotron p,
-.size21 {
-  font-size:21px;
-}
 blockquote,
 .h4,h4,
 .btn-lg,
@@ -1859,8 +1853,8 @@ kbd,
 	}
 	.nav-justified li:focus,
 	.nav-justified li:hover {
-		background-image:-webkit-linear-gradient(rgba(255,255,255,.2) 99%, rgba(0,0,0,.2) 1%, rgba(0,0,0,.2));
-    background-image:linear-gradient(rgba(255,255,255,.2) 99%, rgba(0,0,0,.2) 1%, rgba(0,0,0,.2));
+		background-image:-webkit-linear-gradient(rgba(250,250,250,.2) 100%, rgba(0,0,0,.2) 0, rgba(0,0,0,.2));
+    background-image:linear-gradient(rgba(250,250,250,.2) 100%, rgba(0,0,0,.2) 0, rgba(0,0,0,.2));
 	}
 	.navbar-wrapper {
 		position:absolute;
