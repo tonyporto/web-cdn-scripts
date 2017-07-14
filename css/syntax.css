@@ -85,8 +85,10 @@ pre {
 pre {
 	border-color: transparent;
 }
+
 .syntax,
-.hljs {
+.hljs,
+.language-markup {
 display: block;
 padding: 10px 15px;
 background: #fafafa;
