@@ -38,8 +38,6 @@ menu,
 nav,
 section,
 summary,
-blockquote .small,
-blockquote footer,
 blockquote small {
   display:block;
 }
@@ -98,9 +96,6 @@ img,
 video,
 .img-thumbnail {
 	height:auto;
-}
-figure {
-  margin:1em 40px;
 }
 hr,
 audio:not([controls]){
@@ -247,7 +242,7 @@ textarea {
 *,
 *:before,
 *:after,
- input {
+input {
   box-sizing:border-box;
 }
 a:focus,

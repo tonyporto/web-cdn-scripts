@@ -751,6 +751,30 @@ p,
  * ======================== */
 @media (min-width:768px) {
 
+	/* FLEX COLUMNS */
+	[class*="flex-layout-"] {
+		-webkit-column-gap: 1em;
+		column-gap: 1em;
+	}
+	.flex-layout-4 {
+		-webkit-column-count: 4;
+		column-count: 4;
+	}
+	.flex-layout-3 {
+		-webkit-column-count: 3;
+		column-count: 3;
+	}
+	.flex-layout-2 {
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+	.flex-item {
+		width: 100%;
+		display: inline-block;
+		float: none !important;
+		margin: 0 0 1.2em;
+	}
+	
   .p-x-2-sm,
   .p-r-2-sm {
     padding-right:2em !important;
