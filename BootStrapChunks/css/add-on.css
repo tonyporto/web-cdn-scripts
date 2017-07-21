@@ -70,6 +70,9 @@ a[class*="icon-"] {
 .icon-arrow-right:before {
   content:"\f054";
 }
+.icon-arrow-left:before {
+	content:"\f053";
+}
 /* LABEL MESSAGES */
 .icon-alert-success:before {
 	content:"\f058";

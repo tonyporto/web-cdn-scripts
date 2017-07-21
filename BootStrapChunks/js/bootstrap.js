@@ -129,7 +129,6 @@ Plugin.call($target,option)})}(jQuery));
  * Obviously if the interval is to low it will fire too soon
  * ================================================================== */
 function beforeJquery(name, callback) {
-
     var interval = 90; // ms
 
     window.setTimeout(function() {
@@ -141,16 +140,14 @@ function beforeJquery(name, callback) {
     }, interval);
 }
 beforeJquery("jQuery", function(t) {
+	//FUNCTION USING JQUERY
+	jQuery("button[data-header-btn='button']").on("click", function() {
 
-			//FUNCTION USING JQUERY
-		jQuery("button[data-header-btn='button']").on("click", function() {
+		var clicker = jQuery("[data-header-btn=button]").not(jQuery(this)),
+				dataTarget = clicker.attr("data-target");
 
-			var clicker = jQuery("[data-header-btn=button]").not(jQuery(this)),
-					dataTarget = clicker.attr("data-target");
-
-					clicker.attr("aria-expanded","false")
-					jQuery(dataTarget).removeClass("in")
-
+				clicker.attr("aria-expanded","false")
+				jQuery(dataTarget).removeClass("in")
 		})
 });
 /* ========================================================================
@@ -315,10 +312,10 @@ function centerModal() {
 	if (jQuery(".modal_click").length) {
 
 		var modalClosedCss = {
-						'transition':'all 0.4s ease 0.1s','-webkit-transition':'all 0.4s ease 0.1s',
-						'position':'','bottom':'auto','left':'auto','right':'auto',
-						'top':'auto','margin-top':'auto'
-				};
+					'transition':'all 0.4s ease 0.1s','-webkit-transition':'all 0.4s ease 0.1s',
+					'position':'','bottom':'auto','left':'auto','right':'auto',
+					'top':'auto','margin-top':'auto'
+		};
 
 		$(".modal-dialog").css(modalClosedCss)
 
@@ -356,7 +353,6 @@ function centerModal() {
 		  })
 		});
 	}
-
 }
 /* ========================================================================
  * Bootstrap: ALERT DISMISS v3.3.7

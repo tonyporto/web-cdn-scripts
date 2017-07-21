@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-	<!--[if lt IE 9]>
-		<html class="no-js ie6 ie7 ie8 ie8-and-down" lang="en-US">
-	<![endif]-->
-	<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
-
+<html class="no-js" lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Common Site Bootstrap</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,400italic,700,300italic,300|Roboto:400,400italic,700,500,300,300italic,900">
@@ -15,80 +11,138 @@
 		<link rel="stylesheet" href="../css/syntax.css">
 		<link rel="stylesheet" href="../css/font-awesome.css">
 		
-<style>
-.ease-in {
-	overflow:hidden;
-  height: 0;
-  transition: height .3s linear;
-  
-}
-.ease-in.in {
-	transition: all .3s ease;
-  height: 100px;
-}
-</style>		
+	
 </head>
 <body style="font-family: 'Roboto Condensed';">
 
-<section class="wrapper clearfix p-y-3">
-    
  <style>
- .button-bar {background-color:#333}
+.color-bg-black {background-color:#333}
 @media (min-width: 768px){
 .navbar-nav>li {
     float: left;
     }
     
 }    
-</style>
-    
-    
- <div class="bs-example p-a-1 clearfix relative" style="background-color:#cacaca" data-example-id="default-navbar"> 
- 
- <nav class="navbar navbar-default"> 
- <div class="container-fluid"> 
- 
- <div class="navbar-header float-sm-left m-x-0-sm clearfix"> 
- 
- <button type="button" class="collapsed navbar-toggle display-sm-none" 
-				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> 
 
-				<span class="button-bar"></span> <span class="button-bar"></span> 
-				<span class="button-bar"></span> 
-</button> <a href="#" class="navbar-brand p-a-1 float-left">Brand</a> </div> <div class="collapse navbar-collapse display-sm-block" id="bs-example-navbar-collapse-1"> 
+.header-wrapper {
+  border-bottom-width: 0;
+}
+
+.navbar-nav > li > a {
+	color: #fff;
+}
+.dropdown-menu > li > a {
+	color: #ee6e73
+}
+.dropdown-menu {
+	min-width:140px;
+	margin-left: -1.6em;
+}
+.navbar-right .dropdown-menu {
+	left: auto;
+}
+@media (max-width:767px) {
+
+.navbar-default > .navbar-header:after {
+		content: "";
+		border-top: 1px solid #dedede;
+		margin: auto -1000px;
+		display: block;
+	}
+}
+</style>
+<header class="header-wrapper clearfix relative" style="background-color:#ee6e73" data-example-id="default-navbar"> 
+ 
+ <nav class="navbar navbar-default container-fluid"> 
+ 
+		<div class="navbar-header float-sm-left m-x-0-sm clearfix">  
+ 
+		<button style="transform: scale(.7)" type="button" class="m-t-05 m-r_10 collapsed navbar-toggle display-sm-none" 
+			data-toggle="collapse" data-target="#main-collapse-1" aria-expanded="false"> 
+			<span class="button-bar color-bg-white"></span> 
+			<span class="button-bar color-bg-white"></span> 
+			<span class="button-bar color-bg-white"></span> 
+		</button> 
+
+		<!-- a href="#" class="navbar-brand p-a-1 float-left">Brand</a --> 
+		<img src="http://placehold.it/55/f0f0f0" class="img-respsonsive">
+		</div> 
+		
+		<div class="collapse navbar-collapse display-sm-block" id="main-collapse-1"> 
     
-    <ul class="nav navbar-nav float-sm-left"> 
-    <li class="active">
-    <a href="#" class="p-a-15">Link <span class="sr-only">(current)</span></a></li> 
-    <li><a href="#">Link</a></li> 
-    <li class="dropdown"> 
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a> <ul class="dropdown-menu"> 
-    <li><a href="#">Action</a></li> 
-    <li><a href="#">Another action</a></li> 
-    <li><a href="#">Something else here</a></li> 
-    <li role="separator" class="divider"></li> 
-    <li><a href="#">Separated link</a></li> 
-    <li role="separator" class="divider"></li> 
-    <li><a href="#">One more separated link</a></li> </ul> </li> </ul> 
+    <ul class="nav navbar-nav float-sm-left m-y-10 p-x-2-sm"> 
+			<li class="active">
+				<a href="#" class="p-a-15">Link <span class="sr-only">(current)</span></a>
+			</li> 
+			<li><a href="#">Link</a></li> 
+			<li class="dropdown"> 
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a> 
+				<ul class="dropdown-menu"> 
+					<li><a href="#">Action</a></li> 
+					<li><a href="#">Another action</a></li> 
+					<li><a href="#">Something else here</a></li> 
+					<li role="separator" class="divider"></li> 
+					<li><a href="#">Separated link</a></li> 
+					<li role="separator" class="divider"></li> 
+					<li><a href="#">One more separated link</a></li> 
+				</ul> 
+			</li> 
+		</ul> 
     
-    <form class="navbar-form navbar-left  float-sm-left "> 
-    <div class="form-group display-sm-inblock m-b-0"> 
-    <input class="form-control" placeholder="Search"> </div> 
-    
-    <button type="submit" class="btn btn-default">Submit</button> 
+		<form class="navbar-form navbar-left float-sm-left m-y-10"> 
+			<div class="form-group display-sm-inblock m-b-0"> 
+				<input class="form-control" placeholder="Search"> 
+			</div> 
+			
+			<button type="submit" class="btn btn-default">Submit</button> 
     </form> 
     
-    <ul class="nav navbar-nav navbar-right float-sm-right"> <li><a href="#">Link</a></li> <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a> <ul class="dropdown-menu"> <li><a href="#">Action</a></li> <li><a href="#">Another action</a></li> <li><a href="#">Something else here</a></li> <li role="separator" class="divider"></li> <li><a href="#">Separated link</a></li> </ul> </li> </ul> </div> </div> </nav> </div>
+    <ul class="nav navbar-nav navbar-right float-sm-right m-y-10"> 
+			<li><a href="#">Link</a></li> 
+			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a> 
+				<ul class="dropdown-menu"> 
+					<li><a href="#">Action</a></li> 
+					<li><a href="#">Another action</a></li> 
+					<li><a href="#">Something else here</a></li> 
+					<li role="separator" class="divider"></li> 
+					<li><a href="#">Separated link</a></li> 
+				</ul> 
+			</li> 
+		</ul> 
+	</div> 
+	
 
+	</nav> 
 
-</section>
+</header>
 
 			<!--############################ APP CONTENT ###################################-->
 
 <!-- NAV -->
+<!-- NAV -->
 
 
-    <div class="collapse ease-in" id="navbar-header" style="height:0">
+    <div class="collapse navbar-collapsing" id="navbar-collapse">
+      <div class="container p-a-1">
+        <h3>Collapsed content</h3>
+        <p>Toggleable via the navbar brand.</p>
+      </div>
+    </div>
+    <header class="navbar navbar-inverse bg-faded navbar-static-top m-b-1 p-y-1 color-white color-bg-black">
+			<div class="container-fluid">
+		
+				<!-- div class="row navbar-brand" -->
+			
+			  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar-collapse">
+				&#9776;
+			  </button> MENU
+				<!-- /div -->
+			</div>
+    </header>
+
+<!-- NAV --
+
+    <div class="collapse ease-in" id="navbar-header">
       <div class="container 33bg-inverse p-a-1">
         <h3>Collapsed content</h3>
         <p>Toggleable via the navbar brand.</p>
@@ -99,12 +153,12 @@
    <header class="navbar navbar-inverse bg-faded navbar-static-top p-y-1 m-b-1">
 		<div class="container ">
 		
-		<div class="row navbar-brand">
-			
-			  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar-header">
-				&#9776;
-			  </button> MENU
-		</div>
+			<div class="row navbar-brand">
+				
+					<button class="navbar-toggler " type="button" data-nav="ease-nav" data-toggle="collapse" data-target="#navbar-header">
+					&#9776;
+					</button> MENU
+			</div>
 		</div>
   </header>
 
@@ -330,12 +384,7 @@
 		<td>Column content</td>
 		<td>Column content</td>
 	</tr>
-	<tr class="info">
-		<th scope="row">5</th>
-		<td>Column content</td>
-		<td>Column content</td>
-		<td>Column content</td>
-	</tr>
+
 
 	</tbody>
 </table>
@@ -376,12 +425,6 @@
 	&lt/tr>
 	&lttr>
 		&ltth scope="row">4&lt/th>
-		&lttd>Column content&lt/td>
-		&lttd>Column content&lt/td>
-		&lttd>Column content&lt/td>
-	&lt/tr>
-	&lttr class="info">
-		&ltth scope="row">5&lt/th>
 		&lttd>Column content&lt/td>
 		&lttd>Column content&lt/td>
 		&lttd>Column content&lt/td>
@@ -558,8 +601,36 @@
     </code></pre>
     
 </div>
-		</section>
 
+
+<div class="container p-y-3">
+
+			<h2 class="text-center">Text Links</h2>
+
+			<hr class="m-b-1">
+
+				<a href="#" class="text-primary text-size-1">text Link</a>
+				<a href="#" class="text-success text-size-1-2">text Link</a>
+				<a href="#" class="text-warning  text-size-1-4">text Link</a>
+				<a href="#" class="text-info text-size-2">text Link</a>
+				<a href="#" class="text-danger text-size-2-4">text Link</a>
+
+
+
+		<h3 class="syntax-variable">Text Links Source</h3>
+	<hr>
+
+	<pre><code class="html hljs xml">
+				<span class="syntax-tag">&lt;<span class="syntax-title">a</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"text-primary text-size-1"</span>&gt;</span>Text Link<span class="syntax-tag">&lt;/<span class="syntax-title">a</span>&gt;</span>
+				<span class="syntax-tag">&lt;<span class="syntax-title">a</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"text-success text-size-1-2"</span>&gt;</span>Text Link<span class="syntax-tag">&lt;/<span class="syntax-title">a</span>&gt;</span>
+				<span class="syntax-tag">&lt;<span class="syntax-title">a</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"text-warning text-size-1-4"</span>&gt;</span>Text Link<span class="syntax-tag">&lt;/<span class="syntax-title">a</span>&gt;</span>
+				<span class="syntax-tag">&lt;<span class="syntax-title">a</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"text-info text-size-2"</span>&gt;</span>Text Link<span class="syntax-tag">&lt;/<span class="syntax-title">a</span>&gt;</span>
+				<span class="syntax-tag">&lt;<span class="syntax-title">a</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"text-danger text-size-2-4"</span>&gt;</span>Text Link<span class="syntax-tag">&lt;/<span class="syntax-title">a</span>&gt;</span>
+    </code></pre>
+    
+</div>
+		</section>			
+	
 
 <div class="container p-y-3">
 
@@ -1554,6 +1625,50 @@
 		</p>	
 		
 		<p>CLASS: "m-x-2" (for padding: p-x-2)</p>		
+		
+		
+		
+<!-- ----------- ADD ONE STYLE ----------- -->
+
+<button type="button" class="btn btn-info btn-lg modal_click " data-target="modal_iframe">View Add-on Styles</button>
+
+  
+  
+  
+<div class="modal fade modal_iframe relative" tabindex="-1" role="dialog" aria-hidden="true" >
+  <div class="modal-dialog container content-modal" >
+
+    <!-- Modal content-->
+      <!-- div class="modal-header p-y-1 clearfix" -->
+        <a href="#" class="close color-white size40" data-dismiss="modal">×</a>
+        
+
+					<div class="relative wrapper " style="height:0; padding-bottom: 86%;">
+						<iframe class="absolute top-left  color-bg-white" width="100%" height="100%" border="0"
+							style="height:80vh;overflow-y:scroll; top:14% !important"
+							src="http://tonyporto.github.io/web-cdn-scripts/BootStrapChunks/css/add-on.css"
+							srcdoc="http://tonyporto.github.io/web-cdn-scripts/BootStrapChunks/css/add-on.css">
+						</iframe>
+					</div>    
+        
+        
+       <!-- /div -->
+       
+  </div>
+</div>     
+<!-- script type="text/javascript">     
+var iframeCss = document.createElement('style');
+		//frames = document.getElementsByName("iframe1");
+		
+		
+			iframeCss.type="text/css";
+			iframeCss.innerHTML = "body, html{margin: 0; padding: 0; height: 100%; overflow: hidden;}";
+		
+		document.getElementsByTagName("head")[0].appendChild(iframeCss);
+		//frames.body.appendChild(iframeCss);
+</script --> 
+<!-- ----------- ADD ONE STYLE ----------- -->		
+		
 	</div>
 </section>
 
@@ -1809,8 +1924,8 @@
 		  </a>
 		</li>
 		    
-		<li id="links-collapse1" class="panel-collapse p-l-1 p-y-10 collapse in" aria-expanded="true">
-		  <ul class="list-unstyled line-height-1-8">
+		<li id="links-collapse1" class="panel-collapse p-l-1 collapse in" aria-expanded="true">
+		  <ul class="list-unstyled line-height-1-8 p-y-10">
 		    <li>Car</li>
 		    <li>Car</li>
 		  </ul>
@@ -1822,8 +1937,8 @@
 		    Collapsible Group 2
 		  </a>
 		</li>
-		<li id="links-collapse2" class="panel-collapse collapse p-l-1 p-y-10">
-		  <ul class="list-unstyled line-height-1-8">
+		<li id="links-collapse2" class="panel-collapse collapse p-l-1">
+		  <ul class="list-unstyled line-height-1-8 p-y-10">
 		    <li>Car</li>
 		    <li>Car</li>
 		  </ul>
@@ -1837,8 +1952,8 @@
 		      </a>
 		     
 		    </li>
-		    <li id="links-collapse3" class="panel-collapse collapse p-l-1 p-y-10">
-		      <ul class="list-unstyled line-height-1-8">
+		    <li id="links-collapse3" class="panel-collapse collapse p-l-1">
+		      <ul class="list-unstyled line-height-1-8 p-y-10">
 		        <li>Car</li>
 		        <li>Car</li>
 		       </ul>
@@ -1991,6 +2106,67 @@ whenAvailable("jQuery", function(t) {
 	</div>
 </section>
 
+
+<section class="container p-y-3">
+<h2> Images & Shapes</h2>
+<hr>
+
+<div class="row">    
+                          <div class="col-sm-4 text-center">
+                            <h4>Related 1</h4>
+                            <a href="#"><img src="http://placehold.it/200/f0f0f0" class="img-respsonsive img-circle"></a>
+                          </div>
+                          <div class="col-sm-4 text-center">
+                            <h4>Related 2</h4>
+                            <a href="#"><img src="http://placehold.it/200/f0f0f0" class="img-respsonsive img-circle"></a>
+                          </div>
+                          <div class="col-sm-4 text-center">
+                            <h4>Related 3</h4>
+                            <a href="#"><img src="http://placehold.it/200/f0f0f0" class="img-respsonsive img-circle"></a>
+                          </div>
+                        </div>
+                        
+                        
+                        
+                        
+ <h3 class="syntax-variable">Images Source</h3>                       
+                        
+ <!--------->
+<pre><code class="html hljs xml">
+			<span class="syntax-tag">&lt;<span class="syntax-title">div</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"row"</span>&gt;</span>
+				<span class="syntax-tag">&lt;<span class="syntax-title">div</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"col-sm-4 text-center"</span>&gt;</span> 
+				
+				
+				<span class="syntax-tag">&lt;<span class="syntax-title">h4</span>&gt;</span>Related 1 <span class="syntax-tag">&lt;/<span class="syntax-title">h4</span>&gt;</span>
+				
+				<span class="syntax-tag">&lt;<span class="syntax-title">img</span> <span class="syntax-attribute">src</span>=<span class="syntax-value">"http://placehold.it/200/f0f0f0"</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"img-respsonsive img-circle"</span></span><span class="syntax-tag">&gt;</span>
+
+				<span class="syntax-tag">&lt;/<span class="syntax-title">div</span>&gt;</span>
+				<span class="syntax-tag">&lt;<span class="syntax-title">div</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"col-sm-4 text-center"</span>&gt;</span> 
+				
+				
+				<span class="syntax-tag">&lt;<span class="syntax-title">h4</span></span>&gt;</span>Related 2 <span class="syntax-tag">&lt;/<span class="syntax-title">h4</span>&gt;</span>
+				
+				<span class="syntax-tag">&lt;<span class="syntax-title">img</span> <span class="syntax-attribute">src</span>=<span class="syntax-value">"http://placehold.it/200/f0f0f0"</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"img-respsonsive img-circle"</span> </span><span class="syntax-tag">&gt;</span>
+
+				<span class="syntax-tag">&lt;/<span class="syntax-title">div</span>&gt;</span>
+				<span class="syntax-tag">&lt;<span class="syntax-title">div</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"col-sm-4 text-center"</span>&gt;</span> 
+				
+				
+				<span class="syntax-tag">&lt;<span class="syntax-title">h4</span></span>&gt;</span>Related 3 <span class="syntax-tag">&lt;/<span class="syntax-title">h4</span>&gt;</span>
+				
+				<span class="syntax-tag">&lt;<span class="syntax-title">img</span> <span class="syntax-attribute">src</span>=<span class="syntax-value">"http://placehold.it/200/f0f0f0"</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"img-respsonsive img-circle"</span></span><span class="syntax-tag">&gt;</span> 
+
+				<span class="syntax-tag">&lt;/<span class="syntax-title">div</span>&gt;</span>
+
+			<span class="syntax-tag">&lt;/<span class="syntax-title">div</span>&gt;</span>
+      </code></pre>
+ <!--------->
+                       
+                        
+                        
+                        
+</section>
 
 <section class="container m-y-2">
 
@@ -8329,187 +8505,47 @@ Not all icons below are included in the project, but can be added to project if 
 
 <script src="../js/lab.js"></script>
 <script>
+/* ------------------------------------------------------------------------------------------------------ *
 var tabsCss = document.getElementsByTagName("head")[0],
 		tabsCssTag = document.createElement('style');
 
 		tabsCssTag.innerHTML = ".tab-content>.tab-pane {display:none}.tab-content>.active {display:block;}";
 		tabsCss.appendChild(tabsCssTag);
-
+ * ------------------------------------------------------------------------------------------------------ */
 
 //WAIT UNTIL LAB JS
   $LAB.script("http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
   .script("../js/modernizr.js")
   .script("../BootStrapChunks/js/bootstrap.js").wait(function() {
+ 
+var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = '../BootStrapChunks/js/libs/tabs.js';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);    
     
-/* ========================================================================
- * Bootstrap: tab.js v3.3.7
- * http://getbootstrap.com/javascript/#tabs
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-+function ($) {
-  'use strict';
-
-  // TAB CLASS DEFINITION
-  // ====================
-
-  var Tab = function (element) {
-    // jscs:disable requireDollarBeforejQueryAssignment
-    this.element = $(element)
-    // jscs:enable requireDollarBeforejQueryAssignment
-  }
-
-  Tab.VERSION = '3.3.7'
-
-  Tab.TRANSITION_DURATION = 150
-
-  Tab.prototype.show = function () {
-    var $this    = this.element
-    var $ul      = $this.closest('ul:not(.dropdown-menu)')
-    var selector = $this.data('target')
-
-    if (!selector) {
-      selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
-    }
-
-    if ($this.parent('li').hasClass('active')) return
-
-    var $previous = $ul.find('.active:last a')
-    var hideEvent = $.Event('hide.bs.tab', {
-      relatedTarget: $this[0]
-    })
-    var showEvent = $.Event('show.bs.tab', {
-      relatedTarget: $previous[0]
-    })
-
-    $previous.trigger(hideEvent)
-    $this.trigger(showEvent)
-
-    if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) return
-
-    var $target = $(selector)
-
-    this.activate($this.closest('li'), $ul)
-    this.activate($target, $target.parent(), function () {
-      $previous.trigger({
-        type: 'hidden.bs.tab',
-        relatedTarget: $this[0]
-      })
-      $this.trigger({
-        type: 'shown.bs.tab',
-        relatedTarget: $previous[0]
-      })
-    })
-  }
-
-  Tab.prototype.activate = function (element, container, callback) {
-    var $active    = container.find('> .active')
-    var transition = callback
-      && $.support.transition
-      && ($active.length && $active.hasClass('fade') || !!container.find('> .fade').length)
-
-    function next() {
-      $active
-        .removeClass('active')
-        .find('> .dropdown-menu > .active')
-          .removeClass('active')
-        .end()
-        .find('[data-toggle="tab"]')
-          .attr('aria-expanded', false)
-
-      element
-        .addClass('active')
-        .find('[data-toggle="tab"]')
-          .attr('aria-expanded', true)
-
-      if (transition) {
-        element[0].offsetWidth // reflow for transition
-        element.addClass('in')
-      } else {
-        element.removeClass('fade')
-      }
-
-      if (element.parent('.dropdown-menu').length) {
-        element
-          .closest('li.dropdown')
-            .addClass('active')
-          .end()
-          .find('[data-toggle="tab"]')
-            .attr('aria-expanded', true)
-      }
-
-      callback && callback()
-    }
-
-    $active.length && transition ?
-      $active
-        .one('bsTransitionEnd', next)
-        .emulateTransitionEnd(Tab.TRANSITION_DURATION) :
-      next()
-
-    $active.removeClass('in')
-  }
-
-
-  // TAB PLUGIN DEFINITION
-  // =====================
-
-  function Plugin(option) {
-    return this.each(function () {
-      var $this = $(this)
-      var data  = $this.data('bs.tab')
-
-      if (!data) $this.data('bs.tab', (data = new Tab(this)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
-
-  var old = $.fn.tab
-
-  $.fn.tab             = Plugin
-  $.fn.tab.Constructor = Tab
-
-
-  // TAB NO CONFLICT
-  // ===============
-
-  $.fn.tab.noConflict = function () {
-    $.fn.tab = old
-    return this
-  }
-
-
-  // TAB DATA-API
-  // ============
-	if (!$("[data-tabs=angular]").length) {
-	
-		var clickHandler = function (e) {
-			e.preventDefault()
-			Plugin.call($(this), 'show')
-		}
-
-		$(document)
-			.on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
-			.on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
-			
-	}
-
-}(jQuery);
-    
-    
-    
-    })
+  })
   .script("../js/syntax.js").wait(function() {
     $('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
     })
-  }).wait(function() {
+  })
+  .script("../BootStrapChunks/js/libs/transition.js").wait(function() {
   
 		$(window).trigger("commonJs")
   
+	})
+
+/*
+.wait(function() {
+
+	$(window).on("commonJs", function() {
+		$LAB.script("../js/collapsing.js")
+	})
+
 })
+//https://raw.githubusercontent.com/twbs/bootstrap/master/js/transition.js
+*/
 </script>
 </body>
 </html>
