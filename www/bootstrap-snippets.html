@@ -8664,9 +8664,21 @@ whenAvailable("jQuery", function(t) {
 
 
 
+
+$(document).on('click', 'html', function(e){
+	if ($(".modal-open").length) {
+		if ($(e.target).is("[data-dismiss=modal],div:not(.modal-dialog *)")) {
+
+			if ($(".slideInDown.header-modal").length) {
+					$("header[class*=wrapper]").slice(-3).unwrap()
+			}
+		}
+	}
+})
+		
+		
+		
 });
-
-
 </script>
 </body>
 </html>
