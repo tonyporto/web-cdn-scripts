@@ -1,7 +1,7 @@
-/* ========================================================================
+/* =========================================================== *
  * Bootstrap: dropdown.js v3.3.7
  * http://getbootstrap.com/javascript/#dropdowns
- * ======================================================================= */
+ * =========================================================== */
 (function($){'use strict';var backdrop='.dropdown-backdrop',toggle='[data-toggle="dropdown"]',Dropdown=function(element){$(element).on('click.bs.dropdown',this.toggle)}
 Dropdown.VERSION='3.3.7'
 function getParent($this){var selector=$this.attr('data-target')
@@ -53,10 +53,10 @@ $.fn.dropdown.Constructor=Dropdown
 $.fn.dropdown.noConflict=function(){$.fn.dropdown=old
 return this}
 $(document).on('click.bs.dropdown.data-api',clearMenus).on('click.bs.dropdown.data-api','.dropdown form',function(e){e.stopPropagation()}).on('click.bs.dropdown.data-api',toggle,Dropdown.prototype.toggle).on('keydown.bs.dropdown.data-api',toggle,Dropdown.prototype.keydown).on('keydown.bs.dropdown.data-api','.dropdown-menu',Dropdown.prototype.keydown)}(jQuery));
-/* ========================================================================
+/* =========================================================== *
  * Bootstrap: collapse.js v3.3.7
  * http://getbootstrap.com/javascript/#collapse
- * ====================================================================== */
+ * =========================================================== */
 (function($){'use strict';var Collapse=function(element,options){this.$element=$(element)
 this.options=$.extend({},Collapse.DEFAULTS,options)
 this.$trigger=$('[data-toggle="collapse"][href="#'+element.id+'"],'+'[data-toggle="collapse"][data-target="#'+element.id+'"]')
@@ -123,11 +123,11 @@ $(document).on('click.bs.collapse.data-api','[data-toggle="collapse"]',function(
 if(!$this.attr('data-target'))e.preventDefault()
 var $target=getTargetFromTrigger($this),data=$target.data('bs.collapse'),option=data?'toggle':$this.data()
 Plugin.call($target,option)})}(jQuery));
-/* ================================================================== *
+/* =========================================================== *
  * WHAT CAN BE CHANGED ABOVE ARE THE NAME: beforeJquery
  * AND INTERVAL amount: var interval = 10; // ms
  * Obviously if the interval is to low it will fire too soon
- * ================================================================== */
+ * =========================================================== */
 function beforeJquery(name, callback) {
     var interval = 90; // ms
 
@@ -150,9 +150,9 @@ beforeJquery("jQuery", function(t) {
 				jQuery(dataTarget).removeClass("in")
 		})
 });
-/* ========================================================================
+/* =========================================================== *
  * Bootstrap: Modal v3.3.7
- * ====================================================================== */
+ * =========================================================== */
 (function($){'use strict';var Modal=function(element,options){this.options=options
 this.$body=$(document.body)
 this.$element=$(element)
@@ -266,12 +266,11 @@ $target.one('hidden.bs.modal',function(){$this.is(':visible')&&$this.trigger('fo
 Plugin.call($target,option,this)})
 actualHeight()
 }(jQuery));
-/*! Copyright 2012, Ben Lin (http://dreamerslab.com/)
- * Licensed under the MIT License (LICENSE.txt).
+/* =========================================================== *
+ *! Copyright 2012, Ben Lin (http://dreamerslab.com/)
  *
  * Version: 1.0.18
- * Requires: jQuery >= 1.2.3
- */
+ * =========================================================== */
 function actualHeight() {
 $.fn.addBack=$.fn.addBack||$.fn.andSelf;
 $.fn.extend({actual:function(method,options){if(!this[method]){throw'$.actual => The jQuery method "'+method+'" you called does not exist';}
@@ -304,59 +303,146 @@ function scrollbarWidth() {
 
     return widthNoScroll - widthWithScroll;
 }
-/* ========================================================================
+/* =========================================================== *
  * MAKE MODAL APPEAR ON CENTER OF SCREEN
- * ===================================================================== */
+ * =========================================================== */
 function centerModal() {
 
 	if (jQuery(".modal_click").length) {
 
 		var modalClosedCss = {
-					'transition':'all 0.4s ease 0.1s','-webkit-transition':'all 0.4s ease 0.1s',
-					'position':'','bottom':'auto','left':'auto','right':'auto',
-					'top':'auto','margin-top':'auto'
-		};
+					'transition':'all 0.4s ease 0.1s','-webkit-transition':'all 0.4s ease 0.1s', 'height':'auto',
+					'position':'','bottom':'auto','left':'auto','right':'auto', 'top':'auto','margin-top':'auto'
+		}, mDialog = $(".modal-dialog");
+		
+		//SET TRANSITION STYLE
+		mDialog.css(modalClosedCss)
 
-		$(".modal-dialog").css(modalClosedCss)
+		//SCROLLBARS & OVERFFLOW PROPERTIES FOR MODAL TALLED THAN SCREEN HEIGHT
+		var dialogCss = ".modal-open .header-modal{display:none} .modal-dialog{overflow-y: auto;}.modal-dialog.fixed{overflow-y: hidden;}.modal-content{border-radius:0}.modal-dialog::-webkit-scrollbar{width:10px}"
+			+ ".modal-dialog::-webkit-scrollbar-thumb{background:rgb(187,187,187);-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5)}"
+			+ ".modal-dialog::-webkit-scrollbar-track:enabled { background-color: #ddd }.modal-dialog::-webkit-scrollbar-thumb:window-inactive{background:rgb(187,187,187)}"
+		
+			//ANIMATE HEADER
+			+ ".slideInDown {animation: slideInDown .6s ease 0s normal 1 both running;-webkit-animation: slideInDown .6s ease 0s normal 1 both running;}"
+			+ "@-webkit-keyframes slideInDown {0% {-webkit-transform: translateY(-100%);transform: translateY(-100%); visibility: visible;} 100% {-webkit-transform: translateY(0);transform: translateY(0);}}"
+			+ "@keyframes slideInDown {0% {-webkit-transform: translateY(-100%); transform: translateY(-100%);visibility: visible;} 100% {-webkit-transform: translateY(0);transform: translateY(0);}}";
+					
+		
+			if (!$("[data-css=dialog]").length) {
+				$('head').append("<style data-css='dialog'>" +dialogCss+ "</style>");
+			}
+			
+		$(".modal_click").on("click", function() {
 
-		jQuery(".modal_click").on("click", function() {
+			var modalWindowId = $(this).attr("data-target");
 
-		var modalWindowId = jQuery(this).attr("data-target");
-				jQuery(".modal" + "." +modalWindowId).modal().css("padding-right", scrollbarWidth())
+				$("html,body").css("overflow-y", "hidden").css("margin-right", scrollbarWidth() / 2)
+				//$("header[class*=header]").addClass("slideInDown")
+				
+				if (!$(".header-modal").length) {
+					$("header[class*=wrapper]").slice(-3).wrapAll('<div class="slideInDown header-modal">');
+				}
+				
+				$(".modal" + "." +modalWindowId).modal().attr("aria-hidden","false")
 
-			 setTimeout(function(){
-			  jQuery(window).trigger("modalDialogueCss");
-			 },200);
+				mDialog.each(function() {
 
-			 jQuery("body").removeAttr("style").css("overflow", "hidden");
-		});
+					var modalHeight = $(this).actual('height'),
+							modalHeight = "-" + modalHeight / 2 , //modMarg = modalHeight / 2
+							child = $("." +modalWindowId+ " > .modal-dialog"),
+							parent = $("." +modalWindowId).actual("height");
 
-		$(window).on("modalDialogueCss", function() {
+					if (child.actual("height") >= parent) {
+						
+						var modalHcss = "position:fixed;bottom:0;left:0;right:0;top:1.5vh;margin-top:auto;height:90vh";
+							child.attr("data-child","resize").attr("style", modalHcss)
 
-		  $(".modal-dialog").each(function() {
+					} else {
 
-				var modalHeight = $(this).actual('height'),
-					modMarg = modalHeight / 2,
-					modalHeight = "-" + modMarg,
-					modalHcss = "position:fixed;bottom:0;left:0;right:0;top:50%;margin-top:" + modalHeight+ "px";
+						var modalHcss = "position:fixed;bottom:0;left:0;right:0;top:50%;margin-top:" + modalHeight +"px";
+					
+						if (!$(this)[0].hasAttribute("data-child")) {
+							$(this).attr("style", modalHcss)
+						}
+					}				
+						
+					//CLOSE ON ANY CLICK OUTSIDE ON CONTENT AREA
+					$(document).on('click', 'html', function(e){
+						if ($(e.target).is("[data-dismiss=modal],div:not(.modal-dialog *)")) {
 
-				  //modalCloser = $(this).find("button[data-dismiss=modal]");
-		    $(this).attr("style", modalHcss);
-		    $(this).css("margin-top", modalHeight);
-		    $(this).parent().attr("aria-hidden","false")
+							$(".modal").modal('hide').attr("aria-hidden","true")
 
-				jQuery(document).on('click', 'html', function(e){
-					$(".modal-dialog").css(modalClosedCss)
-					$(".modal").attr("aria-hidden","true")
-				});
+							setTimeout(function(){
+								mDialog.css(modalClosedCss)
+								$("html,body").removeAttr("style")
+							},500);
 
-		  })
+						}
+					});
+
+				})
+
 		});
 	}
 }
-/* ========================================================================
+
+$(window).resize(function() {
+	$(".modal-dialog").removeAttr("data-child")
+})
+/* =========================================================== *
  * Bootstrap: ALERT DISMISS v3.3.7
- * ======================================================================= */
+ * =========================================================== */
 jQuery(".alert-dismissable .close").on("click", function() {
 	jQuery(this).closest(".alert-dismissable").remove()
 });
+
+/* =========================================================== *
+ * Bootstrap: transition.js v3.3.7
+ * http://getbootstrap.com/javascript/#transitions
+ * =========================================================== */
++function ($) {
+  'use strict';
+
+  function transitionEnd() {
+    var el = document.createElement('bootstrap')
+
+    var transEndEventNames = {
+      WebkitTransition : 'webkitTransitionEnd',
+      MozTransition    : 'transitionend',
+      OTransition      : 'oTransitionEnd otransitionend',
+      transition       : 'transitionend'
+    }
+
+    for (var name in transEndEventNames) {
+      if (el.style[name] !== undefined) {
+        return { end: transEndEventNames[name] }
+      }
+    }
+    return false // explicit for ie8 (  ._.)
+  }
+
+  // http://blog.alexmaccaw.com/css-transitions
+  $.fn.emulateTransitionEnd = function (duration) {
+    var called = false
+    var $el = this
+    $(this).one('bsTransitionEnd', function () { called = true })
+    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
+    setTimeout(callback, duration)
+    return this
+  }
+
+  $(function () {
+    $.support.transition = transitionEnd()
+
+    if (!$.support.transition) return
+
+    $.event.special.bsTransitionEnd = {
+      bindType: $.support.transition.end,
+      delegateType: $.support.transition.end,
+      handle: function (e) {
+        if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
+      }
+    }
+  })
+}(jQuery);

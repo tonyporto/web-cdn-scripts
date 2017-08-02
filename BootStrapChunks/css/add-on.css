@@ -122,6 +122,9 @@ a[class*="icon-"] {
 .icon-logout:before {
   content:"\f08b";
 }
+.icon-marker:before {
+  content:"\f041";
+}
 .icon-user:before {
   content:"\f007";
 }
