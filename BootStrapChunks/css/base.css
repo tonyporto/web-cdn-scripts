@@ -1373,7 +1373,7 @@ sub,sup,
 blockquote:not(.widgets),
 .list-group>li,
 .nav li a {
-	padding:10px 15px;
+	padding:10px .9em;
 }
 /* ======================== *
  *  MODAL
@@ -1866,7 +1866,8 @@ kbd,
  * ======================== */
 @media (min-width:992px) {
 
-	.navbar-wrapper:not(.dummy) {
+	.navbar-wrapper:not(.dummy),
+	.in > .nav-justified > li {
 		border-top:0 solid transparent;
 	}
 	/* NAVIGATION */
