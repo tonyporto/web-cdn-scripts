@@ -58,6 +58,12 @@ a[class*="icon-"] {
 .icon-twitter:before {
   content:"\f081";
 }
+.icon-pinterest:before {
+  content:"\f0d3";
+}
+.icon-linkedin:before {
+	content: "\f08c";
+}
 .icon-instagram:before {
   content:"\f16d";
 }

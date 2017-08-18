@@ -56,6 +56,31 @@
 	
 }
 </style>
+<style>
+.slide-panel-close:before {content: "\2573";
+}
+.slide-panel.open:before,
+.open .slide-panel-container {transition-delay: 0s; visibility: visible;
+}
+.slide-panel:before { position: absolute; top: 0; left:0; bottom:0;
+	content: ""; width: 100%; z-index:0; visibility: hidden;
+  transition: visibility .2s .5s; -webkit-transition: visibility .2s .5s;
+	background-color: rgba(0,0,0,.85);
+}
+.slide-panel-container { background: #dbe2e9; height: 100%;
+	transition: transform 0.3s linear 0.2s; -webkit-transition: -webkit-transform 0.3s linear 0.2s;
+	transform: translate3d(100%, 0, 0); -webkit-transform: translate3d(100%, 0, 0);
+}
+.open .slide-panel-container {
+	transform: translate3d(0, 0, 0);-webkit-transform: translate3d(0, 0, 0);
+}
+
+.slide-panel-content {
+	overflow: auto;
+}
+.slide-panel.open:before{z-index:29}
+.slide-panel-container {z-index:30}
+</style>
 <header class="header-wrapper clearfix relative" style="background-color:#ee6e73" data-example-id="default-navbar"> 
  
  <nav class="navbar navbar-default container-fluid"> 
@@ -148,30 +173,46 @@
 				
 				
 				<!-- /div -->
+				
+<button type="button" data-toggle="slidePanel" class="float-right">
+				☰
+</button>				
+				
+				<!-- -->
+				
 			</div>
     </header>
 
-<!-- NAV --
+<!-- NAV -->
 
-    <div class="collapse ease-in" id="navbar-header">
-      <div class="container 33bg-inverse p-a-1">
-        <h3>Collapsed content</h3>
-        <p>Toggleable via the navbar brand.</p>
-      </div>
-    </div>
-    
-    
-   <header class="navbar navbar-inverse bg-faded navbar-static-top p-y-1 m-b-1">
-		<div class="container ">
-		
-			<div class="row navbar-brand">
-				
-					<button class="navbar-toggler " type="button" data-nav="ease-nav" data-toggle="collapse" data-target="#navbar-header">
-					&#9776;
-					</button> MENU
-			</div>
-		</div>
-  </header>
+<aside class="slide-panel">
+  <div class="slide-panel-container affix top-right col-xs-8 col-sm-6 col-md-4 p-x-0">
+    <div class="slide-panel-content widget-wrapper absolute top-left p-x-2 p-y-3">
+      <button type="button" class="btn btn-transparent slide-panel-close absolute top-left p-l-2 color-white pointer" data-toggle="slidePanel"></button>
+
+      <!-- your side content here -->
+<ul class="list-unstyled text-size-1-6">
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="tables-m"> Tables</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="panel-m"> Panel List</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="alerts-m"> Alerts</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="buttons-m">Buttons</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="forms-m">Forms</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="checkboxes-m"> Checkboxes & Radio</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="lists-m">List Styles</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="pagination-m">Pagination</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="layouts-m">Layouts</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="columns-m"> Columns</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="spacing-m"> Spacing</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="panels-m">Panels</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="modals-m">Modals</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="tabs-m">Tabs & Accordions</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="images-m"> Images & Shapes</a></li>
+	<li class="p-y-10 border-b-wrapper"><a href="#" data-goto="icons-m"> Icons</a></li>
+</ul>
+      <!-- your side content here -->
+     </div>
+  </div> 
+</aside> <!-- slide-panel -->
 
 <!-- NAV -->			
 			
@@ -180,7 +221,7 @@
 				<div class="container p-y-2" >
 
 
-				<h2> Table Striped</h2>
+				<h2 class="text-center" id="tables-m"> Tables</h2>
 
 					<table class="table m-b-1  table-striped ">
 						<thead>
@@ -341,7 +382,7 @@
 					
 					
 		<div class="col-xs-12 m-y-1">
-			<h2> Panel List</h2>
+			<h2 id="panel-m"> Panel List</h2>
 			<hr>
 			<ul class="list-group">
               <li class="list-group-item">Bootply Playground</li>
@@ -466,7 +507,7 @@
 
 		<div class="col-md-12 p-y-2">
 
-			<h2> Alerts</h2>
+			<h2 class="text-center" id="alerts-m"> Alerts</h2>
 			<hr>
 					<!-- /* ================================================================================ *
 					             ERROR MESSAGES
@@ -551,7 +592,7 @@
 		<section class="wrapper color-bg-light p-y-3">
 				<div class="container text-center" >
 
-			<h2 class="text-center">Buttons</h2>
+			<h2 class="text-center" id="buttons-m">Buttons</h2>
 
 			<hr>
 
@@ -672,7 +713,7 @@
 
 <div class="container p-y-3">
 
-		<h2 class="text-left">Form Errors</h2>
+		<h2 class="text-center" id="forms-m">Form Errors</h2>
 		<hr>
 
 		<div class="form-group has-success has-feedback">
@@ -959,7 +1000,7 @@
 
 	<div class="col-sm-12 p-y-3 p-x-0">
 
-		<h2 class="text-center"> Checkboxes & Radio</h2>
+		<h2 class="text-center" id="checkboxes-m"> Checkboxes & Radio</h2>
 	  <hr>
 	  
 	  
@@ -1074,7 +1115,7 @@
 </div>
 
 <div class="container p-y-3">
-<h2>List Styles</h2>
+<h2 class="text-center" id="lists-m">List Styles</h2>
 <hr>
 
 		<ul class="list-group m-b-1">
@@ -1103,7 +1144,7 @@
 
 
 	<div class="col-xs-12 p-y-4 text-center">
-<h2>Pagination</h2>
+<h2 id="pagination-m">Pagination</h2>
 <hr>
 	 <ul class="pagination display-inblock p-l-0">
 			<li><a class="active" href="http://www.nasm.org/products/">1</a></li>
@@ -1143,7 +1184,7 @@
 <section class="wrapper p-y-3 color-bg-light">
 	<div class="container">
 
-	<h2 class="text-center" >Layouts</h2>
+	<h2 class="text-center" id="layouts-m">Layouts</h2>
 
 	<hr>
 
@@ -1223,98 +1264,7 @@
     </article><!-- /.blog-main -->
 
 	</div>
-	<div class="col-xs-12 m-y-1">
 
-
-<!--
-<ul class="nav nav-tabs nav-justified">
-  ...
-</ul>
-<ul class="nav nav-pills nav-justified">
-  ... -->
-
-                <ul class="nav nav-tabs nav-justified">
-                  <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
-                  <li><a href="#B" data-toggle="tab">Section 2</a></li>
-                  <li><a href="#C" data-toggle="tab">Section 3</a></li>
-                </ul>
-                <div class="tabbable">
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="A">
-                      <div class="well well-sm">I'm in Section A.</div>
-                    </div>
-                    <div class="tab-pane" id="B">
-                      <div class="well well-sm">Howdy, I'm in Section B.</div>
-                    </div>
-                    <div class="tab-pane" id="C">
-                      <div class="well well-sm">I've decided that I like wells.</div>
-                    </div>
-                  </div>
-                </div> <!-- /tabbable -->
-                
-                
-                <hr>
-                
-  			<div class="tabbable" id="tabs-480998">
-				<ul class="nav  nav-pills nav-justified">
-					<li class="active">
-						<a href="#panel-961869" data-toggle="tab">Section 1</a>
-					</li>
-					<li>
-						<a href="#panel-665672" data-toggle="tab">Section 2</a>
-					</li>
-				</ul>
-				<div class="tab-content">
-					<div class="tab-pane active" id="panel-961869">
-						<p>
-							I'm in Section 1.
-						</p>
-					</div>
-					<div class="tab-pane" id="panel-665672">
-						<p>
-							Howdy, I'm in Section 2.
-						</p>
-					</div>
-				</div>
-			</div>
-                
-		<h3 class="syntax-variable">Table Striped Source</h3>
-	<hr>
-
-	<pre><code class="html hljs xml">
-					<span class="syntax-tag">&lt;<span class="syntax-title">table</span> <span class="syntax-attribute">class</span>=<span class="syntax-value">"table m-b-1  table-striped "</span>&gt;</span>
-						<span class="syntax-tag">&lt;<span class="syntax-title">thead</span>&gt;</span>
-							<span class="syntax-tag">&lt;<span class="syntax-title">tr</span>&gt;</span>
-							  <span class="syntax-tag">&lt;<span class="syntax-title">th</span>&gt;</span>#<span class="syntax-tag">&lt;/<span class="syntax-title">th</span>&gt;</span>
-							  <span class="syntax-tag">&lt;<span class="syntax-title">th</span>&gt;</span>First Name<span class="syntax-tag">&lt;/<span class="syntax-title">th</span>&gt;</span>
-							  <span class="syntax-tag">&lt;<span class="syntax-title">th</span>&gt;</span>Last Name<span class="syntax-tag">&lt;/<span class="syntax-title">th</span>&gt;</span>
-							  <span class="syntax-tag">&lt;<span class="syntax-title">th</span>&gt;</span>Username<span class="syntax-tag">&lt;/<span class="syntax-title">th</span>&gt;</span>
-							  <span class="syntax-tag">&lt;/<span class="syntax-title">tr</span>&gt;</span>
-						<span class="syntax-tag">&lt;/<span class="syntax-title">thead</span>&gt;</span>
-							<span class="syntax-tag">&lt;<span class="syntax-title">tbody</span>&gt;</span>
-							  <span class="syntax-tag">&lt;<span class="syntax-title">tr</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">th</span> <span class="syntax-attribute">scope</span>=<span class="syntax-value">"row"</span>&gt;</span>1<span class="syntax-tag">&lt;/<span class="syntax-title">th</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">td</span>&gt;</span>Mark<span class="syntax-tag">&lt;/<span class="syntax-title">td</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">td</span>&gt;</span>Otto<span class="syntax-tag">&lt;/<span class="syntax-title">td</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">td</span>&gt;</span>@mdo<span class="syntax-tag">&lt;/<span class="syntax-title">td</span>&gt;</span>
-							    <span class="syntax-tag">&lt;/<span class="syntax-title">tr</span>&gt;</span>
-							    <span class="syntax-tag">&lt;<span class="syntax-title">tr</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">th</span> <span class="syntax-attribute">scope</span>=<span class="syntax-value">"row"</span>&gt;</span>2<span class="syntax-tag">&lt;/<span class="syntax-title">th</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">td</span>&gt;</span>Jacob<span class="syntax-tag">&lt;/<span class="syntax-title">td</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">td</span>&gt;</span>Thornton<span class="syntax-tag">&lt;/<span class="syntax-title">td</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">td</span>&gt;</span>@fat<span class="syntax-tag">&lt;/<span class="syntax-title">td</span>&gt;</span>
-							    <span class="syntax-tag">&lt;/<span class="syntax-title">tr</span>&gt;</span>
-							    <span class="syntax-tag">&lt;<span class="syntax-title">tr</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">th</span> <span class="syntax-attribute">scope</span>=<span class="syntax-value">"row"</span>&gt;</span>3<span class="syntax-tag">&lt;/<span class="syntax-title">th</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">td</span>&gt;</span>Larry<span class="syntax-tag">&lt;/<span class="syntax-title">td</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">td</span>&gt;</span>the Bird<span class="syntax-tag">&lt;/<span class="syntax-title">td</span>&gt;</span>
-							      <span class="syntax-tag">&lt;<span class="syntax-title">td</span>&gt;</span>@twitter<span class="syntax-tag">&lt;/<span class="syntax-title">td</span>&gt;</span>
-							    <span class="syntax-tag">&lt;/<span class="syntax-title">tr</span>&gt;</span>
-							  <span class="syntax-tag">&lt;/<span class="syntax-title">tbody</span>&gt;</span>
-							<span class="syntax-tag">&lt;/<span class="syntax-title">table</span>&gt;</span>
-    </code></pre>
-    
-</div>
 	
 <div class="col-xs-12 m-y-1">
 		<h3 class="syntax-variable">Left Sidebar Source</h3>
@@ -1504,7 +1454,7 @@
 <section class="wrapper p-y-3 demo_cols__ ">
 	<div class="container">
 
-		<h2 class="text-center"> Columns</h2>
+		<h2 class="text-center" id="columns-m"> Columns</h2>
 		<hr>
 
 		<span class="col-sm-6 bg-warning"></span>
@@ -1628,7 +1578,7 @@
 <section class="wrapper p-y-3">
 	<div class="container">
 
-		<h2> Spacing</h2>
+		<h2 class="text-center m-t-0" id="spacing-m"> Spacing</h2>
 		<hr>
 		
 		<h2 class="text-center"> Padding & Margins</h2>
@@ -1716,7 +1666,7 @@ var iframeCss = document.createElement('style');
 
 <div class="container p-y-3">
 
-	<h2> Panels</h2>
+	<h2 class="text-center m-t-0" id="panels-m">Panels</h2>
 
   	<hr>
 
@@ -1799,9 +1749,9 @@ var iframeCss = document.createElement('style');
 
 
 <section class="wrapper color-bg-light p-y-3">
-	<div class="container p-y-3">
+	<div class="container">
 
-	<h2> Modals</h2>
+	<h2 class="text-center m-t-0" id="modals-m">Modals</h2>
 		
 	
 		<button type="button" class="btn btn-info btn-lg modal_click " data-target="modal_one">Regular Modal</button>
@@ -1941,9 +1891,107 @@ var iframeCss = document.createElement('style');
 
 <div class="container m-y-3">
 
-<h2>Links Collapse</h2>
-<hr>
+		<h2 class="text-center" id="tabs-m">Tabs & Accordions</h2>
+	<hr>
 
+                <ul class="nav nav-tabs nav-justified">
+                  <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
+                  <li><a href="#B" data-toggle="tab">Section 2</a></li>
+                  <li><a href="#C" data-toggle="tab">Section 3</a></li>
+                </ul>
+                <div class="tabbable">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="A">
+                      <div class="well well-sm">I'm in Section A.</div>
+                    </div>
+                    <div class="tab-pane" id="B">
+                      <div class="well well-sm">Howdy, I'm in Section B.</div>
+                    </div>
+                    <div class="tab-pane" id="C">
+                      <div class="well well-sm">I've decided that I like wells.</div>
+                    </div>
+                  </div>
+                </div> <!-- /tabbable -->
+                
+                
+                <hr>
+                
+  			<div class="tabbable" id="tabs-480998">
+				<ul class="nav  nav-pills nav-justified">
+					<li class="active">
+						<a href="#panel-961869" data-toggle="tab">Section 1</a>
+					</li>
+					<li>
+						<a href="#panel-665672" data-toggle="tab">Section 2</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="panel-961869">
+						<p>
+							I'm in Section 1.
+						</p>
+					</div>
+					<div class="tab-pane" id="panel-665672">
+						<p>
+							Howdy, I'm in Section 2.
+						</p>
+					</div>
+				</div>
+			</div>
+                
+		<h3 class="syntax-variable">Tabs Source</h3>
+	<hr>
+
+	<pre class="m-b-3 clearfix"><code class="html hljs xml">
+                &ltul class="nav nav-tabs nav-justified">
+                  &ltli class="active">&lta href="#A" data-toggle="tab">Section 1&lt/a>&lt/li>
+                  &ltli>&lta href="#B" data-toggle="tab">Section 2&lt/a>&lt/li>
+                  &ltli>&lta href="#C" data-toggle="tab">Section 3&lt/a>&lt/li>
+                &lt/ul>
+                &ltdiv class="tabbable">
+                  &ltdiv class="tab-content">
+                    &ltdiv class="tab-pane active" id="A">
+                      &ltdiv class="well well-sm">I'm in Section A.&lt/div>
+                    &lt/div>
+                    &ltdiv class="tab-pane" id="B">
+                      &ltdiv class="well well-sm">Howdy, I'm in Section B.&lt/div>
+                    &lt/div>
+                    &ltdiv class="tab-pane" id="C">
+                      &ltdiv class="well well-sm">I've decided that I like wells.&lt/div>
+                    &lt/div>
+                  &lt/div>
+                &lt/div> <!-- /tabbable -->
+                
+    
+                
+  			&ltdiv class="tabbable" id="tabs-480998">
+				&ltul class="nav  nav-pills nav-justified">
+					&ltli class="active">
+						&lta href="#panel-961869" data-toggle="tab">Section 1&lt/a>
+					&lt/li>
+					&ltli>
+						&lta href="#panel-665672" data-toggle="tab">Section 2&lt/a>
+					&lt/li>
+				&lt/ul>
+				&ltdiv class="tab-content">
+					&ltdiv class="tab-pane active" id="panel-961869">
+						&ltp>
+							I'm in Section 1.
+						&lt/p>
+					&lt/div>
+					&ltdiv class="tab-pane" id="panel-665672">
+						&ltp>
+							Howdy, I'm in Section 2.
+						&lt/p>
+					&lt/div>
+				&lt/div>
+			&lt/div>
+    </code></pre>
+    
+
+
+<h2>Collapsing Links</h2>
+<hr>
 <style>
 [data-nav=toggle] > li > a:not(.collapsed) {
 	background-color: #f1f1f1;
@@ -2149,7 +2197,7 @@ whenAvailable("jQuery", function(t) {
 
 
 <section class="container p-y-3">
-<h2> Images & Shapes</h2>
+<h2 class="text-center" id="images-m"> Images & Shapes</h2>
 <hr>
 
 <div class="row">    
@@ -2211,7 +2259,7 @@ whenAvailable("jQuery", function(t) {
 
 <section class="container m-y-2">
 
-<h2> Icons</h2>
+<h2 id="icons-m"> Icons</h2>
 <hr>
 <p class="m-y-1">
 Not all icons below are included in the project, but can be added to project if you send me an email <span class="text-bold">(with Subject: Common Site: Request To Add Icon to Project)</span> or use link below and include the icon code in body of email.
@@ -8571,40 +8619,18 @@ var s = document.createElement('script');
       hljs.highlightBlock(block);
     })
     
-/*    
-  })
-  .script("../BootStrapChunks/js/libs/transition.js").wait(function() {
-*/ 
+ 
 		$(window).trigger("commonJs")
   
-	})
-
-/*
-.wait(function() {
-
-	$(window).on("commonJs", function() {
-		$LAB.script("../js/collapsing.js")
-	})
-
 })
-//https://raw.githubusercontent.com/twbs/bootstrap/master/js/transition.js
-*/
-
 .wait(function() {
-
 
 	$("body").addClass("relative").css({"height":"auto","min-height":"auto"})
 	$(".header-wrapper").slice(-3).wrapAll('<div class="header-wrap">');
 	$(".header-wrap").css({"margin-left":"-" + getScrollbarWidth() + "px","padding-left" : getScrollbarWidth() + "px"});
 
 	
-
-	
-//setTimeout(function(){},200);
-
 });
-
-
 
 function whenAvailable(name, callback) {
 
@@ -8617,7 +8643,18 @@ function whenAvailable(name, callback) {
     }, 50);
 }
  
+ 
 //WAIT FOR MODERNIZER TO BE DEFINED
+whenAvailable("Modernizr", function(t) {
+  
+		Modernizr.addTest('firefox', function () {
+		 return !!navigator.userAgent.match(/firefox/i);
+		});  
+  
+}) 
+ 
+ 
+//WAIT FOR JQUERY TO BE DEFINED
 whenAvailable("jQuery", function(t) {
 
 	function fixedhead() {
@@ -8676,6 +8713,53 @@ $(document).on('click', 'html', function(e){
 	}
 })
 		
+		
+		
+//SIDEBAR RIGHT FLYOUT PANEL
+if (document.querySelector("[data-toggle=slidePanel]")) {
+
+	//$(window).on("commonJs", function() {
+
+		if (Modernizr.firefox) {
+			var mozHead = document.getElementsByTagName("head")[0],
+					mozCss = document.createElement('style');
+					mozCss.innerHTML = ".slide-panel:before {display:none;}.slide-panel.open:before {display:block;}";
+					mozHead.appendChild(mozCss);
+		}
+
+		jQuery("[data-toggle=slidePanel]").on('click', function(event){
+			event.preventDefault();
+
+				jQuery('.slide-panel').queue(function(){
+
+					if (!jQuery('.slide-panel-content').is(':empty')){
+						jQuery(this).toggleClass('open').clearQueue();
+						jQuery(".navbar-static-top").css({"z-index": "100", "transition-delay": "0", "visibility": "visible"})
+					}
+
+					jQuery("html").removeAttr("style");
+					if (jQuery(this).hasClass('open')) {
+						jQuery("html").css("overflow", "hidden")
+						
+						jQuery(".navbar-static-top").css({"z-index": "0", "transition": "visibility .2s .5s", "visibility": "hidden"})
+					}
+
+				});
+
+		});
+
+	//});
+}		
+
+
+//GOTO
+  jQuery(document).on('click','[data-goto]', function(event) {
+		event.preventDefault();
+		var target = "#" + this.getAttribute('data-goto');
+		jQuery('html, body').animate({
+			scrollTop: jQuery(target).offset().top
+		}, 1000);
+	});
 		
 		
 });

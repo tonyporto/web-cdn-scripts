@@ -818,7 +818,8 @@ select.input-lg,
 }
 .btn,
 label,
-.header-logo {
+.header-logo,
+.user-select-none {
   -ms-touch-action:manipulation;
   touch-action:manipulation;
   -webkit-user-select:none;
