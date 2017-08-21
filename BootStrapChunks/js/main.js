@@ -9,18 +9,9 @@ Modernizr.addTest('ios', function() {
 Modernizr.addTest('android', function() {
 	return navigator.userAgent.match(/(Android)/g);
 });
-// FIREFOX
-Modernizr.addTest('firefox', function () {
- return !!navigator.userAgent.match(/firefox/i);
-});
-// IE10
-Modernizr.addTest('ie10', function() {
-  return (/*@cc_on!@*/false && document.documentMode === 10);
-});
-// IE11
-Modernizr.addTest('ie11', function() {
-  return (!!document.documentMode && !document.all &&
-    (!!window.matchMedia || !!window.msMatchMedia) && !Modernizr.websqldatabase && !Modernizr.cssreflections);
+//IE
+Modernizr.addTest('ie',function(){
+	return!!navigator.userAgent.match(/MSIE/i)
 });
 //EDGE
 Modernizr.addTest('edge', function() {
@@ -49,18 +40,6 @@ function modernizrResize() {
       min_width = function (width) {
         return Modernizr.mq('(min-width: ' + width + 'px)');
       };
-
-	/* ================================== *
-	 * KEEP FOOTER @ BOTTOM
-	 * ================================== *
-	  var footy = $(".footer-wrapper");
-
-    if ((footy.offset().top + footy.height()) >= $(window).height()) {
-			footy.css('position', 'inherit');
-		} else {
-			footy.css({position: 'fixed', bottom: '0px', left: '0px'});
-		}
-		//END FOOTER @ BOTTOM */
 
     } else {
 
@@ -98,7 +77,7 @@ function modernizrResize() {
 		} else {
 
 			//UN-BOOTSTRAP MOBILE NAVIGATION TO MAKE IT USABLE
-	    //==========================================================================
+	    //==================================================
 			menu_dropdown.addClass("hidden")
 
 		// END MIN 0 to MAX 767px
@@ -139,117 +118,18 @@ function modernizrResize() {
 
 }
 
-/* ========================================================================== *
- * UA LOGIN WIDGET
- *
- * MultiSiteCartLink & UaLoginWidget
- * ========================================================================== *
-function openCartLink() {
-	window.location.href = nasmCartUrl;
-}
-
-function sucessCartCount(data) {
-	$(".countlabel").text("(" + data.CartCount + ")");
-}
-
-function UaLoginWidget() {
-
-  $.ajax({
-		url: window.location.protocol + "//" + window.location.host + '/UAInterrogator.aspx/LoginCheck',
-		type: "POST",
-		dataType: "json",
-		data: '{name:"test"}',
-		contentType: 'application/json; charset=utf-8',
-		cache: false,
-		success: function (data) {
-
-			if ((typeof data.d != 'undefined') && data.d) {
-					$('.messageLabel').html(data.d);
-					$('.loginPanel').addClass("hidden hidden-sm hidden-xs");
-					$('.logoutPanel').removeClass("hidden hidden-sm hidden-xs")
-
-				} else {
-					$('.loginPanel').removeClass("hidden hidden-sm hidden-xs")
-					$('.logoutPanel').addClass("hidden hidden-sm hidden-xs");
-
-			};
-
-			},
-			error: function (xhr) {}
-  });
-
-}
-
-function GetCartItemCount() {
-
-	$.getJSON(shopUrlHostname + '/api/OrderManager/GetCartItemCount?callback=?',
-		function (data) {
-			sucessCartCount(data);
-			return false;
-		});
-
-}
-
-*/
-
-/*HEADER NAV & SEARCH TOGGLE
-function headerSearchOrNav() {
-
-	jQuery("button[data-header-btn='button']").on("click", function() {
-
-		var clicker = jQuery("[data-header-btn=button]").not(jQuery(this)),
-				dataTarget = clicker.attr("data-target");
-
-				jQuery(dataTarget).removeClass("in")
-
-	});
-
-}
-
-
 /* ================================== *
  * ECOMMERCE - BACK ONE PAGE
  * ==================================*/
 function backOne() {
 	window.history.go(-1);
 }
-/* ================================== *
- * REMOVE EMPTY WIDGET FIELDS
- * ==================================
-jQuery('.widget_').filter(function () {
-    return jQuery.trim(jQuery(this).find('.remove-empty').text()).length == 0;
-}).remove();
-*/
-/* ================================== *
- * DISABLE & REMOVE CSS JUNK
- * ==================================
-	var minCss = $('link[id*="mincss"]'),
-		garbageJS = $('script[src*="/Telerik.Web.UI.WebResource.axd?"]');
 
-if ( (window.location.href.indexOf("/Action/Edit") != -1) && (document.referrer.indexOf("/Sitefinity/Pages") > -1) ) {
-
-	minCss.addClass("Sitefinity-garbage-css");
-	garbageJS.addClass("Sitefinity-garbage-js");
-
-} else {
-
-	for (i = 0; i < minCss.length; i++) {
-		minCss.prop('disabled', true);
-		minCss.remove();
-	}
-
-	for (i = 0; i < garbageJS.length; i++) {
-		garbageJS.remove();
-	}
-
-}
-*/
 /* ======================================================= *
  * MENU DOUBLE TAP
  *
  * By Osvaldas Valutis, www.osvaldas.info
  * Available for use under the MIT License
- *
  * ======================================================= */
  function devicesDoubleTapInit() {
 
@@ -351,22 +231,38 @@ $("a[id*='orgspecificproducts']").each(function (i, el) {
     }
 });
 
-/* ================================== *
- * IE FONTAWESOME, THANKS MICROSOFT
- * ==================================
-if (Modernizr.ie10 || Modernizr.ie11) {
+/* ============================================= *
+ * APPEND ELEMENTS TO MAIN.BASE
+ * ============================================= */
+var createEl = document.createElement.bind(document),
+		head = document.getElementsByTagName("head")[0],
 
-	var head = document.getElementsByTagName('head')[0];
+/* ================================ *
+ * FAVICON IF VARIABLE IS DEFINED
+ * ================================ */
+	favIco = "/ResourcePackages/Main/assets/Images/favicon.png";
 
-	var fa = document.createElement('link');
-	    fa.type = 'text/css';
-	    fa.rel = 'stylesheet';
-	    fa.href = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
-	    head.appendChild(fa);
-	    
-	var formControlCss = document.createElement('style');
-			formControlCss.innerHTML = "select.form-control {padding-top: 0; padding-right: 0; padding-bottom: 0;}";
-			head.appendChild(formControlCss);
+	if (favIco.length > 0) {
+
+		var fav = createEl("link");
+				fav.rel = "shortcut icon";
+				fav.href = favIco;
+				head.appendChild(fav);
+
+	}
+
+/* ============================================= *
+ * IE FONTAWESOME & FORMS FIX THANKS MICROSOFT
+ * ============================================= */
+if (Modernizr.ie) {
+
+	var ieCss = createEl("style");
+			ieCss.innerHTML = ".form-control{padding-top:0;padding-bottom:0;line-height:32px} select.form-control{padding-right:0} .form-control.input-lg{line-height:44px}";
+			head.appendChild(ieCss);
+
+	var fa = createEl("link");
+			fa.rel = "stylesheet";
+			fa.href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+			head.appendChild(fa);
 
 }
- */
