@@ -4,24 +4,17 @@
  * ============================= */
 [class*="icon-"] {
 	display:inline-block;
-	font:normal normal normal 14px/1 FontAwesome;
 	font-size:inherit;
 	text-rendering:auto;
 	-webkit-font-smoothing:antialiased;
 	text-transform:none;
 }
-[class*="icon-"],
-.text-normal {
-  font-weight:normal;
-}
 .ico-b:before,
 .ico-a:after,
 [class*="icon-"]:before {
-  font-family:'FontAwesome';
+  font:normal normal normal 14px/1 FontAwesome;
 }
-a[class*="icon-"] {
-  font-family: inherit;
-}
+
 /* ============================= *
  * ONLY ICONS USED *
  * USAGE: prefixed with ".icon-" *
@@ -116,10 +109,14 @@ a[class*="icon-"] {
   content:"\f00d";
 }
 /* ECOMMERCE */
-.login-widget > span:after {
-	content:"/";
+.slash:before, 
+.list-slash > li:not(:first-child):before,
+.list-slash > li:not(.ng-hide) + .ng-hide + li:before,
+.list-slash > li + li:last-child:before {
+  content: "/";
 }
-.login-widget + .login-widget > span:last-child:after {
+.list-slash > .ng-hide + li:before,
+.list-slash > .ng-hide +  .ng-hide +  .ng-hide + li:before {
 	content: none;
 }
 .icon-login:before {
@@ -194,6 +191,9 @@ a[class*="icon-"] {
 .size40 {
 	font-size:40px;
 }
+.size36 {
+  font-size:36px;
+}
 .size30 {
 	font-size:30px;
 }
@@ -208,6 +208,9 @@ a[class*="icon-"] {
 }
 .size18 {
 	font-size:18px;
+}
+.size16 {
+  font-size:16px;
 }
 .size14 {
 	font-size:14px
@@ -295,6 +298,25 @@ p,
 }
 .line-height-1 {
 	line-height:1;
+}
+/* ============================= *
+ *  ICON CONTAINER
+ * ============================= */
+.ico-size-30 {
+	height: 30px;
+	width: 30px;
+}
+.ico-size-32 {
+	height: 32px;
+	width: 32px;
+}
+.ico-size-60 {
+	height: 60px;
+	width: 60px;
+}
+.ico-size-80 {
+	height: 80px;
+	width: 80px;
 }
 /* ============================================================== *
  * HELPER CLASSES : MARGIN & PADDING *
@@ -697,13 +719,12 @@ p,
   padding-left:.3em !important;
 }
 .p-r-04,
-.login-widget > span:after,
-.ico-b:before {
+.ico-b:before,
+.list-slash > li:before {
   padding-right:.4em;
 }
 .p-l-04,
 .ico-a:after,
-.login-widget > span:after,
 .menu-dropdown > a:after {
 	padding-left:.4em;
 }
@@ -749,6 +770,10 @@ p,
   .m-r-0-xs {
     margin-right:0 !important;
   }
+  .m-x-a-xs {
+    margin-right:auto !important;
+    margin-left:auto !important;
+  }
   .p-x-0-xs,
   .p-r-0-xs {
     padding-right:0 !important;
@@ -786,7 +811,6 @@ p,
 		float: none !important;
 		margin: 0 0 1.2em;
 	}
-	
   .p-x-2-sm,
   .p-r-2-sm {
     padding-right:2em !important;
