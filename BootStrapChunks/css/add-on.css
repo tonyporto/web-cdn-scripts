@@ -84,6 +84,9 @@
 .icon-alert-warning:before {
 	content:"\f071";
 }
+.icon-alert-info:before {
+	content:"\f05a";
+}
 /* FORM CHECKBOX */
 .icon-form-success:before,
 .icon-check:before {
@@ -124,6 +127,9 @@
 }
 .icon-logout:before {
   content:"\f08b";
+}
+.icon-folder:before {
+  content:"\f07c";
 }
 .icon-marker:before {
   content:"\f041";

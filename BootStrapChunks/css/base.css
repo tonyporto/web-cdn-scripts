@@ -1368,7 +1368,7 @@ sub,sup,
 blockquote:not(.widgets),
 .list-group>li,
 .nav li a {
-	padding:10px .9em;
+	padding:10px .5em;
 }
 /* ======================== *
  *  MODAL

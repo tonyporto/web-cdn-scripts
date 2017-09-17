@@ -1,18 +1,22 @@
 {
-  "name": "FrontEndStuff",
-  "devDependencies": {
-      "gulp": "^3.9.1",
-      "gulp-concat": "^2.6.1",
-      "gulp-concat-css": "^2.3.0",
-      "gulp-strip-css-comments": "^1.2.0",
-      "gulp-util": "^3.0.8",
-      "gulp-rename": "^1.2.2",
-      "gulp-remove-empty-lines": "^0.0.8",
-      "gulp-merge-media-queries": "^0.2.1",
-      "gulp-clean-css": "^2.3.2",
-      "gulp-autoprefixer": "^3.1.1",
-      "es6-promise": "^4.0.5",
-      "gulp-csscomb": "^3.0.8",
-      "gulp-uglify": "^2.0.0"
-  }
+    "name": "FrontEndStuff",
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-concat-css": "^2.3.0",
+        "gulp-strip-css-comments": "^1.2.0",
+        "gulp-util": "^3.0.8",
+        "gulp-rename": "^1.2.2",
+        "gulp-remove-empty-lines": "^0.0.8",
+        "gulp-merge-media-queries": "^0.2.1",
+        "gulp-clean-css": "^2.3.2",
+        "gulp-autoprefixer": "^3.1.1",
+        "es6-promise": "^4.0.5",
+        "gulp-csscomb": "^3.0.8",
+        "gulp-uglify": "^2.0.0"
+    },
+    "dependencies": {
+        "gulp-chug": "^0.5.1",
+        "gulp-replace": "^0.6.1"
+    }
 }
