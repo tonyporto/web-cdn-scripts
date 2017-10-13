@@ -240,8 +240,7 @@ var createEl = document.createElement.bind(document),
 /* ================================ *
  * FAVICON IF VARIABLE IS DEFINED
  * ================================ */
-	//favIco = "/ResourcePackages/Main/assets/Images/favicon.png";
-	favIco = "";
+	favIco = "/ResourcePackages/Main/assets/Images/favicon.png";
 
 	if (favIco.length > 0) {
 

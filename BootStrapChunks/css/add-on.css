@@ -112,7 +112,7 @@
   content:"\f00d";
 }
 /* ECOMMERCE */
-.slash:before, 
+.slash:before,
 .list-slash > li:not(:first-child):before,
 .list-slash > li:not(.ng-hide) + .ng-hide + li:before,
 .list-slash > li + li:last-child:before {
