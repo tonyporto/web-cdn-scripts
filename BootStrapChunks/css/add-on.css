@@ -191,6 +191,12 @@
 /* ============================= *
  *  FONT SIZES
  * ============================= */
+.size50 {
+	font-size:50px;
+}
+.size48 {
+	font-size:48px;
+}
 .size46 {
 	font-size:46px;
 }
@@ -270,6 +276,13 @@ p,
 }
 .text-size-3-8 {
 	font-size:3.8rem;
+}
+.text-size-4 {
+	font-size:4rem;
+}
+/* EM FOR BIGGER SIZES */
+.text-size-5 {
+	font-size:5em;
 }
 /* ============================= *
  *  LINE HEIGHT
@@ -758,20 +771,17 @@ p,
  *  MAX-WIDTH: 767px
  * ======================== */
 @media (max-width:767px) {
-	.text-resize-1 {
-		font-size:100% !important;
+	.text-xs-size-1 {
+		font-size:1em;
 	}
-	.text-resize-1-2 {
-		font-size:120% !important;
+	.text-xs-size-1-4 {
+		font-size:1.4em;
 	}
-	.text-resize-1-4 {
-		font-size:140% !important;
+	.text-xs-size-1-8 {
+		font-size:1.8em;
 	}
-	.text-resize-1-6 {
-		font-size:160% !important;
-	}
-	.text-resize-1-8 {
-		font-size:180% !important;
+	.text-xs-size-2 {
+		font-size:2em;
 	}
   .m-r-0-xs {
     margin-right:0 !important;

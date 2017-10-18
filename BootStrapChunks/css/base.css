@@ -246,7 +246,6 @@ textarea {
 input {
   box-sizing:border-box;
 }
-a:focus,
 .btn:focus {
   outline:thin dotted;
   outline:5px auto -webkit-focus-ring-color;
@@ -892,8 +891,7 @@ a.text-info:hover,
   color:#5bc0de;
 }
 a,
-a:focus,
-a:hover,
+/* a:focus, a:hover, */
 .text-primary,
 a.text-primary,
 a.text-primary:focus,
