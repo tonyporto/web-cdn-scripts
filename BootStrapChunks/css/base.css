@@ -51,6 +51,7 @@ a.close,
 }
 a:active,
 a:hover,
+a:focus,
 .btn:focus,
 .btn-transparent,
 .navbar-toggle,
@@ -59,7 +60,7 @@ a:hover,
 .modal,
 .modal-content,
 .form-control:focus {
-	outline:0 !important;
+	outline:0;
 }
 b,
 dt,
@@ -245,11 +246,6 @@ textarea {
 *:after,
 input {
   box-sizing:border-box;
-}
-.btn:focus {
-  outline:thin dotted;
-  outline:5px auto -webkit-focus-ring-color;
-  outline-offset:-2px;
 }
 tr,
 tbody {
