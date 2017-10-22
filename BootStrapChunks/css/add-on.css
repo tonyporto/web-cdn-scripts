@@ -771,14 +771,17 @@ p,
  *  MAX-WIDTH: 767px
  * ======================== */
 @media (max-width:767px) {
-	.text-xs-size-1 {
+	.text-size-1-xs {
 		font-size:1em;
 	}
-	.text-xs-size-1-5 {
+	.text-size-1-5-xs {
 		font-size:1.5em;
 	}
-	.text-xs-size-2 {
+	.text-size-2-xs {
 		font-size:2em;
+	}
+	.text-size-3-xs {
+		font-size:3em;
 	}
   .m-r-0-xs {
     margin-right:0 !important;
@@ -853,6 +856,9 @@ p,
  *  MIN-WIDTH: 992px
  * ======================== */
 @media (min-width:992px) {
+	.text-md-size-4 {
+		font-size:4em;
+	}
   .p-x-2-md,
   .p-r-2-md {
     padding-right:2em !important;
