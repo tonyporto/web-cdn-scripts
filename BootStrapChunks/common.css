@@ -597,8 +597,7 @@ hr,
 	border-top: 1px solid #eceeef;
 }
 
-.nav-justified > li > ul > li,
-.nav-justified > li:not(:first-child) {
+.nav-justified li {
 	border-top: 1px solid rgba(221,221,221,.5);
 }
 .header-wrapper:after {
