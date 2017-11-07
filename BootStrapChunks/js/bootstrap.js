@@ -1,10 +1,9 @@
-/* =========================================================== *
+/* ----------------------------------------------------------- *
  * Bootstrap: transition.js v3.3.7
  * http://getbootstrap.com/javascript/#transitions
- * =========================================================== */
+ * ----------------------------------------------------------- */
 +function ($) {
   'use strict';
-
   function transitionEnd() {
     var el = document.createElement('bootstrap')
     var transEndEventNames = {
@@ -13,7 +12,6 @@
       OTransition      : 'oTransitionEnd otransitionend',
       transition       : 'transitionend'
     }
-
     for (var name in transEndEventNames) {
       if (el.style[name] !== undefined) {
         return { end: transEndEventNames[name] }
@@ -21,7 +19,6 @@
     }
     return false // explicit for ie8 (  ._.)
   }
-
   // http://blog.alexmaccaw.com/css-transitions
   $.fn.emulateTransitionEnd = function (duration) {
     var called = false
@@ -31,7 +28,6 @@
     setTimeout(callback, duration)
     return this
   }
-
   $(function () {
     $.support.transition = transitionEnd()
 
@@ -46,10 +42,10 @@
     }
   })
 }(jQuery);
-/* =========================================================== *
+/* ----------------------------------------------------------- *
  * Bootstrap: dropdown.js v3.3.7
  * http://getbootstrap.com/javascript/#dropdowns
- * =========================================================== */
+ * ----------------------------------------------------------- */
 (function($){'use strict';var backdrop='.dropdown-backdrop',toggle='[data-toggle="dropdown"]',Dropdown=function(element){$(element).on('click.bs.dropdown',this.toggle)}
 Dropdown.VERSION='3.3.7'
 function getParent($this){var selector=$this.attr('data-target')
@@ -101,10 +97,10 @@ $.fn.dropdown.Constructor=Dropdown
 $.fn.dropdown.noConflict=function(){$.fn.dropdown=old
 return this}
 $(document).on('click.bs.dropdown.data-api',clearMenus).on('click.bs.dropdown.data-api','.dropdown form',function(e){e.stopPropagation()}).on('click.bs.dropdown.data-api',toggle,Dropdown.prototype.toggle).on('keydown.bs.dropdown.data-api',toggle,Dropdown.prototype.keydown).on('keydown.bs.dropdown.data-api','.dropdown-menu',Dropdown.prototype.keydown)}(jQuery));
-/* =========================================================== *
+/* ----------------------------------------------------------- *
  * Bootstrap: collapse.js v3.3.7
  * http://getbootstrap.com/javascript/#collapse
- * =========================================================== */
+ * ----------------------------------------------------------- */
 (function($){'use strict';var Collapse=function(element,options){this.$element=$(element)
 this.options=$.extend({},Collapse.DEFAULTS,options)
 this.$trigger=$('[data-toggle="collapse"][href="#'+element.id+'"],'+'[data-toggle="collapse"][data-target="#'+element.id+'"]')
@@ -171,9 +167,9 @@ $(document).on('click.bs.collapse.data-api','[data-toggle="collapse"]',function(
 if(!$this.attr('data-target'))e.preventDefault()
 var $target=getTargetFromTrigger($this),data=$target.data('bs.collapse'),option=data?'toggle':$this.data()
 Plugin.call($target,option)})}(jQuery));
-/* =========================================================== *
+/* ----------------------------------------------------------- *
  * OPEN NAV CLOSE SEARCH/ OPEN SEARCH CLOSE NAV
- * =========================================================== */
+ * ----------------------------------------------------------- */
 function beforeJquery(name, callback) {
   window.setTimeout(function() {
     if (window[name]) {
@@ -186,13 +182,11 @@ function beforeJquery(name, callback) {
 beforeJquery("jQuery", function(t) {
 	//FUNCTION USING JQUERY
 	jQuery("button[data-header-btn=button]").on("click", function() {
-
 		var clicker = jQuery("[data-header-btn=button]").not(jQuery(this));
 
-				jQuery("[data-header-btn]").attr("aria-expanded","false")
-				jQuery($(this) , jQuery($(this).attr('data-target'))).attr("aria-expanded","true")
-				jQuery(clicker.attr("data-target")).removeClass("in")
-
+		jQuery("[data-header-btn]").attr("aria-expanded","false")
+		jQuery($(this) , jQuery($(this).attr('data-target'))).attr("aria-expanded","true")
+		jQuery(clicker.attr("data-target")).removeClass("in")
 
 		})
 });
@@ -312,10 +306,10 @@ $target.one('hidden.bs.modal',function(){$this.is(':visible')&&$this.trigger('fo
 Plugin.call($target,option,this)})
 actualHeight()
 }(jQuery));
-/* =========================================================== *
+/* ----------------------------------------------------------- *
  *! Copyright 2012, Ben Lin (http://dreamerslab.com/)
  * Version: 1.0.18
- * =========================================================== */
+ * ----------------------------------------------------------- */
 function actualHeight() {
 $.fn.addBack=$.fn.addBack||$.fn.andSelf;
 $.fn.extend({actual:function(method,options){if(!this[method]){throw'$.actual => The jQuery method "'+method+'" you called does not exist';}
@@ -337,40 +331,34 @@ function scrollbarWidth() {
 
   // add innerdiv
   var inner = document.createElement("div");
-    inner.style.width = "100%";
-    outer.appendChild(inner);
+			inner.style.width = "100%";
+			outer.appendChild(inner);
 
   var widthWithScroll = inner.offsetWidth;
-		outer.parentNode.removeChild(outer);
+			outer.parentNode.removeChild(outer);
 
     return widthNoScroll - widthWithScroll;
 }
-/* =========================================================== *
+/* ----------------------------------------------------------- *
  * MAKE MODAL APPEAR ON CENTER OF SCREEN
- * =========================================================== */
+ * ----------------------------------------------------------- */
 function centerModal() {
 
 	if (jQuery(".modal_click").length) {
 
 		var modalClosedCss = {
-					'transition':'all 0.4s ease 0.1s','-webkit-transition':'all 0.4s ease 0.1s', 'height':'auto',
-					'position':'','bottom':'auto','left':'auto','right':'auto', 'top':'auto','margin-top':'auto'
+				'transition':'all 0.4s ease 0.1s','-webkit-transition':'all 0.4s ease 0.1s', 'height':'auto',
+				'position':'','bottom':'auto','left':'auto','right':'auto', 'top':'auto','margin-top':'auto'
 		},
-		mDialog = $(".modal-dialog"),
-		headers = $("header[class*=wrapper]"),
-		headerL = headers.length;
+		mDialog = $(".modal-dialog");
 
 		//SET TRANSITION STYLE
 		mDialog.css(modalClosedCss)
 
 		//SCROLLBARS & OVERFFLOW PROPERTIES FOR MODAL TALLED THAN SCREEN HEIGHT
-		var dialogCss = ".modal-open .header-modal{display:none} .modal-dialog{overflow-y: auto;}.modal-dialog.fixed{overflow-y: hidden;}.modal-content{border-radius:0}.modal-dialog::-webkit-scrollbar{width:10px}"
+		var dialogCss = ".modal-open .header-modal{display:none}.modal-dialog{overflow-y: auto;}.modal-dialog.fixed{overflow-y: hidden;}.modal-content{border-radius:0}.modal-dialog::-webkit-scrollbar{width:10px}"
 			+ ".modal-dialog::-webkit-scrollbar-thumb{background:rgb(187,187,187);-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5)}"
-			+ ".modal-dialog::-webkit-scrollbar-track:enabled { background-color: #ddd }.modal-dialog::-webkit-scrollbar-thumb:window-inactive{background:rgb(187,187,187)}"
-			//ANIMATE HEADER
-			+ ".slideInDown {animation: slideInDown .6s ease 0s normal 1 both running;-webkit-animation: slideInDown .6s ease 0s normal 1 both running;}"
-			+ "@-webkit-keyframes slideInDown {0% {-webkit-transform: translateY(-100%);transform: translateY(-100%); visibility: visible;} 100% {-webkit-transform: translateY(0);transform: translateY(0);}}"
-			+ "@keyframes slideInDown {0% {-webkit-transform: translateY(-100%); transform: translateY(-100%);visibility: visible;} 100% {-webkit-transform: translateY(0);transform: translateY(0);}}";
+			+ ".modal-dialog::-webkit-scrollbar-track:enabled { background-color: #ddd }.modal-dialog::-webkit-scrollbar-thumb:window-inactive{background:rgb(187,187,187)}";
 
 			if (!$("[data-css=dialog]").length) {
 				$('head').append("<style data-css='dialog'>" +dialogCss+ "</style>");
@@ -380,13 +368,8 @@ function centerModal() {
 
 			var modalWindowId = $(this).attr("data-target");
 
-				$("html,body").css("overflow-y", "hidden").css("margin-right", scrollbarWidth() / 2);
-
-				if (!$(".header-modal").length) {
-					headers.slice(-+headerL).wrapAll('<div class="slideInDown header-modal">');
-				}
-
-				$(".modal" + "." +modalWindowId).modal().attr("aria-hidden","false")
+				$("html").css("overflow-y", "scroll").find("body").css({"height": ($(window).height() - 1) + 'px', "overflow": "hidden"});
+				$(".modal" + "."+modalWindowId).modal().attr("aria-hidden","false")
 
 				mDialog.each(function() {
 
@@ -401,39 +384,60 @@ function centerModal() {
 						var modalHcss = modCss + "top:1.5vh;margin-top:auto;height:90vh";
 							child.attr("data-child","resize").attr("style", modalHcss)
 
-					} else {
+						} else {
 
-						var modalHcss = modCss + "top:50%;margin-top:" + modalHeight +"px";
+						var modalHcss = modCss + "top:50%;margin-top:"+ modalHeight +"px";
 
 						if (!$(this)[0].hasAttribute("data-child")) {
 							$(this).attr("style", modalHcss)
 						}
 					}
-
 					//CLOSE ON ANY CLICK OUTSIDE ON CONTENT AREA
 					$(document).on('click', 'html', function(e){
 						if ($(e.target).is("[data-dismiss=modal],div:not(.modal-dialog *)")) {
 
-							$(".modal").modal('hide').attr("aria-hidden","true")
+							var mdl = "[data-modal-lock]";
+
+							$(".modal:not("+ mdl +")").modal('hide').attr("aria-hidden","true")
 
 							setTimeout(function(){
-								mDialog.css(modalClosedCss)
-								$("html,body").removeAttr("style")
-							},500);
+								//EXCLUDE MODAL LOCK
+							 $(".modal:not("+ mdl +") > .modal-dialog").css(modalClosedCss)
+
+								if(!$(mdl).hasClass("in")) {
+									$(mdl + " > .modal-dialog").css(modalClosedCss)
+									$("html,body").removeAttr("style")
+								}
+
+							},200);
 
 						}
 					});
+					//CLOSE ON ANY CLICK OUTSIDE ON CONTENT AREA
 				})
 		});
 	}
 }
 
+//MODAL REALIGN ON RESIZE
 $(window).resize(function() {
+	if ($(".modal").hasClass("in")) {
+		var md = $(".modal.in .modal-content"),
+				mdHeight = md.actual('height');
+				mdAdjHeight = "-" + mdHeight / 2;
+				md.parent().css("margin-top", mdAdjHeight + "px");
+	}
 	$(".modal-dialog").removeAttr("data-child")
 })
-/* =========================================================== *
+//MODAL LOCK PREVENT CLOSING
+$('.modal[data-modal-lock]').on('hide.bs.modal', function (e) {
+	e.preventDefault();
+	e.stopPropagation();
+	return false;
+})
+/* ----------------------------------------------------------- *
  * Bootstrap: ALERT DISMISS v3.3.7
- * =========================================================== */
+ * ----------------------------------------------------------- */
 jQuery(".alert-dismissable .close").on("click", function() {
 	jQuery(this).closest(".alert-dismissable").remove()
 });
