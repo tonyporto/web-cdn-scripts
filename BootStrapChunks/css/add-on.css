@@ -989,7 +989,6 @@ p,
 	height:18px;
 	width:18px;
 }
-
 /* CHECKBOX & CIRCLE RADIO */
 .form-checkbox.circle input[name]+label:after,
 .form-checkbox input[type=checkbox]:checked+label:after {
@@ -1003,7 +1002,6 @@ p,
 	border-width: 0 2px 2px 0;
 	z-index:2;
 }
-
 /* CIRCLE RADIO */
 .form-checkbox.circle input+label:before {
 	border-width:1px;
