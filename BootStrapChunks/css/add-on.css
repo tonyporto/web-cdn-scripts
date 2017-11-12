@@ -977,6 +977,20 @@ p,
 	background-color:#337ab7;
 	border-color:#337ab7;
 }
+
+/* RADIO BOX */
+.form-checkbox input[type=radio]+label:before,
+.form-checkbox input[type=radio]+label:after {
+	border-radius:50%;
+}
+.form-checkbox input[type=radio]:checked+label:after {
+	margin:1px;
+	border:4px solid #fff;
+	height:18px;
+	width:18px;
+}
+
+/* CHECKBOX & CIRCLE RADIO */
 .form-checkbox.circle input[name]+label:after,
 .form-checkbox input[type=checkbox]:checked+label:after {
 	-webkit-transform:rotate(45deg);
@@ -989,17 +1003,7 @@ p,
 	border-width: 0 2px 2px 0;
 	z-index:2;
 }
-/* RADIO BOX */
-.form-checkbox input[type=radio]+label:before,
-.form-checkbox input[type=radio]+label:after {
-	border-radius:50%;
-}
-.form-checkbox input[type=radio]:checked+label:after {
-	margin:1px;
-	border:4px solid #fff;
-	height:18px;
-	width:18px;
-}
+
 /* CIRCLE RADIO */
 .form-checkbox.circle input+label:before {
 	border-width:1px;
