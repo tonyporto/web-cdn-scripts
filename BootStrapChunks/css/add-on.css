@@ -873,7 +873,7 @@ p,
 	}
 	.m-t-0-md {
 		margin-top: 0;
-	}	
+	}
 	.m-b-0-md {
 		margin-bottom: 0;
 	}
@@ -977,6 +977,7 @@ p,
 	background-color:#337ab7;
 	border-color:#337ab7;
 }
+.form-checkbox.circle input[name]+label:after,
 .form-checkbox input[type=checkbox]:checked+label:after {
 	-webkit-transform:rotate(45deg);
 	transform:rotate(45deg);
@@ -998,4 +999,15 @@ p,
 	border:4px solid #fff;
 	height:18px;
 	width:18px;
+}
+/* CIRCLE RADIO */
+.form-checkbox.circle input+label:before {
+	border-width:1px;
+  height: 23px;
+  width: 23px
+}
+.form-checkbox.circle input[name]+label:after {
+	margin: 1px;
+	border-radius:0;
+	border-color: #ddd;
 }

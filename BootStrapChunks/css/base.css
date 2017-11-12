@@ -239,7 +239,8 @@ textarea {
 *,
 *:before,
 *:after,
-input {
+input,
+.border-box {
   box-sizing:border-box;
 }
 tr,
@@ -260,6 +261,7 @@ thead,
 .input-group-btn {
   vertical-align:middle;
 }
+.text-bottom,
 .table thead th {
   vertical-align:bottom;
 }
@@ -1403,7 +1405,7 @@ blockquote:not(.widgets),
 .input-lg,.btn-lg,
 .form-group-lg .form-control,
 .modal-content,
-.dropdown-menu:not(.main-menu),
+.dropdown-menu:not(.main-menu):not([class*=-flat]),
 .card:not(.slider-wrapper), .card-img,
 .input-group-addon.input-lg {
   border-radius:6px;
