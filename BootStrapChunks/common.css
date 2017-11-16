@@ -2491,7 +2491,7 @@ p,
 	margin-right: auto;
 	margin-left: auto;
 }
-.text-sm-size-1 {
+.text-size-1-sm {
 	font-size: 1em;
 }
 .text-size-2-sm {
@@ -2714,8 +2714,17 @@ p,
 .nav-tabs.nav-justified>.active>a:hover {
 	border-bottom-color: #fff;
 }
-.text-md-size-4 {
+.text-size-2-md {
+	font-size: 2em;
+}
+.text-size-3-md {
+	font-size: 3em;
+}
+.text-size-4-md {
 	font-size: 4em;
+}
+.text-size-4-5-md {
+	font-size: 4.5em;
 }
 .m-t-0-md {
 	margin-top: 0;
