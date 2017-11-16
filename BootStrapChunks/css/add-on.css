@@ -188,6 +188,12 @@
 .text-weight-400 {
 	font-weight:400;
 }
+.text-weight-300 {
+	font-weight:300;
+}
+.text-weight-200 {
+	font-weight:200;
+}
 /* ============================= *
  *  FONT SIZES
  * ============================= */
@@ -607,7 +613,6 @@ p,
 .p-x-2 {
   padding-left:2em !important;
 }
-
 /* --- PADDING 1em --- */
 .panel-body,
 .panel-heading,
@@ -628,7 +633,7 @@ p,
 }
 .p-l-1,
 .p-x-1 {
-  padding-left:1em;
+  padding-left:1em !important;
 }
 
 /* --- PADDING 30px --- */
@@ -815,7 +820,15 @@ p,
  *  MIN-WIDTH: 768px
  * ======================== */
 @media (min-width:768px) {
-
+	.text-sm-size-1 {
+		font-size:1em;
+	}
+	.text-size-2-sm {
+		font-size:2em;
+	}
+	.text-size-3-sm {
+		font-size:3em;
+	}
 	/* FLEX COLUMNS */
 	[class*="flex-layout-"] {
 		-webkit-column-gap: 1em;
@@ -1005,11 +1018,11 @@ p,
 /* CIRCLE RADIO */
 .form-checkbox.circle input+label:before {
 	border-width:1px;
-  height: 23px;
-  width: 23px
+  height:23px;
+  width:23px
 }
 .form-checkbox.circle input[name]+label:after {
-	margin: 1px;
+	margin:1px;
 	border-radius:0;
 	border-color: #ddd;
 }

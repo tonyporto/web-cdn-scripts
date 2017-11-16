@@ -239,7 +239,8 @@ textarea {
 *,
 *:before,
 *:after,
-input {
+input,
+.border-box {
 	box-sizing: border-box;
 }
 tr,
@@ -260,6 +261,7 @@ thead,
 .input-group-btn {
 	vertical-align: middle;
 }
+.text-bottom,
 .table thead th {
 	vertical-align: bottom;
 }
@@ -1415,7 +1417,7 @@ blockquote:not(.widgets),
 .btn-lg,
 .form-group-lg .form-control,
 .modal-content,
-.dropdown-menu:not(.main-menu),
+.dropdown-menu:not(.main-menu):not([class*=-flat]),
 .card:not(.slider-wrapper),
 .card-img,
 .input-group-addon.input-lg {
@@ -1715,6 +1717,12 @@ kbd,
 }
 .text-weight-400 {
 	font-weight: 400;
+}
+.text-weight-300 {
+	font-weight: 300;
+}
+.text-weight-200 {
+	font-weight: 200;
 }
 
 .size50 {
@@ -2142,7 +2150,7 @@ p,
 }
 .p-l-1,
 .p-x-1 {
-	padding-left: 1em;
+	padding-left: 1em !important;
 }
 
 .p-t-30,
@@ -2312,6 +2320,19 @@ p,
 	background-color: #337ab7;
 	border-color: #337ab7;
 }
+
+.form-checkbox input[type=radio]+label:before,
+.form-checkbox input[type=radio]+label:after {
+	border-radius: 50%;
+}
+.form-checkbox input[type=radio]:checked+label:after {
+	margin: 1px;
+	border: 4px solid #fff;
+	height: 18px;
+	width: 18px;
+}
+
+.form-checkbox.circle input[name]+label:after,
 .form-checkbox input[type=checkbox]:checked+label:after {
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
@@ -2324,15 +2345,15 @@ p,
 	z-index: 2;
 }
 
-.form-checkbox input[type=radio]+label:before,
-.form-checkbox input[type=radio]+label:after {
-	border-radius: 50%;
+.form-checkbox.circle input+label:before {
+	border-width: 1px;
+	height: 23px;
+	width: 23px;
 }
-.form-checkbox input[type=radio]:checked+label:after {
+.form-checkbox.circle input[name]+label:after {
 	margin: 1px;
-	border: 4px solid #fff;
-	height: 18px;
-	width: 18px;
+	border-radius: 0;
+	border-color: #ddd;
 }
 @media (min-width:768px) {
 [class*="col-sm-"] {
@@ -2469,6 +2490,15 @@ p,
 .center-sm-block {
 	margin-right: auto;
 	margin-left: auto;
+}
+.text-sm-size-1 {
+	font-size: 1em;
+}
+.text-size-2-sm {
+	font-size: 2em;
+}
+.text-size-3-sm {
+	font-size: 3em;
 }
 
 [class*="flex-layout-"] {
