@@ -12,13 +12,13 @@
     {
 			"adm_studs": [
 					{
-						"cats": "ExamFX News"
+						"cats": "adm_studs_1"
 					},
 					{
-						"cats": "FAQ"
+						"cats": "adm_studs_2"
 					},
 					{
-						"cats": "Contact"
+						"cats": "adm_studs_3"
 					}
 				]
 			},
