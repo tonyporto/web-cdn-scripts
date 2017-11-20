@@ -32,10 +32,10 @@
     {
 			"clinical_exp": [
 					{
-						"cats": "FAQ"
+						"cats": "clinical_1"
 					},
 					{
-						"cats": "Contact"
+						"cats": "clinical_2"
 					}
 				]
 			},
@@ -49,10 +49,10 @@
     {
 			"stud_to_nurse": [
 					{
-						"cats": "FAQ"
+						"cats": "stud_to_nurse_1"
 					},
 					{
-						"cats": "Contact"
+						"cats": "stud_to_nurse_1"
 					}
 				]
 			},
@@ -69,19 +69,19 @@
     {
 			"nclex_Prep": [
 					{
-						"cats": "Course Tour"
+						"cats": "nclex_Prep_1"
 					},
 					{
-						"cats": "Licensing Requirements"
+						"cats": "nclex_Prep_2"
 					},
 					{
-						"cats": "ExamFX News"
+						"cats": "nclex_Prep_3"
 					},
 					{
-						"cats": "FAQ"
+						"cats": "nclex_Prep_4"
 					},
 					{
-						"cats": "Contact"
+						"cats": "nclex_Prep_5"
 					}
 				]
 			},
@@ -96,13 +96,13 @@
     {
 			"faculty_dev": [
 					{
-						"cats": "Course Tour"
+						"cats": "faculty_dev_1"
 					},
 					{
-						"cats": "Licensing Requirements"
+						"cats": "faculty_dev_2"
 					},
 					{
-						"cats": "Contact"
+						"cats": "faculty_dev_3"
 					}
 				]
 			},
@@ -120,22 +120,22 @@
     {
 			"learning_core": [
 					{
-						"cats": "Course Tour"
+						"cats": "learning_core_1"
 					},
 					{
-						"cats": "Licensing Requirements"
+						"cats": "learning_core_2"
 					},
 					{
-						"cats": "ExamFX News"
+						"cats": "learning_core_3"
 					},
 					{
-						"cats": "FAQ"
+						"cats": "learning_core_4"
 					},
 					{
-						"cats": "FAQ"
+						"cats": "learning_core_5"
 					},
 					{
-						"cats": "Contact"
+						"cats": "learning_core_6"
 					}
 				]
 			}
