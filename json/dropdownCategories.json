@@ -1,0 +1,138 @@
+{
+	"dropdown_categories": [
+   {
+      "OUTCOMES DROPDOWN": "_____________ ORDER _____________"
+		},
+		{
+			"outcomes_drop": [
+			  {
+					"value": ".admitting-the-right-students, .not-mason",
+					"text": "Admitting the right students"
+				},
+				{
+					"value": ".learning-core-curriculum, .not-mason",
+					"text": "Learning core curriculum"
+				},
+				{
+					"value": ".clinical-Experience, .not-mason",
+					"text": "Clinical Experience"
+				},
+				{
+					"value": ".nCLEX-Preparedness, .not-mason",
+					"text": "NCLEX Preparedness"
+				},
+				{
+					"value": ".from-Student-to-Licensed-Nurse, .not-mason",
+					"text": "From Student to Licensed Nurse"
+				},
+				{
+					"value": ".faculty-Development, .not-mason",
+					"text": "Faculty Development"
+				}
+			]
+		},
+
+  {
+      "CONTENT AREAS": "_____________ ORDER _____________"
+		},
+		{
+			"content_drop": [
+			  {
+					"value": ".pharmacology",
+					"text": "Pharmacology"
+				},
+				{
+					"value": ".adult-medical-surgical",
+					"text": "Adult Medical-Surgical"
+				},
+				{
+					"value": ".fundamentals",
+					"text": "Fundamentals"
+				},
+				{
+					"value": ".maternal-newborn",
+					"text": "Maternal Newborn"
+				},
+				{
+					"value": ".nursing-care-of-children",
+					"text": "Nursing Care of Children"
+				},
+				{
+					"value": ".mental-health",
+					"text": "Mental Health"
+				},
+				{
+					"value": ".community-health",
+					"text": "Community Health"
+				},
+				{
+					"value": ".nutrition",
+					"text": "Nutrition"
+				},
+				{
+					"value": ".professionalism",
+					"text": "Professionalism"
+				},
+				{
+					"value": ".leadership-management",
+					"text": "Leadership + Management"
+				},
+				{
+					"value": ".communications",
+					"text": "Communications"
+				},
+				{
+					"value": ".student-skills",
+					"text": "Student Skills"
+				},
+				{
+					"value": ".wellness-self-care-for-nurses",
+					"text": "Wellness + Self-care for Nurses"
+				},
+				{
+					"value": ".nursing-skills",
+					"text": "Nursing Skills"
+				},
+				{
+					"value": ".nursing-informatics-technology",
+					"text": "Nursing Informatics + Technology"
+				}
+			]
+		},
+  {
+      "MEDIA TYPES": "_____________ ORDER _____________"
+		},
+		{
+			"media_drop": [
+			  {
+					"value": ".tutorials",
+					"text": "Tutorials"
+				},
+				{
+					"value": ".books-eBooks",
+					"text": "Books/eBooks"
+				},
+				{
+					"value": ".quiz-banks",
+					"text": "Quiz Banks"
+				},
+				{
+					"value": ".assessments",
+					"text": "Practice Assessments"
+				},
+				{
+					"value": ".focused-review",
+					"text": "Focused Review"
+				},
+				{
+					"value": ".prediction",
+					"text": "Prediction"
+				},
+				{
+					"value": ".simulation",
+					"text": "Simulation"
+				}
+			]
+		}
+	]
+}
