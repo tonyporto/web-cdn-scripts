@@ -5,54 +5,45 @@
       "1. Admitting the Right Students": "_____________ ORDER _____________"
 		},
 			{
-				"1": "Achieve",
-				"2": "Learning Strategies",
-				"3": "Test Of Essential Academic Skills"
+				"1": "TEAS SmartPrep",
+				"2": "TEAS Study Manual",
+				"3": "TEAS Practice Assessments",
+				"4": "Test of Essential Academic Skills (TEAS)"
 			},
     {
 			"adm_studs": [
 					{
-						"cats": "adm_studs_1"
+						"cats": "adm_studs_1 mt_tutorials"
 					},
 					{
-						"cats": "adm_studs_2"
+						"cats": "adm_studs_2 mt_books-eBooks "
 					},
 					{
-						"cats": "adm_studs_3"
+						"cats": "adm_studs_3 mt_assessments "
+					},
+					{
+						"cats": "adm_studs_4  mt_prediction"
 					}
 				]
 			},
    {
-      "2. Clinical Experience": "_____________ ORDER _____________"
+      "2. From Students to Licensed Nurse": "_____________ ORDER _____________"
 		},
 			{
-				"1": "Nurse’s Touch",
-				"2": "Real Life Clinical Reasoning Scenarios"
-			},
-    {
-			"clinical_exp": [
-					{
-						"cats": "clinical_1"
-					},
-					{
-						"cats": "clinical_2"
-					}
-				]
-			},
-   {
-      "3. From Students to Licensed Nurse": "_____________ ORDER _____________"
-		},
-			{
-				"1": "Sigma Theta Tau Nurse Manager Certificate",
-				"2": "Skills Modules"
+				"1": "Real Life Clinical Reasoning Scenarios",
+				"2": "Nurse’s Touch",
+				"3": "Sigma Theta Tau Nurse Manager Certificate"
 			},
     {
 			"stud_to_nurse": [
 					{
-						"cats": "stud_to_nurse_1"
+						"cats": "stud_to_nurse_1 adult-medical-surgical maternal-newborn nursing-care-of-children mental-health nursing-skills  mt_simulation"
 					},
 					{
-						"cats": "stud_to_nurse_1"
+						"cats": "stud_to_nurse_2  professionalism leadership-management communications wellness-self-care-for-nurses nursing-informatics-technology nursing-skills  mt_simulation"
+					},
+					{
+						"cats": "stud_to_nurse_3 leadership-management"
 					}
 				]
 			},
@@ -60,28 +51,20 @@
       "4. NCLEX Preparedness": "_____________ ORDER _____________"
 		},
 			{
-				"1": "Comprehensive Predictor",
-				"2": "ATI Pulse",
-				"3": "NCLEX Live Review",
-				"4": "Capstone Comprehensive Live Review",
-				"5": "Virtual ATI"
+				"1": "Comprehensive Live NCLEX Review",
+				"2": "Customized Live NCLEX Review",
+				"3": "Virtual-ATI NCLEX Review"
 			},
     {
 			"nclex_Prep": [
 					{
-						"cats": "nclex_Prep_1"
+						"cats": "nclex_Prep_1 fundamentals adult-medical-surgical mental-health maternal-newborn nursing-care-of-children pharmacology leadership-management community-health  mt_events-seminars"
 					},
 					{
-						"cats": "nclex_Prep_2"
+						"cats": "nclex_Prep_2 fundamentals adult-medical-surgical mental-health maternal-newborn nursing-care-of-children pharmacology leadership-management community-health  mt_events-seminars"
 					},
 					{
-						"cats": "nclex_Prep_3"
-					},
-					{
-						"cats": "nclex_Prep_4"
-					},
-					{
-						"cats": "nclex_Prep_5"
+						"cats": "nclex_Prep_3 fundamentals adult-medical-surgical mental-health maternal-newborn nursing-care-of-children pharmacology leadership-management community-health"
 					}
 				]
 			},
@@ -89,20 +72,28 @@
       "5. Faculty Development": "_____________ ORDER _____________"
 		},
 			{
-				"1": "ATI Academy",
-				"2": "ATI Consulting Services",
-				"3": "Educatingnurses.Com With Dr. Patricia Benner"
+				"1": "ATI Consulting Solutions",
+				"2": "ATI Nurse Educator Essentials",
+				"3": "National Nurse Educator Summit",
+				"4": "EducatingNurses.com",
+				"5": "ATI Academy"
 			},
     {
 			"faculty_dev": [
 					{
-						"cats": "faculty_dev_1"
+						"cats": "faculty_dev_1 mt_events-seminars"
 					},
 					{
-						"cats": "faculty_dev_2"
+						"cats": "faculty_dev_2 mt_events-seminars"
 					},
 					{
 						"cats": "faculty_dev_3"
+					},
+					{
+						"cats": "faculty_dev_4"
+					},
+					{
+						"cats": "faculty_dev_5"
 					}
 				]
 			},
@@ -110,32 +101,77 @@
       "6. Learning Core Curriculum": "_____________ ORDER _____________"
 		},
 			{
-				"1": "Content Mastery Series",
-				"2": "Skills Modules",
-				"3": "Pharmacology Made Easy",
-				"4": "Dosage Calculations And Safe Medication Administration",
-				"5": "Quiz Bank",
-				"6": "Nurse Logic"
+				"1": "Ati Pulse",
+				"2": "Content Mastery Series",
+				"3": "Skills Modules",
+				"4": "Pharmacology Made Easy",
+				"5": "Dosage Calculations And Safe Medication Administration",
+				"6": "Quiz Bank Learning System",
+				"7": "Nurse Logic",
+				"8": "Learning Strategies",
+				"9": "Capstone Comprehensive Content Review",
+
+				"10": "Comprehensive Predictor",
+				"11": "Video Case Studies",
+				"12": "Custom Assessment Builder",
+				"13": "Active Stack pharmacology Flashcards",
+				"14": "Critical Thinking Assessment",
+				"15": "Self Assessment Inventory",
+				"16": "Anatomy & Physiology assessments",
+				"17": "Test Taking Strategies Seminar"
 			},
     {
 			"learning_core": [
 					{
-						"cats": "learning_core_1"
+						"cats": "learning_core_1 mt_prediction"
 					},
 					{
-						"cats": "learning_core_2"
+						"cats": "learning_core_2 pharmacology adult-medical-surgical fundamentals maternal-newborn nursing-care-of-children mental-health community-health nutrition leadership-management communications  mt_assessments"
 					},
 					{
-						"cats": "learning_core_3"
+						"cats": "learning_core_3 adult-medical-surgical fundamentals nursing-care-of-children nutrition nursing-skills  mt_tutorials"
 					},
 					{
-						"cats": "learning_core_4"
+						"cats": "learning_core_4 pharmacology  mt_tutorials"
 					},
 					{
-						"cats": "learning_core_5"
+						"cats": "learning_core_5 pharmacology  mt_tutorials"
 					},
 					{
-						"cats": "learning_core_6"
+						"cats": "learning_core_6 pharmacology adult-medical-surgical fundamentals maternal-newborn nursing-care-of-children mental-health community-health leadership-management communcations  mt_quiz-banks"
+					},
+					{
+						"cats": "learning_core_7 nursing-skills  mt_tutorials"
+					},
+					{
+						"cats": "learning_core_8 student-skills  mt_books-eBooks"
+					},
+					{
+						"cats": "learning_core_9 fundamentals pharmacology adult-medical-surgical maternal-newborn nursing-care-of-children mental-health leadership-management community-health"
+					},
+					{
+						"cats": "learning_core_10  mt_prediction  mt_assessments"
+					},
+					{
+						"cats": "learning_core_11 pharmacology adult-medical-surgical fundamentals maternal-newborn nursing-care-of-children mental-health community-health nutrition leadership-management  mt_simulation"
+					},
+					{
+						"cats": "learning_core_12 mt_quiz-banks"
+					},
+					{
+						"cats": "learning_core_13 pharmacology mt_tutorials"
+					},
+					{
+						"cats": "learning_core_14 student-skills  mt_assessments"
+					},
+					{
+						"cats": "learning_core_15 student-skills  mt_assessments"
+					},
+					{
+						"cats": "learning_core_16 anatomy-physiology  mt_assessments"
+					},
+					{
+						"cats": "learning_core_17 student-skills  mt_events-seminars"
 					}
 				]
 			}

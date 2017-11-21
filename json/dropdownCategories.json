@@ -14,10 +14,7 @@
 					"value": ".learning-core-curriculum, .not-mason",
 					"text": "Learning core curriculum"
 				},
-				{
-					"value": ".clinical-Experience, .not-mason",
-					"text": "Clinical Experience"
-				},
+
 				{
 					"value": ".nCLEX-Preparedness, .not-mason",
 					"text": "NCLEX Preparedness"
@@ -97,6 +94,10 @@
 				{
 					"value": ".nursing-informatics-technology",
 					"text": "Nursing Informatics + Technology"
+				},
+				{
+					"value": ".anatomy-physiology",
+					"text": "Anatomy & Physiologyy"
 				}
 			]
 		},
@@ -106,32 +107,36 @@
 		{
 			"media_drop": [
 			  {
-					"value": ".tutorials",
+					"value": ".mt_tutorials",
 					"text": "Tutorials"
 				},
 				{
-					"value": ".books-eBooks",
+					"value": ".mt_books-eBooks",
 					"text": "Books/eBooks"
 				},
 				{
-					"value": ".quiz-banks",
+					"value": ".mt_quiz-banks",
 					"text": "Quiz Banks"
 				},
 				{
-					"value": ".assessments",
+					"value": ".mt_assessments",
 					"text": "Practice Assessments"
 				},
 				{
-					"value": ".focused-review",
+					"value": ".mt_focused-review",
 					"text": "Focused Review"
 				},
 				{
-					"value": ".prediction",
+					"value": ".mt_prediction",
 					"text": "Prediction"
 				},
 				{
-					"value": ".simulation",
+					"value": ".mt_simulation",
 					"text": "Simulation"
+				},
+				{
+					"value": ".mt_events-seminars",
+					"text": "Live Events/Seminars"
 				}
 			]
 		}
