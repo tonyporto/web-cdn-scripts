@@ -118,7 +118,11 @@
 				"14": "Critical Thinking Assessment",
 				"15": "Self Assessment Inventory",
 				"16": "Anatomy & Physiology assessments",
-				"17": "Test Taking Strategies Seminar"
+				"17": "Test Taking Strategies Seminar",
+				
+				"18": "ATI Complete Partnership",
+				"19": "Review Modules",
+				"20": "ATI Champions"
 			},
     {
 			"learning_core": [
@@ -172,6 +176,15 @@
 					},
 					{
 						"cats": "learning_core_17 student-skills  mt_events-seminars"
+					},
+					{
+						"cats": "learning_core_18  not_in_store"
+					},
+					{
+						"cats": "learning_core_19  not_in_store"
+					},
+					{
+						"cats": "learning_core_20 not_in_store"
 					}
 				]
 			}
