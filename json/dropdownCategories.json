@@ -7,6 +7,10 @@
 		{
 			"outcomes_drop": [
 			  {
+					"value": "*, .not-mason",
+					"text": "All Outcomes"
+				},			
+			  {
 					"value": ".admitting-the-right-students, .not-mason",
 					"text": "Admitting the right students"
 				},
@@ -35,6 +39,10 @@
 		},
 		{
 			"content_drop": [
+			  {
+					"value": ".all_ca",
+					"text": "All Content Areas"
+				},
 			  {
 					"value": ".pharmacology",
 					"text": "Pharmacology"
@@ -106,6 +114,10 @@
 		},
 		{
 			"media_drop": [
+			  {
+					"value": ".all_mt",
+					"text": "All Media Types"
+				},
 			  {
 					"value": ".mt_tutorials",
 					"text": "Tutorials"
