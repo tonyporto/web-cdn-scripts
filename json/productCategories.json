@@ -178,13 +178,13 @@
 						"cats": "learning_core_17 student-skills  mt_events-seminars"
 					},
 					{
-						"cats": "learning_core_18  not_in_store"
+						"cats": "learning_core_18  display-none invisible not_in_store "
 					},
 					{
-						"cats": "learning_core_19  not_in_store why"
+						"cats": "learning_core_19  display-none invisible not_in_store"
 					},
 					{
-						"cats": "learning_core_20 not_in_store"
+						"cats": "learning_core_20 display-none invisible not_in_store"
 					}
 				]
 			}
