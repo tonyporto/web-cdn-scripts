@@ -1248,9 +1248,6 @@ th,
 .invisible {
 	visibility: hidden;
 }
-.visible {
-	visibility: visible;
-}
 .text-hide {
 	font: 0/0 a;
 	color: transparent;
@@ -1541,7 +1538,7 @@ kbd,
 
 
 
-[class*="icon-"] {
+[class*=icon-] {
 	display: inline-block;
 	font-size: inherit;
 	text-rendering: auto;
@@ -1550,7 +1547,7 @@ kbd,
 }
 .ico-b:before,
 .ico-a:after,
-[class*="icon-"]:before {
+[class*=icon-]:before {
 	font: normal normal normal 14px/1 FontAwesome;
 }
 
@@ -1831,7 +1828,7 @@ p,
 .line-height-2-3 {
 	line-height: 2.3;
 }
-.form-checkbox label,
+.form-checkbox label:not([class*=line-height-]),
 .line-height-2 {
 	line-height: 2;
 }
@@ -2402,6 +2399,9 @@ p,
 .col-sm-1 {
 	width: 8.33333333%;
 }
+.col-sm-auto {
+	width: auto !important;
+}
 .col-sm-offset-12 {
 	margin-left: 100%;
 }
@@ -2616,6 +2616,9 @@ p,
 }
 .col-md-1 {
 	width: 8.33333333%;
+}
+.col-md-auto {
+	width: auto !important;
 }
 .col-md-offset-12 {
 	margin-left: 100%;
