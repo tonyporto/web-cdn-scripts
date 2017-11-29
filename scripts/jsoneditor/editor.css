@@ -182,8 +182,11 @@ div.jsoneditor-value.jsoneditor-highlight-active:hover {
 div.jsoneditor-value.jsoneditor-string {
   color: #008000;
 }
-
-
+/*
+tbody > tr > td button:before {
+  color: #1a1a1a;
+}
+*/
 div.jsoneditor-value.jsoneditor-array {
   color: #808080;
 }

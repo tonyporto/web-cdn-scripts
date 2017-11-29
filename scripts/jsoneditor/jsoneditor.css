@@ -4,22 +4,19 @@
 	font-weight:normal;
 	font-style:normal;
 }
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
 /* ========================================================================= *
  * START CSS RESET
  * ========================================================================= */
 html {
-    overflow-y: scroll;
-    font-size: 100%; /* 1 */
-    -ms-text-size-adjust: 100%; /* 2 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+	overflow: hidden;
 	height: 100%;
 }
 body {
 	font: 16px/20px Roboto, sans-serif;
 	font-family: 'Roboto', sans-serif;
-
-    line-height: 1;
-    overflow: hidden;
+  line-height: 1;
+  overflow-y: scroll;
 	color: #666666;
 	min-height: 100%;
 }
@@ -256,10 +253,18 @@ div.jsoneditor-value p {
 div.jsoneditor-value {
   word-break: break-word;
 }
-
+div.jsoneditor-value.jsoneditor-array {
+  color: #808080;
+}
+div.jsoneditor-value.jsoneditor-object,
+div.jsoneditor-value.jsoneditor-array,
 div.jsoneditor-readonly {
   min-width: 16px;
-  color: gray;
+}
+div.jsoneditor-readonly, 
+div.jsoneditor-value.jsoneditor-object, 
+div.jsoneditor-tree button:before {
+    color: #3883fa;
 }
 
 div.jsoneditor-empty {
@@ -356,11 +361,7 @@ div.jsoneditor-value.jsoneditor-string {
   color: #008000;
 }
 
-div.jsoneditor-value.jsoneditor-object,
-div.jsoneditor-value.jsoneditor-array {
-  min-width: 16px;
-  color: #808080;
-}
+
 
 div.jsoneditor-value.jsoneditor-number {
   color: #ee422e;
@@ -514,7 +515,6 @@ div.jsoneditor td.jsoneditor-tree {
   vertical-align: top;
 }
 
-div.jsoneditor-field,
 div.jsoneditor-value,
 div.jsoneditor td,
 div.jsoneditor th,
@@ -525,6 +525,12 @@ div.jsoneditor textarea,
   color: #1A1A1A;
 }
 
+div.jsoneditor-field,
+.jsoneditor-readonly, 
+.jsoneditor-value.jsoneditor-object {
+	font-family: 'Source Sans Pro', sans-serif !important;
+	font-weight: 700;
+}
 /* popover */
 
 .jsoneditor-schema-error {
