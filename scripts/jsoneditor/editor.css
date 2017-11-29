@@ -5,10 +5,12 @@ html {
 	height: 100%;
 }
 body {
-	overflow: hidden;
-	margin: 0;
-	min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    min-height: 100%;
 }
+
 .jsoneditor-expandable:nth-child(even) {
 	background-color: #fafafa;
 }
@@ -17,8 +19,9 @@ body {
 	padding: 8px 16px;
 	white-space: nowrap;
 	-webkit-user-select: none;
-	border-radius: 6px;
+	border-radius: 0;
 	display: inline-block;
+	box-sizing: border-box;
 }
 .button:focus,
 .button:hover {
@@ -34,8 +37,12 @@ body {
 .button:active{
 	border-spacing: 0 !important;
 }
-
-
+.jsoneditor-field {
+	font-weight: bold;
+}
+tr.jsoneditor-expandable {
+	font-weight: bolder;
+}
 #main-container {
 	width: 90%;
 	max-width: 1000px;
@@ -73,7 +80,6 @@ div.jsoneditor-value.jsoneditor-empty::after {
 div.jsoneditor-field.jsoneditor-empty::after {
   content: "field";
 }
-
 div.jsoneditor-value.jsoneditor-empty::after {
   content: "value";
 }
@@ -105,7 +111,9 @@ div.jsoneditor-value.jsoneditor-highlight-active,
 div.jsoneditor-value.jsoneditor-highlight-active:focus,
 div.jsoneditor-value.jsoneditor-highlight-active:hover {
   background-color: #ffee00;
+/*
   border: 1px solid #ffc700;
+*/
   border-radius: 2px;
 }
 
