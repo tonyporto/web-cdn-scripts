@@ -296,7 +296,7 @@ div.jsoneditor-tree button[class*=jsoneditor-]:before {
 }
 div.jsoneditor-readonly,
 div.jsoneditor-value.jsoneditor-object,
-div.jsoneditor-tree button:not(.color-array):before {
+div.jsoneditor-tree:not(.color-array-btn) button:not(.color-array):before {
 	color:#3883fa;
 }
 div.jsoneditor-field.jsoneditor-empty::after {
