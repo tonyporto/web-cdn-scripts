@@ -8,7 +8,7 @@
 /* ========================================================================= *
  * START CSS RESET
  * ========================================================================= */
-html {
+html, body {
 	overflow: hidden;
 	height: 100%;
 }
@@ -16,12 +16,13 @@ body {
 	font: 16px/20px Roboto, sans-serif;
 	font-family: 'Roboto', sans-serif;
   line-height: 1;
-  overflow-y: scroll;
 	color: #666666;
-	min-height: 100%;
+  margin: 0;
+  min-height: 100%;
 }
-
-body,
+body {
+  overflow-y: scroll;
+}
 html,
 nav,
 nav ul,
