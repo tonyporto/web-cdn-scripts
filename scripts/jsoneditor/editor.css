@@ -1,18 +1,24 @@
 @font-face {
-	font-family: 'FontAwesome';
+	font-family: "FontAwesome";
 	src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff") format('woff');
 	font-weight:normal;
 	font-style:normal;
 }
 @import url("http://jsoneditoronline.org/app.min.css");
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
 
 .jsoneditor-field,
 tr.jsoneditor-expandable {
 	font-family: 'Source Sans Pro', sans-serif;
 }
-[class*=ico-]:before {
+[class*=icon_] {
 	font: normal normal normal 14px/1 FontAwesome;
+}
+.jsoneditor-field {
+	font-weight: 700;
+}
+.jsoneditor-expandable {
+	font-weight: 900;
 }
 html {
 	overflow-y: scroll;
@@ -46,12 +52,7 @@ body {
 .button:active{
 	border-spacing: 0 !important;
 }
-.jsoneditor-field {
-	font-weight: 700;
-}
-tr.jsoneditor-expandable {
-	font-weight: 900;
-}
+
 #main-container {
 	width: 90%;
 	max-width: 1000px;
@@ -133,23 +134,23 @@ div.jsoneditor-value.jsoneditor-highlight-active:hover {
 /* ================================================================== *
  * TEXT COLOR
  * ================================================================== */
-.ico-chrome,
+.icon_chrome,
 .color-green {
 	color: #3cba54
 }
 .color-yellow {
 	color: #f4c20d 
 }
-.ico-ie,
+.icon_ie,
 .color-blue {
 	color: #00BCF2;
 }
-.ico-firefox,
+.icon_firefox,
 .color-orange {
 	color: #E55B0A;
 }
 
-.ico-opera,
+.icon_opera,
 .color-red {
 	color: #CC0F16;
 }
