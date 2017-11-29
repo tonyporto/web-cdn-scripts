@@ -254,6 +254,8 @@ div.jsoneditor-value p {
 div.jsoneditor-value {
   word-break: break-word;
 }
+
+div.jsoneditor-tree.color-array-btn button:before,
 div.jsoneditor-tree button.color-array:before,
 div.jsoneditor-value.jsoneditor-array {
   color: #808080;
