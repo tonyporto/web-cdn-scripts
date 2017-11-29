@@ -1,12 +1,11 @@
+@import url("http://jsoneditoronline.org/app.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
 @font-face {
 	font-family: "FontAwesome";
 	src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff") format('woff');
 	font-weight:normal;
 	font-style:normal;
 }
-@import url("http://jsoneditoronline.org/app.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900");
-
 .jsoneditor-field,
 tr.jsoneditor-expandable {
 	font-family: 'Source Sans Pro', sans-serif;
