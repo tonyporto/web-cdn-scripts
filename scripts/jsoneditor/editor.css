@@ -1,5 +1,14 @@
 @import url("http://jsoneditoronline.org/app.min.css");
 
+html {
+	overflow-y: scroll;
+	height: 100%;
+}
+body {
+	overflow: hidden;
+	margin: 0;
+	min-height: 100%;
+}
 .jsoneditor-expandable:nth-child(even) {
 	background-color: #fafafa;
 }
@@ -35,6 +44,9 @@
 }
 .jsoneditor > div.jsoneditor-menu {
 	background-color: #3883fa !important;
+}
+div.jsoneditor, div.jsoneditor-menu {
+	border-color: #fafafa !important;
 }
 .jsoneditor-expandable:nth-child(even) {
 	background-color: #fafafa;
