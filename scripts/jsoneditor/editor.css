@@ -13,6 +13,10 @@ tr.jsoneditor-expandable {
 [class*=icon_]:before {
 	font: normal normal normal 14px/1 FontAwesome;
 }
+
+.jsoneditor-readonly,
+.jsoneditor-value.jsoneditor-object,
+div.jsoneditor-tree button:before,
 .jsoneditor-field {
 	font-weight: 700;
 }
@@ -24,7 +28,6 @@ html {
 	height: 100%;
 }
 body {
-    
     overflow-y: scroll;
     margin: 0;
     min-height: 100%;
@@ -52,6 +55,19 @@ body {
 	border-spacing: 0 !important;
 }
 
+div.jsoneditor-tree button.jsoneditor-collapsed,
+div.jsoneditor-tree button.jsoneditor-expanded {background:none}
+div.jsoneditor-tree button.jsoneditor-collapsed:before {
+  content: "\f0da";
+}
+div.jsoneditor-tree button.jsoneditor-expanded:before {
+  content: "\f0d7";
+}
+.jsoneditor-readonly,
+.jsoneditor-value.jsoneditor-object,
+div.jsoneditor-tree button:before {
+color:#3883fa;
+}
 #main-container {
 	width: 90%;
 	max-width: 1000px;
@@ -133,6 +149,10 @@ div.jsoneditor-value.jsoneditor-highlight-active:hover {
 /* ================================================================== *
  * TEXT COLOR
  * ================================================================== */
+div.jsoneditor-tree > .jsoneditor-readonly,
+div.jsoneditor-value .jsoneditor-object {
+	
+}
 .icon_chrome,
 .color-green {
 	color: #3cba54
