@@ -1,5 +1,17 @@
+@font-face {
+	font-family: 'FontAwesome';
+	src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff") format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
 @import url("http://jsoneditoronline.org/app.min.css");
-
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900');
+body, * {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+[class*=ico-]:before {
+	font: normal normal normal 14px/1 FontAwesome;
+}
 html {
 	overflow-y: scroll;
 	height: 100%;
@@ -25,7 +37,6 @@ body {
 	background-image: -webkit-linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
 	background-image: -moz-linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
 	background-image: -ms-linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
-	background-image: -o-linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
 	background-image: linear-gradient(rgba(255,255,255,.15) 99%, rgba(0,0,0,.1) 1%, rgba(0,0,0,.15));
 }
 .button,
@@ -34,10 +45,10 @@ body {
 	border-spacing: 0 !important;
 }
 .jsoneditor-field {
-	font-weight: bold;
+	font-weight: 700;
 }
 tr.jsoneditor-expandable {
-	font-weight: bolder;
+	font-weight: 900;
 }
 #main-container {
 	width: 90%;
