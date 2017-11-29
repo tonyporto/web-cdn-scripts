@@ -690,30 +690,6 @@ div.jsoneditor-tree .jsoneditor-schema-error {
   }
 }
 
-/*@-webkit-keyframes move-up {*/
-
-/*from   { bottom: 24px; }*/
-
-/*to { bottom: 32px; }*/
-
-/*}*/
-
-/*@-moz-keyframes move-up {*/
-
-/*from   { bottom: 24px; }*/
-
-/*to { bottom: 32px; }*/
-
-/*}*/
-
-/*@-ms-keyframes move-up {*/
-
-/*from   { bottom: 24px; }*/
-
-/*to { bottom: 32px; }*/
-
-/*}*/
-
 /* JSON schema errors displayed at the bottom of the editor in mode text and code */
 
 .jsoneditor .jsoneditor-text-errors {
