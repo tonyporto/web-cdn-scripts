@@ -6,7 +6,9 @@
 }
 @import url("http://jsoneditoronline.org/app.min.css");
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900');
-body, * {
+
+.jsoneditor-field,
+tr.jsoneditor-expandable {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 [class*=ico-]:before {
