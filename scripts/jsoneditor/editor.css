@@ -56,17 +56,25 @@ body {
 }
 
 div.jsoneditor-tree button.jsoneditor-collapsed,
-div.jsoneditor-tree button.jsoneditor-expanded {background:none}
+div.jsoneditor-tree button.jsoneditor-expanded {
+	display: inline-block;
+	font-family: FontAwesome;
+	background:none;
+}
 div.jsoneditor-tree button.jsoneditor-collapsed:before {
   content: "\f0da";
 }
 div.jsoneditor-tree button.jsoneditor-expanded:before {
   content: "\f0d7";
 }
-.jsoneditor-readonly,
-.jsoneditor-value.jsoneditor-object,
+div.jsoneditor-tree button[class*=jsoneditor-]:before {
+    font-size: 16px;
+    font-weight: normal !important;
+}
+div.jsoneditor-readonly,
+div.jsoneditor-value.jsoneditor-object,
 div.jsoneditor-tree button:before {
-color:#3883fa;
+	color:#3883fa;
 }
 #main-container {
 	width: 90%;
