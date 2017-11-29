@@ -33,7 +33,9 @@
 	margin: 0 auto;
 	padding: 20px 0 80px;
 }
-
+div > div.jsoneditor-menu {
+	background-color: #3883fa !important;
+}
 .jsoneditor-expandable:nth-child(even) {
 	background-color: #fafafa;
 }
