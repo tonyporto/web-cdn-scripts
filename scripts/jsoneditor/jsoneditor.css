@@ -254,7 +254,7 @@ div.jsoneditor-value p {
 div.jsoneditor-value {
   word-break: break-word;
 }
-.color-array:before,
+div.jsoneditor-tree button.color-array:before,
 div.jsoneditor-value.jsoneditor-array {
   color: #808080;
 }
@@ -263,11 +263,7 @@ div.jsoneditor-value.jsoneditor-array,
 div.jsoneditor-readonly {
   min-width: 16px;
 }
-div.jsoneditor-readonly, 
-div.jsoneditor-value.jsoneditor-object, 
-div.jsoneditor-tree button:before {
-    color: #3883fa;
-}
+
 
 div.jsoneditor-empty {
   border-color: lightgray;
