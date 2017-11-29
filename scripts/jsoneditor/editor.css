@@ -10,7 +10,7 @@
 tr.jsoneditor-expandable {
 	font-family: 'Source Sans Pro', sans-serif !important;
 }
-[class*=icon_] {
+[class*=icon_]:before {
 	font: normal normal normal 14px/1 FontAwesome;
 }
 .jsoneditor-field {
@@ -20,11 +20,12 @@ tr.jsoneditor-expandable {
 	font-weight: 900;
 }
 html {
-	overflow-y: scroll;
+	overflow: hidden;
 	height: 100%;
 }
 body {
-    overflow: hidden;
+    
+    overflow-y: scroll;
     margin: 0;
     min-height: 100%;
 }
