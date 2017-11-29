@@ -52,8 +52,9 @@ tr.jsoneditor-expandable {
 .jsoneditor > div.jsoneditor-menu {
 	background-color: #3883fa !important;
 }
-div.jsoneditor, div.jsoneditor-menu {
-	border-color: #fafafa !important;
+div.jsoneditor, 
+div.jsoneditor-menu {
+	border-width: 0;
 }
 .jsoneditor-expandable:nth-child(even) {
 	background-color: #fafafa;
