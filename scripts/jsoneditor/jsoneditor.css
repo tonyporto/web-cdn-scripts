@@ -250,7 +250,7 @@ div.jsoneditor-tree button.jsoneditor-expanded:before {
   content: "\f0d7";
 }
 .jsoneditor-tree.color-array-btn > button.jsoneditor-collapsed:before {
-  content: "\f138";;
+  content: "\f138";
 }
 .jsoneditor-tree.color-array-btn > button.jsoneditor-expanded:before {
   content: "\f13a";
@@ -270,7 +270,7 @@ div.jsoneditor-value.jsoneditor-array {
   color: #1a1a1a;
 }
 
-.jsoneditor-tree:not(.color-array-btn) button.jsoneditor-expanded:before {
+.jsoneditor-tree:not(.color-array-btn) button.jsoneditor-expanded:focus:before {
   color: #fff;
   background-color:#ee422e;
 }
