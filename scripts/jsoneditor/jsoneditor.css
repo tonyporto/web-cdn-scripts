@@ -125,35 +125,6 @@ bold {
 .size22 {
 	font-size: 1.375em;
 }
-
-.size20 {
-	font-size: 20px;
-}
-
-
-.size18 {
-	font-size: 18px;
-}
-
-.size16 {
-	font-size: 1em;
-}
-.panel,
-.size14 {
-	font-size: 14px;
-}
-.size12 {
-	font-size: 12px;
-}
-
-.size11 {
-	font-size: 11px;
-}
-
-.size10 {
-	font-size: 10px;
-}
-
 .button {
 	color: #fff;
 	padding: 8px 16px;
@@ -209,9 +180,6 @@ bold {
     min-height: 350px;
 	height: auto;
 }
-
-
-
 .jsoneditor-expandable:nth-child(even) {
 	background-color: #fafafa;
 }
@@ -222,7 +190,6 @@ div.jsoneditor-tree table.jsoneditor-tree,
 div.jsoneditor-menu {
 	width: 100%;
 }
-
 div.jsoneditor,
 div.jsoneditor-outer,
 div.jsoneditor-tree,
@@ -230,7 +197,6 @@ textarea.jsoneditor-text {
   width: 100%;
   height: 100%;
 }
-
 
 div.jsoneditor-field,
 div.jsoneditor-value,
@@ -245,7 +211,6 @@ div.jsoneditor-readonly {
 }
 
 /* adjust margin of p elements inside editable divs, needed for Opera, IE */
-
 div.jsoneditor-field p,
 div.jsoneditor-value p {
   margin: 0;
@@ -255,20 +220,16 @@ div.jsoneditor-value {
   word-break: break-word;
 }
 
-
 div.jsoneditor-value.jsoneditor-object,
 div.jsoneditor-value.jsoneditor-array,
 div.jsoneditor-readonly {
   min-width: 16px;
 }
-
-
 div.jsoneditor-empty {
   border-color: lightgray;
   border-style: dashed;
   border-radius: 2px;
 }
-
 div.jsoneditor-field.jsoneditor-empty::after,
 div.jsoneditor-value.jsoneditor-empty::after {
   pointer-events: none;
@@ -288,6 +249,12 @@ div.jsoneditor-tree button.jsoneditor-collapsed:before {
 div.jsoneditor-tree button.jsoneditor-expanded:before {
   content: "\f0d7";
 }
+.jsoneditor-tree.color-array-btn > button.jsoneditor-collapsed:before {
+  content: "\f138";;
+}
+.jsoneditor-tree.color-array-btn > button.jsoneditor-expanded:before {
+  content: "\f13a";
+}
 div.jsoneditor-tree button[class*=jsoneditor-]:before {
     font-size: 16px;
     font-weight: normal !important;
@@ -300,12 +267,16 @@ div.jsoneditor-value.jsoneditor-object,
 .jsoneditor-tree.color-array-btn > button:before,
 div.jsoneditor-tree button.color-array:before,
 div.jsoneditor-value.jsoneditor-array {
-  color: #808080;
+  color: #1a1a1a;
+}
+
+.jsoneditor-tree:not(.color-array-btn) button.jsoneditor-expanded:before {
+  color: #fff;
+  background-color:#ee422e;
 }
 div.jsoneditor-field.jsoneditor-empty::after {
   content: "field";
 }
-
 div.jsoneditor-value.jsoneditor-empty::after {
   content: "value";
 }
@@ -363,7 +334,7 @@ div.jsoneditor-value.jsoneditor-highlight-active:hover {
 	color: #3cba54
 }
 .color-yellow {
-	color: #f4c20d 
+	color: #f4c20d
 }
 .ico-ie,
 .color-blue {
@@ -378,21 +349,15 @@ div.jsoneditor-value.jsoneditor-highlight-active:hover {
 .color-red {
 	color: #CC0F16;
 }
-
 div.jsoneditor-value.jsoneditor-string {
   color: #008000;
 }
-
-
-
 div.jsoneditor-value.jsoneditor-number {
   color: #ee422e;
 }
-
 div.jsoneditor-value.jsoneditor-boolean {
   color: #ff8c00;
 }
-
 div.jsoneditor-value.jsoneditor-null {
   color: #004ED0;
 }
@@ -419,11 +384,9 @@ div.jsoneditor-mode-form tr.jsoneditor-expandable td.jsoneditor-tree {
 div.jsoneditor-tree button.jsoneditor-collapsed {
   background-position: 0 -48px;
 }
-
 div.jsoneditor-tree button.jsoneditor-expanded {
   background-position: 0 -72px;
 }
-
 div.jsoneditor-tree button.jsoneditor-contextmenu {
   background-position: -48px -72px;
 }
@@ -548,7 +511,7 @@ div.jsoneditor textarea,
 }
 
 div.jsoneditor-field,
-.jsoneditor-readonly, 
+.jsoneditor-readonly,
 .jsoneditor-value.jsoneditor-object {
 	font-family: 'Source Sans Pro', sans-serif !important;
 	font-weight: 700;
