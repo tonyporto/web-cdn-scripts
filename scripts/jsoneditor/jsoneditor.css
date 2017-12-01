@@ -269,10 +269,11 @@ div.jsoneditor-tree button.color-array:before,
 div.jsoneditor-value.jsoneditor-array {
   color: #1a1a1a;
 }
-
+.jsoneditor-tree:not(.color-array-btn) button.jsoneditor-expanded:focus {
+  background-color:#ee422e;
+}
 .jsoneditor-tree:not(.color-array-btn) button.jsoneditor-expanded:focus:before {
   color: #fff;
-  background-color:#ee422e;
 }
 div.jsoneditor-field.jsoneditor-empty::after {
   content: "field";
