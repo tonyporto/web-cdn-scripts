@@ -275,6 +275,12 @@ div.jsoneditor-value.jsoneditor-array {
 .jsoneditor-tree:not(.color-array-btn) button.jsoneditor-expanded:focus:before {
   color: #fff;
 }
+.jsoneditor-tree.color-array-btn button.jsoneditor-expanded:focus {
+	background-color: transparent
+}
+.jsoneditor-tree.color-array-btn button.jsoneditor-expanded:focus:before {
+  color: #1a1a1a;
+}
 div.jsoneditor-field.jsoneditor-empty::after {
   content: "field";
 }
