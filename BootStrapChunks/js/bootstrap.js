@@ -340,6 +340,41 @@ function scrollbarWidth() {
     return widthNoScroll - widthWithScroll;
 }
 /* ----------------------------------------------------------- *
+ * MODAL OUTSIDE SCROLLING & KEYBOARD
+ * ----------------------------------------------------------- */
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventScrolling(e) {
+  e = e || window.event;
+  if (e.preventScrolling)
+      e.preventScrolling(); e.returnValue = false;  
+}
+
+function preventScrollingForScrollKeys(e) {
+	if (keys[e.keyCode]) {
+		preventScrolling(e); return false;
+	}
+}
+
+function disableScroll() {
+  if (window.addEventListener) // older FF
+	window.addEventListener('DOMMouseScroll', preventScrolling, false);
+  window.onwheel = preventScrolling; // modern standard
+  window.onmousewheel = document.onmousewheel = preventScrolling; // older browsers, IE
+  window.ontouchmove  = preventScrolling; // mobile
+  document.onkeydown  = preventScrollingForScrollKeys;
+}
+
+function enableScroll() {
+	if (window.removeEventListener)
+		window.removeEventListener('DOMMouseScroll', preventScrolling, false);
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+} 
+ 
+/* ----------------------------------------------------------- *
  * MAKE MODAL APPEAR ON CENTER OF SCREEN
  * ----------------------------------------------------------- */
 function centerModal() {
@@ -368,8 +403,10 @@ function centerModal() {
 
 			var modalWindowId = $(this).attr("data-target");
 
-				$("html").css("overflow-y", "scroll").find("body").css({"height": ($(window).height() - 1) + 'px', "overflow": "hidden"});
 				$(".modal" + "."+modalWindowId).modal().attr("aria-hidden","false")
+			
+				//DISABLE SCROLL
+				disableScroll()
 
 				mDialog.each(function() {
 
@@ -384,6 +421,9 @@ function centerModal() {
 						var modalHcss = modCss + "top:1.5vh;margin-top:auto;height:90vh";
 							child.attr("data-child","resize").attr("style", modalHcss)
 
+							//RE-ENABLE SCROLLING
+							enableScroll()
+							
 						} else {
 
 						var modalHcss = modCss + "top:50%;margin-top:"+ modalHeight +"px";
@@ -391,14 +431,19 @@ function centerModal() {
 						if (!$(this)[0].hasAttribute("data-child")) {
 							$(this).attr("style", modalHcss)
 						}
+						
 					}
+
+					
 					//CLOSE ON ANY CLICK OUTSIDE ON CONTENT AREA
 					$(document).on('click', 'html', function(e){
 						if ($(e.target).is("[data-dismiss=modal],div:not(.modal-dialog *)")) {
 
 							var mdl = "[data-modal-lock]";
-
 							$(".modal:not("+ mdl +")").modal('hide').attr("aria-hidden","true")
+							
+							//RE-ENABLE SCROLLING
+							enableScroll()
 
 							setTimeout(function(){
 								//EXCLUDE MODAL LOCK
@@ -413,9 +458,16 @@ function centerModal() {
 
 						}
 					});
-					//CLOSE ON ANY CLICK OUTSIDE ON CONTENT AREA
-				})
-		});
+					//CLOSE ON ANY CLICK OUTSIDE ON CONTENT AREA	
+
+	
+	//END EACH
+	})			
+	//END EACH				
+
+				
+		});				
+
 	}
 }
 
@@ -433,8 +485,16 @@ $(window).resize(function() {
 $('.modal[data-modal-lock]').on('hide.bs.modal', function (e) {
 	e.preventDefault();
 	e.stopPropagation();
-	return false;
+	return false;	
 })
+
+/*
+document.addEventListener("click",handler,true);
+function handler(e){
+    if(e.target.className!=="data-close")
+    e.stopPropagation()
+}
+*/
 /* ----------------------------------------------------------- *
  * Bootstrap: ALERT DISMISS v3.3.7
  * ----------------------------------------------------------- */
