@@ -1,0 +1,27 @@
+[
+  {
+	  "label": "Manchester City", 
+		"value": "Manchester City" 
+	},
+	{ "label": "Chelsea", "value": "Chelsea" },
+	{ "label": "Roma", "value": "Roma" },
+	{ "label": "Sevilla", "value": "Sevilla" },
+	{ "label": "Crystal Palace", "value": "Crystal Palace" },
+	{ "label": "Bayern", "value": "Bayern" },
+	{ "label": "Genova", "value": "Genova" },
+	{ "label": "Juventus", "value": "Juventus" },
+	{ "label": "Burnley FC", "value": "Burnley FC" },
+	{ "label": "Palermo", "value": "Palermo" },
+	{ "label": "Swansea", "value": "Swansea" },
+	{ "label": "Liverpool", "value": "Liverpool" },
+	{ "label": "Barcellona", "value": "Barcellona" },
+	{ "label": "Mosca", "value": "Mosca" },
+	{ "label": "Sevilla", "value": "Sevilla" },
+	{ "label": "Manchester", "value": "Manchester" },
+	{ "label": "Sassari", "value": "SassariBurnley FC" },
+	{ "label": "Cagliari", "value": "Cagliari" },
+	{ "label": "Real Madrid", "value": "Real Madrid" },
+	{ "label": "Tottenham Hotspur", "value": "Tottenham Hotspur" },
+	{ "label": "Manchester United", "value": "Manchester United" },
+	{ "label": "Watford", "value": "Watford" }
+]
