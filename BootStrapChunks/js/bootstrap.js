@@ -346,8 +346,8 @@ var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
 function preventScrolling(e) {
   e = e || window.event;
-  if (e.preventScrolling)
-      e.preventScrolling(); e.returnValue = false;  
+	if (e.preventScrolling)
+			e.preventScrolling(); e.returnValue = false;
 }
 
 function preventScrollingForScrollKeys(e) {
@@ -367,13 +367,13 @@ function disableScroll() {
 
 function enableScroll() {
 	if (window.removeEventListener)
-		window.removeEventListener('DOMMouseScroll', preventScrolling, false);
-    window.onmousewheel = document.onmousewheel = null; 
-    window.onwheel = null; 
-    window.ontouchmove = null;  
-    document.onkeydown = null;  
-} 
- 
+	window.removeEventListener('DOMMouseScroll', preventScrolling, false);
+	window.onmousewheel = document.onmousewheel = null;
+	window.onwheel = null;
+	window.ontouchmove = null;
+	document.onkeydown = null;
+}
+
 /* ----------------------------------------------------------- *
  * MAKE MODAL APPEAR ON CENTER OF SCREEN
  * ----------------------------------------------------------- */
@@ -385,37 +385,43 @@ function centerModal() {
 				'transition':'all 0.4s ease 0.1s','-webkit-transition':'all 0.4s ease 0.1s', 'height':'auto',
 				'position':'','bottom':'auto','left':'auto','right':'auto', 'top':'auto','margin-top':'auto'
 		},
-		mDialog = $(".modal-dialog");
+		mDialog = ".modal-dialog";
 
 		//SET TRANSITION STYLE
-		mDialog.css(modalClosedCss)
+		$(mDialog).css(modalClosedCss)
 
 		//SCROLLBARS & OVERFFLOW PROPERTIES FOR MODAL TALLED THAN SCREEN HEIGHT
 		var dialogCss = ".modal-open .header-modal{display:none}.modal-dialog{overflow-y: auto;}.modal-dialog.fixed{overflow-y: hidden;}.modal-content{border-radius:0}.modal-dialog::-webkit-scrollbar{width:10px}"
-			+ ".modal-dialog::-webkit-scrollbar-thumb{background:rgb(187,187,187);-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5)}"
+			+ ".modal-dialog::-webkit-scrollbar-thumb{background:rgb(187,187,187);-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5)}.modal-close{top:3%; right:3%; font-size:3rem; line-height:1}.modal-close:before {content:'\\2573'}"
 			+ ".modal-dialog::-webkit-scrollbar-track:enabled { background-color: #ddd }.modal-dialog::-webkit-scrollbar-thumb:window-inactive{background:rgb(187,187,187)}";
 
-			if (!$("[data-css=dialog]").length) {
-				$('head').append("<style data-css='dialog'>" +dialogCss+ "</style>");
-			}
+			if (!$("[data-css=dialog]").length) { $('head').append("<style data-css='dialog'>" +dialogCss+ "</style>"); }
+
+			$(".modal_click").each(function() {
+				if ($(this)[0].hasAttribute("data-btn") && !$("."+ $(this).attr("data-target") + " .modal-close").length) {
+					$("."+ $(this).attr("data-target")).prepend('<span class="modal-close color-white absolute displa-block top-right pointer" data-dismiss="modal"></span>');
+				}
+			})
 
 		$(".modal_click").on("click", function() {
 
 			var modalWindowId = $(this).attr("data-target");
 
 				$(".modal" + "."+modalWindowId).modal().attr("aria-hidden","false")
-			
+
 				//DISABLE SCROLL
 				disableScroll()
 
-				mDialog.each(function() {
+				if ($(this)[0].hasAttribute("data-backdrop")) { $("body").addClass("modal-body-backdrop"); }
 
-					var modalHeight = $(this).actual('height'),
-							modalHeight = "-" + modalHeight / 2 ,
-							child = $("." +modalWindowId+ " > .modal-dialog"),
-							parent = $("." +modalWindowId).actual("height"),
-							modCss = "position:fixed;bottom:0;left:0;right:0;";
+			$(mDialog).each(function() {
 
+				var modalHeight = "-" + $(this).actual('height') / 2,
+						child = $("." +modalWindowId+ " > " +mDialog),
+						parent = $("." +modalWindowId).actual("height"),
+						modCss = "position:fixed;bottom:0;left:0;right:0;";
+
+					//IF MODAL CONTENT BIGGER THAN WINDOW
 					if (child.actual("height") >= parent) {
 
 						var modalHcss = modCss + "top:1.5vh;margin-top:auto;height:90vh";
@@ -423,78 +429,70 @@ function centerModal() {
 
 							//RE-ENABLE SCROLLING
 							enableScroll()
-							
+
 						} else {
 
+						//IF DIALOG CONTENT NOT TALLER THEN MODAL WINDOW
 						var modalHcss = modCss + "top:50%;margin-top:"+ modalHeight +"px";
 
-						if (!$(this)[0].hasAttribute("data-child")) {
-							$(this).attr("style", modalHcss)
-						}
-						
+						if (!$(this)[0].hasAttribute("data-child")) { $(this).attr("style", modalHcss) }
+
 					}
 
-					
-					//CLOSE ON ANY CLICK OUTSIDE ON CONTENT AREA
-					$(document).on('click', 'html', function(e){
-						if ($(e.target).is("[data-dismiss=modal],div:not(.modal-dialog *)")) {
+				//CLOSE ON ANY CLICK OUTSIDE ON CONTENT AREA
+				$(document).on('click', 'html', function(e){
 
-							var mdl = "[data-modal-lock]";
-							$(".modal:not("+ mdl +")").modal('hide').attr("aria-hidden","true")
-							
-							//RE-ENABLE SCROLLING
-							enableScroll()
+					if ($(e.target).is("[data-dismiss=modal],div:not(.modal-dialog *)")) {
 
-							setTimeout(function(){
-								//EXCLUDE MODAL LOCK
-							 $(".modal:not("+ mdl +") > .modal-dialog").css(modalClosedCss)
+						//CLOSE MODAL & RE-ENABLE SCROLLING
+						if (!$(".modal-body-backdrop").length) {
 
-								if(!$(mdl).hasClass("in")) {
-									$(mdl + " > .modal-dialog").css(modalClosedCss)
-									$("html,body").removeAttr("style")
-								}
+							var modl = ".modal";
+									$(".modal").modal('hide').attr("aria-hidden","true");
+									if (!$("[data-modal-lock]").length) { enableScroll(); }
 
-							},200);
+						} else {
 
+							var modl = ".modal[data-backdrop]";
+									$("[data-dismiss=modal]").click(function() { enableScroll(); })
 						}
-					});
-					//CLOSE ON ANY CLICK OUTSIDE ON CONTENT AREA	
 
-	
-	//END EACH
-	})			
-	//END EACH				
+						setTimeout(function(){
+							if(!$(modl).hasClass("in")) {
+									$(modl + " > " +mDialog).css(modalClosedCss)
+									$("body").removeAttr("style").removeClass("modal-body-backdrop");
+							}
+						},500);
 
-				
-		});				
+					}
+					//DOCUMENT CLICK
 
+				});
+				//CLOSE ON ANY OUTSIDE CLICK
+
+			})
+			//END EACH
+
+		});
 	}
 }
 
 //MODAL REALIGN ON RESIZE
 $(window).resize(function() {
 	if ($(".modal").hasClass("in")) {
-		var md = $(".modal.in .modal-content"),
-				mdHeight = md.actual('height');
-				mdAdjHeight = "-" + mdHeight / 2;
+
+		var md = $(".modal.in > .modal-dialog > div"),
+				mdAdjHeight = "-" + md.actual('height') / 2;
 				md.parent().css("margin-top", mdAdjHeight + "px");
 	}
 	$(".modal-dialog").removeAttr("data-child")
 })
+
 //MODAL LOCK PREVENT CLOSING
 $('.modal[data-modal-lock]').on('hide.bs.modal', function (e) {
-	e.preventDefault();
-	e.stopPropagation();
-	return false;	
+	e.preventDefault(); e.stopPropagation();
+	return false;
 })
-
-/*
-document.addEventListener("click",handler,true);
-function handler(e){
-    if(e.target.className!=="data-close")
-    e.stopPropagation()
-}
-*/
 /* ----------------------------------------------------------- *
  * Bootstrap: ALERT DISMISS v3.3.7
  * ----------------------------------------------------------- */

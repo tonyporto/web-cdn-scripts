@@ -9,10 +9,12 @@
 	-webkit-font-smoothing:antialiased;
 	text-transform:none;
 }
+.ico,
 .ico-b:before,
 .ico-a:after,
 [class*=icon-]:before {
   font:normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
 }
 
 /* ============================= *
@@ -834,10 +836,6 @@ p,
 		-webkit-column-gap: 1em;
 		column-gap: 1em;
 	}
-	.flex-layout-4 {
-		-webkit-column-count: 4;
-		column-count: 4;
-	}
 	.flex-layout-3 {
 		-webkit-column-count: 3;
 		column-count: 3;
@@ -881,6 +879,15 @@ p,
  *  MIN-WIDTH: 992px
  * ======================== */
 @media (min-width:992px) {
+	
+	.flex-layout-5 {
+		-webkit-column-count: 5;
+		column-count: 5;
+	}
+	.flex-layout-4 {
+		-webkit-column-count: 4;
+		column-count: 4;
+	}
 	.text-size-2-md {
 		font-size:2em;
 	}
@@ -969,6 +976,23 @@ p,
     padding-left:0 !important;
   }
 }
+
+/* ============================= *
+ * FADEIN LOAD
+ * ============================= */
+.fadeInLoad {
+	animation: fadeInLoad 3s;
+	-webkit-animation: fadeInLoad 3s;
+}
+@keyframes fadeInLoad {
+  from {opacity:0;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
+  to {opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";}
+}
+@-webkit-keyframes fadeInLoad {
+  from {opacity:0;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
+  to {opacity:1;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";}
+}
+
 /* ============================= *
  * FORM CHECKBOXES & RADIOS
  * ============================= */
