@@ -1,0 +1,55 @@
+[
+  {
+	  "label": "Manchester City",
+		"value": "Manchester City",
+		"url": "/man-city"
+	},
+	{ "label": "Chelsea", "value": "Chelsea",
+		"url": "/chelsea"
+	},
+	{ "label": "Roma", "value": "Roma",
+		"url": "/roma"
+	},
+	{ "label": "Sevilla", "value": "Sevilla",
+		"url": "/sevilla"
+	},
+	{ "label": "Crystal Palace", "value": "Crystal Palace",
+		"url": "/crystal-palace"
+	},
+	{ "label": "Bayern", "value": "Bayern",
+		"url": "/bayern"
+	},
+	{ "label": "Genova", "value": "Genova",
+		"url": "/genova"
+	},
+	{ "label": "Juventus", "value": "Juventus",
+		"url": "/juventus"
+	},
+	{ "label": "Burnley FC", "value": "Burnley FC",
+		"url": "/burnley-FC"
+	},
+	{ "label": "Palermo", "value": "Palermo",
+		"url": "/palermo"
+	},
+	{ "label": "Swansea", "value": "Swansea",
+		"url": "/swansea"
+	},
+	{ "label": "Liverpool", "value": "Liverpool",
+		"url": "/liverpool"
+	},
+	{ "label": "Cagliari", "value": "Cagliari",
+		"url": "/cagliari"
+	},
+	{ "label": "Real Madrid", "value": "Real Madrid",
+		"url": "/real-madrid"
+	},
+	{ "label": "Tottenham Hotspur", "value": "Tottenham Hotspur",
+		"url": "/tottenham-hotspur"
+	},
+	{ "label": "Manchester United", "value": "Manchester United",
+		"url": "/man-united"
+	},
+	{ "label": "Watford", "value": "Watford",
+		"url": "/watford"
+	},
+]
