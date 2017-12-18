@@ -1,38 +1,38 @@
 [
   {
-	  "label": "Manchester City",
-		"value": "/man-city"
+	  "text": "Manchester City",
+		"website-link": "/man-city"
 	},
-	{ "label": "Chelsea", "value": "/chelsea"
+	{ "text": "Chelsea", "website-link": "/chelsea"
 	},
-	{ "label": "Roma", "value": "/roma"
+	{ "text": "Roma", "website-link": "/roma"
 	},
-	{ "label": "Sevilla", "value": "/sevilla"
+	{ "text": "Sevilla", "website-link": "/sevilla"
 	},
-	{ "label": "Crystal Palace", "value": "/crystal-palace"
+	{ "text": "Crystal Palace", "website-link": "/crystal-palace"
 	},
-	{ "label": "Bayern", "value": "/bayern"
+	{ "text": "Bayern", "website-link": "/bayern"
 	},
-	{ "label": "Genova", "value": "/genova"
+	{ "text": "Genova", "website-link": "/genova"
 	},
-	{ "label": "Juventus", "value": "/juventus"
+	{ "text": "Juventus", "website-link": "/juventus"
 	},
-	{ "label": "Burnley FC", "value": "/burnley-FC"
+	{ "text": "Burnley FC", "website-link": "/burnley-FC"
 	},
-	{ "label": "Palermo", "value": "/palermo"
+	{ "text": "Palermo", "website-link": "/palermo"
 	},
-	{ "label": "Swansea", "value": "/swansea"
+	{ "text": "Swansea", "website-link": "/swansea"
 	},
-	{ "label": "Liverpool", "value": "/liverpool"
+	{ "text": "Liverpool", "website-link": "/liverpool"
 	},
-	{ "label": "Cagliari", "value": "/cagliari"
+	{ "text": "Cagliari", "website-link": "/cagliari"
 	},
-	{ "label": "Real Madrid", "value": "/real-madrid"
+	{ "text": "Real Madrid", "website-link": "/real-madrid"
 	},
-	{ "label": "Tottenham Hotspur", "value": "/tottenham-hotspur"
+	{ "text": "Tottenham Hotspur", "website-link": "/tottenham-hotspur"
 	},
-	{ "label": "Manchester United", "value": "/man-united"
+	{ "text": "Manchester United", "website-link": "/man-united"
 	},
-	{ "label": "Watford", "value": "/watford"
+	{ "text": "Watford", "website-link": "/watford"
 	}
 ]
