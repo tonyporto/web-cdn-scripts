@@ -1,55 +1,38 @@
 [
   {
 	  "label": "Manchester City",
-		"value": "Manchester City",
-		"link": "/man-city"
+		"value": "/man-city"
 	},
-	{ "label": "Chelsea", "value": "Chelsea",
-		"link": "/chelsea"
+	{ "label": "Chelsea", "value": "/chelsea"
 	},
-	{ "label": "Roma", "value": "Roma",
-		"link": "/roma"
+	{ "label": "Roma", "value": "/roma"
 	},
-	{ "label": "Sevilla", "value": "Sevilla",
-		"link": "/sevilla"
+	{ "label": "Sevilla", "value": "/sevilla"
 	},
-	{ "label": "Crystal Palace", "value": "Crystal Palace",
-		"link": "/crystal-palace"
+	{ "label": "Crystal Palace", "value": "/crystal-palace"
 	},
-	{ "label": "Bayern", "value": "Bayern",
-		"link": "/bayern"
+	{ "label": "Bayern", "value": "/bayern"
 	},
-	{ "label": "Genova", "value": "Genova",
-		"link": "/genova"
+	{ "label": "Genova", "value": "/genova"
 	},
-	{ "label": "Juventus", "value": "Juventus",
-		"link": "/juventus"
+	{ "label": "Juventus", "value": "/juventus"
 	},
-	{ "label": "Burnley FC", "value": "Burnley FC",
-		"link": "/burnley-FC"
+	{ "label": "Burnley FC", "value": "/burnley-FC"
 	},
-	{ "label": "Palermo", "value": "Palermo",
-		"link": "/palermo"
+	{ "label": "Palermo", "value": "/palermo"
 	},
-	{ "label": "Swansea", "value": "Swansea",
-		"link": "/swansea"
+	{ "label": "Swansea", "value": "/swansea"
 	},
-	{ "label": "Liverpool", "value": "Liverpool",
-		"link": "/liverpool"
+	{ "label": "Liverpool", "value": "/liverpool"
 	},
-	{ "label": "Cagliari", "value": "Cagliari",
-		"link": "/cagliari"
+	{ "label": "Cagliari", "value": "/cagliari"
 	},
-	{ "label": "Real Madrid", "value": "Real Madrid",
-		"link": "/real-madrid"
+	{ "label": "Real Madrid", "value": "/real-madrid"
 	},
-	{ "label": "Tottenham Hotspur", "value": "Tottenham Hotspur",
-		"link": "/tottenham-hotspur"
+	{ "label": "Tottenham Hotspur", "value": "/tottenham-hotspur"
 	},
-	{ "label": "Manchester United", "value": "Manchester United",
-		"link": "/man-united"
+	{ "label": "Manchester United", "value": "/man-united"
 	},
-	{ "label": "Watford", "value": "Watford",
-		"link": "/watford"
+	{ "label": "Watford", "value": "/watford"
 	},
 ]
