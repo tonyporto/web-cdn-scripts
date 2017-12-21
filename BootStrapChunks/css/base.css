@@ -142,7 +142,8 @@ select{
   text-transform:none;
 }
 button::-moz-focus-inner,
-input::-moz-focus-inner {
+input::-moz-focus-inner,
+.navbar-toggle {
   padding:0;
   border:0;
 }
