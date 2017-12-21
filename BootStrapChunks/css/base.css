@@ -142,8 +142,7 @@ select{
   text-transform:none;
 }
 button::-moz-focus-inner,
-input::-moz-focus-inner,
-.navbar-toggle {
+input::-moz-focus-inner {
   padding:0;
   border:0;
 }
@@ -192,7 +191,7 @@ hr,
 img,
 legend,
 fieldset,
-button.close {
+.navbar-toggle {
   border:0;
 }
 table {
