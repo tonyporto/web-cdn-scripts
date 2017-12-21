@@ -161,6 +161,7 @@ li > ul,
 td,th,
 legend,
 fieldset,
+.navbar-toggle,
 input[type=checkbox],
 input[type=radio] {
   padding:0;
@@ -327,7 +328,6 @@ legend,
 blockquote,
 .h4,h4,
 .btn-lg,
-.close,
 .form-group-lg *,
 .input-group-addon.input-lg {
   font-size:18px;
@@ -405,7 +405,6 @@ th,
 .btn {
   font-weight:400;
 }
-.close,
 label,
 .label{
   font-weight:700;
