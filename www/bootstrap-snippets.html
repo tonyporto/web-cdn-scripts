@@ -1069,6 +1069,90 @@
     
 </div>
 
+<h3 class="syntax-variable">Checkboxes Check</h3>
+		<div class="col-xs-12 form-checkbox circle">
+
+			<input type="checkbox" id="checkc_one" name="checkc_one">
+			<label class="p-r-2" for="checkc_one">Checkbox 1</label>
+
+			<input type="checkbox" id="checkc_two" name="checkc_two">
+			<label class="p-r-2" for="checkc_two">Checkbox 2</label>
+
+			<input type="checkbox" id="checkc_three" name="checkc_three">
+			<label class="p-r-2" for="checkc_three">Checkbox 3</label>
+
+			<input type="checkbox" id="checkc_four" name="checkc_four">
+			<label class="" for="checkc_four">Checkbox 4</label>
+			
+		</div>
+		
+	<div class="col-xs-12 clearfix m-y-1">
+		<h3 class="syntax-variable">Checkboxes Check Source</h3>
+	<hr>
+
+	<pre><code class="html">
+	&ltdiv class="form-checkbox circle">
+
+		&ltinput type="checkbox" id="checkc_one" name="checkc_one">
+		&ltlabel class="p-r-2" for="checkc_one">Checkbox 1&lt/label>
+
+		&ltinput type="checkbox" id="checkc_two" name="checkc_two">
+		&ltlabel class="p-r-2" for="checkc_two">Checkbox 2&lt/label>
+
+		&ltinput type="checkbox" id="checkc_three" name="checkc_three">
+		&ltlabel class="p-r-2" for="checkc_three">Checkbox 3&lt/label>
+
+		&ltinput type="checkbox" id="checkc_four" name="checkc_four">
+		&ltlabel class="" for="checkc_four">Checkbox 4&lt/label>
+	
+	&lt/div>
+    </code></pre>
+    
+</div>
+
+<h3 class="syntax-variable">Radio Check</h3>		
+		<div class="col-xs-12 form-checkbox circle">
+
+			<input type="radio"type="radio" id="checkrr_one" name="checkrr_circle">
+			<label class="p-r-2" for="checkrr_one">Radio 1</label>
+
+			<input type="radio" id="checkrr_two" name="checkrr_circle">
+			<label class="p-r-2" for="checkrr_two">Radio 2</label>
+
+			<input type="radio" id="checkrr_three" name="checkrr_circle">
+			<label class="p-r-2" for="checkrr_three">Radio 3</label>
+
+			<input type="radio" id="checkrr_four" name="checkrr_circle">
+			<label class="" for="checkrr_four">Radio 4</label>
+			
+		</div>
+		
+	<div class="col-xs-12 clearfix m-y-1">
+		<h3 class="syntax-variable">Radio Check Source</h3>
+	<hr>
+
+	<pre><code class="html">
+	&ltdiv class="form-checkbox circle">
+
+		&ltinput type="radio" id="checkrr_one" name="checkrr_circle">
+		&ltlabel class="p-r-2" for="checkrr_one">Radio 1&lt/label>
+
+		&ltinput type="radio" id="checkrr_two" name="checkrr_circle">
+		&ltlabel class="p-r-2" for="checkrr_two">Radio 2&lt/label>
+
+		&ltinput type="radio" id="checkrr_three" name="checkrr_circle">
+		&ltlabel class="p-r-2" for="checkrr_three">Radio 3&lt/label>
+
+		&ltinput type="radio" id="checkrr_four" name="checkrr_circle">
+		&ltlabel class="" for="checkrr_four">Radio 4&lt/label>
+	
+	&lt/div>
+    </code></pre>
+    
+</div>
+
+
+
 <div class="col-xs-12 form-checkbox">
 
 			<h2 class="text-center m-t-2">Radios</h2>
@@ -1773,7 +1857,7 @@ var iframeCss = document.createElement('style');
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close " data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <span class="modal-close float-right" data-dismiss="modal" aria-label="Close" style="transform:scale(.5)"></span>
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
@@ -1809,7 +1893,7 @@ var iframeCss = document.createElement('style');
 		    &lt!-- Modal content-->
 		    &ltdiv class="modal-content">
 		      &ltdiv class="modal-header p-y-1 clearfix">
-		        &lta href="#" class="close" data-dismiss="modal">×&lt/a>
+		        &ltspan class="close pointer" data-dismiss="modal">×&lt/span>
 		        &lth4 class="modal-title">Modal Header&lt/h4>
 		      &lt/div>
 		      &ltdiv class="modal-body">
@@ -1854,7 +1938,7 @@ var iframeCss = document.createElement('style');
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header p-y-1 clearfix">
-        <a href="#" class="close" data-dismiss="modal">×</a>
+        <a href="#" class="modal-close float-right" data-dismiss="modal" style="transform:scale(.6)"></a>
         <h4 class="modal-title">Modal Header</h4>
       </div>
       <div class="modal-body">
