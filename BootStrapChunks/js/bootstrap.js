@@ -461,6 +461,7 @@ function centerModal() {
 							if(!$(modl).hasClass("in")) {
 									$(modl + " > " +mDialog).css(modalClosedCss)
 									$("body").removeAttr("style").removeClass("modal-body-backdrop");
+									enableScroll();
 							}
 						},500);
 

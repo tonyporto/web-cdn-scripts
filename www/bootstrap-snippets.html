@@ -1839,11 +1839,90 @@ var iframeCss = document.createElement('style');
 
 	<h2 class="text-center m-t-0" id="modals-m">Modals</h2>
 		
-	
-		<button type="button" class="btn btn-info btn-lg modal_click " data-target="modal_one">Regular Modal</button>
+<p class="text-center">	
+		<button type="button" class="btn btn-info btn-lg modal_click m-r-1" data-target="modal_one">Regular Modal</button>
 		<button type="button" class="btn btn-info btn-lg modal_click " data-target="modal_two">Content Modal</button>
-
+</p>
+		<hr>
 		
+		
+<div class="display-block p-y-1 text-size-1-2">
+<h2  class="syntax-variable">Close Button on top right of modal</h2>
+<p>Use markup <strong>data-btn="close"</strong>on trigger button or link to append close button in the modal</p>
+
+<p class="m-y-1">
+
+<button type="button" class="btn btn-info btn-lg modal_click" data-target="modal_to_open" data-btn="close">Modal Close Button</button>
+
+</p>
+
+	<pre><code class="html">	
+	
+&lt!-- MODAL CLOSE BUTTON -->
+		&ltbutton type="button" class="btn btn-info btn-lg modal_click "
+				
+				data-target="modal_to_open"	
+				data-btn="close">
+						Modal Close Button&lt/button>
+		
+	</code></pre>	
+</div>	
+	
+	
+<hr>
+<div class="display-block p-y-1 text-size-1-2">
+<h2 class="syntax-variable">Disallow Closing Modal on Outer Click</h2>
+<p>Use markup attribute <strong>data-backdrop</strong> on both button and .modal div target to disable close via outside click..</p>
+
+<p class="m-y-1">
+
+<button type="button" class="btn btn-warning btn-lg modal_click" data-target="modal2_to_open" data-btn="close" data-backdrop>No close on outer click</button>
+
+</p>
+
+	<pre><code class="html">	
+//MAKE SURE TO ADD data-btn="close" to the button as it will be the only way to close it...
+//NOTE THE attribute data-backdrop on the modal button
+&lt!-- DISABLE OUTER CLICK MODAL CLOSE -->
+		&ltbutton type="button" class="btn btn-warning btn-lg modal_click "
+				data-toggle="modal" 
+				data-target="modal2_to_open"	
+				data-btn="close"
+				data-backdrop>
+						No close on outer click&lt/button>
+						
+	//NOTE THE attribute data-backdrop on the modal div
+	&ltdiv class="modal fade modal2_to_open" data-backdrop>
+		
+	</code></pre>	
+</div>		
+<hr>
+
+<div class="display-block p-y-1 text-size-1-2">
+<h2 class="syntax-variable">Non-closing Modal</h2>
+<p>Use markup <strong>data-modal-lock</strong> on .modal div to disable modal closing.</p>
+
+<p class="m-y-1">
+
+<button type="button" class="btn btn-danger btn-lg modal_click" data-target="modal-lock">No close Modal</button>
+
+</p>
+
+	<pre><code class="html">	
+	
+&lt!-- NO CLOSE MODAL -->
+		&ltbutton type="button" class="btn btn-danger btn-lg modal_click "
+				data-target="modal-lock">
+					No close Modal/button>
+		
+		
+	//NOTE THE attribute data-modal-lock on the modal div
+	&ltdiv class="modal fade modal-lock" data-modal-lock>
+		
+	</code></pre>	
+</div>
+
+
 		
 		<hr>
 		<h3>Regular Default Modal</h3>
@@ -1930,6 +2009,67 @@ var iframeCss = document.createElement('style');
 		
 </div>
 </section>
+
+
+<!-- MODAL w/ Button -->
+<div class="modal fade modal_to_open">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header p-y-1 clearfix">
+       
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!-- MODAL w/ Button -->
+
+<!-- DISABLE OUTER CLICK MODAL CLOSE -->
+<div class="modal fade modal2_to_open" data-backdrop>
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header p-y-1 clearfix">
+       
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>You can only close this modal by clicking on the close button on the top right</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!-- DISABLE OUTER CLICK MODAL CLOSE -->
+
+<!-- DISABLE MODAL CLOSing -->
+<div class="modal fade modal-lock" data-modal-lock>
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header p-y-1 clearfix">
+       
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Sorry this modal does not close</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!-- DISABLE MODAL CLOSing -->
 
 <!-- MODAL # 1 -->
 <div class="modal fade modal_one" role="dialog" aria-hidden="true" >

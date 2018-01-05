@@ -113,6 +113,9 @@
 .icon-close:before {
   content:"\f00d";
 }
+.list-breadscrumb > li:not(:last-child):after {
+  content:"\f105";
+}
 /* ECOMMERCE */
 .slash:before,
 .list-slash > li:not(:first-child):before,
@@ -336,6 +339,10 @@ p,
 .ico-size-32 {
 	height: 32px;
 	width: 32px;
+}
+.ico-size-48 {
+	height: 48px;
+	width: 48px;
 }
 .ico-size-60 {
 	height: 60px;
