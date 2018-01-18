@@ -1182,6 +1182,15 @@ th,
 .input-group-btn {
 	display: table-cell;
 }
+
+[class*=display-flex] {
+	display: flex;
+	display: -webkit-flex;
+}
+[class*=-flex-center] {
+	align-items: center;
+	-webkit-align-items: center;
+}
 .invisible {
 	visibility: hidden;
 }
