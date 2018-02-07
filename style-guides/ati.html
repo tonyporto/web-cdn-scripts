@@ -195,7 +195,7 @@
 
 <div class="wrapper p-y-2 color-bg-light">			
 	<h3 class="color-1 container ">
-Background Colors w/ Global Spacing (<a href="gl-padding">see global padding</a>)
+Background Colors w/ Global Spacing (<span data-target="asc-padding" class="go-to pointer text-primary">see global padding</span>)
 
 <hr>
 	</h3>
@@ -287,7 +287,7 @@ Background Images with Background  Color
 	<h1 class="m-t-2 text-center">Global Styles</h1>
 	<hr>
 <section class="color-light-bg p-b-3">
-	<div class="container">
+	<div class="container" id="asc-padding">
 
 	<h3 class="m-t-0">Margins & Padding</h3>
 	<hr>
@@ -1082,7 +1082,7 @@ Background Images with Background  Color
 		
 		
 <script>
-#(document).on('click','.go-to', function(event) {
+$(document).on('click','.go-to', function(event) {
   event.preventDefault();
   var target = "#" + this.getAttribute('data-target');
 	  
@@ -1090,21 +1090,6 @@ Background Images with Background  Color
 	  scrollTop: $(target).offset().top
 	}, 1000);
 });
-
-/* =============
-var cmi = "#commonIcons",
-	lis = $(cmi +" > li");
-	
-for (var i = 0; i < lis.length; i += 17) {
-	lis.slice(i, i + 17).wrapAll("<ul class='list-unstyled col-sm-4' data-js='icons'></ul>")	
-}
-//$("[data-js=icons]").prepend("<li class='text-bold border-b-wrapper p-y-10'>ICON CLASS <span class='p-l-1'>OUTPUT</span></li>");
-
-$("[data-js=icons] > li > span").each(function() {
-	var thClass = $(this).text()
-	$(this).next("span").addClass(thClass)
-})
-* ========= */
 </script>
 		
 <script src="http://tonyporto.github.io/web-cdn-scripts/js/syntax.js"></script>
