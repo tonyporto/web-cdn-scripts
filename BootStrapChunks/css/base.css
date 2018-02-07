@@ -1117,6 +1117,10 @@ main[role],
 	-webkit-align-items: stretch;
   align-items: stretch;
 }
+[class*=-flex-wrap] {
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
 main[role] {
   min-height: 100vh;
 }
