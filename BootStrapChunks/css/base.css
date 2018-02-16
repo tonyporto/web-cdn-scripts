@@ -1529,14 +1529,14 @@ pre,
   	text-align:center;
   }
   .text-xs-right {
-	  text-align:right;
+	text-align:right;
   }
   .text-xs-left {
   	text-align:left;
   }
   .center-xs-block {
-	  margin-right:auto;
-	  margin-left:auto;
+	margin-right:auto;
+	margin-left:auto;
   }
 }
 /* ======================== *
