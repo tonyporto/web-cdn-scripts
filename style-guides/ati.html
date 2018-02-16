@@ -1303,6 +1303,52 @@ Background Images with Background  Color
 
 		<h2 class="text-center" id="columns-m"> Columns</h2>
 		<hr>
+		
+<h4>
+
+			<li class="icon-asterist color-1"> NOTE:
+The column in the framework is 12 grid system, it's a simple math equation that must add up to 12. 
+
+</h4>
+
+
+<ul class="list-unstyled p-l-30 line-height-1-5 m-b-1">
+	<li>	 
+	<i class="icon-asterisk m-l_15 color-1 p-r-10"></i>col-sm-4 + col-sm-4 + col-sm-4 = <strong>3 columns </strong>
+	</li>
+	<li>	 
+	<i class="icon-asterisk m-l_15 color-1 p-r-10"></i>col-sm-3 + col-sm-3 + col-sm-3 + col-sm-3 = <strong>4 columns </strong>
+			 
+	</li>
+	<li> 
+	<i class="icon-asterisk m-l_15 color-1 p-r-10"></i>col-sm-6 + col-sm-6 = <strong>2 columns </strong>
+	</li>
+</ul>
+<ul class="list-unstyled p-l-30 line-height-2">
+	<li> <i class="icon-alert-success m-l_15 color-1"></i>
+			 
+			 
+		Column class slugs <strong>[xs,sm,md,or lg]</strong> all have the same value, they only differ based on breakpoint.. <br>
+		Example:  col-xs-6, col-sm-6, col-md-6, col-lg-6 are all 50%, the difference being at what breakpoint they will turn into 50%.
+	</li>
+	<li> <i class="icon-alert-success m-l_15 color-1"></i>
+			 
+		<span class="pointer go-to text-primary" data-target="asc-mq">see Media Query section to see when all breakpoint occur</span>
+	
+	</li>
+	
+<li> <i class="icon-alert-success m-l_15 color-1"></i>
+			 
+		See an example <span class="pointer go-to text-primary" data-target="asc-mqm">
+	1 column to 2, to 4, to 6 column layout
+	</span>
+	</li>
+
+</ul>
+
+
+<hr>
+		
 		<h3 class="syntax-variable m-t-2 text-left">2 Columns</h3>
 	<hr>
         
@@ -1462,7 +1508,7 @@ Background Images with Background  Color
 	</div>
 </section>
 
-<section class="wrapper p-y-3 color-bg-grey ">
+<section class="wrapper p-y-3 color-bg-grey " id="asc-mq">
 	<div class="container">
 
 		<h2 class="text-center"> Media Queries</h2>
@@ -1487,15 +1533,15 @@ Background Images with Background  Color
       </code></pre>		
       
       
-		<h3 class="syntax-variable m-t-2">6 Columns </h3>
-		
+		<h3 class="syntax-variable m-t-2" id="asc-mqm">1 Column / 2 Columns / 4 Columns / 6 Columns </h3>
+		<hr>
 		<p> In the example below we are using every available media query for changing width</p>
 		<ul class="list-unstyled">
-		  <li>1 column to @MAX 480px width</li>
-		  <li>2 columns @MIN 481px to @MAX 767px</li>
-		  <li>3 columns @MIN 768px width</li> 
-		  <li>4 columns @MIN 992px width</li>
-		   <li>6 columns @MIN 1200px width</li>
+		  <li>1 column to @MAX 480px width, <strong> col-xxs</strong></li>
+		  <li>2 columns @MIN 481px to @MAX 767px, <strong> col-xxs</strong></li>
+		  <li>3 columns @MIN 768px width, <strong> col-sm-4</strong></li> 
+		  <li>4 columns @MIN 992px width, <strong> col-md-3</strong></li>
+		   <li>6 columns @MIN 1200px width, <strong> col-lg-2</strong></li>
 		 </ul>
 		<hr>
         
@@ -1528,6 +1574,116 @@ Background Images with Background  Color
 		
 	</div>
 </section>		
+
+
+<section class="wrapper p-y-3">
+	<div class="container">
+
+		<h2 class="text-center" id="centering-cols">CENTER COLUMNS</h2>
+		<hr>	
+	
+	<p class="text-size-2 text-center m-b-2"> 
+	<i class="m_l-15 icon-asterisk color-1"></i>
+	Use widths defined for columns to center align content. 
+	</p>
+	
+		<h4 class="text-center">
+		<li class="icon-asterisk color-1">
+		Note below is using -sm- columns that start @ min screen width of 768px  (<span class="pointer go-to text-primary" data-target="asc-mq">see Media section above</span>) for full control.
+		</h4>
+		
+		<ul class="list-unstyled p-l-30">
+			<li> <i class="icon-alert-success color-1"></i>
+			 substitute <strong>col-sm-6</strong> with <strong>col-xs-6</strong> will make columns break starting at 0px width
+			</li>
+			<li> <i class="icon-alert-success color-1"></i>
+			 substitute <strong>col-sm-6</strong> with <strong>col-md-6</strong> will make columns break to desired size @min-width 992px 
+			</li>
+		</ul>
+		<hr>
+	
+	<span class="m-x-a float-none col-md-1 m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-md-1</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>
+	
+	<span class="m-x-a float-none col-md-2 m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-md-2</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>
+	
+	<span class="m-x-a float-none col-sm-3 m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-sm-3</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>
+	
+	<span class="m-x-a float-none col-sm-4 m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-sm-4</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>	
+	
+	
+	<span class="m-x-a float-none col-sm-5 m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-sm-5</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>
+	
+	<span class="m-x-a float-none col-sm-6  m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-sm-6</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>
+	
+	<span class="m-x-a float-none col-sm-7 m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-sm-7</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>
+	
+	<span class="m-x-a float-none col-sm-8 m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-sm-8</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>
+	
+	<span class="m-x-a float-none col-sm-9 m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-sm-9</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>
+	
+	
+	<span class="m-x-a float-none col-sm-10 m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-sm-10</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>
+	
+	<span class="m-x-a float-none col-sm-11 m-y-10 bg-danger">
+		
+		<p class="p-y-2 text-center">
+		<span class="syntax-title">&lt;div class="</span><span class="syntax-value">m-x-a float-none col-sm-11</span>"<span class="syntax-title">&gt;&lt;/div&gt;</span>
+		</p>
+	</span>
+
+	
+	</div>
+</section>
 
   <section class="color-light-bg p-y-3">
 	<div class="container">
