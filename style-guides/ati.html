@@ -20,6 +20,8 @@
     border: 2px solid white;
     height: 90px;
 }    	
+pre > code {font-size:1em}
+#commonIcons [class*=icon-]:before {font-size:1.5em}
 </style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -116,6 +118,68 @@
 	
 	
 </div>
+	
+	
+	<h3 class="syntax-variable m-t-2">ICON IN WIDGET w/ PADDING</h3>
+<hr>
+	
+	
+
+	
+<div class="row">
+	<div class="col-xs-6 col-sm-3 m-y-10"> 
+	
+	
+	<figure class="display-block color-bg-gradient p-y-3">
+			<span class="ico_70_proctored m-x-a"></span>
+	</figure>
+<figure class="panel widget-wrapper panel-round placard-panel color-bg-white">
+  <figcaption class="panel-body p-x-20 p-y-20 ">
+
+        <h2 class="color-1 size14 m-y-0 text-uppercase placard-title">Teas Prep</h2>
+                <div class="p-y-1 display-block">
+This will be quick overview copy about Admitting 
+	the Right Students, enticing users to click and learn more.            </div>
+    <a class="btn btn-circle-sm btn-outline-color-1 text-uppercase text-weight-600" href="http://ati-stg-mkt01/teas">
+        learn more
+    </a>
+  </figcaption>
+
+</figure>	
+	
+	
+	</div>
+
+	<div class=" col-xs-6 col-sm-9 m-y-10">
+	<p class="text-size-2 p-l-10">
+	<i class="m_l-10 icon-asterisk color-1"></i>
+	HTML content block on the top with snippet labeled <strong>//BLOCK #1</strong>
+	</p>
+	
+	<p class="text-size-2 p-l-30"> Directly below use card panel and leave image field blank, see <strong>//BLOCK #2</strong>
+	</p>
+	
+	<hr>
+	
+			<pre><code class="html">
+			//BLOCK #1
+			&lt;figure class="display-block color-bg-gradient p-y-3 text-center"&gt;
+				&lt;span class="ico_70_proctored m-x-a"&gt;
+			&lt;/figure&gt;
+      </code></pre>	
+	
+	<pre><code class="html">
+	//BLOCK #2
+	//CARD PANEL, NO IMAGE
+	</code></pre>
+	
+	</div>
+</div>
+
+	
+
+	
+	
 	
 	
 	</div>
@@ -268,7 +332,7 @@ Background Colors w/ Global Spacing (<span data-target="asc-padding" class="go-t
 
 
 
-	<h3 class="color-1 container ">
+	<h3 class="color-1 container m-t-2">
 Background Images with Background  Color
 
 <hr>
@@ -292,7 +356,7 @@ Background Images with Background  Color
 	<h3 class="m-t-0">Margins & Padding</h3>
 	<hr>
 <div class="row">
-<div class="col-sm-6">
+<div class="col-md-6">
 
 <table class="table m-b-1  table-striped ">
   <thead>
@@ -620,7 +684,7 @@ Background Images with Background  Color
 </table>
 
 </div>
-<div class="col-sm-6">
+<div class="col-md-6">
 
 <table class="table m-b-1  table-striped ">
   <thead>
@@ -1444,7 +1508,7 @@ Background Images with Background  Color
 		<span class="col-xxs col-xs-6 col-sm-4 col-md-3 col-lg-2 bg-warning"></span>
 	</div>	
 
-
+<header class="col-xs-12 p-x-0">
 		<h4 class="syntax-variable">Source</h4>
 	<hr>
 
@@ -1459,7 +1523,7 @@ Background Images with Background  Color
 				&lt;div class="col-xxs col-xs-6 col-sm-4 col-md-3 col-lg-2"&gt; &lt;/div&gt;
 			&lt;/div&gt;
       </code></pre>      
-      
+</header>   
       
 		
 	</div>
@@ -1467,6 +1531,288 @@ Background Images with Background  Color
 
   <section class="color-light-bg p-y-3">
 	<div class="container">
+	
+	
+       
+        
+ <div class="row">
+	<div class="col-lg-4 col-sm-6 p-y-1">
+
+		<h4 class="m-b-1">Table Bordered</h4>
+							
+<table class="table table-bordered">
+	<thead>
+	<tr>
+		<th>#</th>
+		<th>Column heading</th>
+		<th>Column heading</th>
+		<th>Column heading</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr class="active">
+		<th scope="row">1</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+	<tr>
+		<th scope="row">2</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+	<tr class="success">
+		<th scope="row">3</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+	<tr>
+		<th scope="row">4</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+
+
+	</tbody>
+</table>
+						
+<div class="col-xs-12 m-y-1 p-x-0">
+		<h3 class="syntax-variable">Table Bordered</h3>
+	<hr>
+
+<pre><code class="html hljs xml xml">
+<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">table</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">class</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"table"</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">thead</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>#<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>Column heading<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>Column heading<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>Column heading<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">thead</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tbody</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">class</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"active"</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>1<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>2<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">class</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"success"</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>3<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>4<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tbody</span></span></span><span class="syntax-tag">&gt;</span></span>
+<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">table</span></span></span><span class="syntax-tag">&gt;</span></span>
+</code></pre>
+    
+</div>
+</div>
+
+
+<div class="col-lg-4 col-sm-6 p-y-1">
+					
+		<h4 class="m-b-1">Table Normal</h4>
+							
+
+<table class="table">
+	<thead>
+	<tr>
+		<th>#</th>
+		<th>Column heading</th>
+		<th>Column heading</th>
+		<th>Column heading</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr class="active">
+		<th scope="row">1</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+	<tr>
+		<th scope="row">2</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+	<tr class="success">
+		<th scope="row">3</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+	<tr>
+		<th scope="row">4</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+
+
+	</tbody>
+</table>
+
+
+<div class="col-xs-12 m-y-1 p-x-0">
+		<h3 class="syntax-variable">Table Normal Source</h3>
+	<hr>
+
+	<pre><code class="html hljs xml xml">
+<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">table</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">class</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"table"</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">thead</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>#<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>Column heading<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>Column heading<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>Column heading<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">thead</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tbody</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">class</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"active"</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>1<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>2<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">class</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"success"</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>3<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>4<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tbody</span></span></span><span class="syntax-tag">&gt;</span></span>
+<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">table</span></span></span><span class="syntax-tag">&gt;</span></span>
+    </code></pre>
+    
+</div>   
+</div>
+
+<div class="col-lg-4 col-sm-12 p-y-1">
+					
+		<h4 class="m-b-1">Table Striped</h4>
+							
+
+<table class="table table-striped">
+	<thead>
+	<tr>
+		<th>#</th>
+		<th>Column heading</th>
+		<th>Column heading</th>
+		<th>Column heading</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr class="active">
+		<th scope="row">1</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+	<tr>
+		<th scope="row">2</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+	<tr class="success">
+		<th scope="row">3</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+	<tr>
+		<th scope="row">4</th>
+		<td>Column content</td>
+		<td>Column content</td>
+		<td>Column content</td>
+	</tr>
+
+
+	</tbody>
+</table>
+
+
+<div class="col-xs-12 m-y-1 p-x-0">
+		<h3 class="syntax-variable">Table Striped Source</h3>
+	<hr>
+
+	<pre><code class="html hljs xml xml">
+<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">table</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">class</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"table table-striped"</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">thead</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>#<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>Column heading<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>Column heading<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>Column heading<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">thead</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tbody</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">class</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"active"</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>1<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>2<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">class</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"success"</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>3<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag"> </span><span class="syntax-attribute"><span class="syntax-tag"><span class="syntax-attribute">scope</span></span></span><span class="syntax-tag">=</span><span class="syntax-value"><span class="syntax-tag"><span class="syntax-value">"row"</span></span></span><span class="syntax-tag">&gt;</span></span>4<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">th</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+		<span class="syntax-tag"><span class="syntax-tag">&lt;</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>Column content<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">td</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tr</span></span></span><span class="syntax-tag">&gt;</span></span>
+	<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">tbody</span></span></span><span class="syntax-tag">&gt;</span></span>
+<span class="syntax-tag"><span class="syntax-tag">&lt;/</span><span class="syntax-title"><span class="syntax-tag"><span class="syntax-title">table</span></span></span><span class="syntax-tag">&gt;</span></span>
+    </code></pre>
+    
+</div>
+
+</div>
+
+</div>	
+	
+	
+	
 
 	<h3 class="m-t-0">ICONS SET</h3>
 	<hr>
