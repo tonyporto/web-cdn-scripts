@@ -2,3 +2,5 @@
 BootStrapChunks/.synkron.syncdb
 node_modules/
 Angular Feed/
+BootStrapChunks/GulpMultiSite/
+BootStrapChunks/node_modules/
