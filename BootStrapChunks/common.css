@@ -1156,6 +1156,10 @@ main[role],
 	-webkit-align-items: stretch;
 	align-items: stretch;
 }
+[class*=-flex-wrap] {
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
 main[role] {
 	min-height: 100vh;
 }
@@ -2407,6 +2411,11 @@ p,
 	font-size: 3em;
 }
 
+.flex-reverse-sm {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	flex-direction: row-reverse;
+}
 [class*="flex-layout-"] {
 	-webkit-column-gap: 1em;
 	column-gap: 1em;
@@ -2933,6 +2942,10 @@ h4 {
 .p-x-0-xs,
 .p-l-0-xs {
 	padding-left: 0 !important;
+}
+.flex-column-xs {
+	-webkit-box-direction: normal;
+	flex-direction: column;
 }
 }
 @media (max-width:480px) {
