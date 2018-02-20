@@ -322,10 +322,7 @@ p,
 .line-height-0 {
 	line-height:0;
 }
-.line-height-i,
-.line-height-i-b:before {
-	line-height:inherit;
-}
+
 /* ============================= *
  *  ICON CONTAINER
  * ============================= */

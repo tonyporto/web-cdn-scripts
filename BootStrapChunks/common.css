@@ -1769,10 +1769,6 @@ p,
 .line-height-0 {
 	line-height: 0;
 }
-.line-height-i,
-.line-height-i-b:before {
-	line-height: inherit;
-}
 
 .ico-size-30 {
 	height: 30px;
