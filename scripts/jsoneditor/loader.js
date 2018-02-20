@@ -40,8 +40,6 @@ loadjs([
 				},
 		};
 
-		var json = editor.get(json);
-		
 		var editor = new JSONEditor(container, options, json);
 
 		function fileFetcher(file, callback) {
