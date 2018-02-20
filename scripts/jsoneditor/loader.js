@@ -21,28 +21,53 @@ var editorDir = "http://tonyporto.github.io/web-cdn-scripts/scripts/jsoneditor/"
 //LOAD CSS FILES
 loadjs('css!..' + editorDir + 'jsoneditor.css');
 loadjs([
+	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
 	editorDir + 'jsoneditor.js',
 	editorDir + 'filereader.js',
-	editorDir + 'FileSaver.min.js',
-	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsoneditor', {
+	editorDir + 'FileSaver.min.js'], 'jsoneditor', {
   success: function() {
 
+var container = document.getElementById("jsoneditor");
+
+var options = {
+    mode: 'tree',
+    modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
+    onError: function (err) {
+      alert(err.toString());
+    },
+    onModeChange: function (newMode, oldMode) {
+      console.log('Mode switched from', oldMode, 'to', newMode);
+    }
+
+	
+};
+
+var editor = new JSONEditor(container, options, json);
 
 
-		function fileFetcher(file, callback) {
-			var rawFile = new XMLHttpRequest();
-				rawFile.overrideMimeType("application/json");
-				rawFile.open("GET", file, true);
-				rawFile.onreadystatechange = function() {
-					if (rawFile.readyState === 4 && rawFile.status == "200") {
+		loadjs(editorDir + 'loadAndSave.js', 'loadjson', {
+			
+			 success: function() {
 
-						callback(rawFile.responseText);
+				function fileFetcher(file, callback) {
+					var rawFile = new XMLHttpRequest();
+						rawFile.overrideMimeType("application/json");
+						rawFile.open("GET", file, true);
+						rawFile.onreadystatechange = function() {
+							if (rawFile.readyState === 4 && rawFile.status == "200") {
 
+								callback(rawFile.responseText);
+
+							}
 					}
-			}
-			rawFile.send(null);
-		}
-		//end
+					rawFile.send(null);
+				}
 
-  } //,async: false
+			},async: false
+		});
+
+
+
+
+  },async: false
 });
