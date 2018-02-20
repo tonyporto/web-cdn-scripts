@@ -22,9 +22,9 @@ var editorDir = "http://tonyporto.github.io/web-cdn-scripts/scripts/jsoneditor/"
 loadjs([
 	'css!' + editorDir + 'jsoneditor.css',
 	//'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+	editorDir + 'filereader.js',
 	editorDir + 'jsoneditor.js',
-	editorDir + 'FileSaver.min.js',
-	editorDir + 'filereader.js'], 'jsoneditor', {
+	editorDir + 'FileSaver.min.js'], 'jsoneditor', {
   success: function() {},
   async: false
   }
