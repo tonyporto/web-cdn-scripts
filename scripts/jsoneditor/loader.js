@@ -26,6 +26,7 @@ loadjs([
 	editorDir + 'FileSaver.min.js',
 	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsoneditor', {
   success: function() {}
-  
-  },async: false
+
+  },
+  async: false
 });
