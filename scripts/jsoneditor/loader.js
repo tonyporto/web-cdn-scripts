@@ -44,29 +44,26 @@ var options = {
 
 var editor = new JSONEditor(container, options, json);
 
+editor.set(json);
+var json = editor.get(json);
 
-		loadjs(editorDir + 'loadAndSave.js', 'loadjson', {
-			
-			 success: function() {
+// Load a JSON document
+FileReaderJS.setupInput(document.getElementById('loadDocument'), {
+    readAsDefault: 'Text',
+    on: {
+      load: function (event, file) {
+        editor.setText(event.target.result);
+      }
+    }
+});
 
-				function fileFetcher(file, callback) {
-					var rawFile = new XMLHttpRequest();
-						rawFile.overrideMimeType("application/json");
-						rawFile.open("GET", file, true);
-						rawFile.onreadystatechange = function() {
-							if (rawFile.readyState === 4 && rawFile.status == "200") {
-
-								callback(rawFile.responseText);
-
-							}
-					}
-					rawFile.send(null);
-				}
-
-			},async: false
-		});
-
-
+// Save a JSON document
+document.getElementById('saveDocument').onclick = function () {
+  var blob = new Blob([editor.getText()], {type: 'application/json;charset=utf-8'});
+    
+	var filename = location.href.substr(location.href.lastIndexOf('/') + 1).split('.')[0];
+  saveAs(blob, filename+".json");
+};
 
 
   },async: false
