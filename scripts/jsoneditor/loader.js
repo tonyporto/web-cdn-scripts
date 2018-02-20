@@ -27,9 +27,8 @@ loadjs([
 	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsoneditor', {
   success: function() {
 
-		var container = document.getElementById("jsoneditor"),
-				json = editor.get(json);
-
+		var container = document.getElementById("jsoneditor");
+				
 		var options = {
 				mode: 'tree',
 				modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
@@ -41,6 +40,8 @@ loadjs([
 				},
 		};
 
+		var json = editor.get(json);
+		
 		var editor = new JSONEditor(container, options, json);
 
 		function fileFetcher(file, callback) {
