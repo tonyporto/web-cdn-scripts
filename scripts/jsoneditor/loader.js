@@ -27,7 +27,8 @@ loadjs([
 	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsoneditor', {
   success: function() {
 
-		var container = document.getElementById("jsoneditor");
+		var container = document.getElementById("jsoneditor"),
+				json = editor.get(json);
 
 		var options = {
 				mode: 'tree',
