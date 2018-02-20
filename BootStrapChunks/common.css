@@ -231,7 +231,6 @@ thead th {
 	vertical-align: top;
 }
 img,
-.btn,
 thead,
 .text-middle,
 .display-table-cell,
@@ -1621,7 +1620,8 @@ pre,
 .icon-edit:before {
 	content: "\f044";
 }
-.icon-open:before {
+.icon-open:before,
+.collapsed > .icon-closed:before {
 	content: "\f107";
 }
 .icon-closed:before {
@@ -1762,6 +1762,16 @@ p,
 .input-group-addon,
 .line-height-1 {
 	line-height: 1;
+}
+.line-height-05 {
+	line-height: .5;
+}
+.line-height-0 {
+	line-height: 0;
+}
+.line-height-i,
+.line-height-i-b:before {
+	line-height: inherit;
 }
 
 .ico-size-30 {
