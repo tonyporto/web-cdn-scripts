@@ -19,7 +19,7 @@ loadjs.ready=function ready(deps,args){subscribe(deps,function(depsNotFound){if(
 var editorDir = "http://tonyporto.github.io/web-cdn-scripts/scripts/jsoneditor/";
 
 //LOAD CSS FILES
-loadjs('css!..' + editorDir + 'jsoneditor.css');
+loadjs('css!' + editorDir + 'jsoneditor.css');
 loadjs([
 	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
 	editorDir + 'jsoneditor.js',
