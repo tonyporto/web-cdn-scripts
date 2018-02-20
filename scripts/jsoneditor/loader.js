@@ -24,8 +24,72 @@ loadjs([
 	editorDir + 'jsoneditor.js',
 	editorDir + 'filereader.js',
 	editorDir + 'FileSaver.min.js',
-	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsonInit', {
-  success: function() {},
+	'http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsonInit', {
+  success: function() {
+  
+  
+var container = document.getElementById("jsoneditor");
+
+var options = {
+    mode: 'tree',
+    modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
+    onError: function (err) {
+      alert(err.toString());
+    },
+    onModeChange: function (newMode, oldMode) {
+      console.log('Mode switched from', oldMode, 'to', newMode);
+    },
+
+};
+
+var editor = new JSONEditor(container, options, json);
+
+function fileFetcher(file, callback) {
+	var rawFile = new XMLHttpRequest();
+		rawFile.overrideMimeType("application/json");
+		rawFile.open("GET", file, true);
+		rawFile.onreadystatechange = function() {
+			if (rawFile.readyState === 4 && rawFile.status == "200") {
+
+				callback(rawFile.responseText);
+
+			}
+	}
+	rawFile.send(null);
+}
+
+
+//function 
+function loadAndSave() {
+	
+	editor.set(json);
+	var json = editor.get(json);
+
+	// Load a JSON document
+	if (document.getElementById('loadDocument')) {
+		FileReaderJS.setupInput(document.getElementById('loadDocument'), {
+			readAsDefault: 'Text',
+			on: {
+				load: function (event, file) {
+					editor.setText(event.target.result);
+				}
+			}
+		});
+	}
+	// Save a JSON document
+	if (document.getElementById('saveDocument')) {
+		document.getElementById('saveDocument').onclick = function () {
+			var blob = new Blob([editor.getText()], {type: 'application/json;charset=utf-8'});
+			
+			var filename = location.href.substr(location.href.lastIndexOf('/') + 1).split('.')[0];
+			saveAs(blob, filename+".json");
+		};
+	}
+
+}	
+	  
+  
+  },
   async: false
   }
 );
