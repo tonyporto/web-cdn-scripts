@@ -1,4 +1,4 @@
-editor.set(json);
+
 var json = editor.get(json);
 
 // Load a JSON document
