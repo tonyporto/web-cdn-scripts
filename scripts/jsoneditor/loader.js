@@ -29,4 +29,4 @@ loadjs([
 
   },
   async: false
-});
+);
