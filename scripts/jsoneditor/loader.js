@@ -19,52 +19,13 @@ loadjs.ready=function ready(deps,args){subscribe(deps,function(depsNotFound){if(
 var editorDir = "http://tonyporto.github.io/web-cdn-scripts/scripts/jsoneditor/";
 
 //LOAD CSS FILES
-loadjs('css!' + editorDir + 'jsoneditor.css');
 loadjs([
-	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+	'css!' + editorDir + 'jsoneditor.css',
 	editorDir + 'jsoneditor.js',
 	editorDir + 'filereader.js',
-	editorDir + 'FileSaver.min.js'], 'jsoneditor', {
-  success: function() {
-
-var container = document.getElementById("jsoneditor");
-
-var options = {
-    mode: 'tree',
-    modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
-    onError: function (err) {
-      alert(err.toString());
-    },
-    onModeChange: function (newMode, oldMode) {
-      console.log('Mode switched from', oldMode, 'to', newMode);
-    }
-
-	
-};
-
-var editor = new JSONEditor(container, options, json);
-
-editor.set(json);
-var json = editor.get(json);
-
-// Load a JSON document
-FileReaderJS.setupInput(document.getElementById('loadDocument'), {
-    readAsDefault: 'Text',
-    on: {
-      load: function (event, file) {
-        editor.setText(event.target.result);
-      }
-    }
-});
-
-// Save a JSON document
-document.getElementById('saveDocument').onclick = function () {
-  var blob = new Blob([editor.getText()], {type: 'application/json;charset=utf-8'});
-    
-	var filename = location.href.substr(location.href.lastIndexOf('/') + 1).split('.')[0];
-  saveAs(blob, filename+".json");
-};
-
-
+	editorDir + 'FileSaver.min.js',
+	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsoneditor', {
+  success: function() {}
+  
   },async: false
 });
