@@ -27,10 +27,10 @@ loadjs([
 		loadjs([
 			editorDir + 'jsoneditor.js',
 			editorDir + 'filereader.js',
-			editorDir + 'FileSaver.min.js'
-		]);  
-  
+			editorDir + 'FileSaver.min.js'], 'jsonInit', {
+				success: function() {},
+				async: false
+			})
   },
   async: false
-  }
-);
+});
