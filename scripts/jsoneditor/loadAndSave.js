@@ -1,3 +1,6 @@
+editor.set(json);
+var json = editor.get(json);
+
 // Load a JSON document
 FileReaderJS.setupInput(document.getElementById('loadDocument'), {
     readAsDefault: 'Text',
