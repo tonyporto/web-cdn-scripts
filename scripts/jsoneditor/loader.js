@@ -24,8 +24,7 @@ loadjs([
 	editorDir + 'jsoneditor.js',
 	editorDir + 'filereader.js',
 	editorDir + 'FileSaver.min.js',
-	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
-	editorDir + 'loadAndSave.js'], 'jsoneditor', {
+	'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsoneditor', {
   success: function() {
 
 		var container = document.getElementById("jsoneditor");
