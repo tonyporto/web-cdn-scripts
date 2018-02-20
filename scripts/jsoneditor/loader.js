@@ -25,7 +25,11 @@ loadjs([
 	editorDir + 'jsoneditor.js',
 	editorDir + 'FileSaver.min.js'], 'jsoneditor', {
   success: function() {
-		loadjs(editorDir + 'filereader.js', 'jsonRd');
+  
+		setTimeout(function(){
+			loadjs(editorDir + 'filereader.js', 'jsonRd');	 
+		},300);
+		
   },
   async: false
   }
