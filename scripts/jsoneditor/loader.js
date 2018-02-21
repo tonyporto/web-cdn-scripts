@@ -27,21 +27,24 @@ loadjs([
 	'http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsonInit', {
   success: function() {
    
-var container = document.getElementById("jsoneditor"),
-	  options = {
-			mode: 'tree',
-			modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
-				onError: function (err) {
-					alert(err.toString());
-				},
-				onModeChange: function (newMode, oldMode) {
-					console.log('Mode switched from', oldMode, 'to', newMode);
-				},
-		},
-		editor = new JSONEditor(container, options, json);
-				
-		//editor.set(json);
-		
+	if(typeof container === "undefined") {
+		var container = document.getElementById("jsoneditor");
+	}
+	if(typeof options === "undefined") {
+		var options = {
+					mode: 'tree',
+					modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
+						onError: function (err) {
+							alert(err.toString());
+						},
+						onModeChange: function (newMode, oldMode) {
+							console.log('Mode switched from', oldMode, 'to', newMode);
+						},
+				};
+	}
+	if(typeof editor === "undefined") {
+		var editor = new JSONEditor(container, options, json);	
+	}
 	if(typeof json === "undefined") {
 		var json = editor.get(json);
 	}
