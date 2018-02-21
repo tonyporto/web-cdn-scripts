@@ -26,48 +26,24 @@ loadjs([
 	editorDir + 'FileSaver.min.js',
 	'http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsonInit', {
   success: function() {
-  
-/*  
-var container = document.getElementById("jsoneditor");
-
-var options = {
-    mode: 'tree',
-    modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
-    onError: function (err) {
-      alert(err.toString());
-    },
-    onModeChange: function (newMode, oldMode) {
-      console.log('Mode switched from', oldMode, 'to', newMode);
-    },
-
-};
-
-var editor = new JSONEditor(container, options, json);
-
-
-
+   
+var container = document.getElementById("jsoneditor"),
+	  options = {
+			mode: 'tree',
+			modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
+				onError: function (err) {
+					alert(err.toString());
+				},
+				onModeChange: function (newMode, oldMode) {
+					console.log('Mode switched from', oldMode, 'to', newMode);
+				},
+		},
+		editor = new JSONEditor(container, options, json);
+				
+		editor.set(json);
+		
 	var json = editor.get(json);
 	
-*//*
-var container = document.getElementById("jsoneditor");
-var options = {
-    mode: 'tree',
-    modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
-    onError: function (err) {
-      alert(err.toString());
-    },
-    onModeChange: function (newMode, oldMode) {
-      console.log('Mode switched from', oldMode, 'to', newMode);
-    },
-
- };
-*/ 
-//if(typeof editor == "undefined") {
-//var json = editor.get(json);
-if(typeof editor == "undefined") {
-	 editor = new JSONEditor(container, options, json);
-}	
-
 	// Load a JSON document
 	if (document.getElementById('loadDocument')) {
 		FileReaderJS.setupInput(document.getElementById('loadDocument'), {
