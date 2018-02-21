@@ -27,36 +27,20 @@ loadjs([
 	'http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsonInit', {
   success: function() {
 
-if (!document.getElementsByClassName('jsoneditor-mode-tree')[0]) {
+var container = document.getElementById("jsoneditor");
 
-	if(typeof container === "undefined") {
-		if (document.getElementById('jsoneditor')) {
-			var container = document.getElementById("jsoneditor");
-		}
-	}
-	if(typeof options === "undefined") {
-		var options = {
-					mode: 'tree',
-					modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
-						onError: function (err) {
-							alert(err.toString());
-						},
-						onModeChange: function (newMode, oldMode) {
-							console.log('Mode switched from', oldMode, 'to', newMode);
-						},
-				};
-	}
-	if(typeof editor === "undefined") {
-		var editor = new JSONEditor(container, options, json);
-	}
+var options = {
+    mode: 'tree',
+    modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
+    onError: function (err) {
+      alert(err.toString());
+    },
+    onModeChange: function (newMode, oldMode) {
+      console.log('Mode switched from', oldMode, 'to', newMode);
+    },
+};
 
-editor.set(json);
-
-	if(typeof json === "undefined") {
-		var json = editor.get(json);
-	}
-
-}
+var editor = new JSONEditor(container, options, json);
 
 function fileFetcher(file, callback) {
 	var rawFile = new XMLHttpRequest();
@@ -69,6 +53,13 @@ function fileFetcher(file, callback) {
 	}
 	rawFile.send();
 }
+
+
+function loadAndSave() {
+editor.set(json);
+
+
+var json = editor.get(json);
 
 	// Load a JSON document
 	if (document.getElementById('loadDocument')) {
@@ -91,7 +82,9 @@ function fileFetcher(file, callback) {
 		};
 	}
 
-
+//
+}
+//
 
   }
   //async: false
