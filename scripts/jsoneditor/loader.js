@@ -28,7 +28,9 @@ loadjs([
   success: function() {
    
 	if(typeof container === "undefined") {
-		var container = document.getElementById("jsoneditor");
+		if (document.getElementById('jsoneditor')) {
+			var container = document.getElementById("jsoneditor");
+		}
 	}
 	if(typeof options === "undefined") {
 		var options = {
@@ -45,6 +47,9 @@ loadjs([
 	if(typeof editor === "undefined") {
 		var editor = new JSONEditor(container, options, json);	
 	}
+
+editor.set(json);
+
 	if(typeof json === "undefined") {
 		var json = editor.get(json);
 	}
