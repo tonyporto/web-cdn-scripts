@@ -27,20 +27,7 @@ loadjs([
 	'http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsonInit', {
   success: function() {
 
-var container = document.getElementById("jsoneditor");
 
-var options = {
-    mode: 'tree',
-    modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
-    onError: function (err) {
-      alert(err.toString());
-    },
-    onModeChange: function (newMode, oldMode) {
-      console.log('Mode switched from', oldMode, 'to', newMode);
-    },
-};
-
-var editor = new JSONEditor(container, options, json);
 
 function fileFetcher(file, callback) {
 	var rawFile = new XMLHttpRequest();
@@ -56,6 +43,23 @@ function fileFetcher(file, callback) {
 
 
 function loadAndSave() {
+	
+var container = document.getElementById("jsoneditor");
+
+var options = {
+    mode: 'tree',
+    modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
+    onError: function (err) {
+      alert(err.toString());
+    },
+    onModeChange: function (newMode, oldMode) {
+      console.log('Mode switched from', oldMode, 'to', newMode);
+    },
+};
+
+var editor = new JSONEditor(container, options, json);	
+	
+	
 editor.set(json);
 
 
