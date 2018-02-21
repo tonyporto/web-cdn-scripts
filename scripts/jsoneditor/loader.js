@@ -84,6 +84,8 @@ function fileFetcher(file, callback) {
 	}
 	rawFile.send();
 }
+
+$(document).trigger("jsonFetch")
  
   
   },
