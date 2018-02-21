@@ -48,9 +48,24 @@ var editor = new JSONEditor(container, options, json);
 
 	var json = editor.get(json);
 	
-*/
+*//*
+var container = document.getElementById("jsoneditor");
+var options = {
+    mode: 'tree',
+    modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
+    onError: function (err) {
+      alert(err.toString());
+    },
+    onModeChange: function (newMode, oldMode) {
+      console.log('Mode switched from', oldMode, 'to', newMode);
+    },
+
+ };
+*/ 
+//if(typeof editor == "undefined") {
+//var json = editor.get(json);
 if(typeof editor == "undefined") {
-	editor.set(json);
+	 editor = new JSONEditor(container, options, json);
 }	
 
 	// Load a JSON document
