@@ -66,10 +66,6 @@ var container = document.getElementById("jsoneditor"),
 	}
 	
 	
-	
-
-
- 
   
   },
   async: false
