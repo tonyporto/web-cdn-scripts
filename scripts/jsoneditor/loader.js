@@ -42,7 +42,9 @@ var container = document.getElementById("jsoneditor"),
 				
 		//editor.set(json);
 		
-	//var json = editor.get(json);
+	if(typeof json === "undefined") {
+		var json = editor.get(json);
+	}
 	
 	// Load a JSON document
 	if (document.getElementById('loadDocument')) {
