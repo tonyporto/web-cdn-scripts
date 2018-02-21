@@ -40,7 +40,7 @@ var container = document.getElementById("jsoneditor"),
 		},
 		editor = new JSONEditor(container, options, json);
 				
-		editor.set(json);
+		//editor.set(json);
 		
 	var json = editor.get(json);
 	
