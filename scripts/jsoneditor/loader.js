@@ -27,7 +27,7 @@ loadjs([
 	'http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsonInit', {
   success: function() {
   
-  
+/*  
 var container = document.getElementById("jsoneditor");
 
 var options = {
@@ -47,6 +47,8 @@ var editor = new JSONEditor(container, options, json);
 
 	editor.set(json);
 	var json = editor.get(json);
+	
+*/
 
 	// Load a JSON document
 	if (document.getElementById('loadDocument')) {
