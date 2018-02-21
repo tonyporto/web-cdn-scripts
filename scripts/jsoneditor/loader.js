@@ -45,11 +45,6 @@ var options = {
 var editor = new JSONEditor(container, options, json);
 
 
-
-
-//function 
-function loadAndSave() {
-	
 	editor.set(json);
 	var json = editor.get(json);
 
@@ -73,9 +68,7 @@ function loadAndSave() {
 			saveAs(blob, filename+".json");
 		};
 	}
-
-}	
-	  
+ 
   
   },
   async: false
