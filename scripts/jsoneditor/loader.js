@@ -45,10 +45,13 @@ var options = {
 var editor = new JSONEditor(container, options, json);
 
 
-	editor.set(json);
+
 	var json = editor.get(json);
 	
 */
+if(typeof editor == "undefined") {
+	editor.set(json);
+}	
 
 	// Load a JSON document
 	if (document.getElementById('loadDocument')) {
