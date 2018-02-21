@@ -26,9 +26,9 @@ loadjs([
 	editorDir + 'FileSaver.min.js',
 	'http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsonInit', {
   success: function() {
-   
-if (!document.getElementsByClassName('jsoneditor-mode-tree')[0]) {   
-   
+
+if (!document.getElementsByClassName('jsoneditor-mode-tree')[0]) {
+
 	if(typeof container === "undefined") {
 		if (document.getElementById('jsoneditor')) {
 			var container = document.getElementById("jsoneditor");
@@ -47,7 +47,7 @@ if (!document.getElementsByClassName('jsoneditor-mode-tree')[0]) {
 				};
 	}
 	if(typeof editor === "undefined") {
-		var editor = new JSONEditor(container, options, json);	
+		var editor = new JSONEditor(container, options, json);
 	}
 
 editor.set(json);
@@ -55,9 +55,9 @@ editor.set(json);
 	if(typeof json === "undefined") {
 		var json = editor.get(json);
 	}
-	
-}	
-	
+
+}
+
 	// Load a JSON document
 	if (document.getElementById('loadDocument')) {
 		FileReaderJS.setupInput(document.getElementById('loadDocument'), {
@@ -73,16 +73,16 @@ editor.set(json);
 	if (document.getElementById('saveDocument')) {
 		document.getElementById('saveDocument').onclick = function () {
 			var blob = new Blob([editor.getText()], {type: 'application/json;charset=utf-8'});
-			
+
 			var filename = location.href.substr(location.href.lastIndexOf('/') + 1).split('.')[0];
 			saveAs(blob, filename+".json");
 		};
 	}
-	
-	
-  
-  },
-  async: false
+
+
+
+  }
+  //async: false
   }
 );
 
