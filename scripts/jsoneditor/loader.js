@@ -55,8 +55,7 @@ function fileFetcher(file, callback) {
 	rawFile.send();
 }
 
-
-fileFetcher(filename, function(text){
+fileFetcher(getFileParts, function(text){
 
 	var data = JSON.parse(text);
 
@@ -67,7 +66,6 @@ fileFetcher(filename, function(text){
 
 
 editor.set(json);
-
 
 var json = editor.get(json);
 
@@ -91,7 +89,6 @@ var json = editor.get(json);
 			saveAs(blob, filename+".json");
 		};
 	}
-
 
   }
   //async: false
