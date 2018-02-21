@@ -27,6 +27,8 @@ loadjs([
 	'http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'], 'jsonInit', {
   success: function() {
    
+if (!document.getElementsByClassName('jsoneditor-mode-tree')[0]) {   
+   
 	if(typeof container === "undefined") {
 		if (document.getElementById('jsoneditor')) {
 			var container = document.getElementById("jsoneditor");
@@ -53,6 +55,8 @@ editor.set(json);
 	if(typeof json === "undefined") {
 		var json = editor.get(json);
 	}
+	
+}	
 	
 	// Load a JSON document
 	if (document.getElementById('loadDocument')) {
