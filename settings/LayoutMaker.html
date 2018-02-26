@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Layout Maker</title>
+	<meta name="Generator" content="NPP-Plugin">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+
+
+    <link rel="stylesheet" href="http://tonyporto.github.io/web-cdn-scripts/BootStrapChunks/common.min.css">
+
+
+	<!-- script src=""></script -->
+</head>
+	<body>
+<style>
+.icon-bars:before {
+	content:"\f0c9"
+}
+.icon-edit:before {
+	content:"\f040"
+}
+.icon-down:after {
+	content:"\f0d7"
+}
+.drop-in-box {
+	background: #ffe6e6;
+	overflow: hidden;
+	border: 2px dashed #666666;
+	font-size: 17px;
+	font-family: open_sanssemibold,Arial,Verdana,sans-serif;
+}
+.movable{
+	cursor: move
+}
+.draggable {
+	position: relative;
+  z-index: 2;
+}
+.dropzone {
+	overflow:hidden;
+    transition: background .15s linear, border-color .15s linear;
+}
+[data-drop] {
+	border: 2px dashed #f3f3f3;
+	min-height: 70px;
+	color: #ddd;
+}
+.dropzone.-drop-possible {
+	background: #fffdba;
+	color: #888;
+	border-color:#888;
+}
+[data-edit] {
+	margin-bottom: 20px;
+}
+[data-drop][active="0"],
+.display-none[data-hide] + .display-none[data-edit],
+.active[data-drag*=Section] > header {
+	display:none;
+}
+[data-drop][active="0"] + [data-edit] {
+	display:block;
+}
+.modal-form {
+	overflow: visible
+}
+
+.color-bg-1 {background-color:#e54d43}
+.color-bg-2{background-color:#747474}
+.color-bg-3{background-color:#75c8db}
+.color-bg-4{background:-webkit-linear-gradient(#e54d43,#f57f33);background:linear-gradient(#e54d43,#f57f33)}
+.color-bg-white{background-color:#fff}
+</style>
+
+
+<main role="main">
+
+<div class="display-flex col-xs-12 m-y-1">
+		<article class="display-flex-column col-md-9 dropzone-wrapper p-t-3" style="border: 1px dotted #f6f6">
+
+<div data-hide="option_layout-SC" class="dropzone js-drop p-y-10 m-y-1 text-center text-bold -wrapper" data-drop="SectionContainer">
+	<p class="line-height-1-2">
+		<strong class="line-height-1-5 size24">Content</strong><br>
+		Want to divide this box into columns?<br>
+		Drag layout elements
+	</p>
+</div>
+			<section class="wrapper display-none draggable js-drag" data-edit="section">
+				<header class="panel -flat p-y-10 m-y-10 col-xs-12 size14 text-bold  color-bg-light">
+					<span class="movable icon-bars ico-b ">section+container</span>
+					<span class="float-right">
+						<span class="icon-edit ico-b pointer modal_click"
+									data-toggle="modal"
+									data-target="section_modal"
+									
+									data-backdrop>Edit
+						</span>
+						<!-- span class="p-l-1 ico-a icon-down">More</span -->
+					</span>
+				</header>
+				<div class="container drop-in-box text-center p-y-2">
+					<strong class="size18">SectionContainer</strong>
+					<p>Want to divide this box into columns?<br>
+					Drag layout elements
+					</p>
+				</div>
+			</section>
+
+
+<div data-hide="option_layout-S" class="display-none dropzone js-drop p-y-10 m-y-1 text-center text-bold -wrapper" data-drop="Section">
+	<p class="line-height-1-2">
+		<strong class="line-height-1-5 size24">Content</strong><br>
+		Want to divide this box into columns?<br>
+		Drag layout elements
+	</p>
+</div>
+			<section class="wrapper display-none draggable js-drag" data-edit="section">
+				<header class="movable icon-bars ico-b panel -flat p-y-10 m-y-10 col-xs-12 size14 text-bold color-bg-light">
+					Section
+					<span class="float-right">
+						<span class="icon-edit ico-b pointer modal_click"
+									data-toggle="modal"
+									data-target="section_modal"
+									
+									data-backdrop>Edit
+						</span>
+						<!-- span class="p-l-1 ico-a icon-down">More</span -->
+					</span>
+				</header>
+				<div class="col-xs-12 drop-in-box text-center p-y-2">
+					<strong class="size18">Section</strong>
+					<p>Want to divide this box into columns?<br>
+					Drag layout elements
+					</p>
+				</div>
+			</section>
+
+
+		</article>
+
+
+<!-- (aside(add class="dropzone js-drop") -->
+<aside class="display-flex-column display-flex-center col-md-3 p-t-1" style="background-color:#f3f3f3" data-drop="aside">
+
+
+<div class="form-checkbox p-a-1 border-wrapper color-bg-white m-b-2" style="color:#666">
+
+<p class="size20 text-uppercase">
+Choose a Layout
+</p>
+
+	<input id="option_layout-SC" name="option_layout" type="radio" checked="">
+	<label for="option_layout-SC" class="display-block line-height-1-5 m-b-10">Section+Container</label>
+
+	<input id="option_layout-S" name="option_layout" type="radio">
+	<label for="option_layout-S" class=" line-height-1-5">Section</label>
+
+</div>
+
+<!-- INSTRUCTIONS -->
+<span style="color:#337ab7" class="absolute top-left p-l-15 p-y-10 pointer modal_click icon-alert-info ico-b size16" data-target="modal_help" data-btn="close">Need help, see Instructions</span>
+
+<section data-hide="option_layout-SC" data-drag="SectionContainer"
+			 class="movable draggable js-drag m-b-1">
+
+	<header class="movable panel relative display-block p-x-10 p-y-10 line-height-1 m-b-10 size40 color-bg-white"
+			 style="color:pink;width:120px; height:80px;">
+				<span class="display-block float-left" style="margin-right:-18px"> ◄ </span>
+				<span style="background-color:pink; height:10px;width:60px;margin: 15px 0 10px" class="display-block float-left"></span>
+				<strong class="col-xs-12 p-x-0 text-center size12" style="margin-top:6px; color:#666">section+container</strong>
+	</header>
+
+</section>
+
+<section data-hide="option_layout-S" data-drag="Section"
+			 class="display-none movable draggable js-drag m-b-1">
+
+	<header class="movable panel relative display-block p-x-10 p-y-10 line-height-1 m-b-10 size40 color-bg-white" style="color:pink;width:120px; height:80px;">
+				<span class="display-block float-left" style="margin-right:-18px"> ◄ </span>
+				<span style="background-color:pink; height:10px;width:60px;margin: 15px 0 10px" class="display-block float-left"></span>
+				<strong class="col-xs-12 text-center size12" style="margin-top:6px; color:#666">Section</strong>
+	</header>
+
+</section>
+
+		
+		
+</aside>
+
+</div>
+
+<!-- PREVIEW -->
+<section class="p-y-30 color-bg-light">
+
+<h3 class="text-center size22" style="letter-spacing:5px;">PREVIEW SECTION AREA</h3>
+<div id="preview" class="relative color-bg-white p-y-10" style="min-height:60vh; margin: 35px 15px 15px; border: 2px dotted #ddd;">
+<section class="wrapper" data-preview="section">
+	<div class="container" data-preview="container">
+	
+
+<figure class="text-left text-xs-center clearfix display-flex flex-column-xs">
+	<picture class="float-xs-none float-left display-xs-inline p-r-2 p-r-2-sm p-r-0-xs col-sm-6 col-md-auto p-x-0">
+		<source media="(min-width: 800px)" srcset="http://placehold.it/500x360/6F84FF/ffffff?text=min-width:+800px+Image">
+		<source media="(min-width: 465px)" srcset="http://placehold.it/450x324/6F84FF/ffffff?text=min-width:+465px+Image">
+		<img alt="Admitting-the-Right-Students-intro-min" src="http://placehold.it/350x252/6F84FF/ffffff?text=Default+Image">
+	</picture>
+ <div class="col-sm-6 display-flex-center p-x-0">
+	 <header>
+		 <h2 class=" m-t-2">Placard Caption Right</h2>
+		 
+		 <p class="line-height-1-8 text-size-1-8 m-b-2">Admissions plays a key role in any nursing program. Students that truly fit into your program will perform better during and after graduation.
+		</p>
+	</header>
+ </div>
+</figure>
+	
+	</div>
+</section>
+</div>
+</section>
+
+
+<!-- PREVIEW -->
+<form class="modal fade section_modal" data-backdrop>
+	<div class="modal-dialog content-modal container modal-form">
+
+<fieldset class=" p-a-0" style="margin-top:-100px; margin-bottom:50px">
+
+	<div class="col-md-5 border-wrapper color-bg-white m-t-1 p-a-1">
+		<span id="options_bgcolor_txt" style="display:none"></span>
+		<p>
+		<strong>Background Color:</strong>
+		</p>
+		<select class="form-control" id="options_bgcolor">
+			<option value="" selected="selected">Select BG Color</option>
+			<option value="color-bg-1">BU bg color 1</option>
+			<option value="color-bg-2">BU bg color 2</option>
+			<option value="color-bg-3">BU bg color 3</option>
+			<option value="color-bg-4">BU bg color 4</option>
+			<option value="color-bg-5">BU bg color 5</option>
+			<option value="color-bg-white">White bg color</option>
+		</select>
+	</div>
+
+	<div class="float-md-right col-md-5 border-wrapper color-bg-white m-t-1 p-a-1">
+		<span id="options_padding_txt" style="display:none"></span>
+		<p>
+		<strong>Section Padding:</strong>
+		</p>
+		<select class="form-control" id="options_padding">
+        <option value="p-y-1">top & bottom 1em</option>
+        <option value="p-t-1">padding-top:1em</option>
+        <option value="p-b-1">padding-bottom:1em</option>
+
+        <option value="p-y-20">top & bottom 20px</option>
+        <option value="p-y-30">top & bottom 30px</option>
+
+        <option value="p-y-2">top & bottom 2em</option>
+        <option value="p-t-2">padding-top:2em</option>
+        <option value="p-b-2">padding-bottom:2em</option>
+
+        <option value="p-y-2-5">top & bottom 2.5em</option>
+        <option value="p-t-2-5">padding-top:2.5em</option>
+        <option value="p-b-2-5">padding-bottom:2.5em</option>
+
+        <option value="p-y-3">top & bottom 3em</option>
+        <option value="p-t-3">padding-top:3em</option>
+        <option value="p-b-3">padding-bottom:3em</option>
+
+        <option value="p-y-3-5">top & bottom 3.5em</option>
+        <option value="p-t-3-5">padding-top:3.5em</option>
+        <option value="p-b-3-5">padding-bottom:3.5em</option>
+
+        <option value="p-y-4">top & bottom 4em</option>
+        <option value="p-t-4">padding-top:4em</option>
+        <option value="p-b-4">padding-bottom:4em</option>
+		</select>
+	</div>
+		
+</fieldset>
+
+
+		<div class="col-xs-10 col-md-5 m-x-a float-none color-bg-white panel p-x-30 p-y-30">
+
+			<h2 class="m-t-0">Classes</h2>
+
+	    <div class=" m-b-1">
+	      <strong class="display-block" style="margin-bottom:5px">
+	      
+	      <span data-hide="option_layout-SC">
+					SectionWrapper
+				</span>
+				<span class="display-none" data-hide="option_layout-S">
+					Section
+				</span>
+
+	      </strong>
+	      <input data-id="wrapper_input" type="text" class="form-control">
+	    </div>
+	    
+	    <!-- section container -->
+	    <div data-hide="option_layout-SC" class=" m-b-1">
+	      <label>SectionContainer</label>
+	      <input data-id="container_input" type="text" class="form-control">
+	    </div>
+			<!-- section container -->	    
+<!--
+<a class="btn btn-success" href="#"  data-toggle="collapse" data-target="#layout-results"></a>
+-->
+<a class="btn btn-success" href="#layout-results" 
+	 data-dismiss="modal"
+	 data-toggle="collapse" 
+	 data-target="#layout-results">Save & Close
+</a>
+			
+			
+	  </div>
+
+	</div>
+</form>
+
+
+<!-- RESULTS -->
+<style>
+#layout-results:not(.in) {display:none}
+</style>
+<header id="layout-results" style="z-index:10" 
+				class="col-md-6 m-x-a affix top-left color-bg-white panel p-x-30 p-y-30 collapse display-none">
+
+				<span class="float-right modal-close close size16" data-toggle="collapse" data-target="#layout-results" aria-expanded="true"></span>
+
+	<h4 class="m-t-0 m-b-20">Use these values on the 
+	<strong>
+	      <span data-hide="option_layout-SC">
+					Section+Container
+				</span>
+				<span class="display-none" data-hide="option_layout-S">
+					Section
+				</span>
+	</strong> layout
+	</h4>
+
+	    <div class=" m-b-1">
+	      <strong class="display-block" style="margin-bottom:5px">
+	      
+	      <span data-hide="option_layout-SC">
+					SectionWrapper
+				</span>
+				<span class="display-none" data-hide="option_layout-S">
+					Section
+				</span>
+
+	      </strong>
+	      <input data-id="wrapper_input" type="text" class="form-control">
+	    </div>
+	    
+	    <!-- section container -->
+	    <div data-hide="option_layout-SC" class=" m-b-1">
+	      <label>SectionContainer</label>
+	      <input data-id="container_input" type="text" class="form-control">
+	    </div>
+			<!-- section container -->
+</header>
+<!-- RESULTS -->
+
+
+
+<!-- INSTRUCTIONS -->
+<div class="modal fade modal_help" role="dialog" aria-hidden="true" style="background-color:rgba(51, 122, 183, 0.85)">
+  <div class="modal-dialog container fixed color-white p-x-2">
+
+    <!-- Modal content-->
+
+      <h2 class="color-white text-size-3-sm text-size-2-md">Layout Maker Instructions</h2>
+
+      <div class="modal-body line-height-1-8 size18">
+        <ol class="p-l-20 size24">
+					<li><strong>CHOOSE A LAYOUT</strong> (Section OR Section Wrapper)</li>
+					<li>Drag selected layout icon onto <strong>Content</strong> area</li>
+					<li>Click the  <span class="icon-edit ico-b"><strong>edit</strong></span> on the right of the layout head</li>
+					<li>Add Style (Background Color & Padding) </li>
+					<li>Notice your changes applied in (PREVIEW SECTION AREA)</li>
+					<li class="p-y-10">Click the <span class="btn-sm btn btn-success">Save &amp; Close
+</span></li>
+					<li>Copy & Paste provided snippet into layout</li>
+        </ol>
+      </div>
+
+   
+
+  </div>
+</div>
+<!-- INSTRUCTIONS -->
+
+
+</main>
+<script src="http://tonyporto.github.io/web-cdn-scripts/js/lab.js"></script>
+<script>
+    //WAIT UNTIL LAB JS
+    $LAB
+    .script("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    .script("http://tonyporto.github.io/web-cdn-scripts/js/modernizr.js")
+    .script("https://cdn.jsdelivr.net/npm/interactjs@1.2.9/dist/interact.min.js").wait(function() {
+(function (interact) {
+
+    'use strict';
+
+    var transformProp;
+
+    interact.maxInteractions(Infinity);
+
+    // setup draggable elements.
+    interact('.js-drag')
+        .draggable({ max: Infinity })
+        .on('dragstart', function (event) {
+            event.interaction.x = parseInt(event.target.getAttribute('data-x'), 10) || 0;
+            event.interaction.y = parseInt(event.target.getAttribute('data-y'), 10) || 0;
+        })
+        .on('dragmove', function (event) {
+            event.interaction.x += event.dx;
+            event.interaction.y += event.dy;
+
+            if (transformProp) {
+                event.target.style[transformProp] =
+                    'translate(' + event.interaction.x + 'px, ' + event.interaction.y + 'px)';
+            }
+            else {
+                event.target.style.left = event.interaction.x + 'px';
+                event.target.style.top  = event.interaction.y + 'px';
+            }
+        })
+        .on('dragend', function (event) {
+            event.target.setAttribute('data-x', event.interaction.x);
+            event.target.setAttribute('data-y', event.interaction.y);
+        });
+
+    // setup drop areas.
+    // dropzone #1 accepts draggable #1
+    // setupDropzone('#drop1', '#drag1');
+    // dropzone #2 accepts draggable #1 and #2
+    // setupDropzone('#drop2', '#drag1, #drag2');
+    // every dropzone accepts draggable #3
+    //setupDropzone('.js-drop', '#drag3');
+    setupDropzone('[data-drop=SectionContainer]', '[data-drag=SectionContainer]');
+    setupDropzone('[data-drop=Section]', '[data-drag=Section]');
+
+
+setupDropzone('[data-drop=aside]', '[data-edit=Section]');
+
+    /**
+     * Setup a given element as a dropzone.
+     *
+     * @param {HTMLElement|String} el
+     * @param {String} accept
+     */
+    function setupDropzone(el, accept) {
+        interact(el)
+            .dropzone({
+                accept: accept,
+                ondropactivate: function (event) {
+                    addClass(event.relatedTarget, '-drop-possible');
+                },
+                ondropdeactivate: function (event) {
+                    removeClass(event.relatedTarget, '-drop-possible');
+                }
+            })
+            .on('dropactivate', function (event) {
+                var active = event.target.getAttribute('active')|0;
+
+                // change style if it was previously not active
+                if (active === 0) {
+                    addClass(event.target, '-drop-possible');
+                    //event.target.textContent = 'Drop me here!';
+                }
+
+                event.target.setAttribute('active', active + 1);
+            })
+            .on('dropdeactivate', function (event) {
+                var active = event.target.getAttribute('active')|0;
+
+                // change style if it was previously active
+                // but will no longer be active
+                if (active === 1) {
+                    removeClass(event.target, '-drop-possible');
+                    //event.target.textContent = 'Dropzone';
+                }
+
+                event.target.setAttribute('active', active - 1);
+            })
+            .on('dragenter', function (event) {
+                addClass(event.target, '-drop-over');
+                //event.relatedTarget.textContent = 'I\'m in';
+            })
+            .on('dragleave', function (event) {
+                removeClass(event.target, '-drop-over');
+                //event.relatedTarget.textContent = 'Drag me…';
+            })
+            .on('drop', function (event) {
+                removeClass(event.target, '-drop-over');
+                //event.relatedTarget.textContent = 'Dropped';
+
+              event.relatedTarget.className += " active";
+
+
+            });
+    }
+
+    function addClass (element, className) {
+        if (element.classList) {
+            return element.classList.add(className);
+        }
+        else {
+            element.className += ' ' + className;
+        }
+    }
+
+    function removeClass (element, className) {
+        if (element.classList) {
+            return element.classList.remove(className);
+        }
+        else {
+            element.className = element.className.replace(new RegExp(className + ' *', 'g'), '');
+        }
+    }
+
+    interact(document).on('ready', function () {
+        transformProp = 'transform' in document.body.style
+            ? 'transform': 'webkitTransform' in document.body.style
+            ? 'webkitTransform': 'mozTransform' in document.body.style
+            ? 'mozTransform': 'oTransform' in document.body.style
+            ? 'oTransform': 'msTransform' in document.body.style
+            ? 'msTransform': null;
+    });
+
+}(window.interact));
+
+})
+.script("http://tonyporto.github.io/web-cdn-scripts/BootStrapChunks/js/bootstrap.js")
+
+
+
+
+// =====================================
+function whenAvailable(name, callback) {
+
+    var interval = 10; // ms
+
+    window.setTimeout(function() {
+        if (window[name]) {
+            callback(window[name]);
+        } else {
+            window.setTimeout(arguments.callee, 20);
+        }
+    }, 20);
+}
+
+//WAIT FOR MODERNIZER TO BE DEFINED
+whenAvailable("jQuery", function(t) {
+//
+	jQuery("[name=option_layout]").on("click", function() {
+
+		jQuery("[data-hide]:not(.dropzone)").hide()//.addClass("display-none")
+		jQuery("[data-hide='" + jQuery(this).attr("id") + "']:not(.dropzone)").show()//.removeClass("display-none")
+		
+		jQuery(".dropzone[data-hide]").addClass("display-none")
+		jQuery(".dropzone[data-hide='" + jQuery(this).attr("id") + "']").removeClass("display-none")
+		
+		
+		//PREVIEW
+		if (jQuery("#option_layout-SC").is(":checked")) {
+			jQuery("[data-preview=container]").addClass("container")
+		} else {
+			jQuery("[data-preview=container]").removeClass("container")
+		}
+
+	})
+	
+/* OPTIONS VARIABLES */
+var bgcolor_txt = jQuery("#options_bgcolor_txt, [data-preview=section]"),
+		padding_txt = jQuery("#options_padding_txt, [data-preview=section]"),
+		
+		wrapper_input = jQuery("[data-id=wrapper_input]"),
+		
+		preview = jQuery("[data-preview=section]");	
+
+/* BACKGROUND COLOR ========================================== */
+jQuery("#options_bgcolor").on("change", function() {
+
+	//GET EXISTING BG COLOR CLASS VALUES, REPLACE ALL NEW OPTTIONS & ADD, APPEND FINAL
+	bgcolor_txt.addClass(wrapper_input.val())
+	bgcolor_txt.removeClass("color-bg-1 color-bg-2 color-bg-3 color-bg-4 color-bg-5 color-bg-white");
+	bgcolor_txt.addClass(jQuery(this).val());
+	
+	wrapper_input.val(bgcolor_txt.attr("class"));
+
+})
+
+/* PADDING ========================================== */
+jQuery("#options_padding").on("change", function() {
+
+	padding_txt.addClass(wrapper_input.val())
+	padding_txt.removeClass("p-y-1 p-t-1 p-b-1 p-y-20 p-y-30 p-y-2 p-t-2 p-b-2 p-y-2-5 p-t-2-5 p-b-2-5 p-y-3 p-t-3 p-b-3 p-y-3-5 p-t-3-5 p-b-3-5 p-y-4 p-t-4 p-b-4");
+	padding_txt.addClass(jQuery(this).val());
+	
+	wrapper_input.val(padding_txt.attr("class"));
+
+})
+
+//END
+})
+
+</script>
+	</body>
+</html>
