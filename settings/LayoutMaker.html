@@ -41,6 +41,9 @@
 	position: relative;
   z-index: 2;
 }
+.modal {
+  cursor: default;
+}
 .dropzone {
 	overflow:hidden;
     transition: background .15s linear, border-color .15s linear;
@@ -69,7 +72,9 @@
 .modal-form {
 	overflow: visible
 }
+#layout-results.in:after {
 
+}
 .color-bg-1 {background-color:#e54d43}
 .color-bg-2{background-color:#747474}
 .color-bg-3{background-color:#75c8db}
@@ -231,7 +236,7 @@ Choose a Layout
 
 <fieldset class=" p-a-0" style="margin-top:-100px; margin-bottom:50px">
 
-	<div class="col-md-5 border-wrapper color-bg-white m-t-1 p-a-1">
+	<div class="col-md-5 border-wrapper color-bg-white m-t-1 p-a-1" style="padding: 1em 1em !important">
 		<span id="options_bgcolor_txt" style="display:none"></span>
 		<p>
 		<strong>Background Color:</strong>
@@ -329,10 +334,12 @@ Choose a Layout
 <style>
 #layout-results:not(.in) {display:none}
 </style>
-<header id="layout-results" style="z-index:10" 
-				class="col-md-6 m-x-a affix top-left color-bg-white panel p-x-30 p-y-30 collapse display-none">
-
-				<span class="float-right modal-close close size16" data-toggle="collapse" data-target="#layout-results" aria-expanded="true"></span>
+	
+<header id="layout-results" class="display-none collapse " aria-expanded="true">
+<span class="affix top-left bottom-right display-block" style="z-index:5;background-color:rgba(0,0,0,.75);"></span>
+ <fieldset style="z-index:6" class="col-md-6 m-x-a affix top-left color-bg-white panel p-x-30 p-y-30 ">
+	
+	<span class="float-right modal-close close size16" data-toggle="collapse" data-target="#layout-results" aria-expanded="true"></span>
 
 	<h4 class="m-t-0 m-b-20">Use these values on the 
 	<strong>
@@ -365,6 +372,8 @@ Choose a Layout
 	      <input data-id="container_input" type="text" class="form-control">
 	    </div>
 			<!-- section container -->
+			
+	</fieldset>
 </header>
 <!-- RESULTS -->
 
@@ -586,17 +595,25 @@ var bgcolor_txt = jQuery("#options_bgcolor_txt, [data-preview=section]"),
 		
 		wrapper_input = jQuery("[data-id=wrapper_input]"),
 		
-		preview = jQuery("[data-preview=section]");	
+		preview = jQuery("[data-preview=section]"),
+		
+		option_bgcolors = "color-bg-1 color-bg-2 color-bg-3 color-bg-4 color-bg-5 color-bg-white",
+		option_padding = "p-y-1 p-t-1 p-b-1 p-y-20 p-y-30 p-y-2 p-t-2 p-b-2 p-y-2-5 p-t-2-5 p-b-2-5 p-y-3 p-t-3 p-b-3 p-y-3-5 p-t-3-5 p-b-3-5 p-y-4 p-t-4 p-b-4";	
 
 /* BACKGROUND COLOR ========================================== */
 jQuery("#options_bgcolor").on("change", function() {
 
 	//GET EXISTING BG COLOR CLASS VALUES, REPLACE ALL NEW OPTTIONS & ADD, APPEND FINAL
 	bgcolor_txt.addClass(wrapper_input.val())
-	bgcolor_txt.removeClass("color-bg-1 color-bg-2 color-bg-3 color-bg-4 color-bg-5 color-bg-white");
+	bgcolor_txt.removeClass(option_bgcolors);
 	bgcolor_txt.addClass(jQuery(this).val());
 	
 	wrapper_input.val(bgcolor_txt.attr("class"));
+	
+	var temps = bgcolor_txt.attr("class"),
+			newTemps = temps.replace(option_bgcolors + option_padding + " wrapper",'');
+			jQuery(this).parent().removeClass(option_bgcolors + option_padding + " color-bg-white")
+			.addClass(newTemps)
 
 })
 
@@ -604,7 +621,7 @@ jQuery("#options_bgcolor").on("change", function() {
 jQuery("#options_padding").on("change", function() {
 
 	padding_txt.addClass(wrapper_input.val())
-	padding_txt.removeClass("p-y-1 p-t-1 p-b-1 p-y-20 p-y-30 p-y-2 p-t-2 p-b-2 p-y-2-5 p-t-2-5 p-b-2-5 p-y-3 p-t-3 p-b-3 p-y-3-5 p-t-3-5 p-b-3-5 p-y-4 p-t-4 p-b-4");
+	padding_txt.removeClass(option_padding);
 	padding_txt.addClass(jQuery(this).val());
 	
 	wrapper_input.val(padding_txt.attr("class"));
