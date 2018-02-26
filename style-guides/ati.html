@@ -1712,10 +1712,52 @@ The column in the framework is 12 grid system, it's a simple math equation that 
 	</div>
 </section>
 
-<div class="container p-y-1">
+<div class="container p-y-1"  id="vert-source">
 		<h3 class="syntax-variable m-t-2 text-left">Placard Caption Right Source</h3>
 	<hr>
+<style>
+.color-green,.color-green [class*=syntax-] {color:#53d16a}
 
+.form-checkbox input:checked+label:before {
+    border-color: #53d16a;
+}
+.form-checkbox input:checked+label:before{
+    background-color: #53d16a;
+}
+</style>
+<p id="pl-width-setter">
+<strong class="size18 color-green ">
+Placard Caption image container width setter.
+</strong>
+</p>
+<div class="form-checkbox circle">
+
+		<input type="radio" id="checkc_two" name="width-changer" value="col-md-8" checked>
+		<label class="p-r-2" for="checkc_two">66%</label>
+
+		<input type="radio" id="checkc_three" name="width-changer" value="col-md-7">
+		<label class="p-r-2" for="checkc_three">58%</label>
+		
+		<input type="radio" id="checkc_one" name="width-changer" value="">
+		<label class="p-r-2" for="checkc_one">50%</label>
+
+		<input type="radio" id="checkc_four" name="width-changer" value="col-md-5">
+		<label class="" for="checkc_four">41%</label>
+	
+</div>
+
+<script>
+$("[name=width-changer]").on("change", function() {
+
+	var setter = $("#width-changer-txt");
+
+	setter.removeClass("col-md-8 col-md-7 col-md-5")
+	setter.addClass($(this).val())
+	 $(".width-changer").text(setter.attr("class"))
+})
+</script>
+
+<hr>
 <pre>
 <code class="html">
 &lt;figure class="text-left text-xs-center clearfix display-flex flex-column-xs flex-reverse-sm"&gt;
@@ -1724,7 +1766,7 @@ The column in the framework is 12 grid system, it's a simple math equation that 
 		&lt;source media="(min-width: 465px)" srcset="http://ati-stg-mkt01/images/default-source/educator/widgets/card/captionrightinline/admitting-the-right-students-intro-min.png?sfvrsn=6?Status=Master&amp;sfvrsn=2&amp;size=450"&gt;
 		&lt;img alt="Admitting-the-Right-Students-intro-min" src="http://ati-stg-mkt01/images/default-source/educator/widgets/card/captionrightinline/admitting-the-right-students-intro-min.png?sfvrsn=6?Status=Master&amp;sfvrsn=2&amp;size=350"&gt;
 	&lt;/picture&gt;
- &lt;div class="col-sm-6 col-md-8 display-flex-center p-x-0"&gt;
+ &lt;div class="col-sm-6 <em style="display:none" id="width-changer-txt"></em><strong class="width-changer color-green p-x-05">col-md-8</strong> display-flex-center p-x-0"&gt;
 	 &lt;header&gt;
 		 &lt;h2 class="color-white m-t-2"&gt;Placard Caption Right&lt;/h2&gt;
 		 
@@ -1764,7 +1806,7 @@ The column in the framework is 12 grid system, it's a simple math equation that 
 
 
 <div class="container p-y-1">
-		<h3 class="syntax-variable m-t-2 text-left">Placard Caption Right Rev Souce</h3>
+		<h3 class="syntax-variable m-t-2 text-left">Placard Caption Left Rev Souce</h3>
 	<hr>
 
 <pre>
@@ -1775,7 +1817,7 @@ The column in the framework is 12 grid system, it's a simple math equation that 
 		&lt;source media="(min-width: 465px)" srcset="http://via.placeholder.com/450x450"&gt;
 		&lt;img alt="Admitting-the-Right-Students-intro-min" src="http://via.placeholder.com/250x250"&gt;
 	&lt;/picture&gt;
- &lt;div class="col-sm-6 col-md-8 display-flex-center p-x-0"&gt;
+ &lt;div class="col-sm-6 <strong class="width-changer color-green p-x-05">col-md-8</strong> display-flex-center p-x-0"&gt;
 	 &lt;header&gt;
 		 &lt;h2 class="color-white m-t-2"&gt;Placard Caption Right Rev&lt;/h2&gt;
 		 
@@ -1792,10 +1834,7 @@ The column in the framework is 12 grid system, it's a simple math equation that 
 
   <section class="color-light-bg p-y-3">
 	<div class="container">
-	
-	
-       
-        
+
  <div class="row">
 	<div class="col-lg-4 col-sm-6 p-y-1">
 
