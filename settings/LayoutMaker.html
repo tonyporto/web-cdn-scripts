@@ -236,7 +236,7 @@ Choose a Layout
 
 <fieldset class=" p-a-0" style="margin-top:-100px; margin-bottom:50px">
 
-	<div class="col-md-5 border-wrapper color-bg-white m-t-1 p-a-1" style="padding: 1em 1em !important">
+	<div class="col-md-4 border-wrapper color-bg-white m-t-1 p-a-1" style="padding: 1em 1em !important">
 		<span id="options_bgcolor_txt" style="display:none"></span>
 		<p>
 		<strong>Background Color:</strong>
@@ -251,8 +251,27 @@ Choose a Layout
 			<option value="color-bg-white">White bg color</option>
 		</select>
 	</div>
+	
+<!-- WHITE COLOR -->
+<div class="text-center col-md-4 border-wrapper color-bg-white m-t-1 p-a-1">
+		<span id="options_bgcolor_txt" style="display:none"></span>
+		<p>
+		<strong>White text Color:</strong>
+		</p>
+	<div class="form-checkbox" style="color:#666; padding-top:5px;padding-bottom:5px">
 
-	<div class="float-md-right col-md-5 border-wrapper color-bg-white m-t-1 p-a-1">
+
+	<input id="option_colorN" name="option_color" type="radio" checked="" value="no">
+	<label for="option_colorN" class="display-block-xs line-height-1-5 p-b-10 p-r-2-sm size16">No</label>
+
+	<input id="option_colorY" name="option_color" type="radio" value="yes">
+	<label for="option_colorY" class="size16 line-height-1-5 p-b-10">Yes</label>
+
+	</div>
+</div>
+<!-- WHITE COLOR -->
+
+	<div class="float-md-right col-md-4 border-wrapper color-bg-white m-t-1 p-a-1">
 		<span id="options_padding_txt" style="display:none"></span>
 		<p>
 		<strong>Section Padding:</strong>
@@ -311,7 +330,7 @@ Choose a Layout
 	    <!-- section container -->
 	    <div data-hide="option_layout-SC" class=" m-b-1">
 	      <label>SectionContainer</label>
-	      <input data-id="container_input" type="text" class="form-control">
+	      <input data-id="container_input" type="text" class="form-control" value="container" disabled>
 	    </div>
 			<!-- section container -->	    
 <!--
@@ -369,7 +388,7 @@ Choose a Layout
 	    <!-- section container -->
 	    <div data-hide="option_layout-SC" class=" m-b-1">
 	      <label>SectionContainer</label>
-	      <input data-id="container_input" type="text" class="form-control">
+	      <input data-id="container_input" type="text" class="form-control" value="container" disabled>
 	    </div>
 			<!-- section container -->
 			
@@ -594,7 +613,6 @@ var bgcolor_txt = jQuery("#options_bgcolor_txt, [data-preview=section]"),
 		padding_txt = jQuery("#options_padding_txt, [data-preview=section]"),
 		
 		wrapper_input = jQuery("[data-id=wrapper_input]"),
-		
 		preview = jQuery("[data-preview=section]"),
 		
 		option_bgcolors = "color-bg-1 color-bg-2 color-bg-3 color-bg-4 color-bg-5 color-bg-white",
@@ -610,8 +628,16 @@ jQuery("#options_bgcolor").on("change", function() {
 	
 	wrapper_input.val(bgcolor_txt.attr("class"));
 	
+/*	
+	var pstat = bgcolor_txt.attr("class").replace('wrapper',''),
+			pstatF = $.trim(pstat)
+			//
+			history.pushState(null, null, "#" + pstatF);
+*/
+	
 	var temps = bgcolor_txt.attr("class"),
 			newTemps = temps.replace(option_bgcolors + option_padding + " wrapper",'');
+			
 			jQuery(this).parent().removeClass(option_bgcolors + option_padding + " color-bg-white")
 			.addClass(newTemps)
 
@@ -625,6 +651,21 @@ jQuery("#options_padding").on("change", function() {
 	padding_txt.addClass(jQuery(this).val());
 	
 	wrapper_input.val(padding_txt.attr("class"));
+
+})
+
+
+jQuery("[name=option_color]").on("change", function() {
+
+	if (jQuery("#option_colorY").is(":checked")) {
+		$("[data-id=wrapper_input]").val($("[data-id=wrapper_input]").val() + " color-white");
+		$("[data-preview=section]").addClass("color-white");
+		
+	} else {
+		$("[data-id=wrapper_input]").val($("[data-id=wrapper_input]").val().replace(" color-white",""));
+		$("[data-preview=section]").removeClass("color-white");
+	}
+
 
 })
 
