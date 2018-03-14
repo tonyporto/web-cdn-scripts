@@ -1,5 +1,4 @@
 var tabsCssTag = document.createElement('style');
-
 		tabsCssTag.innerHTML = ".tab-content>.tab-pane {display:none}.tab-content>.active {display:block;}";
 		document.getElementsByTagName("head")[0].appendChild(tabsCssTag);
 /* ========================================================================
@@ -84,7 +83,6 @@ var tabsCssTag = document.createElement('style');
         element.closest('li.dropdown').addClass('active').end()
           .find('[data-toggle="tab"]').attr('aria-expanded', true)
       }
-
       callback && callback()
     }
 
@@ -95,8 +93,6 @@ var tabsCssTag = document.createElement('style');
 
     $active.removeClass('in')
   }
-
-
   // TAB PLUGIN DEFINITION
   // =====================
   function Plugin(option) {
