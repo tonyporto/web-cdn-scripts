@@ -1,0 +1,184 @@
+[
+   {
+      "OUTCOMES DROPDOWN":"_____________ ORDER _____________"
+   },
+   {
+      "select_options":[
+         {
+            "value":"color-bg-1",
+            "text":"BU bg color 1"
+         },
+         {
+            "value":"color-bg-2",
+            "text":"BU bg color 2"
+         },
+         {
+            "value":"color-bg-3",
+            "text":"BU bg color 3"
+         },
+         {
+            "value":"color-bg-4",
+            "text":"BU bg color 4"
+         },
+         {
+            "value":"color-bg-white",
+            "text":"White Background"
+         }
+      ]
+   },
+   {
+      "CONTENT AREAS":"_____________ ORDER _____________"
+   },
+   {
+      "select_options":[
+				{
+				 "value":"size12",
+				 "text":"font-size:12px"
+				 },
+				{
+				 "value":"size14",
+				 "text":"font-size:14px"
+				 },
+				{
+				 "value":"size16",
+				 "text":"font-size:16px"
+				 },
+				{
+				 "value":"size18",
+				 "text":"font-size:18px"
+				 },
+				{
+				 "value":"size20",
+				 "text":"font-size:20px"
+				 },
+				{
+				 "value":"size24",
+				 "text":"font-size:24px"
+				 },
+				{
+				 "value":"size26",
+				 "text":"font-size:26px"
+				 },
+				{
+				 "value":"size30",
+				 "text":"font-size:30px"
+				 },
+				{
+				 "value":"size36",
+				 "text":"font-size:36px"
+				 },
+				{
+				 "value":"size40",
+				 "text":"font-size:40px"
+				 },
+				{
+				 "value":"size46",
+				 "text":"font-size:46px"
+				 },
+				{
+				 "value":"size48",
+				 "text":"font-size:48px"
+				 },
+				{
+				 "value":"size50",
+				 "text":"font-size:50px"
+				 },
+
+				{
+				 "value":"text-size-1",
+				 "text":"font-size:1em"
+				 },
+				{
+				 "value":"text-size-1-2",
+				 "text":"font-size:1.2em"
+				 },
+				{
+				 "value":"text-size-1-4",
+				 "text":"font-size:1.4rem (14px)"
+				 },
+				{
+				 "value":"text-size-1-6",
+				 "text":"font-size:1.6rem (16px)"
+				 },
+				{
+				 "value":"text-size-1-8",
+				 "text":"font-size:1.8rem (18px)"
+				 },
+				{
+				 "value":"text-size-2",
+				 "text":"font-size:2rem (20px)"
+				 },
+				{
+				 "value":"text-size-2-2",
+				 "text":"font-size:2.2rem (22px)"
+				 },
+				{
+				 "value":"text-size-2-4",
+				 "text":"font-size:2.4rem (24px)"
+				 },
+				{
+				 "value":"text-size-2-6",
+				 "text":"font-size:2.6rem (26px)"
+				 },
+				{
+				 "value":"text-size-2-8",
+				 "text":"font-size:2.8rem (28px)"
+				 },
+				{
+				 "value":"text-size-3",
+				 "text":"font-size:3rem (30px)"
+				 },
+				{
+				 "value":"text-size-3-2",
+				 "text":"font-size:3.2rem (32px)"
+				 },
+				{
+				 "value":"text-size-3-4",
+				 "text":"font-size:3.4rem (34px)"
+				 },
+				{
+				 "value":"text-size-3-6",
+				 "text":"font-size:3.6rem (36px)"
+				 },
+				{
+				 "value":"text-size-3-8",
+				 "text":"font-size:3.8rem (38px)"
+				 },
+				{
+				 "value":"text-size-4",
+				 "text":"font-size:4rem (40px)"
+				 },
+				{
+				 "value":"text-size-5",
+				 "text":"font-size:5em (50px)"
+				}
+      ]
+   },
+   {
+      "MEDIA TYPES":"_____________ ORDER _____________"
+   },
+   {
+      "select_options":[
+         {
+            "value":"color-1",
+            "text":"color 1"
+         },
+         {
+            "value":"color-2",
+            "text":"color 2"
+         },
+         {
+            "value":"color-3",
+            "text":"color 3"
+         },
+         {
+            "value":"color-4",
+            "text":"color-4"
+         },
+         {
+            "value":"color-5",
+            "text":"color-5"
+         }
+      ]
+   }
+]
