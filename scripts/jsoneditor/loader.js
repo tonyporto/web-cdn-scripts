@@ -85,8 +85,18 @@ var json = editor.get(json);
 		document.getElementById('saveDocument').onclick = function () {
 			var blob = new Blob([editor.getText()], {type: 'application/json;charset=utf-8'});
 
+			
+		if (typeof filenameNew !== 'undefined') {
+    // the variable is defined
+		
+			var filename = filenameNew;
+		
+		}	else {
 			var filename = location.href.substr(location.href.lastIndexOf('/') + 1).split('.')[0];
+		}	
+			
 			saveAs(blob, filename+".json");
+			
 		};
 	}
 
