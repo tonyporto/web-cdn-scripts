@@ -645,7 +645,8 @@ p,
   padding-top:30px !important;
 }
 .p-r-30,
-.p-x-30 {
+.p-x-30,
+.has-feedback .form-control:not(select) {
 	padding-right:30px;
 }
 .p-b-30,
