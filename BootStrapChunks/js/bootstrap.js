@@ -482,11 +482,10 @@ function centerModal() {
 $(window).resize(function() {
 	if ($(".modal").hasClass("in")) {
 
-		var md = $(".modal.in > .modal-dialog > div"),
+		var md = $(".modal.in > .modal-dialog:not([data-child]) > div"),
 				mdAdjHeight = "-" + md.actual('height') / 2;
 				md.parent().css("margin-top", mdAdjHeight + "px");
 	}
-	$(".modal-dialog").removeAttr("data-child")
 })
 
 //MODAL LOCK PREVENT CLOSING
