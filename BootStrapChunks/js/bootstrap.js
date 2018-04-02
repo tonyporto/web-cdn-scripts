@@ -391,11 +391,11 @@ function centerModal() {
 		$(mDialog).css(modalClosedCss)
 
 		//SCROLLBARS & OVERFFLOW PROPERTIES FOR MODAL TALLED THAN SCREEN HEIGHT
-		var dialogCss = ".modal-open .header-modal{display:none}.modal-dialog{overflow-y: auto;}.modal-dialog.fixed{overflow-y: hidden;}.modal-content{border-radius:0}.modal-dialog::-webkit-scrollbar{width:10px}"
+		var dialogCss = ".modal-open .header-modal{display:none}.modal-dialog[class*=col-]{max-width:none}.modal-dialog{overflow-y: auto;}.modal-dialog.fixed{overflow-y: hidden;}.modal-content{border-radius:0}.modal-dialog::-webkit-scrollbar{width:10px}"
 			+ ".modal-dialog::-webkit-scrollbar-thumb{background:rgb(187,187,187);-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5)}.modal-close{top:3%; right:3%; font-size:3rem; line-height:1}.modal-close:before {content:'\\2573'}"
 			+ ".modal-dialog::-webkit-scrollbar-track:enabled { background-color: #ddd }.modal-dialog::-webkit-scrollbar-thumb:window-inactive{background:rgb(187,187,187)}";
 
-			if (!$("[data-css=dialog]").length) { $('head').append("<style data-css='dialog'>" +dialogCss+ "</style>"); }
+		if (!$("[data-css=dialog]").length) { $('head').append("<style data-css='dialog'>" +dialogCss+ "</style>"); }
 
 			$(".modal_click").each(function() {
 				if ($(this)[0].hasAttribute("data-btn") && !$("."+ $(this).attr("data-target") + " .modal-close").length) {
@@ -405,27 +405,30 @@ function centerModal() {
 
 		$(".modal_click").on("click", function() {
 
-			var modalWindowId = $(this).attr("data-target");
+			var theModal = "."+$(this).attr("data-target"),
+					theDialog = theModal+ " > " +mDialog,
+					modalHeight = "-" + $(theDialog).actual('height') / 2,
+					modCss = "position:fixed;bottom:0;left:0;right:0;",
+					boxCss = "top:1.5vh;margin-top:auto;",
+					boxCssH_one = "height:80vh", boxCssH_two = "height:90vh";
 
-				$(".modal" + "."+modalWindowId).modal().attr("aria-hidden","false")
+				//OPEN MODAL
+				$(".modal"+theModal).modal().attr("aria-hidden","false")
 
 				//DISABLE SCROLL
 				disableScroll()
 
 				if ($(this)[0].hasAttribute("data-backdrop")) { $("body").addClass("modal-body-backdrop"); }
 
-			$(mDialog).each(function() {
-
-				var modalHeight = "-" + $(this).actual('height') / 2,
-						child = $("." +modalWindowId+ " > " +mDialog),
-						parent = $("." +modalWindowId).actual("height"),
-						modCss = "position:fixed;bottom:0;left:0;right:0;";
-
 					//IF MODAL CONTENT BIGGER THAN WINDOW
-					if (child.actual("height") >= parent) {
+					if ($(theDialog).actual("height") >= $(theModal).actual("height")) {
 
-						var modalHcss = modCss + "top:1.5vh;margin-top:auto;height:90vh";
-							child.attr("data-child","resize").attr("style", modalHcss)
+						if ($(theDialog).prev(".modal-close").length) {
+							var modalHcss = modCss + boxCss + boxCssH_one;
+						} else {
+							var modalHcss = modCss + boxCss + boxCssH_two;
+						}
+							$(theDialog).attr("data-child","resize").attr("style", modalHcss)
 
 							//RE-ENABLE SCROLLING
 							enableScroll()
@@ -435,7 +438,7 @@ function centerModal() {
 						//IF DIALOG CONTENT NOT TALLER THEN MODAL WINDOW
 						var modalHcss = modCss + "top:50%;margin-top:"+ modalHeight +"px";
 
-						if (!$(this)[0].hasAttribute("data-child")) { $(this).attr("style", modalHcss) }
+						if ( !$(this)[0].hasAttribute("data-child") || !$(theDialog).hasAttr("data-child") ) { $(theDialog).attr("style", modalHcss) }
 
 					}
 
@@ -447,47 +450,58 @@ function centerModal() {
 						//CLOSE MODAL & RE-ENABLE SCROLLING
 						if (!$(".modal-body-backdrop").length) {
 
-							var modl = ".modal";
-									$(".modal").modal('hide').attr("aria-hidden","true");
-									if (!$("[data-modal-lock]").length) { enableScroll(); }
+							var modl = theModal;
+									$(".modal"+theModal).modal('hide').attr("aria-hidden","true");
+
+									if (!$(theModal+"[data-modal-lock]").length) { enableScroll(); }
 
 						} else {
 
 							var modl = ".modal[data-backdrop]";
-									$("[data-dismiss=modal]").click(function() { enableScroll(); })
+							$("[data-dismiss=modal]").click(function() { enableScroll(); })
 						}
 
+						//RESET MODAL
 						setTimeout(function(){
 							if(!$(modl).hasClass("in")) {
-									$(modl + " > " +mDialog).css(modalClosedCss)
-									$("body").removeAttr("style").removeClass("modal-body-backdrop");
-									enableScroll();
+								$(theDialog).css(modalClosedCss).removeAttr("data-child")
+								$("body").removeAttr("style").removeClass("modal-open modal-body-backdrop");
+								enableScroll();
 							}
 						},500);
 
 					}
 					//DOCUMENT CLICK
-
 				});
 				//CLOSE ON ANY OUTSIDE CLICK
 
+			//MODAL ON RESIZE
+			$(window).resize(function() {
+				if ($(theModal).hasClass("in")) {
+
+					var md = $(theModal+".in > .modal-dialog:not([data-child]) > div"),
+							mdAdjHeight = md.actual('height') / 2;
+
+						if (md.actual('height') >= $(window).height() - 80) {
+
+							if (md.parent().prev(".modal-close").length) {
+								md.parent().attr("style", modCss + boxCss + boxCssH_one)
+							} else {
+								md.parent().attr("style", modCss + boxCss + boxCssH_two)
+							}
+
+						} else {
+							md.parent().css({"height":"auto","top":"50%","margin-top":"-" + mdAdjHeight + "px"}).removeAttr("data-child");
+						}
+
+				}
 			})
-			//END EACH
+			//MODAL ON RESIZE
 
 		});
+		//MODAL ON CLICK FUNCTION
 	}
 }
-
-//MODAL REALIGN ON RESIZE
-$(window).resize(function() {
-	if ($(".modal").hasClass("in")) {
-
-		var md = $(".modal.in > .modal-dialog:not([data-child]) > div"),
-				mdAdjHeight = "-" + md.actual('height') / 2;
-				md.parent().css("margin-top", mdAdjHeight + "px");
-	}
-})
-
 //MODAL LOCK PREVENT CLOSING
 $('.modal[data-modal-lock]').on('hide.bs.modal', function (e) {
 	e.preventDefault(); e.stopPropagation();
