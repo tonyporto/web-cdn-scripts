@@ -847,7 +847,7 @@ p,
 	  -webkit-box-orient:horizontal;
 	  -webkit-box-direction:reverse;
 	  flex-direction:row-reverse;
-    }
+  }
 	[class*="flex-layout-"] {
 		-webkit-column-gap: 1em;
 		column-gap: 1em;
@@ -890,6 +890,9 @@ p,
   .p-l-0-sm {
     padding-left:0 !important;
   }
+  .m-r-1-sm {
+    margin-right:1em;
+  }
 }
 /* ======================== *
  *  MIN-WIDTH: 992px
@@ -922,6 +925,9 @@ p,
 	.m-b-0-md {
 		margin-bottom: 0;
 	}
+  .m-r-1-md {
+    margin-right:1em;
+  }
 	.p-t-2-md,
 	.p-y-2-md {
 		padding-top:2em !important;
