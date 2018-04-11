@@ -141,8 +141,11 @@
 .bootstrap-datetimepicker-widget th.switch {
   width: 145px
 }
-.input-append .add-on i {
+.add-on i {
   font-size: 21px
+}
+.add-on-lg i {
+  font-size: 30px
 }
 .bootstrap-datetimepicker-widget td span,
 [class*=pend].date .add-on i {
