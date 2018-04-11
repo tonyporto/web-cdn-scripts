@@ -633,6 +633,12 @@
                 this.fillDate();
                 this.set();
                 this.notifyChange();
+                
+              if (this.hideOnClick) {
++                  this.hide();
++             }  
+                
+                
               }
               break;
           }
