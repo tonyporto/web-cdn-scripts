@@ -635,8 +635,8 @@
                 this.notifyChange();
                 
               if (this.hideOnClick) {
-+                  this.hide();
-+             }  
+                  this.hide();
+             }  
                 
                 
               }
