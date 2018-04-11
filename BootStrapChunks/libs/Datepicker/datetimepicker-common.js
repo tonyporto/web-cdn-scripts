@@ -118,9 +118,6 @@
       this.fillSeconds();
       this.update();
       this.showMode();
-      
-      this.hideOnClick = (typeof options.hideOnClick != 'undefined') ? options.hideOnClick : false;
-      
       this._attachDatePickerEvents();
     },
 
@@ -633,12 +630,6 @@
                 this.fillDate();
                 this.set();
                 this.notifyChange();
-                
-              if (this.hideOnClick) {
-                  this.hide();
-             }  
-                
-                
               }
               break;
           }
