@@ -145,7 +145,7 @@
   font-size: 21px
 }
 .add-on-lg i {
-  font-size: 30px
+  font-size: 25px
 }
 .bootstrap-datetimepicker-widget td span,
 [class*=pend].date .add-on i {
@@ -156,6 +156,7 @@
   height: 35px
 }
 .add-on-lg i {
+	width: 40px;
   height: 44px
 }
 .bootstrap-datetimepicker-widget div:not(.timepicker) div table td,
