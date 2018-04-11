@@ -148,9 +148,12 @@
 [class*=pend].date .add-on i {
   cursor: pointer
 }
-[class*=pend] .add-on i {
+[class*=pend] .add-on:not(.add-on-lg) i {
   width: 35px;
   height: 35px
+}
+.add-on-lg i {
+  height: 44px
 }
 .bootstrap-datetimepicker-widget div:not(.timepicker) div table td,
 .bootstrap-datetimepicker-widget div:not(.timepicker) div table th {
