@@ -1324,14 +1324,14 @@ pre,
 .input-group-addon:last-child {
   border-left:0;
 }
-[class*=-wrapper]:not(.card),
+[class*=-wrapper]:not(.card):not([class*=-circle]),
 .list-group>li:not(:first-child),
 .pagination>li:not(:last-child)>a,
 .input-group .form-control:first-child,
 .input-group-addon:first-child {
   border-top-right-radius:0;
 }
-[class*=-wrapper]:not(.card),
+[class*=-wrapper]:not(.card):not([class*=-circle]),
 .list-group>li:not(:first-child),
 .pagination>li:not(:first-child)>a,
 .input-group .form-control:last-child,
