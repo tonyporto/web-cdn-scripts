@@ -968,6 +968,10 @@ p,
   .p-l-0-md {
     padding-left:0 !important;
   }
+  .flex-row-md{
+    -webkit-box-orient:horizontal;
+    flex-direction:row;
+  }
 }
 /* ======================== *
  *  MIN-WIDTH: 1200px

@@ -2316,7 +2316,7 @@ p,
 	width: 8.33333333%;
 }
 .col-sm-auto {
-	width: auto !important;
+	width: auto;
 }
 .col-sm-offset-6 {
 	margin-left: 50%;
@@ -2523,7 +2523,7 @@ p,
 	width: 8.33333333%;
 }
 .col-md-auto {
-	width: auto !important;
+	width: auto;
 }
 .col-md-offset-6 {
 	margin-left: 50%;
@@ -2673,6 +2673,10 @@ p,
 .p-l-0-md {
 	padding-left: 0 !important;
 }
+.flex-row-md {
+	-webkit-box-orient: horizontal;
+	flex-direction: row;
+}
 }
 @media (min-width:1200px) {
 [class*="col-lg-"] {
@@ -2717,6 +2721,9 @@ p,
 }
 .col-lg-1 {
 	width: 8.33333333%;
+}
+.col-lg-auto {
+	width: auto;
 }
 .col-lg-offset-6 {
 	margin-left: 50%;
