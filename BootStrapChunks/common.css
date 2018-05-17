@@ -151,7 +151,8 @@ input[type=radio] {
 	padding: 0;
 }
 button,
-input[type] {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 }
 input[type=number],
@@ -1175,6 +1176,8 @@ sup,
 [aria-expanded=true] .button-bar,
 .form-control-feedback,
 .overlay-outer:after,
+.absolute-b:before,
+.absolute-a:after,
 .absolute {
 	position: absolute;
 }
