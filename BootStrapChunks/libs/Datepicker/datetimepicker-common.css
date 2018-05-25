@@ -17,7 +17,7 @@
 .icon-trash:before {
 	content:"\f1f8";
 }
-[class*="icon-"]:before {
+[class*="-datetimepicker-"] [class*="icon-"]:before {
 	color: #333;
 }
 .icon-caret-left:before {
