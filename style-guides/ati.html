@@ -1699,7 +1699,7 @@ The column in the framework is 12 grid system, it's a simple math equation that 
 		<source media="(min-width: 465px)" srcset="http://ati-stg-mkt01/images/default-source/educator/widgets/card/captionrightinline/admitting-the-right-students-intro-min.png?sfvrsn=6?Status=Master&amp;sfvrsn=2&amp;size=450">
 		<img alt="Admitting-the-Right-Students-intro-min" src="http://ati-stg-mkt01/images/default-source/educator/widgets/card/captionrightinline/admitting-the-right-students-intro-min.png?sfvrsn=6?Status=Master&amp;sfvrsn=2&amp;size=350">
 	</picture>
- <div class="col-sm-6 col-md-8 display-flex-center p-x-0">
+ <div data-target="width-changer-txt" class="col-sm-6 col-md-8 display-flex-center p-x-0">
 	 <header>
 		 <h2 class="color-white m-t-2">Placard Caption Right</h2>
 		 
@@ -1732,28 +1732,34 @@ Placard Caption content container width setting.
 </p>
 <div class="form-checkbox circle">
 
+		<input type="radio" id="checkc_one" name="width-changer" value="col-md-9">
+		<label class="p-r-2" for="checkc_one">75%</label>
+
 		<input type="radio" id="checkc_two" name="width-changer" value="col-md-8" checked>
 		<label class="p-r-2" for="checkc_two">66%</label>
 
 		<input type="radio" id="checkc_three" name="width-changer" value="col-md-7">
 		<label class="p-r-2" for="checkc_three">58%</label>
 		
-		<input type="radio" id="checkc_one" name="width-changer" value="">
-		<label class="p-r-2" for="checkc_one">50%</label>
+		<input type="radio" id="checkc_four" name="width-changer" value="">
+		<label class="p-r-2" for="checkc_four">50%</label>
 
-		<input type="radio" id="checkc_four" name="width-changer" value="col-md-5">
-		<label class="" for="checkc_four">41%</label>
+		<input type="radio" id="checkc_five" name="width-changer" value="col-md-5">
+		<label class="" for="checkc_five">41%</label>
 	
 </div>
 
 <script>
 $("[name=width-changer]").on("change", function() {
 
-	var setter = $("#width-changer-txt");
+	var setter = $("[data-target=width-changer-txt]");
+	
+  $("#width-changer-txt").removeClass("col-sm-6 display-flex-center p-x-0")
+	
+	setter.removeClass("col-md-9 col-md-8 col-md-7 col-md-5")
 
-	setter.removeClass("col-md-8 col-md-7 col-md-5")
 	setter.addClass($(this).val())
-	 $(".width-changer").text(setter.attr("class"))
+	 $(".width-changer").text(setter.attr("class").replace("col-sm-6 display-flex-center p-x-0", ""))
 })
 </script>
 
@@ -1766,7 +1772,7 @@ $("[name=width-changer]").on("change", function() {
 		&lt;source media="(min-width: 465px)" srcset="http://ati-stg-mkt01/images/default-source/educator/widgets/card/captionrightinline/admitting-the-right-students-intro-min.png?sfvrsn=6?Status=Master&amp;sfvrsn=2&amp;size=450"&gt;
 		&lt;img alt="Admitting-the-Right-Students-intro-min" src="http://ati-stg-mkt01/images/default-source/educator/widgets/card/captionrightinline/admitting-the-right-students-intro-min.png?sfvrsn=6?Status=Master&amp;sfvrsn=2&amp;size=350"&gt;
 	&lt;/picture&gt;
- &lt;div class="col-sm-6 <em style="display:none" id="width-changer-txt" class="col-md-8"></em><strong class="width-changer color-green p-x-05">col-md-8</strong> display-flex-center flex-column-xs p-x-0"&gt;
+ &lt;div class="col-sm-6 <em id="width-changer-txt" style="display:none" data-target="width-changer-txt" class="col-md-8"></em><strong class="width-changer color-green p-x-05">col-md-8</strong> display-flex-center flex-column-xs p-x-0"&gt;
 	 &lt;header&gt;
 		 &lt;h2 class="m-t-1"&gt;Placard Caption Right&lt;/h2&gt;
 		 

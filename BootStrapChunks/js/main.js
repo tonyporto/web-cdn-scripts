@@ -11,7 +11,12 @@ Modernizr.addTest('android', function() {
 });
 //IE
 Modernizr.addTest('ie',function(){
-	return!!navigator.userAgent.match(/MSIE/i)
+	return (!!navigator.userAgent.match(/MSIE/i) || !!navigator.userAgent.match(/Trident\/7\./));
+});
+
+//SAFARI
+Modernizr.addTest('safari', function() {
+	return (/Safari\/\d./i.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor));
 });
 //EDGE
 Modernizr.addTest('edge', function() {
@@ -25,13 +30,9 @@ function modernizrResize() {
 
 	//MOBILE NAVIGATION VARIABLES
 	var nav_li = ".nav-justified > li",
-			menu_dropdown = jQuery(nav_li + " > .dropdown-menu"),
-			dropdown_menu = jQuery(nav_li + ":has(ul)"),
+			sub_drop = ".menu-dropdown",
 			aria_expanded = {'aria-expanded': 'true'},
 			aria_hidden = {'aria-expanded': 'false'};
-
-	//REMOVE CLASSES FROM ITEMS WITHOUT UL
-	jQuery(nav_li + ":not(:has(ul))").removeAttr("class data-toggle aria-expanded");
 
 	//MIN WIDTH
   var min_width;
@@ -55,32 +56,22 @@ function modernizrResize() {
 	//MODERNIZR RESIZE WRAPPER
 	var mod = function() {
 
-		/* ================================================= *
-		 * UN-BOOTSTRAP MOBILE NAVIGATION TO MAKE IT USABLE
-		 * ================================================= */
-			dropdown_menu.hover(function () {
-				jQuery(this).addClass("open").removeClass("hidden").attr(aria_expanded)
+		// UN-BOOTSTRAP MOBILE NAVIGATION TO MAKE IT USABLE
+			$(sub_drop + "> a").hover(function () {
+				jQuery(this).attr(aria_expanded).parent().addClass("open")
 			}, function () {
-				jQuery(this).removeClass("open").addClass("hidden").attr(aria_hidden);
+				jQuery(this).attr(aria_hidden).parent().removeClass("open")
 		  });
 
+		//MIN WIDTH 992px
 		if (min_width(992)) {
 
 			//REMOVE OPEN MOBILE NAVIGATION TRIGGER & SUBMENU
-			menu_dropdown.removeClass("hidden")
-
-			if (dropdown_menu.hasClass("open")) {
-				dropdown_menu.removeClass("open")
+			if ($(sub_drop).hasClass("open")) {
+				$(sub_drop).removeClass("open")
 			}
 
 		//END MIN 992PX
-		} else {
-
-			//UN-BOOTSTRAP MOBILE NAVIGATION TO MAKE IT USABLE
-	    //==================================================
-			menu_dropdown.addClass("hidden")
-
-		// END MIN 0 to MAX 767px
 		}
 
 		//END MODERNIZR RESIZE WRAPPER
@@ -92,48 +83,68 @@ function modernizrResize() {
 
   /* ========================================== *
 	 * TAB NAVIGATION
-	 * ADD ATTRIBUTES TO MAKE MENU FOCUSABLE
 	 * ========================================== */
-	dropdown_menu.attr({'role':'menuitem','tabindex' : '0','aria-haspopup' : 'true'})
+	$(sub_drop + "> a").on('focus', function() {
+		if (($(this).is(":focus")) && ($(this).parent().has(sub_drop).length > 0)) {
+			$(sub_drop + "> ul > " + sub_drop + "> a").on('focus', function() {
+				$(this).attr(aria_expanded).parent().addClass("open")
 
-	dropdown_menu.on('focus', function() {
-		jQuery(".menu-dropdown").not(jQuery(this).removeClass("open").find("a:first").attr(aria_hidden));
-		jQuery(this).addClass("open").find("a:first").attr(aria_expanded);
+			})
+		}
+
+		$(sub_drop + "> a").not($(this).attr(aria_hidden).parent().removeClass("open"));
+		$(this).attr(aria_expanded).parent().addClass("open")
+
 	});
 
-	jQuery(nav_li + " > ul > li:last-child").on('focusout', function() {
-		jQuery(this).parent().parent().removeClass("open").find("a:first").attr(aria_hidden);
+	/* NAVIGATION ON FOCUSOUT
+	 * ============================================ */
+	$(nav_li + " > ul > li").on('focusout', function() {
+
+		if ($(this).is(nav_li + " > ul > li:not("+sub_drop+"):last-child")) {
+			$(this).parent().parent().removeClass("open").find("a:first").attr(aria_hidden);
+
+		} else {
+
+			if ($(this).has(sub_drop)) {
+				$(sub_drop + "> ul > " + sub_drop + " > ul > li:last-child").on('focusout', function() {
+					$(this).parent().parent().removeClass("open").find("a:first").attr(aria_hidden);
+					$(this).closest(sub_drop).parent().parent()
+						.removeClass("open").find("a:first").attr(aria_hidden);
+				})
+			}
+		}
+
+	});
+
+	/* ============================================ *
+	 * BACK TO TOP AFTER FOCUSOUT FROM LAST LINK
+	 * ============================================ */
+	jQuery(".footer-wrapper a:last").on('focusout', function() {
+		if ($(".header-container-top a").length > 0){
+			jQuery("html, body").animate({
+				scrollTop: jQuery(".header-container-top").offset().top
+			}, 800);
+		} else {
+			jQuery("html, body").animate({
+				scrollTop: jQuery(".header-container-bottom a:first").offset().top
+			}, 800);
+		}
 	});
 
 	/* =============================== *
 	 * ONE TOUCH CLICK FOR IOS
 	 * =============================== */
 	if (Modernizr.ios) {
-
-		jQuery(".menu-dropdown > ul > li > a").on("touchend", function(event) {
+		jQuery(sub_drop + " > ul > li > a").on("touchend", function(event) {
 			window.location.href = $(this).attr("href");
 		});
-
 	} //end
 
-}
-
-/* ================================== *
- * ECOMMERCE - BACK ONE PAGE
- * ==================================*/
-function backOne() {
-	window.history.go(-1);
-}
-
-/* ======================================================= *
- * MENU DOUBLE TAP
- *
- * By Osvaldas Valutis, www.osvaldas.info
- * Available for use under the MIT License
- * ======================================================= */
- function devicesDoubleTapInit() {
-
-	;(function( $, window, document, undefined ) {
+ /* ================================= *
+  * MENU DOUBLE TAP
+  * ================================= */
+  ;(function( $, window, document, undefined ) {
 		$.fn.doubleTapToGo = function( params ) {
 			if( !( 'ontouchstart' in window ) &&
 				!navigator.msMaxTouchPoints &&
@@ -167,8 +178,17 @@ function backOne() {
 	})( jQuery, window, document );
 
 	//INIT DOUBLE TAP FUNCTION
-	jQuery(".nav-justified > li.menu-dropdown").doubleTapToGo();
+	setTimeout(function(){
+		jQuery(".nav-justified li"+sub_drop).doubleTapToGo();
+	},100);
 
+}
+
+/* ================================== *
+ * ECOMMERCE - BACK ONE PAGE
+ * ==================================*/
+function backOne() {
+	window.history.go(-1);
 }
 
 /* ================================== *
@@ -178,7 +198,7 @@ jQuery(function(){
 
 	//Responsive Function
 	modernizrResize()
-	devicesDoubleTapInit();
+	//devicesDoubleTapInit();
 
 });
 
@@ -209,7 +229,7 @@ $("a[id*='orgspecificproducts']").each(function (i, el) {
         $(this).parent().remove();
     }
     else {
-        $.get("/api/ProductGroup/GetProductGroupsWithFirstProduct?",
+        $.get("/api/ProductList/GetPrimaryProducts?",
             {
                 deptName: '',
                 currentPage: 24,
@@ -240,7 +260,7 @@ var createEl = document.createElement.bind(document),
 /* ================================ *
  * FAVICON IF VARIABLE IS DEFINED
  * ================================ */
-	favIco = "";
+	favIco = "/ResourcePackages/Main/assets/Images/favicon.png";
 
 	if (favIco.length > 0) {
 
@@ -252,17 +272,45 @@ var createEl = document.createElement.bind(document),
 	}
 
 /* ============================================= *
- * IE FONTAWESOME & FORMS FIX THANKS MICROSOFT
+ * IE FONTAWESOME,FORMS, FLEXBOX FIX
  * ============================================= */
 if (Modernizr.ie) {
 
 	var ieCss = createEl("style");
-			ieCss.innerHTML = ".form-control{padding-top:0;padding-bottom:0;line-height:32px} select.form-control{padding-right:0} .form-control.input-lg{line-height:44px}";
+			ieCss.innerHTML = ".form-control{padding-top:0;padding-bottom:0;line-height:32px} select.form-control{padding-right:0} .form-control.input-lg{line-height:44px}"
+			+ "main[role], [class*=-flex-column] {-ms-flex-direction: column;}[class*=display-flex] {display: -ms-flexbox;}[class*=-flex-center] {-ms-flex-align: center;}[class*=-flex-stretch] {-ms-align-items: stretch;}.flex-wrapper {-ms-flex: 1 0 auto;}"
+			+ "@media (min-width:768px) {.flex-reverse-sm {-ms-flex-direction:row-reverse;}}";
 			head.appendChild(ieCss);
+
+		//IF IE 11
+		if (!!navigator.userAgent.match(/Trident\/7\./)) {
+			var ie11Css = createEl("style");
+					ie11Css.innerHTML = "[class*=-flex-column] {-ms-flex-flow: row wrap;}"
+					head.appendChild(ie11Css);
+		}
 
 	var fa = createEl("link");
 			fa.rel = "stylesheet";
 			fa.href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 			head.appendChild(fa);
 
+}
+
+/* =============================== *
+ * SAFARI FLEXBOX THANKS APPLE
+ * =============================== */
+if (Modernizr.safari && !Modernizr.flexbox) {
+	var sflxLCss = createEl("style");
+			sflxLCss.innerHTML = ".main[role] {-webkit-box-orient: vertical;}.display-flex-center{display:-webkit-box;-webkit-box-align:center;}.flex-wrapper {-webkit-box-flex: 1;}";
+			head.appendChild(sflxLCss);
+
+}
+
+/* =============================== *
+ * IOS & IPADS THANKS APPLE
+ * =============================== */
+if (Modernizr.ios) {
+	var iosCss = createEl("style");
+			iosCss.innerHTML = "[class*=display-flex]:before, [class*=display-flex]:after{display: none;}";
+			head.appendChild(iosCss);
 }

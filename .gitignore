@@ -1,7 +1,19 @@
 !.gitignore
 BootStrapChunks/.synkron.syncdb
+BootStrapChunks/css - Copy
+BootStrapChunks/node_modules/
+BootStrapChunks/1gulpfile.js
+BootStrapChunks/common.PostCss.css
+BootStrapChunks/commonPostCss.css
+BootStrapChunks/commonPostCss.min.css
+BootStrapChunks/form errors.txt
+BootStrapChunks/gulpfilePostCss.js
+BootStrapChunks/mega-menu44.html
+BootStrapChunks/navbar-close-transition.txt
 node_modules/
+angular/
 Angular Feed/
+responsive-tables.js
 BootStrapChunks/GulpMultiSite/
 BootStrapChunks/node_modules/
 BootStrapChunks/src/
