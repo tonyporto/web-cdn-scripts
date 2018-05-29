@@ -173,3 +173,47 @@ if ($(".copyright-year")[0]){
 var thecurrentyear = new Date().getFullYear();
 	document.getElementsByClassName('copyright-year')[0].innerHTML= thecurrentyear;
 }
+
+/* ============================================= *
+ * APPEND ELEMENTS TO MAIN.BASE
+ * ============================================= */
+var createEl = document.createElement.bind(document),
+		head = document.getElementsByTagName("head")[0],
+		
+/* ============================================= *
+ * IE FONTAWESOME,FORMS, FLEXBOX FIX
+ * ============================================= */
+if (Modernizr.ie) {
+
+	var ieCss = createEl("style");
+			ieCss.innerHTML = ".form-control{padding-top:0;padding-bottom:0;line-height:32px} select.form-control{padding-right:0} .form-control.input-lg{line-height:44px}"
+			+ "main[role], [class*=-flex-column] {-ms-flex-direction: column;}[class*=display-flex] {display: -ms-flexbox;}[class*=-flex-center] {-ms-flex-align: center;}[class*=-flex-stretch] {-ms-align-items: stretch;}.flex-wrapper {-ms-flex: 1 0 auto;}"
+			+ "@media (min-width:768px) {.flex-reverse-sm {-ms-flex-direction:row-reverse;}}";
+			head.appendChild(ieCss);
+
+		//IF IE 11
+		if (!!navigator.userAgent.match(/Trident\/7\./)) {
+			var ie11Css = createEl("style");
+					ie11Css.innerHTML = "[class*=-flex-column] {-ms-flex-flow: row wrap;}"
+					head.appendChild(ie11Css);
+		}
+
+}
+/* =============================== *
+ * SAFARI FLEXBOX THANKS APPLE
+ * =============================== */
+if (Modernizr.safari && !Modernizr.flexbox) {
+	var sflxLCss = createEl("style");
+			sflxLCss.innerHTML = ".main[role] {-webkit-box-orient: vertical;}.display-flex-center{display:-webkit-box;-webkit-box-align:center;}.flex-wrapper {-webkit-box-flex: 1;}";
+			head.appendChild(sflxLCss);
+
+}
+
+/* =============================== *
+ * IOS & IPADS THANKS APPLE
+ * =============================== */
+if (Modernizr.ios) {
+	var iosCss = createEl("style");
+			iosCss.innerHTML = "[class*=display-flex]:before, [class*=display-flex]:after{display: none;}";
+			head.appendChild(iosCss);
+}
