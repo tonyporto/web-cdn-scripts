@@ -178,7 +178,7 @@ var thecurrentyear = new Date().getFullYear();
  * APPEND ELEMENTS TO MAIN.BASE
  * ============================================= */
 var createEl = document.createElement.bind(document),
-		head = document.getElementsByTagName("head")[0],
+		head = document.getElementsByTagName("head")[0];
 		
 /* ============================================= *
  * IE FONTAWESOME,FORMS, FLEXBOX FIX
