@@ -1021,18 +1021,6 @@ video,
 .display-inline {
   display:inline;
 }
-.collapse,
-.dropdown-menu,
-audio:not([controls]),
-[hidden],
-template,
-.sr-only,
-.modal,
-.hidden,
-.display-none,
-[aria-expanded=true] .button-bar:not(:first-child):not(:last-child) {
-  display:none;
-}
 pre,
 legend,
 [class*="col-"],
@@ -1055,6 +1043,18 @@ legend,
 .center-block,
 .display-block {
   display:block;
+}
+.collapse,
+.dropdown-menu,
+audio:not([controls]),
+[hidden],
+template,
+.sr-only,
+.modal,
+.hidden,
+.display-none,
+[aria-expanded=true] .button-bar:not(:first-child):not(:last-child) {
+  display:none;
 }
 table,
 .display-table,
