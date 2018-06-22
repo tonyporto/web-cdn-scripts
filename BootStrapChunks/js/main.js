@@ -179,7 +179,7 @@ function modernizrResize() {
 
 	//INIT DOUBLE TAP FUNCTION
 	setTimeout(function(){
-		jQuery(".nav-justified li"+sub_drop).doubleTapToGo();
+		jQuery(".nav-justified "+sub_drop).doubleTapToGo();
 	},100);
 
 }
@@ -270,7 +270,24 @@ var createEl = document.createElement.bind(document),
 				head.appendChild(fav);
 
 	}
+	
+/* ============================================= *
+ * DEVICE CLICK
+ * ============================================= */	
+if (Modernizr.touchevents) {
+	
+	var sub_drop = $(".nav-justified .menu-dropdown");
+	
+	sub_drop.on("hover", function() {
+		sub_drop.not($(this).removeClass("open"))
+		$(this).addClass("open")
+	})
+	sub_drop.on("click", function() {
+		sub_drop.removeClass("open")
+		$(this).addClass("open")
+	})
 
+}
 /* ============================================= *
  * IE FONTAWESOME,FORMS, FLEXBOX FIX
  * ============================================= */

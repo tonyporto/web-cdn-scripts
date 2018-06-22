@@ -2545,14 +2545,14 @@ p,
 	float: none !important;
 }
 .text-md-left {
-	text-align: left !important;
+	text-align: left;
 }
 .text-md-right {
-	text-align: right !important;
+	text-align: right;
 }
 .nav-justified > li > a,
 .text-md-center {
-	text-align: center !important;
+	text-align: center;
 }
 
 .nav-tabs.nav-justified>li>a {
@@ -2808,6 +2808,7 @@ h4 {
 	content: "\f107";
 	float: right;
 }
+.menu-dropdown.open > a:after,
 .menu-dropdown:not(.click-dropdown):hover > a:after {
 	content: "\f106";
 }
