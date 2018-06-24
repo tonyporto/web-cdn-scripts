@@ -158,9 +158,9 @@ function modernizrResize() {
 			$(this).addClass("open")
 		})
 		*/
-		sub_drop.on("click", function() {
+		$(".menu-dropdown").on("click", function() {
 		
-			sub_drop.not($(this).prev("ul > li.open").removeClass("open").next("a").attr(aria_hidden))
+			$(".menu-dropdown").not($(this).prev("ul > li.open").removeClass("open").next("a").attr(aria_hidden))
 			$(this).addClass("open").next("a").attr(aria_expanded)
 
 		})
