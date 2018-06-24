@@ -204,7 +204,7 @@ function modernizrResize() {
 
 	//INIT DOUBLE TAP FUNCTION
 	setTimeout(function(){
-		jQuery(sub_drop + "," + sub_drop +">ul>"+ sub_drop).doubleTapToGo();
+		jQuery(sub_drop +":has(ul)").doubleTapToGo();
 	},100);
 
 }
