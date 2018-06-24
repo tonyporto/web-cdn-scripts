@@ -286,7 +286,7 @@ var createEl = document.createElement.bind(document),
  * ================================ */
 	favIco = "/ResourcePackages/Main/assets/Images/favicon.png";
 
-	if (favIco.length > 0) {
+	if (!$("link[rel*=shortcut]").length) {
 
 		var fav = createEl("link");
 				fav.rel = "shortcut icon";
