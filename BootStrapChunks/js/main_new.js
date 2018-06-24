@@ -162,6 +162,11 @@ function modernizrResize() {
 		
 			$(".menu-dropdown").not($(this).prev("ul > li.open").removeClass("open").next("a").attr(aria_hidden))
 			$(this).addClass("open").next("a").attr(aria_expanded)
+			
+			if (!$(this).prev("ul > li.open").length) {
+				$(".menu-dropdown").removeClass("open").next("a").attr(aria_hidden)
+				$(this).addClass("open").next("a").attr(aria_expanded)			
+			}
 
 		})
 
