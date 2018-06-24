@@ -10,6 +10,9 @@ BootStrapChunks/form errors.txt
 BootStrapChunks/gulpfilePostCss.js
 BootStrapChunks/mega-menu44.html
 BootStrapChunks/navbar-close-transition.txt
+common.min.css
+common.css
+gulpfile.js
 node_modules/
 angular/
 Angular Feed/
