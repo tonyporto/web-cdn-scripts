@@ -947,19 +947,19 @@ p,
 	}
 	.p-b-2-md,
 	.p-y-2-md {
-		padding-bottom:2em !important;
+		padding-bottom:2em;
 	}
   .p-x-2-md,
   .p-r-2-md {
-    padding-right:2em !important;
+    padding-right:2em;
   }
   .p-x-2-md,
   .p-l-2-md {
-    padding-left:2em !important;
+    padding-left:2em;
   }
 	.p-t-1-md,
 	.p-y-1-md {
-		padding-top:1em !important;
+		padding-top:1em;
 	}
   .p-x-1-md,
   .p-r-1-md {
@@ -967,7 +967,7 @@ p,
   }
 	.p-b-1-md,
 	.p-y-1-md {
-		padding-bottom:1em !important;
+		padding-bottom:1em;
 	}
   .p-x-1-md,
   .p-l-1-md {

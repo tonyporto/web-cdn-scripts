@@ -330,9 +330,6 @@ p,
 pre {
   margin:0 0 10px;
 }
-.mark,mark {
-  padding:.2em;
-}
 .table td,
 .table th {
   padding:.75rem;
@@ -1269,8 +1266,8 @@ blockquote:not(.widgets),
 .list-group>li,
 .img-rounded,
 .input-lg,.btn-lg,
-.form-group-lg .form-control,
 .modal-content,
+.form-group-lg .form-control:not([class*=-flat]),
 .dropdown-menu:not(.main-menu):not([class*=-flat]),
 .card:not(.slider-wrapper), .card-img,
 .input-group-addon.input-lg {
@@ -1616,6 +1613,7 @@ pre,
 		background-image:linear-gradient(rgba(250,250,250,.2) 100%, rgba(0,0,0,.2) 0, rgba(0,0,0,.2));
 	}
 	.navbar-wrapper {
+		margin-top:0;
 		position:absolute;
 		top:100%;
 		left:0;
@@ -1721,15 +1719,14 @@ pre,
   .col-md-offset-1 {margin-left:8.33333333%;}
 
   .navbar-toggle,
-  .hidden-md,
   .display-md-none {
   	display:none !important;
   }
   .navbar-collapse.collapse,
-  .show-md,
   .display-md-block {
   	display:block !important;
   }
+  .display-md-inblock {display: inline-block;}
   .nav-justified > li:not(.dropdown),
   .nav-justified > li > a,
   .dropdown-menu > li > a,
