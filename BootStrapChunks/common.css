@@ -349,10 +349,6 @@ p,
 pre {
 	margin: 0 0 10px;
 }
-.mark,
-mark {
-	padding: .2em;
-}
 .table td,
 .table th {
 	padding: .75rem;
@@ -1307,11 +1303,10 @@ blockquote:not(.widgets),
 .img-rounded,
 .input-lg,
 .btn-lg,
-.form-group-lg .form-control,
 .modal-content,
+.form-group-lg:not(.-flat) .form-control:not(.-flat),
 .dropdown-menu:not(.main-menu):not([class*=-flat]),
-.card:not(.slider-wrapper),
-.card-img,
+.card:not(.slider-wrapper):not(.-flat),
 .input-group-addon.input-lg {
 	border-radius: 6px;
 }
@@ -2517,14 +2512,15 @@ p,
 	margin-left: 8.33333333%;
 }
 .navbar-toggle,
-.hidden-md,
 .display-md-none {
 	display: none !important;
 }
 .navbar-collapse.collapse,
-.show-md,
 .display-md-block {
 	display: block !important;
+}
+.display-md-inblock {
+	display: inline-block;
 }
 .nav-justified > li:not(.dropdown),
 .nav-justified > li > a,
@@ -2601,19 +2597,19 @@ p,
 }
 .p-b-2-md,
 .p-y-2-md {
-	padding-bottom: 2em !important;
+	padding-bottom: 2em;
 }
 .p-x-2-md,
 .p-r-2-md {
-	padding-right: 2em !important;
+	padding-right: 2em;
 }
 .p-x-2-md,
 .p-l-2-md {
-	padding-left: 2em !important;
+	padding-left: 2em;
 }
 .p-t-1-md,
 .p-y-1-md {
-	padding-top: 1em !important;
+	padding-top: 1em;
 }
 .p-x-1-md,
 .p-r-1-md {
@@ -2621,7 +2617,7 @@ p,
 }
 .p-b-1-md,
 .p-y-1-md {
-	padding-bottom: 1em !important;
+	padding-bottom: 1em;
 }
 .p-x-1-md,
 .p-l-1-md {
@@ -2793,6 +2789,7 @@ h4 {
 	background-image: linear-gradient(rgba(250,250,250,.2) 100%, rgba(0,0,0,.2) 0, rgba(0,0,0,.2));
 }
 .navbar-wrapper {
+	margin-top: 0;
 	position: absolute;
 	top: 100%;
 	left: 0;

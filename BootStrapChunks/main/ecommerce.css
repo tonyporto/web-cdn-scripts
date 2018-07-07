@@ -1,12 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat|Oxygen:400,700);
-.font-oxygen {
-	font-family: 'Oxygen', sans-serif;
-}
-.font-mon {
-	font-family: 'Montserrat', sans-serif;
-}
-.price:before,
-[ng-bind='product.price']:before {
+.font-oxygen {font-family: 'Oxygen', sans-serif;}
+.font-mon {font-family: 'Montserrat', sans-serif;}
+.price:before,[ng-bind='product.price']:before {
 	content: "$";
 }
 .close-btn:before,
@@ -73,6 +68,7 @@ button[data-btn=number],
 }
 button[data-btn=number][data-quantity] {
 	width: 26px;
+	line-height: 1;
 }
 .form-control[data-input=number]{
 	width: 50px;
@@ -87,9 +83,17 @@ button[data-btn=number]:first-child {
 	border-bottom-width: 0;
 	border-top-right-radius: 4px !important;
 }
+/* THANKS IE */
+.ie button[disabled] {
+	cursor: not-allowed; 
+	visibility: visible;
+	display:block;
+	zoom: 1;
+}
 .fadeInBlocks {
 	opacity: 0;
 }
+.ie button[disabled],
 .open > .affix-nav,
 .navbar-static-top.affix {
 	opacity: 1;
@@ -192,8 +196,8 @@ button[data-btn=number]:first-child {
  * ====================================== */
 .slide-panel-container {
 	height: 100%;
-	transition: transform 0.3s linear 0.2s;
-	-webkit-transition: -webkit-transform 0.3s linear 0.2s;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 	transform: translate3d(100%, 0, 0);
 	-webkit-transform: translate3d(100%, 0, 0);
 }
@@ -236,7 +240,7 @@ button[data-btn=number]:first-child {
 		width: 300%;
 	}
 	.text-md-resize {
-		font-size: 1.2em !important;
+		font-size: 1.2em;
 	}
 }
 

@@ -1267,9 +1267,9 @@ blockquote:not(.widgets),
 .img-rounded,
 .input-lg,.btn-lg,
 .modal-content,
-.form-group-lg .form-control:not([class*=-flat]),
+.form-group-lg:not(.-flat) .form-control:not(.-flat),
 .dropdown-menu:not(.main-menu):not([class*=-flat]),
-.card:not(.slider-wrapper), .card-img,
+.card:not(.slider-wrapper):not(.-flat),
 .input-group-addon.input-lg {
   border-radius:6px;
 }

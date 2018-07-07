@@ -152,12 +152,7 @@ function modernizrResize() {
 	
 		var aria_expanded = {'aria-expanded': 'true'},
 				aria_hidden = {'aria-expanded': 'false'};
-		/*
-		sub_drop.on("hover", function() {
-			sub_drop.not($(this).removeClass("open"))
-			$(this).addClass("open")
-		})
-		*/
+
 		$(".menu-dropdown").on("click", function() {
 		
 			$(".menu-dropdown").not($(this).prev("ul > li.open").removeClass("open").next("a").attr(aria_hidden))
@@ -241,7 +236,7 @@ var thecurrentyear = new Date().getFullYear();
 
 /* ================================== *
  * HIDE ORGANIZATION SPECIFIC PRODUCT LIST PAGE
- * ================================== */
+ * ================================== *
 function readCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -252,12 +247,14 @@ function readCookie(name) {
     }
     return null;
 };
-
+*/
 $("a[id*='orgspecificproducts']").each(function (i, el) {
-    if (readCookie("OrgId") == null) {
+	
+	if (Cookies['OrgId'] == null) {
+    //if (readCookie("OrgId") == null) {
         $(this).parent().remove();
-    }
-    else {
+  } 
+  else {
         $.get("/api/ProductList/GetPrimaryProducts?",
             {
                 deptName: '',
