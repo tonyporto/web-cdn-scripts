@@ -149,22 +149,22 @@ function modernizrResize() {
 	 * DEVICE CLICK
 	 * ============================================= */	
 	if (Modernizr.touchevents) {
-	
-		var aria_expanded = {'aria-expanded': 'true'},
-				aria_hidden = {'aria-expanded': 'false'};
+		setTimeout(function(){
+			var aria_expanded = {'aria-expanded': 'true'},
+					aria_hidden = {'aria-expanded': 'false'};
 
-		$(".menu-dropdown").on("click", function() {
-		
-			$(".menu-dropdown").not($(this).prev("ul > li.open").removeClass("open").next("a").attr(aria_hidden))
-			$(this).addClass("open").next("a").attr(aria_expanded)
+			$(".menu-dropdown").on("click", function() {
 			
-			if (!$(this).prev("ul > li.open").length) {
-				$(".menu-dropdown").removeClass("open").next("a").attr(aria_hidden)
-				$(this).addClass("open").next("a").attr(aria_expanded)			
-			}
+				$(".menu-dropdown").not($(this).prev("ul > li.open").removeClass("open").next("a").attr(aria_hidden))
+				$(this).addClass("open").next("a").attr(aria_expanded)
+				
+				if (!$(this).prev("ul > li.open").length) {
+					$(".menu-dropdown").removeClass("open").next("a").attr(aria_hidden)
+					$(this).addClass("open").next("a").attr(aria_expanded)			
+				}
 
-		})
-
+			})
+		},400);
 	}
  /* ================================= *
   * MENU DOUBLE TAP
@@ -203,9 +203,8 @@ function modernizrResize() {
 	})( jQuery, window, document );
 
 	//INIT DOUBLE TAP FUNCTION
-	setTimeout(function(){
-		jQuery(sub_drop +":has(ul)").doubleTapToGo();
-	},100);
+	jQuery("nav "+sub_drop+":has(ul)").doubleTapToGo();
+	
 
 }
 
