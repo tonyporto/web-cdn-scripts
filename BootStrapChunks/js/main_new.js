@@ -280,11 +280,11 @@ $("a[id*='orgspecificproducts']").each(function (i, el) {
  * APPEND ELEMENTS TO MAIN.BASE
  * ============================================= */
 var createEl = document.createElement.bind(document),
-		head = document.getElementsByTagName("head")[0],
+		head = document.getElementsByTagName("head")[0];
 
 /* ================================ *
  * FAVICON IF VARIABLE IS DEFINED
- * ================================ */
+ * ================================
 	favIco = "/ResourcePackages/Main/assets/Images/favicon.png";
 
 	if (!$("link[rel*=shortcut]").length) {
@@ -295,7 +295,7 @@ var createEl = document.createElement.bind(document),
 				head.appendChild(fav);
 
 	}
-
+ */
 /* ============================================= *
  * IE FONTAWESOME,FORMS, FLEXBOX FIX
  * ============================================= */
