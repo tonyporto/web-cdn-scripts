@@ -165,6 +165,16 @@ function modernizrResize() {
 
 			})
 		},400);
+		
+		
+		
+		$("nav "+sub_drop+":has(ul)").each(function (index, elem) {
+			/* OR Option 2: Use this to keep the href on the <a> intact but prevent the default action */
+			$(elem).prev("a").click(function(event) {
+  				event.preventDefault();
+			});
+		});		
+		
 	}
  /* ================================= *
   * MENU DOUBLE TAP
