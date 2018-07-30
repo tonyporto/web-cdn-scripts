@@ -68,11 +68,11 @@ function modernizrResize() {
 
 			//REMOVE OPEN MOBILE NAVIGATION TRIGGER & SUBMENU
 			$(".nav-justified").removeClass("touch")
-			
+
 			if ($(sub_drop).hasClass("open")) {
 				$(sub_drop).removeClass("open")
 			}
-			
+
 		//END MIN 992PX
 		} else {
 			$(".nav-justified").addClass("touch")
@@ -147,34 +147,53 @@ function modernizrResize() {
 
 	/* ============================================= *
 	 * DEVICE CLICK
-	 * ============================================= */	
+	 * ============================================= */
 	if (Modernizr.touchevents) {
 		setTimeout(function(){
 			var aria_expanded = {'aria-expanded': 'true'},
 					aria_hidden = {'aria-expanded': 'false'};
 
 			$(".menu-dropdown").on("click", function() {
-			
+
 				$(".menu-dropdown").not($(this).prev("ul > li.open").removeClass("open").next("a").attr(aria_hidden))
 				$(this).addClass("open").next("a").attr(aria_expanded)
-				
+
 				if (!$(this).prev("ul > li.open").length) {
 					$(".menu-dropdown").removeClass("open").next("a").attr(aria_hidden)
-					$(this).addClass("open").next("a").attr(aria_expanded)			
+					$(this).addClass("open").next("a").attr(aria_expanded)
 				}
 
 			})
 		},400);
-		
-		
-		
+
+/*SUBMENU PARENT DISABLE
 		$("nav "+sub_drop+":has(ul)").each(function (index, elem) {
-			/* OR Option 2: Use this to keep the href on the <a> intact but prevent the default action */
 			$(elem).prev("a").click(function(event) {
   				event.preventDefault();
 			});
-		});		
-		
+		});
+*/
+		//SUBMENU PARENT DISABLE/ENABLE
+		$("nav "+sub_drop+":has(ul) > a").each(function() {
+			$(this).attr("data-href", $(this).attr("href"))
+
+			$(this).delay(400).queue(function(){
+				$(this).attr("href", "#").clearQueue();
+			});
+
+			$(this).on("click", function() {
+
+				$(this).delay(400).queue(function(){
+					$(this).attr("href", $(this).attr("data-href")).addClass("open-ul")//.clearQueue();
+					$("nav "+sub_drop+":has(ul) > a").not($(this)).attr("href", "#")
+					.removeClass("open-ul").clearQueue();
+				});
+
+			})
+
+		})
+		//SUBMENU PARENT DISABLE/ENABLE
+
 	}
  /* ================================= *
   * MENU DOUBLE TAP
@@ -214,7 +233,7 @@ function modernizrResize() {
 
 	//INIT DOUBLE TAP FUNCTION
 	jQuery("nav "+sub_drop+":has(ul)").doubleTapToGo();
-	
+
 
 }
 
@@ -258,11 +277,11 @@ function readCookie(name) {
 };
 */
 $("a[id*='orgspecificproducts']").each(function (i, el) {
-	
+
 	if (Cookies['OrgId'] == null) {
     //if (readCookie("OrgId") == null) {
         $(this).parent().remove();
-  } 
+  }
   else {
         $.get("/api/ProductList/GetPrimaryProducts?",
             {
