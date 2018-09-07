@@ -2389,12 +2389,6 @@ p,
 	-webkit-column-count: 2;
 	column-count: 2;
 }
-.flex-item {
-	width: 100%;
-	display: inline-block;
-	float: none !important;
-	margin: 0 0 1.2em;
-}
 .p-x-2-sm,
 .p-r-2-sm {
 	padding-right: 2em !important;

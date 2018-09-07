@@ -1,0 +1,11 @@
+{
+    "_comment": "npm install -g gulp-concat -g gulp-concat-css -g gulp-strip-css-comments -g gulp-util -g gulp-rename -g gulp-remove-empty-lines -g gulp-merge-media-queries -g gulp-chug -g gulp-replace -g gulp-clean-css -g gulp-autoprefixer -g gulp-csscomb -g gulp-uglify",
+    "name": "FrontEndStuff",
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-rename": "^1.4.0",
+        "gulp-uglify": "^3.0.1",
+        "merge-stream": "^1.0.1"
+    }
+}
