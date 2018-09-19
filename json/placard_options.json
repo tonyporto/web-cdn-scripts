@@ -1,6 +1,6 @@
 [
    {
-      "OUTCOMES DROPDOWN":"_____________ ORDER _____________"
+      "BACKGROUND COLOR":"_____________ SELECT BG COLOR _____________"
    },
    {
       "select_options":[
@@ -21,13 +21,20 @@
             "text":"BU bg color 4"
          },
          {
+            "value":"color-bg-5",
+            "text":"BU bg color 5"
+         },
+         {
             "value":"color-bg-white",
             "text":"White Background"
          }
       ]
    },
    {
-      "CONTENT AREAS":"_____________ ORDER _____________"
+      "placard_bg_colors":"color-bg-1 color-bg-2 color-bg-3 color-bg-4 color-bg-5 color-bg-white"
+   },
+   {
+      "TITLE FONT-SIZE":"_____________ SELECT FONT SIZE _____________"
    },
    {
       "select_options":[
@@ -155,7 +162,10 @@
       ]
    },
    {
-      "MEDIA TYPES":"_____________ ORDER _____________"
+      "placard_font_size":"size12 size14 size16 size18 size20 size24 size26 size30 size36 size40 size46 size48 size50 text-size-1 text-size-1-2 text-size-1-4 text-size-1-6 text-size-1-8 text-size-2 text-size-2-2 text-size-2-4 text-size-2-6 text-size-2-8 text-size-3 text-size-3-2 text-size-3-4 text-size-3-6 text-size-3-8 text-size-4 text-size-5"
+   },
+   {
+      "TITLE COLOR":"_____________ SELECT TITLE COLOR _____________"
    },
    {
       "select_options":[
@@ -178,6 +188,37 @@
          {
             "value":"color-5",
             "text":"color-5"
+         }
+      ]
+   },
+   {
+      "placard_colors":"color-1 color-2 color-3 color-4 color-5"
+   },
+			{
+				"btn_optgroup_1_label": "FLAT BUTTONS",
+				"btn_optgroup_2_label": "NORMAL BUTTONS"
+			},   
+   {
+      "button_options":[
+         {
+            "value":"btn btn-primary btn-flat",
+            "text":"Primary Blue"
+         },
+         {
+            "value":"btn btn-success btn-flat",
+            "text":"Success Green"
+         },
+         {
+            "value":"btn btn-warning btn-flat",
+            "text":"Warning Yellow"
+         },
+         {
+            "value":"btn btn-info btn-flat",
+            "text":"Info B.Blue"
+         },
+         {
+            "value":"btn btn-danger btn-flat",
+            "text":"Danger Red"
          }
       ]
    }
