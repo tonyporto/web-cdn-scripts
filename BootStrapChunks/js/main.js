@@ -29,7 +29,8 @@ Modernizr.addTest('edge', function() {
 function modernizrResize() {
 
 	//MOBILE NAVIGATION VARIABLES
-	var nav_li = ".nav-justified > li",
+	var //nav_li = ".nav-justified > li",
+			nav_li = ".nav-justified:not(.touch)",
 			sub_drop = ".menu-dropdown",
 			aria_expanded = {'aria-expanded': 'true'},
 			aria_hidden = {'aria-expanded': 'false'};
@@ -67,13 +68,17 @@ function modernizrResize() {
 		if (min_width(992)) {
 
 			//REMOVE OPEN MOBILE NAVIGATION TRIGGER & SUBMENU
+			$(".nav-justified").removeClass("touch")
+
+			//REMOVE OPEN MOBILE NAVIGATION TRIGGER & SUBMENU
 			if ($(sub_drop).hasClass("open")) {
 				$(sub_drop).removeClass("open")
 			}
 
 		//END MIN 992PX
+		} else {
+			$(".nav-justified").addClass("touch")
 		}
-
 		//END MODERNIZR RESIZE WRAPPER
 	};
 
@@ -84,7 +89,7 @@ function modernizrResize() {
   /* ========================================== *
 	 * TAB NAVIGATION
 	 * ========================================== */
-	$(sub_drop + "> a").on('focus', function() {
+	$(nav_li + " " + sub_drop + "> a").on('focus', function() {
 		if (($(this).is(":focus")) && ($(this).parent().has(sub_drop).length > 0)) {
 			$(sub_drop + "> ul > " + sub_drop + "> a").on('focus', function() {
 				$(this).attr(aria_expanded).parent().addClass("open")
@@ -99,9 +104,9 @@ function modernizrResize() {
 
 	/* NAVIGATION ON FOCUSOUT
 	 * ============================================ */
-	$(nav_li + " > ul > li").on('focusout', function() {
+	$(nav_li + " li > ul > li").on('focusout', function() {
 
-		if ($(this).is(nav_li + " > ul > li:not("+sub_drop+"):last-child")) {
+		if ($(this).is(nav_li + " li > ul > li:not("+sub_drop+"):last-child")) {
 			$(this).parent().parent().removeClass("open").find("a:first").attr(aria_hidden);
 
 		} else {
@@ -116,6 +121,7 @@ function modernizrResize() {
 		}
 
 	});
+
 
 	/* ============================================ *
 	 * BACK TO TOP AFTER FOCUSOUT FROM LAST LINK
@@ -132,14 +138,37 @@ function modernizrResize() {
 		}
 	});
 
-	/* =============================== *
-	 * ONE TOUCH CLICK FOR IOS
-	 * =============================== */
-	if (Modernizr.ios) {
-		jQuery(sub_drop + " > ul > li > a").on("touchend", function(event) {
-			window.location.href = $(this).attr("href");
-		});
-	} //end
+	/* ============================================= *
+	 * DEVICE CLICK
+	 * ============================================= */
+	if (Modernizr.touchevents) {
+		setTimeout(function(){
+
+			var aria_expanded = {'aria-expanded': 'true'},
+					aria_hidden = {'aria-expanded': 'false'};
+
+			$(".menu-dropdown").on("click", function() {
+
+				$(".menu-dropdown").not($(this).prev("ul > li.open").removeClass("open").next("a").attr(aria_hidden))
+				$(this).addClass("open").next("a").attr(aria_expanded)
+
+				if (!$(this).prev("ul > li.open").length) {
+					$(".menu-dropdown").removeClass("open").next("a").attr(aria_hidden)
+					$(this).addClass("open").next("a").attr(aria_expanded)
+				}
+
+			})
+
+			//SUBMENU PARENT DISABLE
+			$("nav "+sub_drop+":has(ul)").each(function (index, elem) {
+				/* OR Option 2: Use this to keep the href on the <a> intact but prevent the default action */
+				$(elem).prev("a").click(function(event) {
+						event.preventDefault();
+				});
+			});
+
+		},400);
+	}
 
  /* ================================= *
   * MENU DOUBLE TAP
@@ -179,7 +208,7 @@ function modernizrResize() {
 
 	//INIT DOUBLE TAP FUNCTION
 	setTimeout(function(){
-		jQuery(".nav-justified "+sub_drop).doubleTapToGo();
+		jQuery("nav "+sub_drop+":has(ul)").doubleTapToGo();
 	},100);
 
 }
@@ -251,33 +280,12 @@ $("a[id*='orgspecificproducts']").each(function (i, el) {
     }
 });
 
-/* ============================================= *
- * APPEND ELEMENTS TO MAIN.BASE
- * ============================================= */
-var createEl = document.createElement.bind(document),
-		head = document.getElementsByTagName("head")[0],
 
-/* ================================ *
- * FAVICON IF VARIABLE IS DEFINED
- * ================================ */
-	favIco = "/ResourcePackages/Main/assets/Images/favicon.png";
-
-	if (favIco.length > 0) {
-
-		var fav = createEl("link");
-				fav.rel = "shortcut icon";
-				fav.href = favIco;
-				head.appendChild(fav);
-
-	}
-	
-/* ============================================= *
- * DEVICE CLICK
- * ============================================= */	
+/*
 if (Modernizr.touchevents) {
-	
+
 	var sub_drop = $(".nav-justified .menu-dropdown");
-	
+
 	sub_drop.on("hover", function() {
 		sub_drop.not($(this).removeClass("open"))
 		$(this).addClass("open")
@@ -288,6 +296,13 @@ if (Modernizr.touchevents) {
 	})
 
 }
+*/
+/* ============================================= *
+ * APPEND ELEMENTS TO MAIN.BASE
+ * ============================================= */
+var createEl = document.createElement.bind(document),
+		head = document.getElementsByTagName("head")[0];
+
 /* ============================================= *
  * IE FONTAWESOME,FORMS, FLEXBOX FIX
  * ============================================= */
@@ -295,7 +310,7 @@ if (Modernizr.ie) {
 
 	var ieCss = createEl("style");
 			ieCss.innerHTML = ".form-control{padding-top:0;padding-bottom:0;line-height:32px} select.form-control{padding-right:0} .form-control.input-lg{line-height:44px}"
-			+ "main[role], [class*=-flex-column] {-ms-flex-direction: column;}[class*=display-flex] {display: -ms-flexbox;}[class*=-flex-center] {-ms-flex-align: center;}[class*=-flex-stretch] {-ms-align-items: stretch;}.flex-wrapper {-ms-flex: 1 0 auto;}"
+			+ "main[role], [class*=-flex-column] {-ms-flex-direction: column;}[class*=display-flex] {display: -ms-flexbox;}[class*=-flex-center] {-ms-flex-align: center;}[class*=-flex-stretch] {-ms-align-items: stretch;}"
 			+ "@media (min-width:768px) {.flex-reverse-sm {-ms-flex-direction:row-reverse;}}";
 			head.appendChild(ieCss);
 
@@ -318,11 +333,10 @@ if (Modernizr.ie) {
  * =============================== */
 if (Modernizr.safari && !Modernizr.flexbox) {
 	var sflxLCss = createEl("style");
-			sflxLCss.innerHTML = ".main[role] {-webkit-box-orient: vertical;}.display-flex-center{display:-webkit-box;-webkit-box-align:center;}.flex-wrapper {-webkit-box-flex: 1;}";
+			sflxLCss.innerHTML = ".main[role] {-webkit-box-orient: vertical;}.display-flex-center{-webkit-box-align:center;}.flex-wrapper {-webkit-box-flex: 1;}";
 			head.appendChild(sflxLCss);
 
 }
-
 /* =============================== *
  * IOS & IPADS THANKS APPLE
  * =============================== */
@@ -330,4 +344,13 @@ if (Modernizr.ios) {
 	var iosCss = createEl("style");
 			iosCss.innerHTML = "[class*=display-flex]:before, [class*=display-flex]:after{display: none;}";
 			head.appendChild(iosCss);
+
+	//FIX BACK BUTTON LOADING FROM CACHE
+	$(window).bind("pageshow", function(event) {
+    if (event.originalEvent.persisted) {
+        window.location.reload()
+    }
+	});
+	//FIX BACK BUTTON LOADING FROM CACHE
+
 }
